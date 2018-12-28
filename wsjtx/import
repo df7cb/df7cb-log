@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -eux
+
+# start               stop                call   loc  qrg mode rsttx rstrx mypwr
+# 2018-12-25,21:40:45,2018-12-25,21:41:45,YU1WAT,KN04,3.574367,FT8,-15,-11,15,,
+
+< wsjtx.log \
+  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,,$//' |
+  psql \
+    -c "COPY log (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr) FROM STDIN (FORMAT CSV, DELIMITER ',')" \
+    service=cb
