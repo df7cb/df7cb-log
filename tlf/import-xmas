@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eux
+
+# 80CW  26-Dec-18 08:51 0001  DF1PY          599  599  14K01         DL   14  3         
+
+< xmas2018.log \
+  sed -e 's/ 80/3.5	/' \
+      -e 's/ \+/	/1' \
+      -e 's/ \+/	/g2' \
+      -e 's/	00..// ' \
+      -e 's/599/599Q02/' \
+      -e 's/599	14\(...\)/599\1	\1/' \
+      -e 's/	3	$//' \
+      -e 's/	DL	14$//' \
+      -e 's/$/	30/' |
+  psql \
+    -c "COPY log (qrg, mode, start, call, rsttx, rstrx, dok, mypwr) FROM STDIN" \
+    service=cb
