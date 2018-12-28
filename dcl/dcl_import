@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+import adif
+
+adif = adif.ADIF()
+
+dcl = adif.read('dcl.adif')
+
+# {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
+
+for qso in dcl:
+    if qso['BAND'] == '80m':
+        qrg = '3.5'
+    elif qso['BAND'] == '40m':
+        qrg = '7'
+    else:
+        raise Exception('unknown band')
+    if qso['DARC_DOK'] == '':
+        qso['DARC_DOK'] = '\\N'
+        rstrx = '599'
+    else:
+        rstrx = '599' + qso['DARC_DOK']
+    print(qso['CALL'] +'\t'+ qrg +'\t'+ qso['MODE'] +'\t599Q02\t' + rstrx +'\t'+ qso['QSO_DATE'], qso['TIME_ON'] +'\t'+ qso['DARC_DOK'] + '\tBlieskastel')

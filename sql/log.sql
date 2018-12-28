@@ -24,7 +24,7 @@ CREATE TABLE log (
     mytrx text,
     mypwr real,
     myqth text DEFAULT 'Krefeld'::text,
-    myloc text DEFAULT 'JO31HI'::text,
+    myloc text,
     myant text,
     CONSTRAINT start_before_stop CHECK ((start <= stop)),
     CONSTRAINT valid_qrg CHECK (((qrg >= (0.1)::double precision) AND (qrg <= (2500)::double precision)))
@@ -40,11 +40,25 @@ ALTER TABLE log CLUSTER ON log_pkey;
 CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     LANGUAGE plpgsql
     AS $$BEGIN
+
+  -- QTH defaults
+  IF NEW.myqth = 'Krefeld' THEN
+    IF NEW.myloc IS NULL THEN NEW.myloc := 'JO31HI'; END IF;
+
+  ELSIF NEW.myqth = 'Blieskastel' THEN
+    IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
+    IF NEW.mypwr IS NULL THEN NEW.mypwr := 100; END IF;
+    IF NEW.myloc IS NULL THEN NEW.myloc := 'JN39PF'; END IF;
+    IF NEW.myant IS NULL THEN NEW.myant := 'Doppelzepp'; END IF;
+  END IF;
+
+  -- shortwave defaults
   IF NEW.qrg < 30 THEN
     IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
     IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-    IF NEW.myant IS NULL THEN NEW.myant := 'Windom'; END IF;
+    IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
   END IF;
+
   RETURN NEW;
 END;$$;
 

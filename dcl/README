@@ -1,0 +1,9 @@
+Before I uploaded my logs into the DCL, there where 59 records from the 2000
+and 2002 XMAS contests. Since I lost some XMAS contest logs, I worked on
+importing these into my database, only to later realize that I'm only missing
+the 2003, 2005, and 2006 logs.
+
+Still, crosschecking the logs was interesting. At the very least I didn't miss
+any QSOs submitted by other OMs.
+
+adif.py is from pyqso, but with DARC_DOK added as valid field name.
