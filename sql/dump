@@ -1,0 +1,3 @@
+#!/bin/sh
+
+psql -c '\copy (SELECT * FROM log ORDER BY start, call) to log' service=cb
