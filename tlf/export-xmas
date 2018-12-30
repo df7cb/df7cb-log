@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+import pyqso.cabrillo
+import psycopg2
+import psycopg2.extras
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+cur.execute("""SELECT qrg AS "FREQ", mode AS "MODE", to_char(start, 'YYYYMMDD') AS "QSO_DATE", to_char(start, 'hh24mi') AS "TIME_ON", regexp_replace(rsttx, '^599', '599 ') AS "RST_SENT", regexp_replace(rstrx, '^599', '599 ') AS "RST_RCVD", call AS "CALL" FROM log WHERE start::date = '2018-12-26'""")
+
+# {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
+
+records = cur.fetchall()
+cabrillo = pyqso.cabrillo.Cabrillo()
+cabrillo.write(records, 'xmas.cabrillo', contest='DARC-XMAS', mycall='DF7CB')
