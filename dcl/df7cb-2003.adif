@@ -1,0 +1,141 @@
+Amateur radio log file. Generated on 2018-12-31 18:00:19.012791. Contains 15 record(s).
+
+<adif_ver:5>3.0.4
+<programid:5>PyQSO
+<programversion:5>1.1.0
+<eoh>
+<call:6>OK1AJZ
+<qso_date:8>20030209
+<time_on:4>1641
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>589
+<rst_rcvd:3>579
+<eor>
+<call:5>DJ4EL
+<qso_date:8>20030309
+<time_on:4>0235
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:5>W5ONX
+<qso_date:8>20030309
+<time_on:4>0258
+<freq:4>10.1
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>559
+<rst_rcvd:3>559
+<eor>
+<call:6>DL0EUF
+<qso_date:8>20030421
+<time_on:4>1303
+<freq:5>10.11
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>559
+<rst_rcvd:3>549
+<eor>
+<call:5>GB2RN
+<qso_date:8>20030421
+<time_on:4>1322
+<freq:5>7.013
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>579
+<rst_rcvd:3>589
+<eor>
+<call:5>S57RT
+<qso_date:8>20030720
+<time_on:4>1008
+<freq:5>7.023
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:3>539
+<rst_rcvd:3>579
+<eor>
+<call:5>G4HRC
+<qso_date:8>20030720
+<time_on:4>1022
+<freq:5>7.022
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 001
+<rst_rcvd:7>599 020
+<eor>
+<call:6>SP1KQR
+<qso_date:8>20030720
+<time_on:4>1027
+<freq:5>7.021
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 002
+<rst_rcvd:7>599 101
+<eor>
+<call:6>G6KQ/P
+<qso_date:8>20030720
+<time_on:4>1539
+<freq:5>7.025
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 003
+<rst_rcvd:7>599 119
+<eor>
+<call:5>G4DBL
+<qso_date:8>20030720
+<time_on:4>1543
+<freq:5>7.026
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 004
+<rst_rcvd:7>599 079
+<eor>
+<call:7>G4AYM/P
+<qso_date:8>20030720
+<time_on:4>1547
+<freq:5>7.028
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 005
+<rst_rcvd:7>599 090
+<eor>
+<call:7>G4ARI/P
+<qso_date:8>20030720
+<time_on:4>1551
+<freq:5>7.026
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 006
+<rst_rcvd:7>599 099
+<eor>
+<call:7>G0VYR/P
+<qso_date:8>20030720
+<time_on:4>1557
+<freq:5>7.024
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:7>599 007
+<rst_rcvd:7>599 060
+<eor>
+<call:6>DL6DCC
+<qso_date:8>20031229
+<time_on:4>1402
+<freq:5>7.017
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>UR5BAH
+<qso_date:8>20031229
+<time_on:4>1419
+<freq:4>7.01
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>

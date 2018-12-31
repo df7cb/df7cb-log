@@ -1,0 +1,954 @@
+Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 record(s).
+
+<adif_ver:5>3.0.4
+<programid:5>PyQSO
+<programversion:5>1.1.0
+<eoh>
+<call:7>F4AJQ/P
+<qso_date:8>20181201
+<time_on:4>1650
+<freq:5>3.522
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 001
+<rst_rcvd:7>599 065
+<eor>
+<call:5>DJ7MS
+<qso_date:8>20181201
+<time_on:4>1659
+<freq:5>3.521
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 002
+<rst_rcvd:7>599 049
+<eor>
+<call:4>OL3E
+<qso_date:8>20181201
+<time_on:4>1719
+<freq:5>3.513
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 003
+<rst_rcvd:7>599 032
+<eor>
+<call:6>HG90NK
+<qso_date:8>20181201
+<time_on:4>1720
+<freq:5>3.512
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 004
+<rst_rcvd:7>599 052
+<eor>
+<call:4>HG1A
+<qso_date:8>20181201
+<time_on:4>1731
+<freq:4>3.51
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 005
+<rst_rcvd:7>599 081
+<eor>
+<call:4>F5IN
+<qso_date:8>20181201
+<time_on:4>1735
+<freq:5>3.512
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 006
+<rst_rcvd:7>599 081
+<eor>
+<call:6>HG90DJ
+<qso_date:8>20181201
+<time_on:4>1742
+<freq:5>3.511
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>DL3KWF
+<qso_date:8>20181201
+<time_on:4>1933
+<freq:5>3.513
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 007
+<rst_rcvd:10>599 096PRO
+<eor>
+<call:6>YO5OSO
+<qso_date:8>20181201
+<time_on:4>2120
+<freq:5>3.531
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 008
+<rst_rcvd:10>599 170PRO
+<eor>
+<call:4>S57X
+<qso_date:8>20181201
+<time_on:4>2125
+<freq:5>3.529
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 009
+<rst_rcvd:11>599 098TOPS
+<eor>
+<call:4>YT6T
+<qso_date:8>20181201
+<time_on:4>2132
+<freq:5>3.528
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 010
+<rst_rcvd:7>599 172
+<eor>
+<call:5>UV5QQ
+<qso_date:8>20181201
+<time_on:4>2138
+<freq:5>3.526
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:7>599 149
+<eor>
+<call:4>OL8M
+<qso_date:8>20181201
+<time_on:4>2143
+<freq:5>3.523
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:7>599 190
+<eor>
+<call:6>YO5AXF
+<qso_date:8>20181201
+<time_on:4>2148
+<freq:5>3.517
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 013
+<rst_rcvd:7>599 116
+<eor>
+<call:5>YL3FW
+<qso_date:8>20181201
+<time_on:4>2150
+<freq:5>3.516
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 014
+<rst_rcvd:7>599 082
+<eor>
+<call:5>DG7EE
+<qso_date:8>20181201
+<time_on:4>2152
+<freq:5>3.515
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 015
+<rst_rcvd:7>599 062
+<eor>
+<call:6>DL3KWR
+<qso_date:8>20181201
+<time_on:4>2157
+<freq:5>3.512
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 016
+<rst_rcvd:10>599 187PRO
+<eor>
+<call:6>OK1HFP
+<qso_date:8>20181201
+<time_on:4>2200
+<freq:5>3.511
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 017
+<rst_rcvd:7>599 143
+<eor>
+<call:5>S57DX
+<qso_date:8>20181201
+<time_on:4>2210
+<freq:5>3.517
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 018
+<rst_rcvd:7>599 206
+<eor>
+<call:5>YL3CW
+<qso_date:8>20181201
+<time_on:4>2211
+<freq:5>7.008
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:5>CT1ZQ
+<qso_date:8>20181201
+<time_on:4>2217
+<freq:5>7.009
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:3>579
+<rst_rcvd:3>579
+<eor>
+<call:5>DJ5IL
+<qso_date:8>20181202
+<time_on:4>2140
+<freq:4>3.52
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:3>579
+<eor>
+<call:7>HG0IDPD
+<qso_date:8>20181202
+<time_on:4>2153
+<freq:5>3.517
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:3>579
+<eor>
+<call:6>DL1DAW
+<qso_date:8>20181202
+<time_on:4>2157
+<freq:5>3.516
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:5>DJ0AH
+<qso_date:8>20181202
+<time_on:4>2205
+<freq:5>3.515
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:7>OE0YOTA
+<qso_date:8>20181202
+<time_on:4>2209
+<freq:5>3.512
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:5>9A2KI
+<qso_date:8>20181203
+<time_on:4>2015
+<freq:4>3.51
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>HG90MF
+<qso_date:8>20181203
+<time_on:4>2113
+<freq:5>3.521
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>HG90HL
+<qso_date:8>20181205
+<time_on:4>1908
+<freq:5>3.526
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>HG90NS
+<qso_date:8>20181205
+<time_on:4>1913
+<freq:5>3.518
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:7>S511PMC
+<qso_date:8>20181206
+<time_on:4>2031
+<freq:5>3.518
+<mode:2>CW
+<tx_pwr:1>5
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:4>RL4A
+<qso_date:8>20181208
+<time_on:4>1721
+<freq:5>7.015
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 001
+<rst_rcvd:7>599 019
+<eor>
+<call:5>EA6NB
+<qso_date:8>20181208
+<time_on:4>1815
+<freq:5>7.012
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>SM2OTU
+<qso_date:8>20181209
+<time_on:4>1406
+<freq:7>14.0751
+<mode:3>FT8
+<tx_pwr:2>10
+<rst_sent:3>-21
+<rst_rcvd:3>-14
+<gridsquare:4>KP16
+<eor>
+<call:5>EA5RJ
+<qso_date:8>20181209
+<time_on:4>1816
+<freq:7>7.07573
+<mode:3>FT8
+<tx_pwr:1>6
+<rst_sent:3>-03
+<rst_rcvd:3>-02
+<gridsquare:4>IM98
+<eor>
+<call:5>EA4GA
+<qso_date:8>20181209
+<time_on:4>1821
+<freq:6>7.0755
+<mode:3>FT8
+<tx_pwr:1>6
+<rst_sent:3>-20
+<rst_rcvd:3>-13
+<gridsquare:4>IN80
+<eor>
+<call:5>DK0MA
+<qso_date:8>20181209
+<time_on:4>1923
+<freq:7>7.07582
+<mode:3>FT8
+<tx_pwr:1>6
+<rst_sent:3>-13
+<rst_rcvd:3>-07
+<gridsquare:4>JO31
+<eor>
+<call:5>CU3EM
+<qso_date:8>20181209
+<time_on:4>2052
+<freq:7>7.07593
+<mode:3>FT8
+<tx_pwr:2>30
+<rst_sent:3>+08
+<rst_rcvd:3>-08
+<gridsquare:4>HM68
+<eor>
+<call:6>RA3DRE
+<qso_date:8>20181209
+<time_on:4>2101
+<freq:7>7.07535
+<mode:3>FT8
+<tx_pwr:2>30
+<rst_sent:3>-11
+<rst_rcvd:3>+00
+<gridsquare:4>KO94
+<eor>
+<call:5>E78AB
+<qso_date:8>20181210
+<time_on:4>2101
+<freq:7>3.57435
+<mode:3>FT8
+<tx_pwr:2>50
+<rst_sent:3>-09
+<rst_rcvd:3>-08
+<gridsquare:4>JN84
+<eor>
+<call:6>OK2WMC
+<qso_date:8>20181210
+<time_on:4>2103
+<freq:7>3.57444
+<mode:3>FT8
+<tx_pwr:2>50
+<rst_sent:3>-04
+<rst_rcvd:3>-06
+<gridsquare:4>JN99
+<eor>
+<call:6>OV1CDX
+<qso_date:8>20181212
+<time_on:4>2056
+<freq:5>3.507
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:4>II2R
+<qso_date:8>20181212
+<time_on:4>2110
+<freq:5>3.518
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:4>599 
+<rst_rcvd:4>599 
+<eor>
+<call:6>IW0FEK
+<qso_date:8>20181214
+<time_on:4>1939
+<freq:7>7.07523
+<mode:3>FT8
+<tx_pwr:2>30
+<rst_sent:3>+05
+<rst_rcvd:3>-19
+<gridsquare:4>JN61
+<eor>
+<call:5>S53EO
+<qso_date:8>20181215
+<time_on:4>2232
+<freq:7>3.57474
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-01
+<rst_rcvd:3>-04
+<gridsquare:4>JN65
+<eor>
+<call:6>SP2EWQ
+<qso_date:8>20181215
+<time_on:4>2234
+<freq:7>3.57474
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+04
+<rst_rcvd:3>+03
+<eor>
+<call:6>DL1NCH
+<qso_date:8>20181215
+<time_on:4>2236
+<freq:7>3.57376
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-11
+<rst_rcvd:3>-08
+<gridsquare:4>JO31
+<eor>
+<call:6>EV1P/A
+<qso_date:8>20181215
+<time_on:4>2248
+<freq:7>7.07452
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-12
+<rst_rcvd:3>-12
+<eor>
+<call:5>TA2MN
+<qso_date:8>20181220
+<time_on:4>2145
+<freq:7>7.07477
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+00
+<rst_rcvd:3>-16
+<gridsquare:4>KN40
+<eor>
+<call:6>MW0HCC
+<qso_date:8>20181220
+<time_on:4>2220
+<freq:4>3.51
+<mode:2>CW
+<tx_pwr:2>20
+<rst_sent:3>559
+<rst_rcvd:3>559
+<eor>
+<call:4>9A9Z
+<qso_date:8>20181221
+<time_on:4>2155
+<freq:7>3.57613
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+07
+<rst_rcvd:3>-18
+<gridsquare:4>JN75
+<eor>
+<call:5>S51GI
+<qso_date:8>20181222
+<time_on:4>1549
+<freq:7>7.07578
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-02
+<rst_rcvd:3>-11
+<gridsquare:4>JN76
+<eor>
+<call:6>IK4IDY
+<qso_date:8>20181222
+<time_on:4>1559
+<freq:7>7.07643
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+06
+<rst_rcvd:3>-17
+<gridsquare:4>JN54
+<eor>
+<call:6>IU5JJW
+<qso_date:8>20181222
+<time_on:4>1605
+<freq:7>7.07564
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+04
+<rst_rcvd:3>-06
+<gridsquare:4>JN52
+<eor>
+<call:5>F5PBG
+<qso_date:8>20181225
+<time_on:4>1544
+<freq:7>14.0755
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+14
+<rst_rcvd:3>-09
+<gridsquare:4>IN78
+<eor>
+<call:6>DO2STA
+<qso_date:8>20181225
+<time_on:4>1646
+<freq:7>3.57526
+<mode:3>FT8
+<tx_pwr:2>15
+<rst_sent:3>-08
+<rst_rcvd:3>-03
+<gridsquare:4>JO40
+<eor>
+<call:4>5P1W
+<qso_date:8>20181225
+<time_on:4>1649
+<freq:6>3.5754
+<mode:3>FT8
+<tx_pwr:2>15
+<rst_sent:3>-10
+<rst_rcvd:3>-10
+<gridsquare:4>JO55
+<eor>
+<call:5>E78AB
+<qso_date:8>20181225
+<time_on:4>2128
+<freq:7>3.57416
+<mode:3>FT8
+<tx_pwr:2>70
+<rst_sent:3>-13
+<rst_rcvd:3>-21
+<gridsquare:4>JN84
+<eor>
+<call:5>DO7WA
+<qso_date:8>20181225
+<time_on:4>2133
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+00
+<rst_rcvd:3>-01
+<gridsquare:4>JO30
+<eor>
+<call:4>DQ3F
+<qso_date:8>20181225
+<time_on:4>2134
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>+01
+<rst_rcvd:3>-12
+<gridsquare:4>JO40
+<eor>
+<call:5>M0TBQ
+<qso_date:8>20181225
+<time_on:4>2137
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-19
+<rst_rcvd:3>-10
+<gridsquare:4>IO82
+<eor>
+<call:6>MI6JVC
+<qso_date:8>20181225
+<time_on:4>2139
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-11
+<rst_rcvd:3>-09
+<gridsquare:4>IO64
+<eor>
+<call:6>YU1WAT
+<qso_date:8>20181225
+<time_on:4>2140
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-15
+<rst_rcvd:3>-11
+<gridsquare:4>KN04
+<eor>
+<call:6>SP9DTE
+<qso_date:8>20181225
+<time_on:4>2142
+<freq:7>3.57437
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-09
+<rst_rcvd:3>-10
+<gridsquare:4>JO74
+<eor>
+<call:5>DL2BO
+<qso_date:8>20181225
+<time_on:4>2150
+<freq:7>3.57469
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-02
+<rst_rcvd:3>-13
+<gridsquare:4>JO31
+<eor>
+<call:6>OE3UKW
+<qso_date:8>20181225
+<time_on:4>2151
+<freq:7>3.57469
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-06
+<rst_rcvd:3>-10
+<gridsquare:4>JN88
+<eor>
+<call:4>LY5P
+<qso_date:8>20181225
+<time_on:4>2153
+<freq:7>3.57469
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-14
+<rst_rcvd:3>-13
+<gridsquare:4>KO15
+<eor>
+<call:7>HB9HSLU
+<qso_date:8>20181225
+<time_on:4>2202
+<freq:7>3.57451
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-01
+<rst_rcvd:3>-14
+<eor>
+<call:5>G4TZX
+<qso_date:8>20181225
+<time_on:4>2204
+<freq:7>3.57451
+<mode:3>FT8
+<tx_pwr:2>20
+<rst_sent:3>-04
+<rst_rcvd:3>-15
+<gridsquare:4>JO01
+<eor>
+<call:5>DF1PY
+<qso_date:8>20181226
+<time_on:4>0851
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 K01
+<eor>
+<call:5>DL4HG
+<qso_date:8>20181226
+<time_on:4>0851
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 GT2
+<eor>
+<call:5>DL2VM
+<qso_date:8>20181226
+<time_on:4>0854
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 S36
+<eor>
+<call:5>DJ1YF
+<qso_date:8>20181226
+<time_on:4>0858
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 E03
+<eor>
+<call:6>DL5ANS
+<qso_date:8>20181226
+<time_on:4>0902
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 X23
+<eor>
+<call:5>DJ5WW
+<qso_date:8>20181226
+<time_on:4>0904
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 T13
+<eor>
+<call:5>DL4ME
+<qso_date:8>20181226
+<time_on:4>0904
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 X20
+<eor>
+<call:6>DL5IAH
+<qso_date:8>20181226
+<time_on:4>0910
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 K09
+<eor>
+<call:6>DL1LJD
+<qso_date:8>20181226
+<time_on:4>0915
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 S31
+<eor>
+<call:6>DL3DTH
+<qso_date:8>20181226
+<time_on:4>0915
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 S07
+<eor>
+<call:5>DL0HP
+<qso_date:8>20181226
+<time_on:4>0921
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 D06
+<eor>
+<call:6>DL1IAO
+<qso_date:8>20181226
+<time_on:4>0922
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 A24
+<eor>
+<call:5>DK2FG
+<qso_date:8>20181226
+<time_on:4>0924
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 T68
+<eor>
+<call:5>DK3GI
+<qso_date:8>20181226
+<time_on:4>0924
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 B40
+<eor>
+<call:5>DF0FY
+<qso_date:8>20181226
+<time_on:4>0941
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 E31
+<eor>
+<call:6>DO1AYJ
+<qso_date:8>20181226
+<time_on:4>0941
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 X22
+<eor>
+<call:6>DL7BAT
+<qso_date:8>20181226
+<time_on:4>0943
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 V12
+<eor>
+<call:6>DL7ALM
+<qso_date:8>20181226
+<time_on:4>0944
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 D06
+<eor>
+<call:5>DK3WW
+<qso_date:8>20181226
+<time_on:4>0948
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 Y09
+<eor>
+<call:4>DM4G
+<qso_date:8>20181226
+<time_on:4>0948
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 W36
+<eor>
+<call:5>DF1LX
+<qso_date:8>20181226
+<time_on:4>0952
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 M15
+<eor>
+<call:6>DL1NEO
+<qso_date:8>20181226
+<time_on:4>0952
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 B36
+<eor>
+<call:6>DK0SAX
+<qso_date:8>20181226
+<time_on:4>0956
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 SAX
+<eor>
+<call:4>DD8D
+<qso_date:8>20181226
+<time_on:4>0957
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 G73
+<eor>
+<call:5>DF5RF
+<qso_date:8>20181226
+<time_on:4>1006
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 F43
+<eor>
+<call:5>DF4PD
+<qso_date:8>20181226
+<time_on:4>1007
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 G23
+<eor>
+<call:6>DL5SDN
+<qso_date:8>20181226
+<time_on:4>1010
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 P15
+<eor>
+<call:5>DK2TC
+<qso_date:8>20181226
+<time_on:4>1012
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 G08
+<eor>
+<call:6>DL9SUD
+<qso_date:8>20181226
+<time_on:4>1014
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 V14
+<eor>
+<call:5>DH2FW
+<qso_date:8>20181226
+<time_on:4>1016
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 T02
+<eor>
+<call:5>DJ2AX
+<qso_date:8>20181226
+<time_on:4>1016
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 X20
+<eor>
+<call:5>DF4XX
+<qso_date:8>20181226
+<time_on:4>1020
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 E38
+<eor>
+<call:5>DL4WA
+<qso_date:8>20181226
+<time_on:4>1020
+<freq:3>3.5
+<mode:2>CW
+<tx_pwr:2>30
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 X28
+<eor>

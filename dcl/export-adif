@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+import pyqso.adif
+import psycopg2
+import psycopg2.extras
+import sys
+
+year = sys.argv[1]
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+cur.execute("""SELECT qrg::text AS "FREQ",
+        mode AS "MODE",
+        to_char(start, 'YYYYMMDD') AS "QSO_DATE",
+        to_char(start, 'hh24mi') AS "TIME_ON",
+        coalesce(regexp_replace(rsttx, '^599', '599 '), '') AS "RST_SENT",
+        coalesce(regexp_replace(rstrx, '^599', '599 '), '') AS "RST_RCVD",
+        call AS "CALL",
+        coalesce(loc, '') AS "GRIDSQUARE",
+        coalesce(mypwr::text, '') AS "TX_PWR"
+        FROM log
+        WHERE extract(year from start) = %s
+            AND call NOT LIKE '%%-%%'
+            AND mycall LIKE 'DF7CB%%'
+        ORDER BY start, call""",
+        (year,))
+
+records = cur.fetchall()
+adif = pyqso.adif.ADIF()
+adif.write(records, 'df7cb-%s.adif' % year)
