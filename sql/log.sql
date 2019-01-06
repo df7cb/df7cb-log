@@ -63,7 +63,7 @@ CREATE TABLE log (
     qth text,
     loc text,
     dok text,
-    bemerkung text,
+    comment text,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
     mytrx text,
     mypwr real,
@@ -109,3 +109,7 @@ END;$$;
 CREATE TRIGGER log_insert BEFORE INSERT ON log FOR EACH ROW EXECUTE PROCEDURE logtrigger();
 
 GRANT SELECT ON TABLE log TO PUBLIC;
+
+CREATE TABLE log2 (LIKE log INCLUDING ALL);
+
+CREATE TRIGGER log_insert BEFORE INSERT ON log2 FOR EACH ROW EXECUTE PROCEDURE logtrigger();
