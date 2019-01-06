@@ -11,6 +11,7 @@ conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 cur.execute("""SELECT qrg::text AS "FREQ",
+        qrg::band AS "BAND",
         mode AS "MODE",
         to_char(start, 'YYYYMMDD') AS "QSO_DATE",
         to_char(start, 'hh24mi') AS "TIME_ON",
