@@ -32,3 +32,51 @@ WSJT-X ADIF Export<eoh>
 <call:4>LY5P <gridsquare:4>KO15 <mode:3>FT8 <rst_sent:3>-14 <rst_rcvd:3>-13 <qso_date:8>20181225 <time_on:6>215315 <qso_date_off:8>20181225 <time_off:6>215415 <band:3>80m <freq:8>3.574694 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <eor>
 <call:7>HB9HSLU <gridsquare:0> <mode:3>FT8 <rst_sent:3>-01 <rst_rcvd:3>-14 <qso_date:8>20181225 <time_on:6>220215 <qso_date_off:8>20181225 <time_off:6>220315 <band:3>80m <freq:8>3.574513 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <eor>
 <call:5>G4TZX <gridsquare:4>JO01 <mode:3>FT8 <rst_sent:3>-04 <rst_rcvd:3>-15 <qso_date:8>20181225 <time_on:6>220445 <qso_date_off:8>20181225 <time_off:6>220545 <band:3>80m <freq:8>3.574513 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <eor>
+<call:5>DO8TG <qso_date:8>20190103 <time_on:4>2215 <freq:7>3.57382 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-11 <rst_rcvd:3>-10 <gridsquare:4>JN58 <eor>
+<call:6>DO9UDO <qso_date:8>20190103 <time_on:4>2219 <freq:7>3.57359 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-17 <rst_rcvd:3>-09 <gridsquare:4>JO42 <eor>
+<call:5>DJ6GI <qso_date:8>20190103 <time_on:4>2221 <freq:7>3.57359 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-12 <rst_rcvd:3>-05 <gridsquare:4>JO43 <eor>
+<call:6>ON3GTV <qso_date:8>20190103 <time_on:4>2223 <freq:7>3.57359 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-13 <rst_rcvd:3>-01 <gridsquare:4>JO21 <eor>
+<call:6>DL1AMH <qso_date:8>20190103 <time_on:4>2225 <freq:7>3.57359 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-06 <rst_rcvd:3>-06 <gridsquare:4>JO61 <eor>
+<call:5>G0DLV <qso_date:8>20190103 <time_on:4>2231 <freq:7>3.57394 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-14 <rst_rcvd:3>-12 <gridsquare:4>IO70 <eor>
+<call:4>9A6T <qso_date:8>20190103 <time_on:4>2235 <freq:7>3.57455 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-12 <rst_rcvd:3>-15 <gridsquare:4>JN75 <eor>
+<call:5>S55OO <qso_date:8>20190103 <time_on:4>2238 <freq:7>3.57462 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+01 <rst_rcvd:3>-09 <gridsquare:4>JN76 <eor>
+<call:6>DL1OHM <qso_date:8>20190103 <time_on:4>2241 <freq:6>3.5744 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-02 <rst_rcvd:3>-11 <gridsquare:4>JN39 <eor>
+<call:6>SQ9CWZ <qso_date:8>20190103 <time_on:4>2243 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-07 <rst_rcvd:3>-12 <gridsquare:4>JO90 <eor>
+<call:6>SQ9PUZ <qso_date:8>20190103 <time_on:4>2246 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-07 <rst_rcvd:3>-12 <gridsquare:4>KO00 <eor>
+<call:6>DO4MTB <qso_date:8>20190103 <time_on:4>2247 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+04 <rst_rcvd:3>+01 <gridsquare:4>JO41 <eor>
+<call:4>PC2F <qso_date:8>20190103 <time_on:4>2249 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-14 <rst_rcvd:3>+00 <gridsquare:4>JO22 <eor>
+<call:6>IZ1ANK <qso_date:8>20190103 <time_on:4>2254 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-13 <rst_rcvd:3>-07 <gridsquare:4>JN33 <eor>
+<call:5>RD3QM <qso_date:8>20190103 <time_on:4>2256 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-16 <rst_rcvd:3>-08 <gridsquare:4>LO00 <eor>
+<call:8>LA/G3SWC <qso_date:8>20190103 <time_on:4>2302 <freq:6>3.5747 <band:3>80m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-22 <rst_rcvd:3>-08 <eor>
+<call:6>UA3THY <qso_date:8>20190104 <time_on:4>1034 <freq:7>18.1015 <band:3>17m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-08 <rst_rcvd:3>-15 <gridsquare:4>LO16 <eor>
+<call:5>DF8JK <qso_date:8>20190104 <time_on:4>1041 <freq:7>18.1015 <band:3>17m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-17 <rst_rcvd:3>-10 <gridsquare:4>JO31 <eor>
+<call:5>EA3UV <qso_date:8>20190104 <time_on:4>1053 <freq:7>14.0749 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+10 <rst_rcvd:3>-12 <gridsquare:4>JN01 <eor>
+<call:4>OH5C <qso_date:8>20190104 <time_on:4>1058 <freq:7>14.0751 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+10 <rst_rcvd:3>-10 <gridsquare:4>KP30 <eor>
+<call:5>YO4NF <qso_date:8>20190104 <time_on:4>1101 <freq:7>14.0751 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-10 <rst_rcvd:3>-13 <gridsquare:4>KN44 <eor>
+<call:4>RM1F <qso_date:8>20190104 <time_on:4>1108 <freq:7>14.0751 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-11 <rst_rcvd:3>-11 <gridsquare:4>KO59 <eor>
+<call:6>UR5RGS <qso_date:8>20190104 <time_on:4>1110 <freq:7>14.0751 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+06 <rst_rcvd:3>-09 <gridsquare:4>KO51 <eor>
+<call:5>YO3JW <qso_date:8>20190104 <time_on:4>1119 <freq:7>14.0754 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-05 <rst_rcvd:3>-17 <gridsquare:4>KN34 <eor>
+<call:6>IK8BDA <qso_date:8>20190104 <time_on:4>1124 <freq:7>14.0761 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-09 <rst_rcvd:3>-08 <gridsquare:4>JM78 <eor>
+<call:6>IK4LZH <qso_date:8>20190104 <time_on:4>2106 <freq:7>14.0754 <band:3>20m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-14 <rst_rcvd:3>-20 <gridsquare:4>JN54 <eor>
+<call:6>IK0OEF <qso_date:8>20190104 <time_on:4>2111 <freq:7>14.0757 <band:3>20m <mode:3>FT8 <tx_pwr:2>50 <rst_sent:3>+00 <rst_rcvd:3>-24 <gridsquare:4>JN61 <eor>
+<call:6>CT1AXS <qso_date:8>20190104 <time_on:4>2242 <freq:7>7.07518 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-03 <rst_rcvd:3>-17 <gridsquare:4>IM59 <eor>
+<call:5>DB8EB <qso_date:8>20190105 <time_on:4>2210 <freq:7>7.07511 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-10 <rst_rcvd:3>-10 <gridsquare:4>JO31 <eor>
+<call:5>LZ1MS <qso_date:8>20190105 <time_on:4>2211 <freq:7>7.07511 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+00 <rst_rcvd:3>-06 <gridsquare:4>KN12 <eor>
+<call:5>R7KAZ <qso_date:8>20190105 <time_on:4>2226 <freq:7>7.07505 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-06 <rst_rcvd:3>-16 <gridsquare:4>KN74 <eor>
+<call:6>IK0OEF <qso_date:8>20190105 <time_on:4>2230 <freq:7>7.07505 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+13 <rst_rcvd:3>-04 <gridsquare:4>JN61 <eor>
+<call:6>EA3IAZ <qso_date:8>20190105 <time_on:4>2231 <freq:7>7.07498 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-24 <rst_rcvd:3>-16 <gridsquare:4>JN11 <eor>
+<call:5>HA1RB <qso_date:8>20190105 <time_on:4>2241 <freq:7>7.07462 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-10 <rst_rcvd:3>-21 <gridsquare:4>JN86 <eor>
+<call:5>4Z1KN <qso_date:8>20190105 <time_on:4>2242 <freq:7>7.07538 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>-11 <rst_rcvd:3>-01 <gridsquare:4>KM72 <eor>
+<call:5>EA9BO <qso_date:8>20190105 <time_on:4>2254 <freq:7>7.07502 <band:3>40m <mode:3>FT8 <rst_sent:3>-11 <rst_rcvd:3>-10 <gridsquare:4>IM75 <eor>
+<call:6>EA1ANB <qso_date:8>20190105 <time_on:4>2259 <freq:7>7.07501 <band:3>40m <mode:3>FT8 <tx_pwr:2>40 <rst_sent:3>+04 <rst_rcvd:3>-03 <gridsquare:4>IN52 <eor>
+<call:6>EA5ISK <gridsquare:4>IM99 <mode:3>FT8 <rst_sent:3>-08 <rst_rcvd:3>-13 <qso_date:8>20190106 <time_on:6>203615 <qso_date_off:8>20190106 <time_off:6>203715 <band:3>40m <freq:8>7.075488 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:5>EA3AQ <gridsquare:4>JN11 <mode:3>FT8 <rst_sent:3>-12 <rst_rcvd:3>-13 <qso_date:8>20190106 <time_on:6>204030 <qso_date_off:8>20190106 <time_off:6>204130 <band:3>40m <freq:8>7.075514 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:5>UT5XR <gridsquare:4>KN49 <mode:3>FT8 <rst_sent:3>+00 <rst_rcvd:3>-14 <qso_date:8>20190106 <time_on:6>205245 <qso_date_off:8>20190106 <time_off:6>205400 <band:3>40m <freq:8>7.076004 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:6>EA5GOR <gridsquare:4>IM98 <mode:3>FT8 <rst_sent:3>+04 <rst_rcvd:3>-11 <qso_date:8>20190106 <time_on:6>205430 <qso_date_off:8>20190106 <time_off:6>205530 <band:3>40m <freq:8>7.076004 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:6>IK1VHR <gridsquare:4>JN44 <mode:3>FT8 <rst_sent:3>+04 <rst_rcvd:3>-24 <qso_date:8>20190106 <time_on:6>210115 <qso_date_off:8>20190106 <time_off:6>210245 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:5>CU5AM <gridsquare:4>HM58 <mode:3>FT8 <rst_sent:3>-13 <rst_rcvd:3>-09 <qso_date:8>20190106 <time_on:6>210445 <qso_date_off:8>20190106 <time_off:6>210545 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:6>IK8IUQ <gridsquare:4>JN70 <mode:3>FT8 <rst_sent:3>-14 <rst_rcvd:3>+00 <qso_date:8>20190106 <time_on:6>210630 <qso_date_off:8>20190106 <time_off:6>210715 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:9>EA1GT/QRP <gridsquare:0> <mode:3>FT8 <rst_sent:3>-04 <rst_rcvd:3>+00 <qso_date:8>20190106 <time_on:6>210745 <qso_date_off:8>20190106 <time_off:6>210915 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:8>EA8/OH5C <gridsquare:0> <mode:3>FT8 <rst_sent:3>-10 <rst_rcvd:3>+00 <qso_date:8>20190106 <time_on:6>211130 <qso_date_off:8>20190106 <time_off:6>211315 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:6>IT9RZR <gridsquare:4>JM76 <mode:3>FT8 <rst_sent:3>-16 <rst_rcvd:3>-20 <qso_date:8>20190106 <time_on:6>211430 <qso_date_off:8>20190106 <time_off:6>211615 <band:3>40m <freq:8>7.075652 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
+<call:5>EA1UY <gridsquare:4>IN52 <mode:3>FT8 <rst_sent:3>-07 <rst_rcvd:3>-01 <qso_date:8>20190106 <time_on:6>212215 <qso_date_off:8>20190106 <time_off:6>212400 <band:3>40m <freq:8>7.075501 <station_callsign:5>DF7CB <my_gridsquare:6>JO31hi <tx_pwr:2>40 <eor>
