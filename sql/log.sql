@@ -9,13 +9,13 @@ CREATE TYPE band AS ENUM (
     '70cm', '33cm', '23cm', '13cm', '9cm', '6cm', '3cm', '1.25cm',
     '6mm', '4mm', '2.5mm', '2mm', '1mm');
 
-CREATE OR REPLACE FUNCTION band(qrg real) RETURNS band
+CREATE OR REPLACE FUNCTION band(qrg numeric) RETURNS band
     LANGUAGE SQL AS
 $$SELECT CASE
     WHEN qrg BETWEEN 0.136 AND 0.137       THEN '2190m'::band
     WHEN qrg BETWEEN 0.472 AND 0.479       THEN '630m'
     WHEN qrg BETWEEN 0.501 AND 0.504       THEN '560m'
-    WHEN qrg BETWEEN 1.799 AND 2.0         THEN '160m'
+    WHEN qrg BETWEEN 1.8 AND 2.0           THEN '160m'
     WHEN qrg BETWEEN 3.5 AND 4.0           THEN '80m'
     WHEN qrg BETWEEN 5.102 AND 5.4065      THEN '60m'
     WHEN qrg BETWEEN 7.0 AND 7.3           THEN '40m'
@@ -23,7 +23,7 @@ $$SELECT CASE
     WHEN qrg BETWEEN 14.0 AND 14.35        THEN '20m'
     WHEN qrg BETWEEN 18.0 AND 18.168       THEN '17m'
     WHEN qrg BETWEEN 21.0 AND 21.45        THEN '15m'
-    WHEN qrg BETWEEN 24.889 AND 24.99      THEN '12m'
+    WHEN qrg BETWEEN 24.89 AND 24.99       THEN '12m'
     WHEN qrg BETWEEN 28.0 AND 29.7         THEN '10m'
     WHEN qrg BETWEEN 50.0 AND 54.0         THEN '6m'
     WHEN qrg BETWEEN 70.0 AND 71.0         THEN '4m'
@@ -44,7 +44,7 @@ $$SELECT CASE
     WHEN qrg BETWEEN 241000.0 AND 250000.0 THEN '1mm'
 END$$;
 
-CREATE CAST (real AS band) WITH FUNCTION band;
+CREATE CAST (numeric AS band) WITH FUNCTION band AS ASSIGNMENT;
 
 CREATE DOMAIN call AS text
 	CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+([/-][A-Z0-9]+)*$'::text));
@@ -53,7 +53,7 @@ CREATE TABLE log (
     start timestamp with time zone NOT NULL,
     stop timestamp with time zone,
     call call NOT NULL,
-    qrg real NOT NULL,
+    qrg numeric NOT NULL,
     mode text NOT NULL,
     rsttx text,
     rstrx text,
@@ -66,7 +66,7 @@ CREATE TABLE log (
     comment text,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
     mytrx text,
-    mypwr real,
+    mypwr numeric,
     myqth text DEFAULT 'Krefeld'::text,
     myloc text,
     myant text,
