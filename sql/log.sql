@@ -49,6 +49,9 @@ CREATE CAST (numeric AS band) WITH FUNCTION band AS ASSIGNMENT;
 CREATE DOMAIN call AS text
 	CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+([/-][A-Z0-9]+)*$'::text));
 
+CREATE DOMAIN locator AS text
+	CONSTRAINT valid_locator CHECK (VALUE ~ '^[A-Z][A-Z](?:[0-9][0-9](?:[A-Za-z][A-Za-z](?:[0-9][0-9](?:[A-Za-z][A-Za-z])?)?)?)?$');
+
 CREATE TABLE log (
     start timestamp with time zone NOT NULL,
     stop timestamp with time zone,
@@ -61,7 +64,7 @@ CREATE TABLE log (
     qslrx character(1) DEFAULT 'N'::bpchar NOT NULL,
     name text,
     qth text,
-    loc text,
+    loc locator,
     dok text,
     comment text,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
