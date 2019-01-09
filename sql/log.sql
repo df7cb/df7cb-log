@@ -113,6 +113,11 @@ CREATE TRIGGER log_insert BEFORE INSERT ON log FOR EACH ROW EXECUTE PROCEDURE lo
 
 GRANT SELECT ON TABLE log TO PUBLIC;
 
+CREATE OR REPLACE VIEW logview AS
+    SELECT start, stop::time, call, band(qrg), qrg, mode, rsttx, rstrx, qsltx ||'/'|| qslrx AS qsl, name, qth, loc, dok, comment, mycall, mytrx, mypwr, myqth, myloc, myant FROM log;
+
+GRANT SELECT ON TABLE logview TO PUBLIC;
+
 CREATE TABLE log2 (LIKE log INCLUDING ALL);
 
 CREATE TRIGGER log_insert BEFORE INSERT ON log2 FOR EACH ROW EXECUTE PROCEDURE logtrigger();
