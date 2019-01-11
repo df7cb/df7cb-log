@@ -1,0 +1,34 @@
+http://www.codxc.com/new/page.asp?content=k2di
+
+This is the 11/2017 version of my ARRL DXCC country list.  Changes
+since 02/2011 include a new prefix for Niue (E6); deletion of
+Kingman Reef (KH5K), Malyj Vysotskij Is (RI1M) and Southern Sudan
+(ST0); and new entity South Sudan (Z8).
+
+This list is available via the Central Oregon DX Club website
+http://codxc.org (or a direct link at http://dxcc.k2di.net).
+Formatted HTML and PDF versions are also available there, as are
+PDF versions by country name and ITU allocation.
+
+Much of the geographic information was provided by Ron McConnell, W2IOL.
+
+The colon-separated fields are:
+	1. primary amateur prefix
+		- "*" suffix for deleted countries
+	2. country name
+	3. continent(s)
+	4. ITU zone(s)
+	5. CQ zone(s)
+	6. time zone (hours from UTC)
+	7. latitude
+	8. longitude
+	9. ITU prefix allocation(s) ("~" suffix for unofficial)
+	10. other amateur prefixes
+
+Please email corrections and suggestions to me.
+
+Bill Brelsford, K2DI
+Yachats, Oregon  USA
+Email: dxcc[at]k2di.net
+Permanent email: <callsign>@arrl.net
+
