@@ -56,6 +56,7 @@ CREATE TABLE log (
     start timestamp with time zone NOT NULL,
     stop timestamp with time zone,
     call call NOT NULL,
+    cty cty REFERENCES country(cty),
     qrg numeric NOT NULL,
     mode text NOT NULL,
     rsttx text,
