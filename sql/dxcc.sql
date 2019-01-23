@@ -34,6 +34,11 @@ INSERT INTO prefix
   SELECT regexp_replace(m[1], '=|[\[(].*', '', 'g'), cty -- remove = and everything after [ or (
   FROM cty, regexp_matches(prefixes, '[^ ]+', 'g') m(m); -- blank-separated words
 
+CREATE OR REPLACE FUNCTION cty(call text)
+  RETURNS text
+  LANGUAGE SQL
+  AS $$SELECT cty FROM prefix WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+
 -- shp2pgsql -DIs 4326 ne_10m_admin_0_map_subunits | psql service=cb
 
 CREATE TABLE map_import (
