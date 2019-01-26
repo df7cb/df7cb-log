@@ -2,18 +2,18 @@ CREATE DOMAIN locator AS text
 	CONSTRAINT valid_locator CHECK (VALUE ~ '^[A-R][A-R](?:[0-9][0-9](?:[A-Xa-x][A-Xa-x](?:[0-9][0-9](?:[A-Xa-x][A-Xa-x])?)?)?)?$');
 
 CREATE OR REPLACE FUNCTION locator_as_linestring (loc locator) RETURNS text
-LANGUAGE plpgsql
+STRICT LANGUAGE plpgsql
 AS $$DECLARE
     a1 int := ascii(substr(loc, 1, 1)) - 65; -- field
     a2 int := ascii(substr(loc, 2, 1)) - 65;
     b1 int := ascii(substr(loc, 3, 1)) - 48; -- square
     b2 int := ascii(substr(loc, 4, 1)) - 48;
-    c1 int := ascii(substr(loc, 5, 1)) - 65; -- subsquare
-    c2 int := ascii(substr(loc, 6, 1)) - 65;
+    c1 int := ascii(upper(substr(loc, 5, 1))) - 65; -- subsquare
+    c2 int := ascii(upper(substr(loc, 6, 1))) - 65;
     d1 int := ascii(substr(loc, 7, 1)) - 48;
     d2 int := ascii(substr(loc, 8, 1)) - 48;
-    e1 int := ascii(substr(loc, 9, 1)) - 65;
-    e2 int := ascii(substr(loc, 10, 1)) - 65;
+    e1 int := ascii(upper(substr(loc, 9, 1))) - 65;
+    e2 int := ascii(upper(substr(loc, 10, 1))) - 65;
     lon_d double precision := 20;
     lat_d double precision := 10;
     lon double precision;
@@ -54,7 +54,7 @@ RETURN format('LINESTRING(%s %s,%s %s,%s %s,%s %s,%s %s)',
 END$$;
 
 CREATE OR REPLACE FUNCTION ST_Locator(loc locator) RETURNS geometry(POLYGON, 4326)
-LANGUAGE SQL
+STRICT LANGUAGE SQL
 AS $$SELECT ST_Polygon(ST_GeomFromText(locator_as_linestring(loc)), 4326)$$;
 
 CREATE OR REPLACE VIEW geolog AS

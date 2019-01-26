@@ -1,7 +1,3 @@
---
--- PostgreSQL database dump
---
-
 CREATE TYPE band AS ENUM (
     '2190m', '630m', '560m',
     '160m', '80m', '60m', '40m', '30m', '20m', '17m', '15m', '12m', '10m',
@@ -48,9 +44,6 @@ CREATE CAST (numeric AS band) WITH FUNCTION band AS ASSIGNMENT;
 
 CREATE DOMAIN call AS text
 	CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+([/-][A-Z0-9]+)*$'::text));
-
-CREATE DOMAIN locator AS text
-	CONSTRAINT valid_locator CHECK (VALUE ~ '^[A-R][A-R](?:[0-9][0-9](?:[A-Xa-x][A-Xa-x](?:[0-9][0-9](?:[A-Xa-x][A-Xa-x])?)?)?)?$');
 
 CREATE TABLE log (
     start timestamp with time zone NOT NULL,
