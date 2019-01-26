@@ -107,6 +107,10 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
   END IF;
 
+  IF NEW.cty IS NULL THEN
+    NEW.cty = cty(NEW.call);
+  END IF;
+
   RETURN NEW;
 END;$$;
 
