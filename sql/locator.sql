@@ -59,3 +59,24 @@ AS $$SELECT ST_Polygon(ST_GeomFromText(locator_as_linestring(loc)), 4326)$$;
 
 CREATE OR REPLACE VIEW geolog AS
     SELECT call, band(qrg), loc, ST_Locator(loc) FROM log WHERE loc IS NOT NULL;
+
+-- generate locators
+
+CREATE TABLE locators2 (
+  field varchar(2) PRIMARY KEY,
+  geom geometry(POLYGON, 4326) NOT NULL
+);
+INSERT INTO locators2
+  SELECT chr(lon)||chr(lat), ST_Locator(chr(lon)||chr(lat))
+  FROM generate_series(65, 82) lon, generate_series(65, 82) lat;
+CREATE INDEX ON locators2 USING gist(geom);
+
+CREATE TABLE locators4 (
+  field varchar(4) PRIMARY KEY,
+  geom geometry(POLYGON, 4326) NOT NULL
+);
+INSERT INTO locators4
+  SELECT chr(lon)||chr(lat)||chr(lon2)||chr(lat2), ST_Locator(chr(lon)||chr(lat)||chr(lon2)||chr(lat2))
+  FROM generate_series(65, 82) lon, generate_series(65, 82) lat,
+       generate_series(48, 57) lon2, generate_series(48, 57) lat2;
+CREATE INDEX ON locators4 USING gist(geom);
