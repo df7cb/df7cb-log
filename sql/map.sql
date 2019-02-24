@@ -237,6 +237,16 @@ INSERT INTO map_import (country, geom)
   FROM map_import WHERE country = 'Malaysia';
 DELETE FROM map_import WHERE country = 'Malaysia';
 
+-- split Scotland
+WITH scotland AS (DELETE FROM map_import WHERE country = 'Scotland' RETURNING geom),
+  parts AS (SELECT d.geom FROM scotland, ST_Dump(geom) d),
+  shetland AS (INSERT INTO map_import (country, geom)
+    SELECT 'Shetland Islands', ST_Union(geom) FROM parts
+      WHERE ST_Intersects(geom, ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80'))))
+INSERT INTO map_import (country, geom)
+  SELECT 'Scotland', ST_Union(geom) FROM parts
+    WHERE NOT ST_Intersects(geom, ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80')));
+
 -- split Turkey
 WITH turkey AS (DELETE FROM map_import WHERE country = 'Turkey' RETURNING geom),
   parts AS (SELECT d.geom FROM turkey, ST_Dump(geom) d),
