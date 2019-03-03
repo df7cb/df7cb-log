@@ -98,6 +98,9 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
     IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
     IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
+    IF NEW.mypwr IS NULL THEN
+      NEW.mypwr := CASE NEW.qrg::band WHEN '60m' THEN 15 ELSE 100 END;
+    END IF;
   END IF;
 
   IF NEW.cty IS NULL THEN
