@@ -57,8 +57,10 @@ CREATE OR REPLACE FUNCTION ST_Locator(loc locator) RETURNS geometry(POLYGON, 432
 STRICT LANGUAGE SQL
 AS $$SELECT ST_Polygon(ST_GeomFromText(locator_as_linestring(loc)), 4326)$$;
 
+/*
 CREATE OR REPLACE VIEW geolog AS
     SELECT call, band(qrg), loc, ST_Locator(loc) FROM log WHERE loc IS NOT NULL;
+*/
 
 -- generate locators
 

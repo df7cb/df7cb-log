@@ -1,5 +1,3 @@
--- shp2pgsql -DIs 4326 ne_10m_admin_0_map_subunits | psql service=cb
-
 DROP TABLE IF EXISTS map_import;
 CREATE TABLE map_import (
   sovereignt text,

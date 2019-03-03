@@ -42,9 +42,6 @@ END$$;
 
 CREATE CAST (numeric AS band) WITH FUNCTION band AS ASSIGNMENT;
 
-CREATE DOMAIN call AS text
-	CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+([/-][A-Z0-9]+)*$'::text));
-
 CREATE TABLE log (
     start timestamp with time zone NOT NULL,
     stop timestamp with time zone,
