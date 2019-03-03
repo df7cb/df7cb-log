@@ -19,16 +19,15 @@ for line in sys.stdin:
     if line[23] != '0':
         Exception('serial does not start with 0')
 
-    sql = "INSERT INTO LOG (start, call, qrg, rsttx, rstrx, loc, comment, mypwr) " + \
-          "VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO LOG (start, call, qrg, rsttx, rstrx, comment, mypwr) " + \
+          "VALUES (%s, %s, %s, %s, %s, %s, %s)"
     data = (line[7:22],
             line[29:39].rstrip(),
             qrg,
-            #line[44:47]+line[24:27],
-            'JO31',
-            #line[49:52]+line[54:64].rstrip(),
-            line[54:64].rstrip(),
-            line[54:64].rstrip(),
+            line[44:47]+line[24:27],
+            #'JO31',
+            line[49:52]+line[54:64].rstrip(),
+            #line[54:64].rstrip(),
             sys.argv[1],
             sys.argv[2])
     print (sql % data)

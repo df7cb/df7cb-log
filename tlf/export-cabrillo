@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 
+# usage: export-cabrillo <contest name> <filename>
+
 import pyqso.cabrillo
 import psycopg2
 import psycopg2.extras
+import sys
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+contest = sys.argv[1]
+filename = sys.argv[2]
 
 cur.execute("""SELECT qrg AS "FREQ",
         mode AS "MODE",
@@ -15,14 +21,15 @@ cur.execute("""SELECT qrg AS "FREQ",
         regexp_replace(rstrx, '^599', '599 ') AS "RST_RCVD",
         call AS "CALL"
         FROM log
-        WHERE date_trunc('month', start) = '2019-02-01'
-        AND comment = 'UKEICC 80m Contest'""")
+        WHERE date_trunc('month', start) = date_trunc('month', current_date)
+        AND comment = %s""",
+        (contest,))
 
 # {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
 
 records = cur.fetchall()
 cabrillo = pyqso.cabrillo.Cabrillo()
 cabrillo.write(records,
-        '2019-02-27-ukeicc.cabrillo',
-        contest='UKEICC 80m Contest',
+        filename,
+        contest=contest,
         mycall='DF7CB')
