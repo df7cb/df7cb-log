@@ -1,4 +1,4 @@
-Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 record(s).
+Amateur radio log file. Generated on 2019-03-24 21:24:40.268276. Contains 102 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -8,6 +8,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1650
 <freq:5>3.522
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 001
@@ -17,6 +18,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1659
 <freq:5>3.521
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 002
@@ -26,6 +28,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1719
 <freq:5>3.513
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 003
@@ -35,6 +38,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1720
 <freq:5>3.512
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 004
@@ -44,6 +48,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1731
 <freq:4>3.51
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 005
@@ -53,6 +58,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1735
 <freq:5>3.512
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 006
@@ -62,6 +68,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1742
 <freq:5>3.511
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -71,6 +78,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>1933
 <freq:5>3.513
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 007
@@ -80,6 +88,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2120
 <freq:5>3.531
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 008
@@ -89,6 +98,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2125
 <freq:5>3.529
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 009
@@ -98,6 +108,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2132
 <freq:5>3.528
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 010
@@ -107,6 +118,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2138
 <freq:5>3.526
+<band:3>80m
 <mode:2>CW
 <tx_pwr:3>100
 <rst_sent:7>599 011
@@ -116,6 +128,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2143
 <freq:5>3.523
+<band:3>80m
 <mode:2>CW
 <tx_pwr:3>100
 <rst_sent:7>599 012
@@ -125,6 +138,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2148
 <freq:5>3.517
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 013
@@ -134,6 +148,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2150
 <freq:5>3.516
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 014
@@ -143,6 +158,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2152
 <freq:5>3.515
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 015
@@ -152,6 +168,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2157
 <freq:5>3.512
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 016
@@ -161,6 +178,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2200
 <freq:5>3.511
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 017
@@ -170,6 +188,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2210
 <freq:5>3.517
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 018
@@ -179,6 +198,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2211
 <freq:5>7.008
+<band:3>40m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -188,6 +208,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181201
 <time_on:4>2217
 <freq:5>7.009
+<band:3>40m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:3>579
@@ -197,6 +218,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181202
 <time_on:4>2140
 <freq:4>3.52
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -206,6 +228,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181202
 <time_on:4>2153
 <freq:5>3.517
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -215,6 +238,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181202
 <time_on:4>2157
 <freq:5>3.516
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -224,6 +248,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181202
 <time_on:4>2205
 <freq:5>3.515
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -233,6 +258,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181202
 <time_on:4>2209
 <freq:5>3.512
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -242,6 +268,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181203
 <time_on:4>2015
 <freq:4>3.51
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -251,6 +278,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181203
 <time_on:4>2113
 <freq:5>3.521
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -260,6 +288,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181205
 <time_on:4>1908
 <freq:5>3.526
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -269,6 +298,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181205
 <time_on:4>1913
 <freq:5>3.518
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -278,6 +308,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181206
 <time_on:4>2031
 <freq:5>3.518
+<band:3>80m
 <mode:2>CW
 <tx_pwr:1>5
 <rst_sent:4>599 
@@ -287,6 +318,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181208
 <time_on:4>1721
 <freq:5>7.015
+<band:3>40m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 001
@@ -296,6 +328,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181208
 <time_on:4>1815
 <freq:5>7.012
+<band:3>40m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -304,7 +337,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>SM2OTU
 <qso_date:8>20181209
 <time_on:4>1406
-<freq:7>14.0751
+<freq:9>14.075087
+<band:3>20m
 <mode:3>FT8
 <tx_pwr:2>10
 <rst_sent:3>-21
@@ -314,7 +348,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>EA5RJ
 <qso_date:8>20181209
 <time_on:4>1816
-<freq:7>7.07573
+<freq:8>7.075731
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:1>6
 <rst_sent:3>-03
@@ -325,6 +360,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181209
 <time_on:4>1821
 <freq:6>7.0755
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:1>6
 <rst_sent:3>-20
@@ -334,7 +370,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>DK0MA
 <qso_date:8>20181209
 <time_on:4>1923
-<freq:7>7.07582
+<freq:8>7.075819
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:1>6
 <rst_sent:3>-13
@@ -344,7 +381,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>CU3EM
 <qso_date:8>20181209
 <time_on:4>2052
-<freq:7>7.07593
+<freq:8>7.075934
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>30
 <rst_sent:3>+08
@@ -354,7 +392,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>RA3DRE
 <qso_date:8>20181209
 <time_on:4>2101
-<freq:7>7.07535
+<freq:8>7.075354
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>30
 <rst_sent:3>-11
@@ -364,7 +403,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>E78AB
 <qso_date:8>20181210
 <time_on:4>2101
-<freq:7>3.57435
+<freq:8>3.574354
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>50
 <rst_sent:3>-09
@@ -374,7 +414,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>OK2WMC
 <qso_date:8>20181210
 <time_on:4>2103
-<freq:7>3.57444
+<freq:8>3.574438
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>50
 <rst_sent:3>-04
@@ -385,6 +426,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181212
 <time_on:4>2056
 <freq:5>3.507
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -394,6 +436,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181212
 <time_on:4>2110
 <freq:5>3.518
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:4>599 
@@ -403,6 +446,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181214
 <time_on:4>1939
 <freq:7>7.07523
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>30
 <rst_sent:3>+05
@@ -412,7 +456,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>S53EO
 <qso_date:8>20181215
 <time_on:4>2232
-<freq:7>3.57474
+<freq:8>3.574738
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-01
@@ -422,7 +467,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>SP2EWQ
 <qso_date:8>20181215
 <time_on:4>2234
-<freq:7>3.57474
+<freq:8>3.574738
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+04
@@ -431,7 +477,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>DL1NCH
 <qso_date:8>20181215
 <time_on:4>2236
-<freq:7>3.57376
+<freq:8>3.573764
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-11
@@ -441,7 +488,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>EV1P/A
 <qso_date:8>20181215
 <time_on:4>2248
-<freq:7>7.07452
+<freq:8>7.074517
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-12
@@ -450,7 +498,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>TA2MN
 <qso_date:8>20181220
 <time_on:4>2145
-<freq:7>7.07477
+<freq:8>7.074765
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+00
@@ -461,6 +510,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181220
 <time_on:4>2220
 <freq:4>3.51
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>20
 <rst_sent:3>559
@@ -470,6 +520,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181221
 <time_on:4>2155
 <freq:7>3.57613
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+07
@@ -479,7 +530,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>S51GI
 <qso_date:8>20181222
 <time_on:4>1549
-<freq:7>7.07578
+<freq:8>7.075779
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-02
@@ -489,7 +541,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>IK4IDY
 <qso_date:8>20181222
 <time_on:4>1559
-<freq:7>7.07643
+<freq:8>7.076426
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+06
@@ -499,7 +552,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>IU5JJW
 <qso_date:8>20181222
 <time_on:4>1605
-<freq:7>7.07564
+<freq:8>7.075642
+<band:3>40m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+04
@@ -509,7 +563,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>F5PBG
 <qso_date:8>20181225
 <time_on:4>1544
-<freq:7>14.0755
+<freq:9>14.075471
+<band:3>20m
 <mode:3>FT8
 <tx_pwr:3>100
 <rst_sent:3>+14
@@ -519,7 +574,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>DO2STA
 <qso_date:8>20181225
 <time_on:4>1646
-<freq:7>3.57526
+<freq:8>3.575263
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>15
 <rst_sent:3>-08
@@ -529,7 +585,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:4>5P1W
 <qso_date:8>20181225
 <time_on:4>1649
-<freq:6>3.5754
+<freq:8>3.575402
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>15
 <rst_sent:3>-10
@@ -539,7 +596,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>E78AB
 <qso_date:8>20181225
 <time_on:4>2128
-<freq:7>3.57416
+<freq:8>3.574155
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>70
 <rst_sent:3>-13
@@ -549,7 +607,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>DO7WA
 <qso_date:8>20181225
 <time_on:4>2133
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+00
@@ -559,7 +618,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:4>DQ3F
 <qso_date:8>20181225
 <time_on:4>2134
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>+01
@@ -569,7 +629,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>M0TBQ
 <qso_date:8>20181225
 <time_on:4>2137
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-19
@@ -579,7 +640,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>MI6JVC
 <qso_date:8>20181225
 <time_on:4>2139
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-11
@@ -589,7 +651,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>YU1WAT
 <qso_date:8>20181225
 <time_on:4>2140
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-15
@@ -599,7 +662,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>SP9DTE
 <qso_date:8>20181225
 <time_on:4>2142
-<freq:7>3.57437
+<freq:8>3.574367
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-09
@@ -609,7 +673,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>DL2BO
 <qso_date:8>20181225
 <time_on:4>2150
-<freq:7>3.57469
+<freq:8>3.574694
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-02
@@ -619,7 +684,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:6>OE3UKW
 <qso_date:8>20181225
 <time_on:4>2151
-<freq:7>3.57469
+<freq:8>3.574694
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-06
@@ -629,7 +695,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:4>LY5P
 <qso_date:8>20181225
 <time_on:4>2153
-<freq:7>3.57469
+<freq:8>3.574694
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-14
@@ -639,7 +706,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:7>HB9HSLU
 <qso_date:8>20181225
 <time_on:4>2202
-<freq:7>3.57451
+<freq:8>3.574513
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-01
@@ -648,7 +716,8 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <call:5>G4TZX
 <qso_date:8>20181225
 <time_on:4>2204
-<freq:7>3.57451
+<freq:8>3.574513
+<band:3>80m
 <mode:3>FT8
 <tx_pwr:2>20
 <rst_sent:3>-04
@@ -659,6 +728,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0851
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -668,15 +738,17 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0851
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
-<rst_rcvd:7>599 GT2
+<rst_rcvd:7>599 E38
 <eor>
 <call:5>DL2VM
 <qso_date:8>20181226
 <time_on:4>0854
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -686,6 +758,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0858
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -695,15 +768,17 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0902
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
 <rst_rcvd:7>599 X23
 <eor>
-<call:5>DJ5WW
+<call:5>DJ5MW
 <qso_date:8>20181226
 <time_on:4>0904
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -713,24 +788,27 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0904
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
-<rst_rcvd:7>599 X20
+<rst_rcvd:7>599 X30
 <eor>
 <call:6>DL5IAH
 <qso_date:8>20181226
 <time_on:4>0910
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
 <rst_rcvd:7>599 K09
 <eor>
-<call:6>DL1LJD
+<call:6>DL1LOD
 <qso_date:8>20181226
 <time_on:4>0915
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -740,15 +818,17 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0915
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
 <rst_rcvd:7>599 S07
 <eor>
-<call:5>DL0HP
+<call:5>DL0SP
 <qso_date:8>20181226
 <time_on:4>0921
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -758,6 +838,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0922
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -767,15 +848,17 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0924
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
-<rst_rcvd:7>599 T68
+<rst_rcvd:7>599 N05
 <eor>
 <call:5>DK3GI
 <qso_date:8>20181226
 <time_on:4>0924
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -785,6 +868,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0941
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -794,15 +878,17 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0941
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
 <rst_rcvd:7>599 X22
 <eor>
-<call:6>DL7BAT
+<call:5>DL7BA
 <qso_date:8>20181226
 <time_on:4>0943
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -812,6 +898,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0944
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -821,6 +908,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0948
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -830,6 +918,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0948
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -839,6 +928,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0952
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -848,6 +938,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0952
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -857,6 +948,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0956
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -866,6 +958,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>0957
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -875,6 +968,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1006
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -884,6 +978,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1007
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -893,6 +988,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1010
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -902,6 +998,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1012
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -911,6 +1008,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1014
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -920,6 +1018,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1016
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -929,6 +1028,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1016
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -938,6 +1038,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1020
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
@@ -947,6 +1048,7 @@ Amateur radio log file. Generated on 2018-12-31 18:00:23.365648. Contains 102 re
 <qso_date:8>20181226
 <time_on:4>1020
 <freq:3>3.5
+<band:3>80m
 <mode:2>CW
 <tx_pwr:2>30
 <rst_sent:7>599 Q02
