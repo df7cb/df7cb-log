@@ -76,136 +76,55 @@ UPDATE map_import SET country = rename_to
   FROM rename
   WHERE map_import.country = rename_from;
 
-WITH b AS (DELETE FROM map_import WHERE country IN ('Isole Pelagie', 'Pantelleria') RETURNING *)
+CREATE OR REPLACE FUNCTION join_country(to_cty, VARIADIC from_ctys[])
+RETURNS void LANGUAGE AS
+$$WITH b AS (DELETE FROM map_import WHERE country = ANY(from_ctys) RETURNING *)
 INSERT INTO map_import (country, geom)
-  SELECT 'African Italy', ST_Multi(ST_Union(geom)) FROM b;
+  SELECT to_cty, ST_Multi(ST_Union(geom)) FROM b$$;
 
-WITH b AS (DELETE FROM map_import WHERE country IN ('Andaman Islands', 'Nicobar Islands') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Andaman & Nicobar Is.', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Antigua', 'Barbuda') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Antigua & Barbuda', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Australia', 'Tasmania') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Australia', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Baker Island', 'Howland Island') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Baker & Howland Islands', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Ceuta', 'Melilla') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Ceuta & Melilla', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Diego Garcia NSF', 'Br. Indian Ocean Ter.') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Chagos Islands', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('China', 'Hainan', 'Paracel Islands') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'China', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Denmark', 'Bornholm') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Denmark', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE sovereignt = 'Equatorial Guinea' RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Equatorial Guinea', ST_Multi(ST_Union(geom)) FROM b;
-
+SELECT join_country('African Italy', 'Isole Pelagie', 'Pantelleria');
+SELECT join_country('Andaman & Nicobar Is.', 'Andaman Islands', 'Nicobar Islands');
+SELECT join_country('Antigua & Barbuda', 'Antigua', 'Barbuda');
+SELECT join_country('Australia', 'Australia', 'Tasmania');
+SELECT join_country('Baker & Howland Islands', 'Baker Island', 'Howland Island');
+SELECT join_country('Ceuta & Melilla', 'Ceuta', 'Melilla');
+SELECT join_country('Chagos Islands', 'Diego Garcia NSF', 'Br. Indian Ocean Ter.');
+SELECT join_country('China', 'China', 'Hainan', 'Paracel Islands');
+SELECT join_country('Denmark', 'Denmark', 'Bornholm');
+SELECT join_country('Equatorial Guinea', 'Equatorial Guinea');
 UPDATE map_import SET country = 'Asiatic Russia' WHERE continent = 'Asia' AND country = 'Russia';
-WITH b AS (DELETE FROM map_import WHERE country IN ('Russia', 'Crimea') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'European Russia', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Georgia', 'Adjara') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Georgia', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Guernsey', 'Alderney', 'Herm', 'Sark') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Guernsey', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('India', 'Siachen Glacier') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'India', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Iraq', 'Iraqi Kurdistan') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Iraq', ST_Multi(ST_Union(geom)) FROM b;
-
+SELECT join_country('European Russia', 'Russia', 'Crimea');
+SELECT join_country('Georgia', 'Georgia', 'Adjara');
+SELECT join_country('Guernsey', 'Guernsey', 'Alderney', 'Herm', 'Sark');
+SELECT join_country('India', 'India', 'Siachen Glacier');
+SELECT join_country('Iraq', 'Iraq', 'Iraqi Kurdistan');
 -- Japanese islands
-WITH b AS (DELETE FROM map_import WHERE country IN ('Bonin Islands', 'Volcano Islands') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Ogasawara', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE sovereignt = 'Japan' RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Japan', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Juan De Nova Island', 'Europa Island') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Juan de Nova & Europa', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('North Island', 'South Island') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'New Zealand', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('North Korea', 'Korean DMZ (north)') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'DPR of Korea', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Kazakhstan', 'Baikonur') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Kazakhstan', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('South Korea', 'Baengnyeongdo', 'Dokdo', 'Jejudo', 'Ulleungdo', 'Korean DMZ (south)') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Republic of Korea', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Gaza', 'West Bank') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Palestine', ST_Multi(ST_Union(geom)) FROM b;
-
+SELECT join_country('Ogasawara', 'Bonin Islands', 'Volcano Islands');
+SELECT join_country('Japan', 'Japan');
+SELECT join_country('Juan de Nova & Europa', 'Juan De Nova Island', 'Europa Island');
+SELECT join_country('New Zealand', 'North Island', 'South Island');
+SELECT join_country('DPR of Korea', 'North Korea', 'Korean DMZ (north)');
+SELECT join_country('Kazakhstan', 'Kazakhstan', 'Baikonur');
+SELECT join_country('Republic of Korea','South Korea', 'Baengnyeongdo', 'Dokdo', 'Jejudo', 'Ulleungdo', 'Korean DMZ (south)');
+SELECT join_country('Palestine', 'Gaza', 'West Bank');
 /* TODO: split San Andres from Columbia */
-WITH b AS (DELETE FROM map_import WHERE country IN ('Serranilla Bank', 'Bajo Nuevo Bank') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'San Andres & Providencia', ST_Multi(ST_Union(geom)) FROM b;
+SELECT join_country('San Andres & Providencia', 'Serranilla Bank', 'Bajo Nuevo Bank');
+SELECT join_country('Sao Tome & Principe', 'São Tomé and Principe');
+SELECT join_country('Somalia', 'Somalia' /*, 'Somaliland'*/);
+SELECT join_country('Syria', 'Syria', 'UNDOF Zone');
+SELECT join_country('Serbia', 'Serbia', 'Vojvodina');
+SELECT join_country('Tanzania', 'Tanzania', 'Zanzibar');
+SELECT join_country('Trinidad & Tobago', 'Trinidad', 'Tobago');
+SELECT join_country('UK Base Areas on Cyprus', 'Akrotiri', 'Dhekelia');
+SELECT join_country('Yemen', 'Yemen', 'Socotra');
 
-WITH b AS (DELETE FROM map_import WHERE sovereignt = 'São Tomé and Principe' RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Sao Tome & Principe', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE sovereignt IN ('Somalia' /*, 'Somaliland'*/) RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Somalia', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Syria', 'UNDOF Zone') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Syria', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Serbia', 'Vojvodina') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Serbia', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Tanzania', 'Zanzibar') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Tanzania', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Trinidad', 'Tobago') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Trinidad & Tobago', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Akrotiri', 'Dhekelia') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'UK Base Areas on Cyprus', ST_Multi(ST_Union(geom)) FROM b;
-
-WITH b AS (DELETE FROM map_import WHERE country IN ('Yemen', 'Socotra') RETURNING *)
-INSERT INTO map_import (country, geom)
-  SELECT 'Yemen', ST_Multi(ST_Union(geom)) FROM b;
+CREATE OR REPLACE FUNCTION split_country(cty text, new_cty text, selector geometry)
+RETURNS void LANGUAGE SQL AS
+$$WITH parts AS (SELECT d.geom AS part FROM map_import, ST_Dump(geom) d WHERE country = cty),
+  new_part AS (INSERT INTO map_import (country, geom)
+    SELECT new_cty, ST_Union(part) FROM parts WHERE ST_Intersects(part, selector))
+  UPDATE map_import SET geom =
+    (SELECT ST_Union(part) FROM parts WHERE NOT ST_Intersects(part, selector))$$;
 
 -- split Greece
 WITH greece AS (DELETE FROM map_import WHERE country = 'Greece' RETURNING geom),
