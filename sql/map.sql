@@ -43,6 +43,7 @@ WITH rename (rename_to, rename_from) AS (VALUES
   ('Northern Ireland', 'N. Ireland'),
   ('Peter 1 Island', 'Peter I Island'),
   ('Pitcairn Island', 'Pitcairn Islands'),
+  ('Pr. Edward & Marion Is.', 'Prince Edward Islands'),
   ('Republic of Kosovo', 'Kosovo'),
   ('Republic of South Sudan', 'South Sudan'),
   ('Republic of the Congo', 'Congo'),
@@ -124,16 +125,17 @@ $$WITH parts AS (SELECT d.geom AS part FROM map_import, ST_Dump(geom) d WHERE co
     (SELECT ST_Multi(ST_Union(part)) FROM parts WHERE NOT ST_Intersects(part, selector))
     WHERE country = cty$$;
 
--- split Greece
+-- Greece
 SELECT split_country('Greece', 'Crete', ST_Collect(ST_Locator('KM24'), ST_Locator('KM25')));
 SELECT split_country('Greece', 'Dodecanese', ST_SetSRID('POLYGON((26.2 35.4,30 35.4,30 37.5,26.2 37.5,26.2 35.4))'::geometry, 4326));
-WITH cut_athos AS
-  (SELECT ST_CollectionHomogenize(ST_Split(geom, ST_SetSRID('LINESTRING(24.0 40.4,24.0 40.3)'::geometry, 4326))) geom
+-- cut Mount Athos from mainland Greece so we can split it
+UPDATE map_import SET geom =
+  (SELECT ST_CollectionHomogenize(ST_Split(geom, ST_SetSRID('LINESTRING(24.0 40.4,24.0 40.3)'::geometry, 4326)))
      FROM map_import WHERE country = 'Greece')
-UPDATE map_import SET geom = cut_athos.geom FROM cut_athos WHERE country = 'Greece';
+  WHERE country = 'Greece';
 SELECT split_country('Greece', 'Mount Athos', ST_Locator('KN20de'));
 
--- split Malaysia
+-- Malaysia
 SELECT split_country('Malaysia', 'West Malaysia', ST_SetSRID('POLYGON((90 0,108 0,108 10,90 10,90 0))'::geometry, 4326));
 UPDATE map_import SET country = 'East Malaysia' WHERE country = 'Malaysia';
 
@@ -143,17 +145,22 @@ UPDATE map_import SET country = 'European Russia' WHERE country = 'Russia';
 SELECT split_country('European Russia', 'Franz Josef Land', ST_SetSRID('POLYGON((35 79,70 79,70 83,35 83,35 79))'::geometry, 4326));
 --SELECT join_country('European Russia', 'Russia', 'Crimea');
 
--- split Turkey
+-- Turkey
 SELECT split_country('Turkey', 'European Turkey', ST_Collect(ST_Locator('KN20'), ST_Locator('KN31')));
 UPDATE map_import SET country = 'Asiatic Turkey' WHERE country = 'Turkey';
 
 -- Islands
+SELECT split_country('Fr. South Antarctic Lands', 'Amsterdam & St. Paul Is.', ST_Locator('MF'));
+SELECT split_country('Fr. South Antarctic Lands', 'Crozet Island', ST_Locator('LE'));
+UPDATE map_import SET country = 'Kerguelen Islands' WHERE country = 'Fr. South Antarctic Lands';
+SELECT split_country('Mauritius', 'Agalega & St. Brandon', ST_Locator('LH93')); -- St. Brandon is not present in NE
 SELECT split_country('Mauritius', 'Rodriguez Island', ST_Locator('MH10'));
 SELECT split_country('Scotland', 'Shetland Islands', ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80')));
 
 /*
  * Not present in cty.csv:
  * N. Cyprus
+ * Pratas Island
  * Somaliland
  */
 
