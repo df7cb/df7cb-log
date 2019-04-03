@@ -150,15 +150,21 @@ SELECT split_country('Turkey', 'European Turkey', ST_Collect(ST_Locator('KN20'),
 UPDATE map_import SET country = 'Asiatic Turkey' WHERE country = 'Turkey';
 
 -- Islands
+SELECT split_country('Colombia', 'Malpelo Island', ST_Locator('EJ'));
+SELECT split_country('Fiji', 'Rotuma Island', ST_Locator('RH87'));
 SELECT split_country('Fr. South Antarctic Lands', 'Amsterdam & St. Paul Is.', ST_Locator('MF'));
 SELECT split_country('Fr. South Antarctic Lands', 'Crozet Island', ST_Locator('LE'));
 UPDATE map_import SET country = 'Kerguelen Islands' WHERE country = 'Fr. South Antarctic Lands';
+SELECT split_country('Kiribati', 'Western Kiribati', ST_Collect(ST_Locator('RI'), ST_Locator('RJ'))); -- TODO: the islands in the middle might belong to Western Kiribati as well
+UPDATE map_import SET country = 'Eastern Kiribati' WHERE country = 'Kiribati';
 SELECT split_country('Mauritius', 'Agalega & St. Brandon', ST_Locator('LH93')); -- St. Brandon is not present in NE
 SELECT split_country('Mauritius', 'Rodriguez Island', ST_Locator('MH10'));
+SELECT split_country('Mexico', 'Revillagigedo', ST_Collect(ST_Collect(ST_Locator('DK28'), ST_Locator('DK48')), ST_Locator('DK49'))); -- Roca Partida is not present in NE
 SELECT split_country('Scotland', 'Shetland Islands', ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80')));
 
 /*
  * Not present in cty.csv:
+ * Mellish Reef (QH72)
  * N. Cyprus
  * Pratas Island
  * Somaliland
