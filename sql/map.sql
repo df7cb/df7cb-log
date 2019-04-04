@@ -18,11 +18,11 @@ WITH rename (rename_to, rename_from) AS (VALUES
   ('Aland Islands', 'Åland'),
   ('Annobon Island', 'Annobón'),
   ('Ascension Island', 'Ascension'),
-  ('Bonaire', 'Caribbean Netherlands'),
   ('Bouvet', 'Bouvet Island'),
   ('Brunei Darussalam', 'Brunei'),
   ('Cape Verde', 'Cabo Verde'),
   ('Central African Republic', 'Central African Rep.'),
+  ('Cocos (Keeling) Islands', 'Cocos Islands'),
   ('Cote d''Ivoire', 'Côte d''Ivoire'),
   ('Curacao', 'Curaçao'),
   ('Czech Republic', 'Czechia'),
@@ -85,7 +85,7 @@ INSERT INTO map_import (country, geom)
 SELECT join_country('African Italy', 'Isole Pelagie', 'Pantelleria');
 SELECT join_country('Andaman & Nicobar Is.', 'Andaman Islands', 'Nicobar Islands');
 SELECT join_country('Antigua & Barbuda', 'Antigua', 'Barbuda');
-SELECT join_country('Australia', 'Australia', 'Tasmania');
+SELECT join_country('Australia', 'Australia', 'Tasmania', 'Ashmore & Cartier Islands', 'Coral Sea Islands');
 SELECT join_country('Baker & Howland Islands', 'Baker Island', 'Howland Island');
 SELECT join_sovereignt('Belgium', 'Belgium');
 SELECT join_sovereignt('Bosnia-Herzegovina', 'Bosnia and Herzegovina');
@@ -93,22 +93,23 @@ SELECT join_country('Ceuta & Melilla', 'Ceuta', 'Melilla');
 SELECT join_country('Chagos Islands', 'Diego Garcia NSF', 'Br. Indian Ocean Ter.');
 SELECT join_country('China', 'China', 'Hainan', 'Paracel Islands');
 SELECT join_country('Denmark', 'Denmark', 'Bornholm');
-SELECT join_country('Equatorial Guinea', 'Equatorial Guinea');
+SELECT join_sovereignt('Timor - Leste', 'East Timor');
+SELECT join_country('Equatorial Guinea', 'Bioko', 'Río Muni');
 SELECT join_country('Georgia', 'Georgia', 'Adjara');
 SELECT join_country('Guernsey', 'Guernsey', 'Alderney', 'Herm', 'Sark');
 SELECT join_country('India', 'India', 'Siachen Glacier');
 SELECT join_country('Iraq', 'Iraq', 'Iraqi Kurdistan');
+SELECT join_country('Palmyra & Jarvis Islands', 'Palmyra Atoll', 'Jarvis Island', 'Kingman Reef'); -- Kingman Reef removed as DXCC entity in 2016
 SELECT join_country('Ogasawara', 'Bonin Islands', 'Volcano Islands'); -- Japanese islands
-SELECT join_country('Japan', 'Japan');
-SELECT join_country('Juan de Nova & Europa', 'Juan De Nova Island', 'Europa Island');
+SELECT join_sovereignt('Japan', 'Japan');
+SELECT join_country('Juan de Nova & Europa', 'Juan De Nova Island', 'Europa Island', 'Bassas da India'); -- unclean of Bassas da India belongs here
 SELECT join_country('New Zealand', 'North Island', 'South Island');
 SELECT join_country('DPR of Korea', 'North Korea', 'Korean DMZ (north)');
 SELECT join_country('Kazakhstan', 'Kazakhstan', 'Baikonur');
 SELECT join_country('Republic of Korea','South Korea', 'Baengnyeongdo', 'Dokdo', 'Jejudo', 'Ulleungdo', 'Korean DMZ (south)');
 SELECT join_country('Palestine', 'Gaza', 'West Bank');
-/* TODO: split San Andres from Columbia */
-SELECT join_country('San Andres & Providencia', 'Serranilla Bank', 'Bajo Nuevo Bank');
-SELECT join_country('Sao Tome & Principe', 'São Tomé and Principe');
+SELECT join_country('Papua New Guinea', 'Papua New Guinea', 'Bougainville'); -- Bougainville is an autonomous province without assigned prefix
+SELECT join_sovereignt('Sao Tome & Principe', 'São Tomé and Principe');
 SELECT join_country('Somalia', 'Somalia' /*, 'Somaliland'*/);
 SELECT join_country('Syria', 'Syria', 'UNDOF Zone');
 SELECT join_country('Serbia', 'Serbia', 'Vojvodina');
@@ -153,24 +154,41 @@ UPDATE map_import SET country = 'Asiatic Turkey' WHERE country = 'Turkey';
 -- Islands
 SELECT split_country('American Samoa', 'Swains Island', ST_Locator('AH48'));
 SELECT split_country('Antarctica', 'South Shetland Islands', ST_SetSRID('POLYGON((-63 -64,-52 -61,-54 -60,-64 -63,-63 -64))'::geometry, 4326));
+SELECT split_country('Australia', 'Lord Howe Island', ST_Locator('QF98'));
+SELECT split_country('Brazil', 'St. Peter & St. Paul', ST_Locator('HJ50'));
+SELECT split_country('Brazil', 'Fernando de Noronha', ST_SetSRID('POLYGON((-33 -4,-32 -4,-32 -3,-33 -3,-33 -4))'::geometry, 4326));
 SELECT split_country('Brazil', 'Trindade & Martim Vaz', ST_Locator('HG59'));
 SELECT split_country('Canada', 'Sable Island', ST_Locator('GN03'));
+SELECT split_country('Caribbean Netherlands', 'Saba & St. Eustatius', ST_Locator('FK87'));
+UPDATE map_import SET country = 'Bonaire' WHERE country = 'Caribbean Netherlands';
 SELECT split_country('Colombia', 'Malpelo Island', ST_Locator('EJ'));
+SELECT split_country('Colombia', 'San Andres & Providencia', ST_Collect(ST_Locator('EK92'), ST_Locator('EK93')));
+SELECT join_country('San Andres & Providencia', 'San Andres & Providencia', 'Serranilla Bank', 'Bajo Nuevo Bank');
 SELECT split_country('Cook Islands', 'South Cook Islands', ST_SetSRID('POLYGON((-162 -17,-162 -24,-154 -24,-154 -17,-162 -17))'::geometry, 4326));
 UPDATE map_import SET country = 'North Cook Islands' WHERE country = 'Cook Islands';
+SELECT split_country('Costa Rica', 'Cocos Island', ST_Locator('EJ65'));
 SELECT split_country('Fiji', 'Rotuma Island', ST_Locator('RH87'));
+SELECT split_country('Fiji', 'Conway Reef', ST_Locator('RG78'));
+SELECT split_country('French Polynesia', 'Austral Islands', ST_SetSRID('POLYGON((-141 -27,-152 -18,-157 -23,-143 -31,-141 -27))'::geometry, 4326));
+SELECT split_country('French Polynesia', 'Marquesas Islands', ST_SetSRID('POLYGON((-145 -12,-130 -12,-130 -5,-145 -5,-145 -12))'::geometry, 4326));
 SELECT split_country('Fr. South Antarctic Lands', 'Amsterdam & St. Paul Is.', ST_Locator('MF'));
 SELECT split_country('Fr. South Antarctic Lands', 'Crozet Island', ST_Locator('LE'));
 UPDATE map_import SET country = 'Kerguelen Islands' WHERE country = 'Fr. South Antarctic Lands';
+SELECT split_country('Hawaii', 'Kure Island', ST_Locator('AL08'));
+SELECT split_country('Isla Sala y Gomez', 'Juan Fernandez Islands', ST_Collect(ST_Locator('EF96'), ST_Locator('FF06')));
+UPDATE map_import SET country = 'San Felix & San Ambrosio' WHERE country = 'Isla Sala y Gomez';
+SELECT split_country('Japan', 'Minami Torishima', ST_Locator('QL64'));
 SELECT split_country('Kiribati', 'Banaba Island', ST_Locator('RI49'));
 SELECT split_country('Kiribati', 'Western Kiribati', ST_Collect(ST_Locator('RI'), ST_Locator('RJ')));
 SELECT split_country('Kiribati', 'Central Kiribati', ST_Locator('AI'));
 UPDATE map_import SET country = 'Eastern Kiribati' WHERE country = 'Kiribati';
-SELECT split_country('Mauritius', 'Agalega & St. Brandon', ST_Locator('LH93')); -- St. Brandon is not present in NE
+SELECT split_country('Mauritius', 'Agalega & St. Brandon', ST_Collect(ST_Locator('LH89'), ST_Locator('LH93'))); -- St. Brandon is not present in NE
 SELECT split_country('Mauritius', 'Rodriguez Island', ST_Locator('MH10'));
 SELECT split_country('Mexico', 'Revillagigedo', ST_Collect(ST_Collect(ST_Locator('DK28'), ST_Locator('DK48')), ST_Locator('DK49'))); -- Roca Partida is not present in NE
 SELECT split_country('Pitcairn Island', 'Ducie Island', ST_Locator('CG75'));
 SELECT split_country('Scotland', 'Shetland Islands', ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80')));
+SELECT split_country('Solomon Islands', 'Temotu Province', ST_SetSRID('POLYGON((164 -13,171 -13,171 -8,164 -8,164 -13))'::geometry, 4326));
+SELECT split_country('Svalbard', 'Bear Island', ST_Locator('JQ94'));
 SELECT split_country('Venezuela', 'Aves Island', ST_Locator('FK85'));
 
 /*
@@ -181,8 +199,10 @@ SELECT split_country('Venezuela', 'Aves Island', ST_Locator('FK85'));
  * Not present in Natural Earth:
  * Chesterfield Islands (QH90)
  * Desecheo Island (FK68GJ)
+ * Market Reef (JP90NH)
  * Mellish Reef (QH72)
  * Pratas Island
+ * St. Paul Island (FN97WE)
  * Willis Island (QH43XR)
  */
 
@@ -193,7 +213,9 @@ UPDATE country c SET geom = m.geom
 
 CLUSTER country USING country_pkey;
 
+/* -- show entries not associated
 SELECT c.country, m.*
   FROM country c FULL JOIN map_import m ON c.country = m.country
   WHERE c.country IS NULL OR m.country IS NULL
   ORDER BY COALESCE(c.country, m.country);
+*/
