@@ -41,6 +41,7 @@ WITH rename (rename_to, rename_from) AS (VALUES
   ('Mariana Islands', 'N. Mariana Islands'),
   ('Midway Island', 'Midway Islands'),
   ('Northern Ireland', 'N. Ireland'),
+  ('N.Z. Subantarctic Is.', 'N.Z. SubAntarctic Islands'),
   ('Peter 1 Island', 'Peter I Island'),
   ('Pitcairn Island', 'Pitcairn Islands'),
   ('Pr. Edward & Marion Is.', 'Prince Edward Islands'),
@@ -150,24 +151,39 @@ SELECT split_country('Turkey', 'European Turkey', ST_Collect(ST_Locator('KN20'),
 UPDATE map_import SET country = 'Asiatic Turkey' WHERE country = 'Turkey';
 
 -- Islands
+SELECT split_country('American Samoa', 'Swains Island', ST_Locator('AH48'));
+SELECT split_country('Antarctica', 'South Shetland Islands', ST_SetSRID('POLYGON((-63 -64,-52 -61,-54 -60,-64 -63,-63 -64))'::geometry, 4326));
+SELECT split_country('Brazil', 'Trindade & Martim Vaz', ST_Locator('HG59'));
+SELECT split_country('Canada', 'Sable Island', ST_Locator('GN03'));
 SELECT split_country('Colombia', 'Malpelo Island', ST_Locator('EJ'));
+SELECT split_country('Cook Islands', 'South Cook Islands', ST_SetSRID('POLYGON((-162 -17,-162 -24,-154 -24,-154 -17,-162 -17))'::geometry, 4326));
+UPDATE map_import SET country = 'North Cook Islands' WHERE country = 'Cook Islands';
 SELECT split_country('Fiji', 'Rotuma Island', ST_Locator('RH87'));
 SELECT split_country('Fr. South Antarctic Lands', 'Amsterdam & St. Paul Is.', ST_Locator('MF'));
 SELECT split_country('Fr. South Antarctic Lands', 'Crozet Island', ST_Locator('LE'));
 UPDATE map_import SET country = 'Kerguelen Islands' WHERE country = 'Fr. South Antarctic Lands';
-SELECT split_country('Kiribati', 'Western Kiribati', ST_Collect(ST_Locator('RI'), ST_Locator('RJ'))); -- TODO: the islands in the middle might belong to Western Kiribati as well
+SELECT split_country('Kiribati', 'Banaba Island', ST_Locator('RI49'));
+SELECT split_country('Kiribati', 'Western Kiribati', ST_Collect(ST_Locator('RI'), ST_Locator('RJ')));
+SELECT split_country('Kiribati', 'Central Kiribati', ST_Locator('AI'));
 UPDATE map_import SET country = 'Eastern Kiribati' WHERE country = 'Kiribati';
 SELECT split_country('Mauritius', 'Agalega & St. Brandon', ST_Locator('LH93')); -- St. Brandon is not present in NE
 SELECT split_country('Mauritius', 'Rodriguez Island', ST_Locator('MH10'));
 SELECT split_country('Mexico', 'Revillagigedo', ST_Collect(ST_Collect(ST_Locator('DK28'), ST_Locator('DK48')), ST_Locator('DK49'))); -- Roca Partida is not present in NE
+SELECT split_country('Pitcairn Island', 'Ducie Island', ST_Locator('CG75'));
 SELECT split_country('Scotland', 'Shetland Islands', ST_Collect(ST_Collect(ST_Locator('IO99'), ST_Locator('IP90')), ST_Locator('IP80')));
+SELECT split_country('Venezuela', 'Aves Island', ST_Locator('FK85'));
 
 /*
  * Not present in cty.csv:
- * Mellish Reef (QH72)
  * N. Cyprus
- * Pratas Island
  * Somaliland
+ *
+ * Not present in Natural Earth:
+ * Chesterfield Islands (QH90)
+ * Desecheo Island (FK68GJ)
+ * Mellish Reef (QH72)
+ * Pratas Island
+ * Willis Island (QH43XR)
  */
 
 UPDATE country c SET geom = m.geom
