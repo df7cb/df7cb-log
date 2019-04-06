@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import os
 import pyqso.adif
 import psycopg2
 import psycopg2.extras
@@ -30,3 +31,6 @@ cur.execute("""SELECT qrg::text AS "FREQ",
 records = cur.fetchall()
 adif = pyqso.adif.ADIF()
 adif.write(records, 'df7cb-%s.adif' % year)
+
+# Remove timestamp from header to make output reproducible
+os.system("sed -i -e 's/Generated on .*\\. //' df7cb-%s.adif" % year)
