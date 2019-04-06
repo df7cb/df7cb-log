@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -eux
+
+YEAR=$(date +%Y)
+
+git pull --ff-only
+
+( cd wsjtx; ./import )
+( cd sql; ./dump )
+( cd lotw; ./export-adif $YEAR; ./tqsl-upload df7cb-$YEAR.adif )
+
+git add -u
+git commit -m "Log upload"
+git push
