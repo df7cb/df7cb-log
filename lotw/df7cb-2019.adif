@@ -1,4 +1,4 @@
-Amateur radio log file. Contains 1635 record(s).
+Amateur radio log file. Contains 1658 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -14929,6 +14929,16 @@ Amateur radio log file. Contains 1635 record(s).
 <rst_sent:7>599 021
 <rst_rcvd:5>599 F
 <eor>
+<call:5>AM70S
+<qso_date:8>20190406
+<time_on:4>1635
+<freq:5>7.003
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>599
+<rst_rcvd:3>599
+<eor>
 <call:6>SP2KJH
 <qso_date:8>20190406
 <time_on:4>1638
@@ -16732,6 +16742,16 @@ Amateur radio log file. Contains 1635 record(s).
 <rst_sent:6>599 28
 <rst_rcvd:6>599 29
 <eor>
+<call:4>TM4G
+<qso_date:8>20190414
+<time_on:4>1743
+<freq:5>7.012
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:3>599
+<rst_rcvd:3>599
+<eor>
 <call:5>YL2TD
 <qso_date:8>20190414
 <time_on:4>1745
@@ -17431,4 +17451,214 @@ Amateur radio log file. Contains 1635 record(s).
 <tx_pwr:3>100
 <rst_sent:6>599 28
 <rst_rcvd:6>599 29
+<eor>
+<call:5>OK1VK
+<qso_date:8>20190415
+<time_on:4>1632
+<freq:6>7.0369
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:7>599 005
+<eor>
+<call:4>SM9X
+<qso_date:8>20190415
+<time_on:4>1634
+<freq:6>7.0358
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:7>599 009
+<eor>
+<call:4>SM5S
+<qso_date:8>20190415
+<time_on:4>1635
+<freq:6>7.0347
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:7>599 004
+<eor>
+<call:6>HB9BXE
+<qso_date:8>20190415
+<time_on:4>1636
+<freq:6>7.0343
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:7>599 016
+<eor>
+<call:6>OK1DOR
+<qso_date:8>20190415
+<time_on:4>1639
+<freq:6>7.0338
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:7>599 011
+<eor>
+<call:5>OM3PA
+<qso_date:8>20190415
+<time_on:4>1641
+<freq:6>7.0312
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 006
+<rst_rcvd:7>599 020
+<eor>
+<call:6>SM5IMO
+<qso_date:8>20190415
+<time_on:4>1643
+<freq:6>7.0295
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:7>599 022
+<eor>
+<call:4>SD6F
+<qso_date:8>20190415
+<time_on:4>1645
+<freq:6>7.0291
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:7>599 003
+<eor>
+<call:4>9A7R
+<qso_date:8>20190415
+<time_on:4>1646
+<freq:6>7.0284
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 009
+<rst_rcvd:7>599 018
+<eor>
+<call:5>OK2EA
+<qso_date:8>20190415
+<time_on:4>1647
+<freq:5>7.028
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:7>599 021
+<eor>
+<call:5>OK1KT
+<qso_date:8>20190415
+<time_on:4>1649
+<freq:6>7.0274
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:7>599 017
+<eor>
+<call:4>SN1A
+<qso_date:8>20190415
+<time_on:4>1650
+<freq:5>7.025
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:7>599 026
+<eor>
+<call:5>UT5IZ
+<qso_date:8>20190415
+<time_on:4>1651
+<freq:6>7.0244
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 013
+<rst_rcvd:7>599 016
+<eor>
+<call:6>OK2BFN
+<qso_date:8>20190415
+<time_on:4>1653
+<freq:6>7.0239
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 014
+<rst_rcvd:7>599 021
+<eor>
+<call:5>DK2FG
+<qso_date:8>20190415
+<time_on:4>1658
+<freq:5>7.039
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 015
+<rst_rcvd:7>599 038
+<eor>
+<call:6>OK1FMJ
+<qso_date:8>20190415
+<time_on:4>1700
+<freq:6>7.0383
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 016
+<rst_rcvd:7>599 016
+<eor>
+<call:4>EU8F
+<qso_date:8>20190415
+<time_on:4>1704
+<freq:6>7.0369
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 017
+<rst_rcvd:7>599 042
+<eor>
+<call:6>OK2NAJ
+<qso_date:8>20190415
+<time_on:4>1705
+<freq:6>7.0347
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 018
+<rst_rcvd:7>599 040
+<eor>
+<call:6>SP4DNX
+<qso_date:8>20190415
+<time_on:4>1710
+<freq:6>7.0281
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 019
+<rst_rcvd:7>599 041
+<eor>
+<call:6>OK2SLS
+<qso_date:8>20190415
+<time_on:4>1713
+<freq:6>7.0348
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 020
+<rst_rcvd:7>599 022
+<eor>
+<call:6>OK1FMG
+<qso_date:8>20190415
+<time_on:4>1718
+<freq:6>7.0293
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 021
+<rst_rcvd:7>599 008
 <eor>
