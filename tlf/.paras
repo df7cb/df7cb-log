@@ -3,7 +3,7 @@ DF7CB
 # Messages  F1...F12 ---------------------
 TEST DE % K
 @ DE %
-5NN28
+@ 5NN#
 TU 
 @
 %
@@ -14,9 +14,9 @@ QRZ?
 PSE K
 TEST % %
 # TU message S&P mode---------------------
-TU 5NN28
+TU 5NN#
 # TU  message CQ mode---------------------
-
+TU % 
 # Digi Messages  F1...F12 ---------------------
 |TEST DE % K |@ DE % |@ 5NN# |TU  |@ |% |@ SRI QSO B4 GL |AGN |? |QRZ? |PSE K |TEST % % # TU message S&P mode---------------------
 |TU UR 5NN # # TU  message CQ mode---------------------
@@ -27,4 +27,4 @@ qso.log
 # Contest--------------------
 contest
 # Parameters--don't change----
-LMDNCFS::C
+SMDNCFS3:C

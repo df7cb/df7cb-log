@@ -1,5 +1,5 @@
 RULES=contest
-ITUMULT
+#ITUMULT
 EDITOR=vi
 CALL=DF7CB
 TIME_OFFSET=0
@@ -45,7 +45,7 @@ SHOW_FREQUENCY
 #################################
 #
 #CLUSTER
-BANDMAP=S,900  # skipdupes, 900s livetime
+BANDMAP=S,3600  # skipdupes, livetime
 #FILTER
 #
 SCOREWINDOW
