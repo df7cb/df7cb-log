@@ -1,0 +1,89 @@
+RULES=contest
+ITUMULT
+EDITOR=vi
+CALL=DF7CB
+TIME_OFFSET=0
+TIME_MASTER
+NETKEYER
+NETKEYERPORT=6789
+NETKEYERHOST=127.0.0.1
+#---speed (6 ... 60 wpm)
+CWSPEED=30
+#---weight (-5 ... 5 ms)
+WEIGHT=1
+#---cq delay (in 0,5 s)
+CQDELAY=10
+#---txdelay (ms)
+TXDELAY=2
+#---sidetone (200...800, 0 = mute)
+CWTONE=800
+#################################
+#                               #
+#  RADIO CONTROL                #
+# (comment out if not present)  #
+# Rigmodel = Hamlib index, here #
+#           for ten tec OMNI VI #
+#################################
+#
+RADIO_CONTROL
+RIGMODEL=2
+#RIGSPEED=19200
+RIGPORT=localhost
+#RIGPORT=/dev/ttyUSB2
+#RIGPTT
+#
+#SSBMODE
+#
+#RIT_CLEAR
+#
+SHOW_FREQUENCY
+#
+#################################
+#                               #
+#  INFORMATION WINDOWS          #
+#                               #
+#################################
+#
+#CLUSTER
+BANDMAP=S,900  # skipdupes, 900s livetime
+#FILTER
+#
+SCOREWINDOW
+#
+CHECKWINDOW
+#################################
+#                               #
+#  CHECK PARTIAL FUNCTION       #
+#                               #
+#################################
+# 
+PARTIALS
+#USEPARTIALS
+#
+#################################
+#                               #
+#  CONDX (info for muf calc.)   #
+#                               #
+#################################
+#
+SUNSPOTS=30
+SFI=100
+#
+#################################
+#                               #
+#     Misc commands             #
+#                               #
+#################################
+# No automatic 'qso before msg'
+NOB4
+#
+# No automatic cq
+#NOAUTOCQ
+#
+# Left/right arrows don't change band...
+#NO_BANDSWITCH_ARROWKEYS
+#
+# Marker file for Xplanet
+#MARKERS=tlfmarkers
+#
+#############END#################
