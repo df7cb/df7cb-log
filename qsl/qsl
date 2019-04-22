@@ -1,0 +1,119 @@
+#!/usr/bin/python3
+
+import psycopg2
+import psycopg2.extras
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import mm
+from reportlab.platypus import Table, TableStyle
+import sys
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+def qsl(c, call):
+    # QSO table
+    cur.execute("""SELECT
+            regexp_replace(call, '0', 'Ø', 'g') AS call,
+            regexp_replace(date_trunc('minute', start::timestamp)::text, ':00$', '') AS start,
+            round(qrg, 3) || ' MHz' AS qrg,
+            mode,
+            rsttx, rstrx,
+            mytrx || ', ' || mypwr || ' W, ' || myant AS mystn,
+            CASE WHEN qslrx = 'J' THEN 'QSL rcvd, tnx!'
+                 WHEN qslrx IN ('N', 'W') THEN 'Pse QSL'
+                 ELSE qsltx || ' ' || qslrx
+            END AS qsl
+            FROM log WHERE call = %s
+            ORDER BY start, call""", (call,))
+
+    qsos = [['Confirming our QSO\nDate',
+             'Frequency',
+             'Mode',
+             'RST\nsent', 'RST\nrcvd',
+             'My Trx, Power, Ant',
+             'QSL',
+            ]]
+
+    call_formatted = ''
+    for qso in cur.fetchall():
+        call_formatted = qso['call']
+        qsos.append([qso['start'], qso['qrg'], qso['mode'],
+                     qso['rsttx'], qso['rstrx'],
+                     qso['mystn'],
+                     qso['qsl'],
+                    ])
+
+    t = Table(qsos)
+    t.setStyle(TableStyle([
+        ('LEADING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 0),
+        ('SIZE', (0, 0), (-1, 0), 6),
+        ('SIZE', (0, 1), (-1, -1), 9),
+      ]))
+
+    w,h = t.wrap(100*mm, 30*mm)
+    t.drawOn(c, 0*mm, 10*mm)
+
+    # picture
+    height = 60*mm
+    width = height * 768/996 # keep aspect ratio
+    c.drawImage('traarer_muehle.png', 10*mm, 28*mm, width=width, height=height)
+    c.saveState()
+    c.setFont("Helvetica", 5)
+    c.rotate(90)
+    c.drawString(27*mm, -3*mm, "Picture (C) Julia Berg")
+    c.restoreState()
+
+    # recipient
+    c.rect(70*mm, 76*mm, 67*mm, 11*mm)
+    c.setFont("Helvetica", 14)
+    c.drawString(71.3*mm, 82.5*mm, "to")
+    c.setFont("Helvetica", 33)
+    c.drawString(78*mm, 77.5*mm, call_formatted)
+
+    # myself
+    c.setFont("Helvetica", 40)
+    c.drawString(69*mm, 63*mm, "DF7CB")
+
+    c.setFont("Helvetica", 14)
+    c.drawString(70*mm, 57*mm, "Christoph Berg")
+
+    c.setFont("Helvetica", 10)
+    text = c.beginText()
+    text.setTextOrigin(70*mm, 51*mm)
+    text.textLines("""
+        Born in 1977, Radio Amateur since 1994
+        Debian and PostgreSQL Developer
+        Open Source practitioner, Bridge player
+        """)
+    c.drawText(text)
+
+    text = c.beginText()
+    text.setTextOrigin(70*mm, 37*mm)
+    text.textLines("""
+        Rather Str. 76a
+        47802 Krefeld-Traar
+        Germany
+        JO31HI
+        """)
+    c.drawText(text)
+
+    text = c.beginText()
+    text.setTextOrigin(110*mm, 37*mm)
+    text.textLines("""
+        cb@df7cb.de
+        www.df7cb.de
+        Twitter @df7cb
+        DOK QØ2
+        """)
+    c.drawText(text)
+
+call = sys.argv[1]
+c = canvas.Canvas("qsl.pdf", pagesize=(140*mm, 90*mm))
+c.setTitle("DF7CB QSL for %s" % call)
+qsl(c, call)
+
+c.showPage()
+c.save()
+
