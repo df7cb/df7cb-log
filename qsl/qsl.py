@@ -2,10 +2,8 @@
 
 import psycopg2
 import psycopg2.extras
-from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
 from reportlab.platypus import Table, TableStyle
-import sys
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
@@ -109,11 +107,14 @@ def qsl(c, call):
         """)
     c.drawText(text)
 
-call = sys.argv[1]
-c = canvas.Canvas("qsl.pdf", pagesize=(140*mm, 90*mm))
-c.setTitle("DF7CB QSL for %s" % call)
-qsl(c, call)
+if __name__ == "__main__":
+    import sys
+    from reportlab.pdfgen import canvas
 
-c.showPage()
-c.save()
+    call = sys.argv[1]
+    c = canvas.Canvas("qsl.pdf", pagesize=(140*mm, 90*mm))
+    c.setTitle("DF7CB QSL for %s" % call)
+    qsl(c, call)
 
+    c.showPage()
+    c.save()
