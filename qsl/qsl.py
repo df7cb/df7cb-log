@@ -4,9 +4,16 @@ import psycopg2
 import psycopg2.extras
 from reportlab.lib.units import mm
 from reportlab.platypus import Table, TableStyle
+from reportlab.graphics.barcode.qr import QrCodeWidget
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics import renderPDF
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+mycall = "DF7CB"
+(qslwidth, qslheight) = (140*mm, 90*mm)
+qslmargin = 3*mm
 
 def qsl(c, call):
     # QSO table
@@ -16,6 +23,7 @@ def qsl(c, call):
             round(qrg, 3) || ' MHz' AS qrg,
             mode,
             rsttx, rstrx,
+            mycall,
             mytrx || ', ' || mypwr || ' W, ' || myant AS mystn,
             CASE WHEN qslrx = 'J' THEN 'QSL rcvd, tnx!'
                  WHEN qslrx IN ('N', 'W') THEN 'Pse QSL'
@@ -34,6 +42,7 @@ def qsl(c, call):
 
     call_formatted = ''
     for qso in cur.fetchall():
+        mycall = qso['mycall']
         call_formatted = qso['call']
         qsos.append([qso['start'], qso['qrg'], qso['mode'],
                      qso['rsttx'], qso['rstrx'],
@@ -64,15 +73,24 @@ def qsl(c, call):
     c.restoreState()
 
     # recipient
-    c.rect(70*mm, 76*mm, 67*mm, 11*mm)
+    qrsize = 11*mm
+    c.rect(70*mm, 76*mm, qslwidth - 2*qslmargin - 70*mm - qrsize, 11*mm)
     c.setFont("Helvetica", 14)
     c.drawString(71.3*mm, 82.5*mm, "to")
     c.setFont("Helvetica", 33)
     c.drawString(78*mm, 77.5*mm, call_formatted)
 
+    qrtext = "TO:%s\nVIA:%s\nFRM:%s" % (call, "", mycall)
+    qrw = QrCodeWidget(qrtext, barBorder=0, barLevel='L')
+    b = qrw.getBounds()
+    (w, h) = (b[2] - b[0], b[3] - b[1])
+    d = Drawing(qrsize, qrsize, transform=[qrsize/w,0,0,qrsize/h,0,0])
+    d.add(qrw)
+    renderPDF.draw(d, c, qslwidth - qslmargin - qrsize, qslheight - qslmargin - qrsize)
+
     # myself
     c.setFont("Helvetica", 40)
-    c.drawString(69*mm, 63*mm, "DF7CB")
+    c.drawString(69*mm, 63*mm, mycall)
 
     c.setFont("Helvetica", 14)
     c.drawString(70*mm, 57*mm, "Christoph Berg")
@@ -112,8 +130,8 @@ if __name__ == "__main__":
     from reportlab.pdfgen import canvas
 
     call = sys.argv[1]
-    c = canvas.Canvas("qsl.pdf", pagesize=(140*mm, 90*mm))
-    c.setTitle("DF7CB QSL for %s" % call)
+    c = canvas.Canvas("qsl.pdf", pagesize=(qslwidth, qslheight))
+    c.setTitle("%s QSL for %s" % (mycall, call))
     qsl(c, call)
 
     c.showPage()
