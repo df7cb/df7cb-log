@@ -7,7 +7,7 @@ from reportlab.lib.units import mm
 
 offset = 8.5*mm
 
-qsl.cur.execute("SELECT call FROM log WHERE qsltx = 'W' GROUP BY cty, call ORDER BY cty, call")
+qsl.cur.execute("SELECT call FROM log WHERE qsltx = 'R' GROUP BY cty, call ORDER BY cty, call")
 
 c = canvas.Canvas("qsl.pdf", pagesize=landscape(A4))
 c.setTitle("QSLs to print")

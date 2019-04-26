@@ -13,12 +13,12 @@ for line in sys.stdin:
     m = re.search("^[0-9]+$", l)
     if m:
         qsl = qsls[int(l)]
-        if qsl['qsltx'] == 'J':
-            cur.execute("""UPDATE log SET qslrx = 'J' WHERE (start, call) = (%s, %s)""",
+        if qsl['qsltx'] == 'Y':
+            cur.execute("""UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
                     (qsl['start'], qsl['call']))
             conn.commit()
-        if qsl['qsltx'] in ('W', 'N'):
-            cur.execute("""UPDATE log SET qsltx = 'W', qslrx = 'J' WHERE (start, call) = (%s, %s)""",
+        if qsl['qsltx'] in ('R', 'N'):
+            cur.execute("""UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
                     (qsl['start'], qsl['call']))
             conn.commit()
         else:

@@ -42,6 +42,9 @@ END$$;
 
 CREATE CAST (numeric AS band) WITH FUNCTION band AS ASSIGNMENT;
 
+CREATE DOMAIN qsl AS char(1)
+    CONSTRAINT valid_qsl_request CHECK (VALUE IN ('Y', 'N', 'R'));
+
 CREATE TABLE log (
     start timestamp with time zone NOT NULL,
     stop timestamp with time zone,

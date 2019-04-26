@@ -38,8 +38,8 @@ def qsl(c, call):
                 nullif(myloc, 'JO31HI')
               ), '')
             ) AS mystn,
-            CASE WHEN qslrx = 'J' THEN 'QSL rcvd, tnx!'
-                 WHEN qslrx IN ('N', 'W') THEN 'Pse QSL'
+            CASE WHEN qslrx = 'Y' THEN 'QSL rcvd, tnx!'
+                 WHEN qslrx IN ('N', 'R') THEN 'Pse QSL'
                  ELSE qsltx || ' ' || qslrx
             END AS qsl,
             CASE WHEN qslrx = 'J' THEN 'TNX' ELSE 'PSE' END AS qsl_rcvd
