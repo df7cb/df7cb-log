@@ -13,7 +13,7 @@ cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 mycall = "DF7CB"
 (qslwidth, qslheight) = (140*mm, 90*mm)
-qslmargin = 3*mm
+qslmargin = 2*mm
 
 def qsl(c, call):
     # QSO table
@@ -70,7 +70,7 @@ def qsl(c, call):
     w, h = t.wrap(100*mm, 30*mm)
     t.drawOn(c, 0*mm, 29*mm - h)
 
-    qrsize = 28*mm
+    qrsize = 27*mm
     qrw = QrCodeWidget(adif, barBorder=0, barLevel='L')
     b = qrw.getBounds()
     (w, h) = (b[2] - b[0], b[3] - b[1])
@@ -90,11 +90,11 @@ def qsl(c, call):
 
     # recipient
     qrsize = 11*mm
-    c.rect(70*mm, 76*mm, qslwidth - 2*qslmargin - 70*mm - qrsize, 11*mm)
+    c.rect(70*mm, 77*mm, qslwidth - 2*qslmargin - 70*mm - qrsize, 11*mm)
     c.setFont("Helvetica", 14)
-    c.drawString(71.3*mm, 82.5*mm, "to")
-    c.setFont("Helvetica", 33)
-    c.drawString(78*mm, 77.5*mm, call_formatted)
+    c.drawString(71.3*mm, 79*mm, "to")
+    c.setFont("Helvetica", 28)
+    c.drawString(77*mm, 79*mm, call_formatted)
 
     qrtext = "TO:%s\nVIA:%s\nFRM:%s" % (call, "", mycall)
     qrw = QrCodeWidget(qrtext, barBorder=0, barLevel='L')
@@ -106,7 +106,7 @@ def qsl(c, call):
 
     # myself
     c.setFont("Helvetica", 33)
-    c.drawString(69.5*mm, 65*mm, mycall)
+    c.drawString(69.5*mm, 66*mm, mycall)
 
     c.setFont("Helvetica", 14)
     c.drawString(70*mm, 60*mm, "Christoph Berg")

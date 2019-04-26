@@ -1,0 +1,46 @@
+#!/usr/bin/python3
+
+import qsl
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import landscape, A4
+from reportlab.lib.units import mm
+
+offset = 8.5*mm
+
+qsl.cur.execute("SELECT call FROM log WHERE qsltx = 'W' GROUP BY cty, call ORDER BY cty, call")
+
+c = canvas.Canvas("qsl.pdf", pagesize=landscape(A4))
+c.setTitle("QSLs to print")
+
+def cross(c, x, y):
+    size = 2*mm
+    c.line(x-size, y, x+size, y)
+    c.line(x, y-size, x, y+size)
+
+def finish_page(c):
+    c.setLineWidth(.1*mm)
+    for x in 0, qsl.qslwidth, 2*qsl.qslwidth:
+        for y in 0, qsl.qslheight, 2*qsl.qslheight:
+            cross(c, offset+x, offset+y)
+    c.showPage()
+
+count = 0
+for call in qsl.cur.fetchall():
+    c.saveState()
+    c.translate(offset, offset)
+    if count % 4 == 0:
+        c.translate(0, qsl.qslheight)
+    elif count % 4 == 1:
+        c.translate(qsl.qslwidth, qsl.qslheight)
+    elif count % 4 == 3:
+        c.translate(qsl.qslwidth, 0)
+    qsl.qsl(c, call['call'])
+    c.restoreState()
+    count += 1
+    if count == 4:
+        finish_page(c)
+        count = 0
+
+if count != 0:
+    finish_page(c)
+c.save()
