@@ -26,7 +26,18 @@ def qsl(c, call):
             mode,
             rsttx, rstrx,
             mycall,
-            mytrx || ', ' || mypwr || ' W, ' || myant AS mystn,
+            concat_ws(E'\n',
+              nullif(concat_ws(', ',
+                mytrx,
+                mypwr || ' W',
+                myant
+              ), ''),
+              nullif(concat_ws(', ',
+                nullif(mycall, 'DF7CB'),
+                nullif(myqth, 'Krefeld'),
+                nullif(myloc, 'JO31HI')
+              ), '')
+            ) AS mystn,
             CASE WHEN qslrx = 'J' THEN 'QSL rcvd, tnx!'
                  WHEN qslrx IN ('N', 'W') THEN 'Pse QSL'
                  ELSE qsltx || ' ' || qslrx
@@ -38,7 +49,7 @@ def qsl(c, call):
     qsos = [['Confirming our QSO\nDate',
              'Freq', 'Mode',
              'RST\nsent', 'RST\nrcvd',
-             'My Trx, Power, Ant',
+             'My Station\nTrx, Power, Ant',
              'QSL',
             ]]
     adif = "OPERATOR;QSO_DATE;TIME_ON;FREQ;MODE;RST_SENT;QSL_RCVD;"
@@ -60,11 +71,17 @@ def qsl(c, call):
 
     t = Table(qsos)
     t.setStyle(TableStyle([
-        ('LEADING', (0, 0), (-1, -1), 6),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 0),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 0),
-        ('SIZE', (0, 0), (-1, 0), 6),
-        ('SIZE', (0, 1), (-1, -1), 8),
+        # global
+        ('RIGHTPADDING',  (0, 0), (-1, -1), 0),
+        # header
+        ('SIZE',          (0, 0), (-1, 0), 6),
+        ('LEADING',       (0, 0), (-1, 0), 6),
+        # body
+        ('TOPPADDING',    (0, 1), (-1, -1), 0),
+        ('BOTTOMPADDING', (0, 1), (-1, -1), 0),
+        ('SIZE',          (0, 1), (-1, -1), 8),
+        ('LEADING',       (0, 1), (-1, -1), 9),
+        ('VALIGN',        (0, 1), (-1, -1), 'TOP'),
       ]))
 
     w, h = t.wrap(100*mm, 30*mm)
