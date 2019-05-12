@@ -2,4 +2,4 @@
 
 set -eux
 
-tqsl -c DF7CB -l Krefeld-Traar --password=$(cat ~/.priv/tqsl/password) -x -u "$@"
+tqsl -c DF7CB -l Krefeld-Traar --password=$(cat ~/.priv/tqsl/password) -x -u -a compliant "$@"
