@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -eu
+
+LOG="$1"
+PW="$(cat $HOME/.priv/pw/clublog-app-pass)"
+APIKEY="$(cat $HOME/.priv/pw/clublog-api-key)"
+
+curl -s -S \
+  --form email=cb@df7cb.de \
+  --form password=$PW \
+  --form callsign=DF7CB \
+  --form file=@$LOG \
+  --form api=$APIKEY \
+  https://secure.clublog.org/putlogs.php
+
+echo

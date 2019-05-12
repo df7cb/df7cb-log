@@ -19,7 +19,11 @@ git pull --ff-only
 
 ( cd wsjtx; ./import )
 ( cd sql; ./dump )
-( cd lotw; ./export-adif $YEAR; ./tqsl-upload df7cb-$YEAR.adif )
+( cd lotw
+  ./export-adif $YEAR
+  ./tqsl-upload df7cb-$YEAR.adif
+  ./clublog-upload df7cb-$YEAR.adif
+)
 
 if [ "$GIT" ]; then
   git add -u
