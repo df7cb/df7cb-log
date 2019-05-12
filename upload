@@ -1,5 +1,16 @@
 #!/bin/sh
 
+GIT=git
+
+while getopts "n" opt ; do
+  case $opt in
+    n) GIT="" ;;
+    *) exit 5 ;;
+  esac
+done
+# shift away args
+shift $((OPTIND - 1))
+
 set -eux
 
 YEAR=$(date +%Y)
@@ -10,6 +21,8 @@ git pull --ff-only
 ( cd sql; ./dump )
 ( cd lotw; ./export-adif $YEAR; ./tqsl-upload df7cb-$YEAR.adif )
 
-git add -u
-git commit -m "Log upload"
-git push
+if [ "$GIT" ]; then
+  git add -u
+  git commit -m "Log upload"
+  git push
+fi
