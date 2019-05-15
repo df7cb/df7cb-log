@@ -23,6 +23,7 @@ git pull --ff-only
   ./export-adif $YEAR
   ./tqsl-upload df7cb-$YEAR.adif
   ./clublog-upload df7cb-$YEAR.adif
+  ./eqsl-upload df7cb-$YEAR.adif &
 )
 
 if [ "$GIT" ]; then
