@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -eu
+
+LOG="$1"
+PW="$(cat $HOME/.priv/pw/eqsl-pass)"
+
+curl \
+  -u "DF7CB:$PW" \
+  -F Filename=@$LOG \
+  -F EQSL_USER=DF7CB \
+  -F EQSL_PSWD=$PW \
+  http://www.eqsl.cc/qslcard/ImportADIF.cfm
