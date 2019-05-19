@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+LOG="$1"
+PW="$(cat $HOME/.priv/pw/dcl-pass)"
+
+set -x
+
+curl --cookie-jar .dcl-cookies \
+  -F user=DF7CB \
+  -F pass=$PW \
+  -o /dev/null \
+  https://dcl.darc.de/~dcl/public/login.php \
+  --cookie PHPSESSID \
+  -F Datei=@$LOG \
+  -F aktionADIF=uploadADIF \
+  -o /dev/null \
+  https://dcl.darc.de/~dcl/public/job_upload_adif.php
