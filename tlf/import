@@ -7,9 +7,31 @@ CBR="${LOG%.log}.cbr"
 set -eux
 
 ./import-tlf -n "$CONTEST" < $LOG
-echo "Ok?"
-read
+read ok
 ./import-tlf "$CONTEST" < $LOG
 
+# add address and category info, remove decimal part of frequencies
 ./export-cabrillo "$CONTEST" "$CBR"
-sed -i -e '/^QSO:/ s/\.[0-9]* / /' $CBR
+sed -i \
+  -e '/^CALLSIGN:/ a \
+NAME: Christoph Berg\
+EMAIL: cb@df7cb.de\
+ADDRESS: Rather Str. 76a\
+ADDRESS: 47802 Krefeld\
+ADDRESS: Germany\
+CLUB: Rhein Ruhr DX Association' \
+  -e '/^CONTEST:/ a \
+CATEGORY-ASSISTED: NON-ASSISTED\
+CATEGORY-BAND: ALL\
+CATEGORY-MODE: CW\
+CATEGORY-OPERATOR: SINGLE-OP\
+CATEGORY-POWER: LOW\
+CATEGORY-STATION: FIXED\
+CATEGORY-TRANSMITTER: ONE' \
+  -e '/^QSO:/ s/\.[0-9]* / /' \
+  $CBR
+
+# fix missing trailing newline
+echo >> $CBR
+
+git add $CBR
