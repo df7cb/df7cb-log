@@ -1,4 +1,4 @@
-Amateur radio log file. Contains 2842 record(s).
+Amateur radio log file. Contains 2894 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -30044,6 +30044,416 @@ Amateur radio log file. Contains 2842 record(s).
 <rst_rcvd:3>-02
 <gridsquare:4>JO49
 <eor>
+<call:7>RX9CM/P
+<qso_date:8>20190601
+<time_on:4>1750
+<freq:6>14.016
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:7>599 140
+<eor>
+<call:6>SN5T/P
+<qso_date:8>20190601
+<time_on:4>1755
+<freq:7>14.0114
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:7>599 188
+<eor>
+<call:7>IQ1TG/8
+<qso_date:8>20190601
+<time_on:4>1939
+<freq:7>14.0329
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:7>599 279
+<eor>
+<call:8>UA9CDC/P
+<qso_date:8>20190601
+<time_on:4>1941
+<freq:7>14.0301
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:7>599 364
+<eor>
+<call:7>R3KBO/P
+<qso_date:8>20190601
+<time_on:4>1943
+<freq:6>14.029
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:7>599 330
+<eor>
+<call:6>R5RT/P
+<qso_date:8>20190601
+<time_on:4>1949
+<freq:7>14.0138
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 006
+<rst_rcvd:7>599 313
+<eor>
+<call:7>RA1ZZ/3
+<qso_date:8>20190601
+<time_on:4>1950
+<freq:7>14.0113
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:7>599 245
+<eor>
+<call:7>G3UES/P
+<qso_date:8>20190601
+<time_on:4>1954
+<freq:6>7.0389
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:7>599 128
+<eor>
+<call:7>DL0RD/P
+<qso_date:8>20190601
+<time_on:4>1955
+<freq:5>7.038
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 009
+<rst_rcvd:7>599 159
+<eor>
+<call:8>IV3CGJ/P
+<qso_date:8>20190601
+<time_on:4>2002
+<freq:6>7.0334
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:7>599 095
+<eor>
+<call:6>GI5I/P
+<qso_date:8>20190601
+<time_on:4>2004
+<freq:6>7.0326
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:7>599 211
+<eor>
+<call:6>S59T/P
+<qso_date:8>20190601
+<time_on:4>2005
+<freq:6>7.0308
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:7>599 371
+<eor>
+<call:6>S53Q/P
+<qso_date:8>20190601
+<time_on:4>2007
+<freq:6>7.0321
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 013
+<rst_rcvd:7>599 224
+<eor>
+<call:7>DF0TX/P
+<qso_date:8>20190601
+<time_on:4>2011
+<freq:6>7.0317
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 014
+<rst_rcvd:7>599 258
+<eor>
+<call:7>G0FBB/P
+<qso_date:8>20190601
+<time_on:4>2015
+<freq:6>7.0294
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 015
+<rst_rcvd:7>599 212
+<eor>
+<call:6>RC7A/P
+<qso_date:8>20190601
+<time_on:4>2023
+<freq:6>7.0261
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 016
+<rst_rcvd:7>599 430
+<eor>
+<call:8>UA9CDC/P
+<qso_date:8>20190601
+<time_on:4>2029
+<freq:6>7.0249
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 017
+<rst_rcvd:7>599 413
+<eor>
+<call:7>IQ0PG/P
+<qso_date:8>20190601
+<time_on:4>2040
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 018
+<rst_rcvd:7>599 102
+<eor>
+<call:6>RN9T/P
+<qso_date:8>20190601
+<time_on:4>2042
+<freq:6>7.0196
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 019
+<rst_rcvd:7>599 244
+<eor>
+<call:7>DL0MW/P
+<qso_date:8>20190601
+<time_on:4>2048
+<freq:6>7.0185
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 020
+<rst_rcvd:7>599 267
+<eor>
+<call:5>M2A/P
+<qso_date:8>20190601
+<time_on:4>2051
+<freq:6>7.0136
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 021
+<rst_rcvd:7>599 445
+<eor>
+<call:6>DA2A/P
+<qso_date:8>20190601
+<time_on:4>2057
+<freq:6>7.0345
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 022
+<rst_rcvd:7>599 172
+<eor>
+<call:8>GM0ADX/P
+<qso_date:8>20190601
+<time_on:4>2059
+<freq:6>7.0374
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 023
+<rst_rcvd:7>599 166
+<eor>
+<call:6>RW7F/P
+<qso_date:8>20190601
+<time_on:4>2104
+<freq:6>7.0216
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 024
+<rst_rcvd:7>599 463
+<eor>
+<call:6>DL0C/P
+<qso_date:8>20190601
+<time_on:4>2105
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 025
+<rst_rcvd:7>599 275
+<eor>
+<call:8>DL0SEL/P
+<qso_date:8>20190601
+<time_on:4>2107
+<freq:6>3.5353
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 026
+<rst_rcvd:7>599 168
+<eor>
+<call:7>DF0TX/P
+<qso_date:8>20190601
+<time_on:4>2111
+<freq:6>3.5335
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 027
+<rst_rcvd:7>599 313
+<eor>
+<call:6>DP3A/P
+<qso_date:8>20190601
+<time_on:4>2113
+<freq:6>3.5311
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 028
+<rst_rcvd:7>599 295
+<eor>
+<call:7>DK0MN/P
+<qso_date:8>20190602
+<time_on:4>0909
+<freq:4>7.02
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 029
+<rst_rcvd:7>599 875
+<eor>
+<call:7>DL0FA/P
+<qso_date:8>20190602
+<time_on:4>0919
+<freq:6>7.0171
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 030
+<rst_rcvd:7>599 506
+<eor>
+<call:8>IK4CIE/P
+<qso_date:8>20190602
+<time_on:4>0922
+<freq:4>7.01
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 031
+<rst_rcvd:7>599 089
+<eor>
+<call:7>G4FNL/P
+<qso_date:8>20190602
+<time_on:4>0934
+<freq:6>7.0204
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 032
+<rst_rcvd:7>599 961
+<eor>
+<call:7>DL0LA/P
+<qso_date:8>20190602
+<time_on:4>0940
+<freq:5>7.009
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 033
+<rst_rcvd:8>599 1001
+<eor>
+<call:7>DK0TU/P
+<qso_date:8>20190602
+<time_on:4>0947
+<freq:6>7.0193
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 034
+<rst_rcvd:8>599 1058
+<eor>
+<call:6>DM5A/P
+<qso_date:8>20190602
+<time_on:4>1450
+<freq:6>7.0324
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 035
+<rst_rcvd:8>599 1084
+<eor>
+<call:6>DM3Y/P
+<qso_date:8>20190602
+<time_on:4>1453
+<freq:6>7.0218
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 036
+<rst_rcvd:7>599 697
+<eor>
+<call:7>DL0CS/P
+<qso_date:8>20190602
+<time_on:4>1455
+<freq:6>7.0175
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 037
+<rst_rcvd:8>599 1269
+<eor>
+<call:8>GM3BSQ/P
+<qso_date:8>20190602
+<time_on:4>1456
+<freq:6>7.0155
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 038
+<rst_rcvd:8>599 1073
+<eor>
+<call:7>DL0KF/P
+<qso_date:8>20190602
+<time_on:4>1458
+<freq:6>7.0097
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 040
+<rst_rcvd:7>599 860
+<eor>
+<call:7>G3WRR/P
+<qso_date:8>20190602
+<time_on:4>1458
+<freq:6>7.0114
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 039
+<rst_rcvd:7>599 825
+<eor>
+<call:6>G2NF/P
+<qso_date:8>20190602
+<time_on:4>1459
+<freq:6>7.0067
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 041
+<rst_rcvd:8>599 1078
+<eor>
 <call:5>HA4YF
 <qso_date:8>20190602
 <time_on:4>1933
@@ -30109,4 +30519,114 @@ Amateur radio log file. Contains 2842 record(s).
 <rst_sent:3>+02
 <rst_rcvd:3>-05
 <gridsquare:4>JN47
+<eor>
+<call:4>OK5M
+<qso_date:8>20190603
+<time_on:4>1636
+<freq:6>7.0351
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:7>599 008
+<eor>
+<call:4>9A7R
+<qso_date:8>20190603
+<time_on:4>1637
+<freq:5>7.032
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:7>599 011
+<eor>
+<call:4>SD1A
+<qso_date:8>20190603
+<time_on:4>1640
+<freq:4>7.03
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:7>599 017
+<eor>
+<call:5>OK2EA
+<qso_date:8>20190603
+<time_on:4>1643
+<freq:5>7.037
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:7>599 011
+<eor>
+<call:4>OK5E
+<qso_date:8>20190603
+<time_on:4>1644
+<freq:6>7.0364
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:7>599 012
+<eor>
+<call:5>OM3PA
+<qso_date:8>20190603
+<time_on:4>1645
+<freq:6>7.0367
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 006
+<rst_rcvd:7>599 011
+<eor>
+<call:5>HA5MA
+<qso_date:8>20190603
+<time_on:4>1647
+<freq:5>7.036
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:7>599 015
+<eor>
+<call:5>OM5RM
+<qso_date:8>20190603
+<time_on:4>1649
+<freq:5>7.034
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:7>599 022
+<eor>
+<call:4>SN1T
+<qso_date:8>20190603
+<time_on:4>1650
+<freq:5>7.033
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 009
+<rst_rcvd:7>599 023
+<eor>
+<call:6>ES1BVG
+<qso_date:8>20190603
+<time_on:4>1657
+<freq:6>7.0352
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:7>599 025
+<eor>
+<call:4>EU8F
+<qso_date:8>20190603
+<time_on:4>1659
+<freq:6>7.0339
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:7>599 035
 <eor>
