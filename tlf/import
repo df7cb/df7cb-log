@@ -34,4 +34,5 @@ CATEGORY-TRANSMITTER: ONE' \
 # fix missing trailing newline
 echo >> $CBR
 
+vi $CBR
 git add $CBR

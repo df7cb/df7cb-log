@@ -21,8 +21,8 @@ cur.execute("""SELECT qrg AS "FREQ",
         regexp_replace(rstrx, '^599', '599 ') AS "RST_RCVD",
         call AS "CALL"
         FROM log
-        WHERE date_trunc('month', start) = date_trunc('month', current_date)
-        AND comment ~ %s""",
+        WHERE start > now() - '3 days'::interval
+        AND contest ~ %s""",
         (contest,))
 
 # {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}

@@ -26,7 +26,7 @@ for line in sys.stdin:
 
     qrg = Decimal(line[79:87]) / 1000
 
-    sql = "INSERT INTO LOG (start, call, qrg, rsttx, rstrx, comment) " + \
+    sql = "INSERT INTO LOG (start, call, qrg, rsttx, rstrx, contest) " + \
           "VALUES (%s, %s, %s, %s, %s, %s)"
     data = (line[7:22],              # date+time
             line[29:43].rstrip(),    # call
@@ -42,7 +42,7 @@ for line in sys.stdin:
             line[49:52]+line[54:67].rstrip(), # their rst + serial
             #line[54:64].rstrip(),
 
-            args[0]) # comment = contest name
+            args[0]) # contest name
     print (sql % data)
     if not noop:
         cur.execute(sql, data)
