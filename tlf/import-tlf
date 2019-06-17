@@ -35,6 +35,7 @@ for line in sys.stdin:
             # my rst:
             line[44:47]+line[24:27], # my rst + serial (3 digits)
             #line[44:47]+'28',       # my rst + my ITU zone
+            #line[44:47]+'42',       # my rst + my age
             #'JO31',
 
             # their rst:
