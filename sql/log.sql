@@ -60,6 +60,7 @@ CREATE TABLE log (
     qth text,
     loc locator,
     dok text,
+    contest text,
     comment text,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
     mytrx text,
