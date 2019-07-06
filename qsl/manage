@@ -17,7 +17,7 @@ for line in sys.stdin:
             cur.execute("""UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
                     (qsl['start'], qsl['call']))
             conn.commit()
-        if qsl['qsltx'] in ('R', 'N'):
+        elif qsl['qsltx'] in ('R', 'N'):
             cur.execute("""UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
                     (qsl['start'], qsl['call']))
             conn.commit()
