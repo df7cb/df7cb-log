@@ -6,6 +6,7 @@ CONTEST=contest
 LOGFILE=contest.log
 CONTEST_MODE
 CABRILLO=UNIVERSAL
+#ITUMULT
 #
 ##################################
 #                                #
@@ -35,8 +36,9 @@ F10= QRZ?
 F11= PSE K
 F12=TEST % %
 #
-CQ_TU_MSG=TU % 
+CQ_TU_MSG=TU %
 S&P_TU_MSG=TU 5NN #
+#S&P_TU_MSG=TU 5NN28
 #
 #ALT_0=
 #ALT_1=

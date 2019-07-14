@@ -14,13 +14,13 @@ QRZ?
 PSE K
 TEST % %
 # TU message S&P mode---------------------
-TU 5NN #
+TU 5NN28
 # TU  message CQ mode---------------------
-TU % 
+TU %
 # Digi Messages  F1...F12 ---------------------
 |TEST DE % K |@ DE % |@ 5NN# |TU  |@ |% |@ SRI QSO B4 GL |AGN |? |QRZ? |PSE K |TEST % % # TU message S&P mode---------------------
-|TU 5NN # # TU  message CQ mode---------------------
-|TU %  # Info for top status line----------------
+|TU 5NN28 # TU  message CQ mode---------------------
+|TU % # Info for top status line----------------
    1=CQ  2=DE  3=RST 4=73  5=HIS  6=MY  7=B4   8=AGN  9=?  
 # Logfile--------------------
 contest.log
