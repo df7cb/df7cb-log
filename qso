@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rlwrap -S "qso> " --history-file .qso.history --histsize=100 --remember \
+  ./qso.py "$@"
