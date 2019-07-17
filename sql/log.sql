@@ -65,7 +65,7 @@ CREATE TABLE log (
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
     mytrx text,
     mypwr numeric,
-    myqth text DEFAULT 'Krefeld'::text,
+    myqth text,
     myloc text,
     myant text,
     CONSTRAINT start_before_stop CHECK (start <= stop),
@@ -82,6 +82,10 @@ ALTER TABLE log CLUSTER ON log_pkey;
 CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     LANGUAGE plpgsql
     AS $$BEGIN
+
+  IF NEW.myqth IS NULL THEN
+    NEW.myqth := CASE WHEN NEW.start > '2010-01-01' THEN 'Krefeld' ELSE 'Blieskastel' END;
+  END IF;
 
   -- QTH defaults
   IF NEW.myqth = 'Krefeld' THEN
