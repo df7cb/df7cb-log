@@ -50,6 +50,8 @@ for line in sys.stdin:
             qsltx = tok.upper()[0]
             if len(tok) > 1:
                 qslrx = tok.upper()[1]
+        elif tok == "commit":
+            conn.commit()
         else:
             if call:
                 print("Two calls on one line?")
@@ -59,6 +61,7 @@ for line in sys.stdin:
     if time and call:
         args = ("%s %s" % (date, time), call, qrg, mode, rsttx, rstrx, qsltx, qslrx, contest)
         print(insert % args)
+        cur.execute(insert, args)
     elif call:
         cur.execute(select, (call,))
         for rec in cur.fetchall():
