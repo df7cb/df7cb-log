@@ -49,3 +49,13 @@ CREATE OR REPLACE FUNCTION cty(call call)
   AS $$SELECT cty FROM prefix WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
 
 --CREATE CAST (call AS cty) WITH FUNCTION cty AS ASSIGNMENT;
+
+CREATE OR REPLACE FUNCTION cq(call call)
+  RETURNS text
+  LANGUAGE SQL
+  AS $$SELECT lpad(cq::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+
+CREATE OR REPLACE FUNCTION itu(call call)
+  RETURNS text
+  LANGUAGE SQL
+  AS $$SELECT lpad(itu::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
