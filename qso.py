@@ -37,7 +37,7 @@ for line in sys.stdin:
         if re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
             print("Date:", date)
-        elif tok.upper() in ('CW', 'SSB', 'FT8'):
+        elif tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
             mode = tok.upper()
             print("Mode:", mode)
         elif re.search('^\d{1,2}:\d{2}$', tok):
