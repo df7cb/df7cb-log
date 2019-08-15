@@ -85,6 +85,8 @@ for line in sys.stdin:
                 rstrx = '599' + str(info[auto_rst]).zfill(2)
             except KeyError:
                 pass
+        if rstrx is None:
+            rstrx = '599'
         args = ("%s %s" % (date, time), call, qrg, mode, rsttx, rstrx, qsltx, qslrx, contest)
         print(args)
         cur.execute(insert, args)
