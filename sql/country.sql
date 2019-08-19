@@ -41,7 +41,7 @@ INSERT INTO prefix
 CREATE INDEX ON prefix USING gist(prefix);
 
 CREATE DOMAIN call AS text
-	CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+([/-][A-Z0-9]+)*$'::text));
+  CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+(/[A-Z0-9]+)*$'::text));
 
 CREATE OR REPLACE FUNCTION cty(call call)
   RETURNS cty
