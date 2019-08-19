@@ -13,20 +13,20 @@ for line in sys.stdin:
     m = re.search("^[0-9]+$", l)
     if m:
         qsl = qsls[int(l)]
+        args = (qsl['start'], qsl['call'])
         if qsl['qsltx'] == 'Y':
-            cur.execute("""UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
-                    (qsl['start'], qsl['call']))
-            conn.commit()
+            sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
         elif qsl['qsltx'] in ('R', 'N'):
-            cur.execute("""UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)""",
-                    (qsl['start'], qsl['call']))
-            conn.commit()
+            sql = """UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
         else:
             assert(0)
+        print(sql % args)
+        cur.execute(sql, args)
+        conn.commit()
 
     else:
-        cur.execute("""SELECT row_number() over () as n, * FROM log WHERE call ~* %s ORDER BY start""", (l,))
-        qsls = ['']
+        cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call ~* %s ORDER BY start""", (l,))
+        qsls = [''] # numbers are 1-based
         for rec in cur.fetchall():
             qsls.append(rec)
             print(str(rec['n']) + ':',

@@ -42,7 +42,7 @@ for line in sys.stdin:
             print("Mode:", mode)
         elif re.search('^\d{1,2}:\d{2}$', tok):
             time = tok
-        elif re.search('^\d+\.\d+$', tok):
+        elif re.search('^\d+(\.\d+)?$', tok):
             qrg = tok
 
         # RST handling
@@ -61,6 +61,10 @@ for line in sys.stdin:
                 rstrx = tok.upper()
             if rsttx == '599001': # enable automatic serial mode
                 auto_rst = "serial"
+        elif tok == "+":
+            rsttx = str(int(rsttx) + 1)
+        elif tok == "-":
+            rsttx = str(int(rsttx) - 1)
         elif tok == "itumult":
             auto_rst = "ituz"
         elif tok == "cqmult":
