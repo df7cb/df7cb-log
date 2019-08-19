@@ -1,3 +1,6 @@
 #!/bin/sh
 
+set -eux
+
 psql -c '\copy (SELECT * FROM log ORDER BY start, call) to log' service=cb
+psql -c '\copy (SELECT * FROM swl ORDER BY start, call) to swl' service=cb
