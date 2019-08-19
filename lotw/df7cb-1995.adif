@@ -1,4 +1,4 @@
-Amateur radio log file. Contains 252 record(s).
+Amateur radio log file. Contains 248 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -629,16 +629,6 @@ Amateur radio log file. Contains 252 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
-<call:6>DE4ASS
-<qso_date:8>19951103
-<time_on:4>1924
-<freq:5>3.698
-<band:3>80m
-<mode:3>SSB
-<rst_rcvd:2>55
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
 <call:6>DL8DBJ
 <qso_date:8>19951103
 <time_on:4>1940
@@ -682,15 +672,6 @@ Amateur radio log file. Contains 252 record(s).
 <rst_rcvd:2>59
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
-<eor>
-<call:6>FE1301
-<qso_date:8>19951104
-<time_on:4>1334
-<freq:6>14.041
-<band:3>20m
-<mode:2>CW
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
 <eor>
 <call:6>DL8URJ
 <qso_date:8>19951104
@@ -832,16 +813,6 @@ Amateur radio log file. Contains 252 record(s).
 <mode:3>SSB
 <rst_sent:2>11
 <rst_rcvd:2>28
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
-<call:9>I202085MI
-<qso_date:8>19951104
-<time_on:4>2354
-<freq:5>7.072
-<band:3>40m
-<mode:3>SSB
-<rst_rcvd:2>59
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
@@ -1140,16 +1111,6 @@ Amateur radio log file. Contains 252 record(s).
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>N
-<eor>
-<call:6>DE3HZF
-<qso_date:8>19951111
-<time_on:4>2325
-<freq:5>3.778
-<band:3>80m
-<mode:3>SSB
-<rst_rcvd:2>59
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
 <eor>
 <call:6>OM3RKA
 <qso_date:8>19951111

@@ -2,4 +2,11 @@
 
 set -eux
 
-tqsl -c DF7CB -l Krefeld-Traar --password=$(cat ~/.priv/tqsl/password) -x -u -a compliant "$@"
+FILE="$1"
+case $FILE in
+  df7cb-199?.adif|df7cb-200?.adif) QTH="Blieskastel-Webenheim" ;;
+  df7cb-20??.adif) QTH="Krefeld-Traar" ;;
+  *) echo "TODO"; exit 2 ;;
+esac
+
+tqsl -c DF7CB -l $QTH --password=$(cat ~/.priv/tqsl/password) -x -u -a compliant "$@"

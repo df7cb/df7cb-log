@@ -1,4 +1,4 @@
-Amateur radio log file. Generated on 2018-12-31 18:00:19.797990. Contains 5 record(s).
+Amateur radio log file. Contains 10 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -8,44 +8,119 @@ Amateur radio log file. Generated on 2018-12-31 18:00:19.797990. Contains 5 reco
 <qso_date:8>20061223
 <time_on:4>1215
 <freq:5>7.013
+<band:3>40m
 <mode:2>CW
 <tx_pwr:2>40
 <rst_sent:3>579
 <rst_rcvd:3>569
+<qsl_sent:1>R
+<qsl_rcvd:1>Y
 <eor>
 <call:6>EW1HUN
 <qso_date:8>20061223
 <time_on:4>1229
 <freq:6>18.072
+<band:3>17m
 <mode:2>CW
 <tx_pwr:2>20
-<rst_sent:4>599 
-<rst_rcvd:4>599 
+<rst_sent:3>599
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>UX0ZX
 <qso_date:8>20061223
 <time_on:4>1240
 <freq:6>18.071
+<band:3>17m
 <mode:2>CW
 <tx_pwr:2>40
-<rst_sent:4>599 
-<rst_rcvd:4>599 
+<rst_sent:3>599
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:3>R7C
 <qso_date:8>20061223
 <time_on:4>1300
 <freq:6>14.017
+<band:3>20m
 <mode:2>CW
 <tx_pwr:2>40
-<rst_sent:4>599 
-<rst_rcvd:4>599 
+<rst_sent:3>599
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>YO8SXX
 <qso_date:8>20061223
 <time_on:4>1313
 <freq:6>14.007
+<band:3>20m
 <mode:2>CW
 <tx_pwr:2>40
 <rst_sent:3>539
 <rst_rcvd:3>539
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>DR5S
+<qso_date:8>20061226
+<time_on:4>0833
+<freq:5>3.543
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 Q10
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>DL0CS
+<qso_date:8>20061226
+<time_on:4>0842
+<freq:5>7.016
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 M15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>G4OGD
+<qso_date:8>20061226
+<time_on:4>0843
+<freq:5>7.016
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 004
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK5MM
+<qso_date:8>20061226
+<time_on:4>0850
+<freq:5>7.013
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 019
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>DK9IP
+<qso_date:8>20061226
+<time_on:4>0938
+<freq:5>3.545
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 A24
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>

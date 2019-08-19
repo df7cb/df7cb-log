@@ -1,4 +1,4 @@
-Amateur radio log file. Contains 891 record(s).
+Amateur radio log file. Contains 889 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -8025,16 +8025,6 @@ Amateur radio log file. Contains 891 record(s).
 <qsl_sent:1>N
 <qsl_rcvd:1>N
 <eor>
-<call:7>NL10609
-<qso_date:8>19961124
-<time_on:4>1809
-<freq:1>7
-<band:3>40m
-<mode:2>CW
-<rst_rcvd:6>599 01
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
 <call:5>OY1CT
 <qso_date:8>19961124
 <time_on:4>1809
@@ -8741,7 +8731,7 @@ Amateur radio log file. Contains 891 record(s).
 <call:4>T77C
 <qso_date:8>19961213
 <time_on:4>1503
-<freq:2>18
+<freq:6>18.068
 <band:3>17m
 <mode:2>CW
 <rst_sent:3>559
@@ -9592,16 +9582,6 @@ Amateur radio log file. Contains 891 record(s).
 <rst_rcvd:7>599 A20
 <qsl_sent:1>N
 <qsl_rcvd:1>N
-<eor>
-<call:6>DE1MSA
-<qso_date:8>19961226
-<time_on:4>1016
-<freq:3>3.5
-<band:3>80m
-<mode:2>CW
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
 <eor>
 <call:6>DL4FAI
 <qso_date:8>19961226

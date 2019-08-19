@@ -1,4 +1,4 @@
-Amateur radio log file. Contains 614 record(s).
+Amateur radio log file. Contains 854 record(s).
 
 <adif_ver:5>3.0.4
 <programid:5>PyQSO
@@ -387,7 +387,7 @@ Amateur radio log file. Contains 614 record(s).
 <rst_sent:3>579
 <rst_rcvd:3>579
 <qsl_sent:1>Y
-<qsl_rcvd:1>R
+<qsl_rcvd:1>Y
 <eor>
 <call:5>G3VZM
 <qso_date:8>19970123
@@ -1005,16 +1005,6 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
-<call:6>DE2WAF
-<qso_date:8>19970301
-<time_on:4>1842
-<freq:3>3.5
-<band:3>80m
-<mode:2>CW
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
 <call:6>EA7CIW
 <qso_date:8>19970301
 <time_on:4>1958
@@ -1287,26 +1277,6 @@ Amateur radio log file. Contains 614 record(s).
 <band:3>40m
 <mode:2>CW
 <rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
-<call:6>DE0QRT
-<qso_date:8>19970316
-<time_on:4>1245
-<freq:1>7
-<band:3>40m
-<mode:2>CW
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
-<eor>
-<call:6>DE1PPN
-<qso_date:8>19970316
-<time_on:4>1245
-<freq:1>7
-<band:3>40m
-<mode:2>CW
 <rst_rcvd:3>599
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
@@ -1672,7 +1642,7 @@ Amateur radio log file. Contains 614 record(s).
 <rst_sent:3>589
 <rst_rcvd:3>589
 <qsl_sent:1>Y
-<qsl_rcvd:1>R
+<qsl_rcvd:1>Y
 <eor>
 <call:5>OK2VP
 <qso_date:8>19970403
@@ -2818,6 +2788,222 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_rcvd:1>Y
 <gridsquare:6>JN39MQ
 <eor>
+<call:6>IK0IZW
+<qso_date:8>19970503
+<time_on:4>2018
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:6>599 LT
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IN3BGM
+<qso_date:8>19970503
+<time_on:4>2020
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:6>599 BZ
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK1ZNL
+<qso_date:8>19970503
+<time_on:4>2021
+<freq:5>7.018
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:6>599 TO
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>I7ALE
+<qso_date:8>19970503
+<time_on:4>2023
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:6>599 FG
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK0PEP
+<qso_date:8>19970503
+<time_on:4>2024
+<freq:5>7.010
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:6>599 TR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RZ3BW
+<qso_date:8>19970503
+<time_on:4>2024
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:7>599 018
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK2PIG
+<qso_date:8>19970503
+<time_on:4>2026
+<freq:5>7.015
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 006
+<rst_rcvd:6>599 MI
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>UT0U
+<qso_date:8>19970503
+<time_on:4>2029
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:7>599 027
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>II1H
+<qso_date:8>19970503
+<time_on:4>2030
+<freq:5>7.011
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:6>599 SV
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UR5YG
+<qso_date:8>19970503
+<time_on:4>2031
+<freq:5>7.010
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 009
+<rst_rcvd:7>599 026
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:8>TA/DL1CW
+<qso_date:8>19970503
+<time_on:4>2037
+<freq:5>7.009
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:7>599 022
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
+<call:6>IK2GWH
+<qso_date:8>19970503
+<time_on:4>2038
+<freq:5>7.008
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:6>599 MI
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YU1AVA
+<qso_date:8>19970503
+<time_on:4>2039
+<freq:5>7.005
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 013
+<rst_rcvd:7>599 025
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>IS0OM
+<qso_date:8>19970503
+<time_on:4>2042
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 014
+<rst_rcvd:6>599 SS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>F6HKA
+<qso_date:8>19970503
+<time_on:4>2044
+<freq:5>7.023
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 015
+<rst_rcvd:6>599 13
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK0ABY
+<qso_date:8>19970503
+<time_on:4>2049
+<freq:5>7.024
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 016
+<rst_rcvd:6>599 RM
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>DL8SAD
+<qso_date:8>19970503
+<time_on:4>2053
+<freq:5>7.025
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 017
+<rst_rcvd:7>599 015
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK8RTE
+<qso_date:8>19970503
+<time_on:4>2056
+<freq:5>7.027
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 018
+<rst_rcvd:6>599 KR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>F6KFH
 <qso_date:8>19970504
 <time_on:4>1042
@@ -2870,16 +3056,88 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_rcvd:1>N
 <gridsquare:6>JN39VX
 <eor>
+<call:4>RZ3Q
+<qso_date:8>19970504
+<time_on:4>1857
+<freq:5>3.522
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 019
+<rst_rcvd:8>599 1722
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>US9QA
+<qso_date:8>19970504
+<time_on:4>1859
+<freq:5>3.525
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 020
+<rst_rcvd:7>599 432
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>IR7S
+<qso_date:8>19970504
+<time_on:4>1902
+<freq:5>3.527
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 021
+<rst_rcvd:6>599 BR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IQ0TIC
+<qso_date:8>19970504
+<time_on:4>1903
+<freq:5>3.528
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 022
+<rst_rcvd:6>599 PG
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>DL3BRA
+<qso_date:8>19970504
+<time_on:4>1904
+<freq:5>3.529
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 023
+<rst_rcvd:7>599 199
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:6>IK2SOE
 <qso_date:8>19970504
 <time_on:4>1906
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 024
+<rst_rcvd:6>599 MI
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>YU1WR
+<qso_date:8>19970504
+<time_on:4>1907
+<freq:5>3.530
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 025
+<rst_rcvd:7>599 183
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>IK1RQQ
 <qso_date:8>19970504
@@ -2887,10 +3145,34 @@ Amateur radio log file. Contains 614 record(s).
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 026
+<rst_rcvd:6>599 TO
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:4>US1E
+<qso_date:8>19970504
+<time_on:4>1910
+<freq:5>3.534
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 027
+<rst_rcvd:7>599 800
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>I3BBK
+<qso_date:8>19970504
+<time_on:4>1911
+<freq:5>3.535
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 028
+<rst_rcvd:6>599 PD
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>IN3WDJ
 <qso_date:8>19970504
@@ -2898,8 +3180,8 @@ Amateur radio log file. Contains 614 record(s).
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 028
+<rst_rcvd:6>599 PD
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
@@ -3002,28 +3284,6 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
-<call:4>N4AF
-<qso_date:8>19970510
-<time_on:4>2150
-<freq:2>14
-<band:3>20m
-<mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>R
-<eor>
-<call:4>T97M
-<qso_date:8>19970510
-<time_on:4>2150
-<freq:2>14
-<band:3>20m
-<mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>R
-<eor>
 <call:4>W3PP
 <qso_date:8>19970510
 <time_on:4>2150
@@ -3034,6 +3294,28 @@ Amateur radio log file. Contains 614 record(s).
 <rst_rcvd:3>599
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:4>T97M
+<qso_date:8>19970510
+<time_on:4>2156
+<freq:2>14
+<band:3>20m
+<mode:2>CW
+<rst_sent:3>599
+<rst_rcvd:3>599
+<qsl_sent:1>Y
+<qsl_rcvd:1>R
+<eor>
+<call:4>N4AF
+<qso_date:8>19970510
+<time_on:4>2157
+<freq:2>14
+<band:3>20m
+<mode:2>CW
+<rst_sent:3>599
+<rst_rcvd:3>599
+<qsl_sent:1>Y
+<qsl_rcvd:1>R
 <eor>
 <call:5>ZP5KO
 <qso_date:8>19970510
@@ -3156,6 +3438,54 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:5>G3SJJ
+<qso_date:8>19970517
+<time_on:4>1629
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 001/CHRIS
+<rst_rcvd:10>599 /CHRIS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YL2KL
+<qso_date:8>19970517
+<time_on:4>1631
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 002/CHRIS
+<rst_rcvd:12>599 089/GIRT
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LY5A
+<qso_date:8>19970517
+<time_on:4>1643
+<freq:5>7.031
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 003/CHRIS
+<rst_rcvd:11>599 045/VIL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UX7IA
+<qso_date:8>19970517
+<time_on:4>1644
+<freq:5>7.031
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 004/CHRIS
+<rst_rcvd:11>599 082/SAM
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>G0WNI
 <qso_date:8>19970518
 <time_on:4>2021
@@ -3255,13 +3585,217 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
+<call:4>S53M
+<qso_date:8>19970524
+<time_on:4>2043
+<freq:6>21.006
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:7>599 670
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>PY1DHG
+<qso_date:8>19970524
+<time_on:4>2046
+<freq:6>21.005
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:7>599 044
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>NY4A
+<qso_date:8>19970524
+<time_on:4>2056
+<freq:6>21.007
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:8>599 1178
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>NB1B
+<qso_date:8>19970524
+<time_on:4>2057
+<freq:6>21.009
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:8>599 1364
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>KG1D
+<qso_date:8>19970524
+<time_on:4>2100
+<freq:6>21.015
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:7>599 683
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>PA6WPX
+<qso_date:8>19970525
+<time_on:4>0919
+<freq:6>21.016
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 006
+<rst_rcvd:7>599 411
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EO6F
+<qso_date:8>19970525
+<time_on:4>0928
+<freq:6>21.017
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LZ7N
+<qso_date:8>19970525
+<time_on:4>0928
+<freq:6>21.017
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA4ML
+<qso_date:8>19970525
+<time_on:4>0930
+<freq:6>21.021
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>9A1A
+<qso_date:8>19970525
+<time_on:4>0936
+<freq:6>21.027
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:8>599 1155
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IT9ORA
+<qso_date:8>19970525
+<time_on:4>0936
+<freq:6>21.032
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>ZX2WO
 <qso_date:8>19970525
 <time_on:4>0940
-<freq:2>21
+<freq:6>21.004
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
+<rst_sent:7>599 013
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LZ9A
+<qso_date:8>19970525
+<time_on:4>0942
+<freq:6>21.006
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 014
+<rst_rcvd:8>599 2875
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>Z38G
+<qso_date:8>19970525
+<time_on:4>0944
+<freq:6>21.008
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 015
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IT9UCS
+<qso_date:8>19970525
+<time_on:4>0945
+<freq:6>21.011
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 016
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA4ZW
+<qso_date:8>19970525
+<time_on:4>0949
+<freq:6>21.013
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 017
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:9>IS9/OK5DX
+<qso_date:8>19970525
+<time_on:4>0952
+<freq:6>21.013
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 018
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>IQ9AF
+<qso_date:8>19970525
+<time_on:4>0953
+<freq:6>21.014
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 019
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3269,22 +3803,82 @@ Amateur radio log file. Contains 614 record(s).
 <call:5>EA5BM
 <qso_date:8>19970525
 <time_on:4>0958
-<freq:2>21
+<freq:6>21.025
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 020
+<rst_rcvd:7>599 917
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:4>LZ5W
+<qso_date:8>19970525
+<time_on:4>1006
+<freq:6>21.015
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 021
+<rst_rcvd:8>599 2444
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LZ7N
+<qso_date:8>19970525
+<time_on:4>1008
+<freq:6>21.017
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 022
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LZ8A
+<qso_date:8>19970525
+<time_on:4>1010
+<freq:6>21.030
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 023
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA3KU
+<qso_date:8>19970525
+<time_on:4>1013
+<freq:6>21.037
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 024
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA4BGM
+<qso_date:8>19970525
+<time_on:4>1014
+<freq:6>21.044
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 025
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:4>BV6U
 <qso_date:8>19970525
 <time_on:4>1019
-<freq:2>21
+<freq:6>21.055
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 026
+<rst_rcvd:8>599 1044
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
@@ -3294,43 +3888,127 @@ Amateur radio log file. Contains 614 record(s).
 <freq:2>21
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
+<rst_sent:7>599 027
 <rst_rcvd:3>599
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:5>UA4LM
+<qso_date:8>19970525
+<time_on:4>1030
+<freq:6>21.053
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 028
+<rst_rcvd:7>599 513
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>CT1AOZ
+<qso_date:8>19970525
+<time_on:4>1034
+<freq:6>21.043
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 029
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA3CU
+<qso_date:8>19970525
+<time_on:4>1037
+<freq:6>21.030
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 030
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>9A50D
+<qso_date:8>19970525
+<time_on:4>1038
+<freq:6>21.027
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 031
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UY0CA
+<qso_date:8>19970525
+<time_on:4>1112
+<freq:6>21.031
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 032
+<rst_rcvd:7>599 078
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:9>IS9/OK5DX
+<qso_date:8>19970525
+<time_on:4>1311
+<freq:6>28.031
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 033
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:4>ZD8Z
 <qso_date:8>19970525
 <time_on:4>1316
-<freq:2>21
+<freq:6>21.040
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 034
+<rst_rcvd:8>599 2249
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
 <call:5>TP2CE
 <qso_date:8>19970525
 <time_on:4>1318
-<freq:2>21
+<freq:6>21.028
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 035
+<rst_rcvd:8>599 1702
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:4>ZW5B
 <qso_date:8>19970525
 <time_on:4>1324
-<freq:2>21
+<freq:6>21.023
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 036
+<rst_rcvd:8>599 2200
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>EA6ZY
+<qso_date:8>19970525
+<time_on:4>1328
+<freq:6>21.022
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 037
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>HA8LTQ
 <qso_date:8>19970525
@@ -3343,38 +4021,278 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:4>NB1B
+<qso_date:8>19970525
+<time_on:4>1939
+<freq:6>14.002
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 038
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>NJ4F
+<qso_date:8>19970525
+<time_on:4>1941
+<freq:6>14.003
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 039
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:4>IZ9R
 <qso_date:8>19970525
 <time_on:4>1942
-<freq:2>14
+<freq:6>14.006
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 040
+<rst_rcvd:8>599 2772
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>OH7AAC
+<qso_date:8>19970525
+<time_on:4>1944
+<freq:6>14.008
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 041
+<rst_rcvd:8>599 2442
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA6ZY
+<qso_date:8>19970525
+<time_on:4>1949
+<freq:6>14.011
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 043
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LZ5W
+<qso_date:8>19970525
+<time_on:4>1950
+<freq:6>14.011
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 044
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>RW6AWT
 <qso_date:8>19970525
 <time_on:4>1951
-<freq:2>14
+<freq:6>14.012
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
+<rst_sent:7>599 045
 <rst_rcvd:3>599
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:4>YT1R
+<qso_date:8>19970525
+<time_on:4>1953
+<freq:6>14.024
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 046
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EN5E
+<qso_date:8>19970525
+<time_on:4>1955
+<freq:6>14.032
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 047
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K3MM
+<qso_date:8>19970525
+<time_on:4>1956
+<freq:6>14.009
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 042
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UY1HY
+<qso_date:8>19970525
+<time_on:4>1956
+<freq:6>14.036
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 048
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:9>IS9/OK5DX
+<qso_date:8>19970525
+<time_on:4>1957
+<freq:6>14.039
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 049
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>Z32XX
+<qso_date:8>19970525
+<time_on:4>2001
+<freq:6>14.039
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 050
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA5BY
+<qso_date:8>19970525
+<time_on:4>2004
+<freq:6>14.052
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 051
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>RW9OWD
+<qso_date:8>19970525
+<time_on:4>2006
+<freq:6>14.053
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 052
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>WP2Z
+<qso_date:8>19970525
+<time_on:4>2010
+<freq:6>14.059
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 053
+<rst_rcvd:3>599
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
+<call:6>PY2EYE
+<qso_date:8>19970525
+<time_on:4>2011
+<freq:6>14.059
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 054
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>9X4WW
 <qso_date:8>19970525
 <time_on:4>2013
-<freq:2>14
+<freq:6>14.063
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 055
+<rst_rcvd:7>599 345
 <qsl_sent:1>Y
-<qsl_rcvd:1>R
+<qsl_rcvd:1>Y
+<eor>
+<call:6>RU6LWZ
+<qso_date:8>19970525
+<time_on:4>2014
+<freq:6>14.066
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 056
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>WI9WI
+<qso_date:8>19970525
+<time_on:4>2015
+<freq:6>14.068
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 057
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K8DX
+<qso_date:8>19970525
+<time_on:4>2018
+<freq:6>14.070
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 058
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>KU8E
+<qso_date:8>19970525
+<time_on:4>2021
+<freq:6>14.071
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 059
+<rst_rcvd:3>599
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>PA6WPX
+<qso_date:8>19970525
+<time_on:4>2023
+<freq:5>7.031
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 060
+<rst_rcvd:8>599 1272
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>EA6ADG
 <qso_date:8>19970528
@@ -3404,6 +4322,7 @@ Amateur radio log file. Contains 614 record(s).
 <freq:2>28
 <band:3>10m
 <mode:2>CW
+<tx_pwr:3>100
 <rst_sent:3>539
 <rst_rcvd:3>559
 <qsl_sent:1>Y
@@ -3434,7 +4353,7 @@ Amateur radio log file. Contains 614 record(s).
 <call:5>EX8MZ
 <qso_date:8>19970530
 <time_on:4>1637
-<freq:2>18
+<freq:6>18.068
 <band:3>17m
 <mode:2>CW
 <rst_sent:3>559
@@ -3445,7 +4364,7 @@ Amateur radio log file. Contains 614 record(s).
 <call:5>RU4HY
 <qso_date:8>19970530
 <time_on:4>1642
-<freq:2>18
+<freq:6>18.068
 <band:3>17m
 <mode:2>CW
 <rst_sent:3>569
@@ -4037,258 +4956,1074 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>N
 <qsl_rcvd:1>N
 <eor>
-<call:5>9A0HQ
+<call:6>YO4RDN
 <qso_date:8>19970712
-<time_on:4>1510
-<freq:1>7
+<time_on:4>1537
+<freq:5>7.021
 <band:3>40m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>Y
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EU1AF
+<qso_date:8>19970712
+<time_on:4>1538
+<freq:5>7.023
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>OK2PO
 <qso_date:8>19970712
 <time_on:4>1541
-<freq:1>7
+<freq:5>7.025
 <band:3>40m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
 <call:5>S53EO
 <qso_date:8>19970712
 <time_on:4>1546
-<freq:1>7
+<freq:5>7.018
 <band:3>40m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
+<call:5>YO0HQ
+<qso_date:8>19970712
+<time_on:4>1547
+<freq:5>7.047
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 SRJ
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>SP3PZK
+<qso_date:8>19970712
+<time_on:4>1548
+<freq:5>7.014
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 PZK
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>9A0HQ
+<qso_date:8>19970712
+<time_on:4>1550
+<freq:5>7.010
+<band:3>40m
+<mode:2>CW
+<rst_sent:6>599 28
+<rst_rcvd:7>599 HRS
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:6>IK0YVV
 <qso_date:8>19970712
 <time_on:4>1550
-<freq:1>7
+<freq:5>7.008
 <band:3>40m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>UT5UDX
+<qso_date:8>19970712
+<time_on:4>1554
+<freq:5>7.006
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>SP2AYC
+<qso_date:8>19970712
+<time_on:4>1557
+<freq:5>7.006
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OM7HQ
+<qso_date:8>19970712
+<time_on:4>1559
+<freq:5>7.004
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 SARA
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S50HQ
+<qso_date:8>19970712
+<time_on:4>1600
+<freq:5>7.001
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>UT6BAD
+<qso_date:8>19970712
+<time_on:4>1611
+<freq:5>7.006
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>SK0HQ
+<qso_date:8>19970712
+<time_on:4>1614
+<freq:5>7.008
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>HG6N
+<qso_date:8>19970712
+<time_on:4>1615
+<freq:5>7.012
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EM5HQ
+<qso_date:8>19970712
+<time_on:4>1617
+<freq:5>7.013
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 UARS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YU1WR
+<qso_date:8>19970712
+<time_on:4>1622
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RW4WR
+<qso_date:8>19970712
+<time_on:4>1638
+<freq:6>14.003
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 30
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EX8W
+<qso_date:8>19970712
+<time_on:4>1658
+<freq:6>14.012
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 31
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RU6AR
+<qso_date:8>19970712
+<time_on:4>1714
+<freq:6>14.057
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>9A0HQ
+<qso_date:8>19970712
+<time_on:4>1950
+<freq:5>7.010
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 HRS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>ER7A
+<qso_date:8>19970712
+<time_on:4>1950
+<freq:5>7.007
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 ARMB
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA7DPU
+<qso_date:8>19970712
+<time_on:4>2001
+<freq:6>14.002
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 37
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K3ZO
+<qso_date:8>19970712
+<time_on:4>2005
+<freq:6>14.009
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 08
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA5FV
+<qso_date:8>19970712
+<time_on:4>2006
+<freq:6>14.012
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 37
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K3MM
+<qso_date:8>19970712
+<time_on:4>2006
+<freq:6>14.014
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 08
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>YT0A
+<qso_date:8>19970712
+<time_on:4>2007
+<freq:6>14.014
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>R
+<qsl_rcvd:1>Y
+<eor>
+<call:5>UT7ZT
+<qso_date:8>19970712
+<time_on:4>2010
+<freq:6>14.020
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>4Z4TA
+<qso_date:8>19970712
+<time_on:4>2011
+<freq:6>14.023
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 39
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>R3HQ/6
+<qso_date:8>19970712
+<time_on:4>2012
+<freq:6>14.027
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 SRR
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
+<call:5>US5ZC
+<qso_date:8>19970712
+<time_on:4>2020
+<freq:6>14.038
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EM8I
+<qso_date:8>19970712
+<time_on:4>2024
+<freq:6>14.044
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>RZ3Q
+<qso_date:8>19970712
+<time_on:4>2025
+<freq:6>14.052
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:11>SV5/OM3LA/P
 <qso_date:8>19970712
-<time_on:4>1727
-<freq:2>14
+<time_on:4>2027
+<freq:6>14.055
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
-<call:4>V2BE
+<call:5>ON6ZX
 <qso_date:8>19970712
-<time_on:4>1736
-<freq:2>14
+<time_on:4>2029
+<freq:6>14.056
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>R
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 27
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:4>W4AN
 <qso_date:8>19970712
 <time_on:4>2032
-<freq:2>14
+<freq:6>14.057
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 08
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>UY8IF
+<qso_date:8>19970712
+<time_on:4>2033
+<freq:6>14.060
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>V26E
+<qso_date:8>19970712
+<time_on:4>2036
+<freq:6>14.059
+<band:3>20m
+<mode:2>CW
+<rst_sent:6>599 28
+<rst_rcvd:6>599 11
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
+<call:5>LR2BW
+<qso_date:8>19970712
+<time_on:4>2039
+<freq:6>14.066
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>DU8DZE
 <qso_date:8>19970712
 <time_on:4>2042
-<freq:2>14
+<freq:6>14.067
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 14
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
 <call:5>9A0HQ
 <qso_date:8>19970712
 <time_on:4>2106
-<freq:2>21
+<freq:6>21.026
 <band:3>15m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:7>599 HRS
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>YU0HQ
+<qso_date:8>19970712
+<time_on:4>2111
+<freq:5>3.506
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 SRJ
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OZ8SW
+<qso_date:8>19970712
+<time_on:4>2114
+<freq:5>3.504
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EM5HQ
+<qso_date:8>19970712
+<time_on:4>2115
+<freq:5>3.502
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 URRL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>DL6FBL
+<qso_date:8>19970712
+<time_on:4>2116
+<freq:5>3.503
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK2HI
+<qso_date:8>19970712
+<time_on:4>2118
+<freq:5>3.507
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>DK3KD
+<qso_date:8>19970712
+<time_on:4>2119
+<freq:5>3.511
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S50HQ
+<qso_date:8>19970712
+<time_on:4>2120
+<freq:5>3.512
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 ZRS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>DL0TZ
+<qso_date:8>19970712
+<time_on:4>2121
+<freq:5>3.513
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EW6X
+<qso_date:8>19970712
+<time_on:4>2122
+<freq:5>3.513
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>HG5M
+<qso_date:8>19970712
+<time_on:4>2123
+<freq:5>3.514
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>DA0HQ
 <qso_date:8>19970712
 <time_on:4>2124
-<freq:3>3.5
+<freq:5>3.515
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:8>599 DARC
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:5>S52FB
 <qso_date:8>19970712
 <time_on:4>2125
-<freq:3>3.5
+<freq:5>3.518
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:4>OH3C
 <qso_date:8>19970712
 <time_on:4>2128
-<freq:3>3.5
+<freq:5>3.520
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:8>599 SRAL
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>SK0HQ
+<qso_date:8>19970712
+<time_on:4>2131
+<freq:5>3.521
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 SSA
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>UU5J
+<qso_date:8>19970712
+<time_on:4>2132
+<freq:5>3.522
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>OL7HQ
 <qso_date:8>19970712
 <time_on:4>2133
-<freq:3>3.5
+<freq:5>3.522
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:7>599 CRC
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>HB9LF
+<qso_date:8>19970712
+<time_on:4>2135
+<freq:5>3.523
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LY6K
+<qso_date:8>19970712
+<time_on:4>2137
+<freq:5>3.524
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UA1QV
+<qso_date:8>19970712
+<time_on:4>2140
+<freq:5>3.524
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:3>M7A
+<qso_date:8>19970712
+<time_on:4>2141
+<freq:5>3.527
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 27
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>S53EO
 <qso_date:8>19970712
 <time_on:4>2142
-<freq:3>3.5
+<freq:5>3.527
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:9>OJ0/OH1VR
 <qso_date:8>19970712
 <time_on:4>2146
-<freq:3>3.5
+<freq:5>3.518
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
+<eor>
+<call:6>S57MNM
+<qso_date:8>19970712
+<time_on:4>2148
+<freq:5>3.529
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>F6KAR
+<qso_date:8>19970712
+<time_on:4>2150
+<freq:5>3.531
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 27
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>HA5AGS
 <qso_date:8>19970712
 <time_on:4>2152
-<freq:3>3.5
+<freq:5>3.534
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>OM7HQ
+<qso_date:8>19970712
+<time_on:4>2247
+<freq:5>1.831
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 SARA
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S50HQ
+<qso_date:8>19970712
+<time_on:4>2248
+<freq:5>1.830
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 ZRS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S51TA
+<qso_date:8>19970712
+<time_on:4>2253
+<freq:5>1.824
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>IK2IQV
 <qso_date:8>19970712
 <time_on:4>2254
-<freq:3>1.8
+<freq:5>1.821
 <band:4>160m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:5>OL7HQ
 <qso_date:8>19970712
 <time_on:4>2257
-<freq:3>1.8
+<freq:5>1.833
 <band:4>160m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:7>599 CLC
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:5>DA0HQ
 <qso_date:8>19970712
 <time_on:4>2259
-<freq:3>1.8
+<freq:5>1.835
 <band:4>160m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:8>599 DARC
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:5>PA6HQ
 <qso_date:8>19970712
 <time_on:4>2300
-<freq:3>1.8
+<freq:5>1.836
 <band:4>160m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:9>599 VERON
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>IS0OMH
+<qso_date:8>19970713
+<time_on:4>0906
+<freq:6>28.004
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>LA2HFA
+<qso_date:8>19970713
+<time_on:4>0908
+<freq:6>28.010
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EM5HQ
+<qso_date:8>19970713
+<time_on:4>0911
+<freq:6>28.010
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 UARL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA7DPU
+<qso_date:8>19970713
+<time_on:4>0912
+<freq:6>28.013
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 37
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OZ4FF
+<qso_date:8>19970713
+<time_on:4>0916
+<freq:6>28.012
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>LY1DS
 <qso_date:8>19970713
 <time_on:4>0928
-<freq:2>28
+<freq:6>28.019
 <band:3>10m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>EA5FID
+<qso_date:8>19970713
+<time_on:4>0931
+<freq:6>28.021
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 37
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA5FV
+<qso_date:8>19970713
+<time_on:4>0931
+<freq:6>28.024
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 37
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>Z30M
+<qso_date:8>19970713
+<time_on:4>0935
+<freq:6>28.028
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>9A0HQ
 <qso_date:8>19970713
 <time_on:4>0937
-<freq:2>28
+<freq:6>28.031
 <band:3>10m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:7>599 HRS
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:5>YU0HQ
+<qso_date:8>19970713
+<time_on:4>0940
+<freq:6>28.041
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:7>599 SRJ
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>OH3C
+<qso_date:8>19970713
+<time_on:4>0948
+<freq:6>28.034
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:8>599 SRAL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LY6K
+<qso_date:8>19970713
+<time_on:4>0949
+<freq:6>28.032
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>EU8T
+<qso_date:8>19970713
+<time_on:4>0953
+<freq:6>28.019
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OH1AF
+<qso_date:8>19970713
+<time_on:4>0954
+<freq:6>28.019
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>HG0D
+<qso_date:8>19970713
+<time_on:4>0955
+<freq:6>28.016
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>SL0CB
 <qso_date:8>19970713
 <time_on:4>1002
-<freq:2>28
+<freq:6>28.011
 <band:3>10m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 18
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
+<eor>
+<call:5>DK3KD
+<qso_date:8>19970713
+<time_on:4>1011
+<freq:6>28.011
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>DL7PR
 <qso_date:8>19970713
@@ -4569,13 +6304,229 @@ Amateur radio log file. Contains 614 record(s).
 <call:6>IK8TPJ
 <qso_date:8>19970803
 <time_on:4>0925
-<freq:2>28
+<freq:6>28.019
 <band:3>10m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>YO9AFT
+<qso_date:8>19970803
+<time_on:4>0929
+<freq:6>28.014
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 PH
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO8BIG
+<qso_date:8>19970803
+<time_on:4>0934
+<freq:6>28.011
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:5>559IS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO0KOR
+<qso_date:8>19970803
+<time_on:4>0935
+<freq:6>28.015
+<band:3>10m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 SV
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YO3NB
+<qso_date:8>19970803
+<time_on:4>0936
+<freq:6>21.016
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 BU
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:8>YO8KAN/P
+<qso_date:8>19970803
+<time_on:4>0939
+<freq:6>21.018
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 NT
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO2KCB
+<qso_date:8>19970803
+<time_on:4>0940
+<freq:6>21.018
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 CS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO3FRI
+<qso_date:8>19970803
+<time_on:4>0941
+<freq:6>21.019
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 BU
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO4CBA
+<qso_date:8>19970803
+<time_on:4>0941
+<freq:6>21.020
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 CT
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO3KXI
+<qso_date:8>19970803
+<time_on:4>0943
+<freq:6>21.025
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 BU
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO8KDD
+<qso_date:8>19970803
+<time_on:4>0945
+<freq:6>21.021
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 SV
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO9KPD
+<qso_date:8>19970803
+<time_on:4>0947
+<freq:6>21.012
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 PH
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO4KAK
+<qso_date:8>19970803
+<time_on:4>0950
+<freq:6>21.005
+<band:3>15m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 HR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YT7TY
+<qso_date:8>19970803
+<time_on:4>1012
+<freq:6>14.014
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO3FWC
+<qso_date:8>19970803
+<time_on:4>1018
+<freq:6>14.019
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 BU
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK1KZ
+<qso_date:8>19970803
+<time_on:4>1020
+<freq:6>14.022
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>YO3FRI
+<qso_date:8>19970803
+<time_on:4>1023
+<freq:6>14.021
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 BU
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>G3WGN
+<qso_date:8>19970803
+<time_on:4>1029
+<freq:6>14.029
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 27
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:8>YO9KBU/P
+<qso_date:8>19970803
+<time_on:4>1039
+<freq:6>14.034
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 DB
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:8>SO9OBD/P
 <qso_date:8>19970803
@@ -4663,20 +6614,9 @@ Amateur radio log file. Contains 614 record(s).
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>Y
-<qsl_rcvd:1>R
+<qsl_rcvd:1>Y
 <eor>
 <call:4>LT1F
-<qso_date:8>19970809
-<time_on:4>1849
-<freq:2>21
-<band:3>15m
-<mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
-<qsl_sent:1>Y
-<qsl_rcvd:1>R
-<eor>
-<call:4>LT1T
 <qso_date:8>19970809
 <time_on:4>1849
 <freq:2>21
@@ -5072,6 +7012,18 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:5>DJ5PS
+<qso_date:8>19970917
+<time_on:4>1905
+<freq:5>3.532
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 Q02
+<rst_rcvd:7>599 K39
+<qsl_sent:1>Y
+<qsl_rcvd:1>Y
+<eor>
 <call:5>DL0WI
 <qso_date:8>19970917
 <time_on:4>1910
@@ -5424,38 +7376,566 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
-<call:5>EW3AC
+<call:6>RU4WEB
 <qso_date:8>19971011
-<time_on:4>1015
-<freq:1>7
+<time_on:4>1506
+<freq:5>7.015
 <band:3>40m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<tx_pwr:3>100
+<rst_sent:13>599 002/CHRIS
+<rst_rcvd:12>599 003/VLAD
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YL2TW
+<qso_date:8>19971011
+<time_on:4>1506
+<freq:5>7.015
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 001/CHRIS
+<rst_rcvd:11>599 006/GUS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>LY2BTA
+<qso_date:8>19971011
+<time_on:4>1509
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:12>599 004/ANDY
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EA2CR
+<qso_date:8>19971011
+<time_on:4>1510
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:13>599 006/DURAN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>GM3POI
+<qso_date:8>19971011
+<time_on:4>1514
+<freq:5>7.027
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 005
+<rst_rcvd:13>599 013/CLIVE
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EW3AC
+<qso_date:8>19971011
+<time_on:4>1515
+<freq:5>7.027
+<band:3>40m
+<mode:2>CW
+<rst_sent:13>599 006/CHRIS
+<rst_rcvd:12>599 004/ALEX
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>GM3FAM
+<qso_date:8>19971011
+<time_on:4>1521
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:12>599 004/CRIS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY1DZ
+<qso_date:8>19971011
+<time_on:4>1521
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:12>599 008/OLEG
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>I7ALE
+<qso_date:8>19971011
+<time_on:4>1523
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 009
+<rst_rcvd:13>599 003/SARDO
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA1AEQ
+<qso_date:8>19971011
+<time_on:4>1527
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 010
+<rst_rcvd:11>599 001/QSD
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>LA4XFA
+<qso_date:8>19971011
+<time_on:4>1530
+<freq:5>7.020
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 011
+<rst_rcvd:12>599 005/HANS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YU7WJ
+<qso_date:8>19971011
+<time_on:4>1542
+<freq:5>7.025
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 012
+<rst_rcvd:13>599 009/GABOR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>UA9CDV
+<qso_date:8>19971011
+<time_on:4>1543
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 013
+<rst_rcvd:12>599 025/OLEG
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY1DD
+<qso_date:8>19971011
+<time_on:4>1550
+<freq:5>7.026
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 014
+<rst_rcvd:11>599 022/RON
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>HA2SX
+<qso_date:8>19971011
+<time_on:4>1552
+<freq:5>7.026
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 015
+<rst_rcvd:12>599 14/PETER
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EU1TU
+<qso_date:8>19971011
+<time_on:4>1555
+<freq:5>7.026
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 016
+<rst_rcvd:11>599 033/ART
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YL2KL
+<qso_date:8>19971011
+<time_on:4>1558
+<freq:5>7.026
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 017
+<rst_rcvd:12>599 038/GIRT
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA3ALV
+<qso_date:8>19971011
+<time_on:4>1602
+<freq:5>7.028
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 018
+<rst_rcvd:11>599 018/ARI
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LA1YE
+<qso_date:8>19971011
+<time_on:4>1605
+<freq:5>7.028
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 019
+<rst_rcvd:12>599 013/JOHN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RA1TU
+<qso_date:8>19971011
+<time_on:4>1614
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 020
+<rst_rcvd:12>599 036/VLAD
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UA3TU
+<qso_date:8>19971011
+<time_on:4>1615
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 021
+<rst_rcvd:12>599 033/ALEX
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YU7CB
+<qso_date:8>19971011
+<time_on:4>1620
+<freq:5>7.020
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 022
+<rst_rcvd:12>599 014/LACI
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>EA5FID
+<qso_date:8>19971011
+<time_on:4>1623
+<freq:5>7.020
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 023
+<rst_rcvd:12>599 031/JOSE
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY1DN
+<qso_date:8>19971011
+<time_on:4>1740
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 024
+<rst_rcvd:11>599 013/IAN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>RK9CWW
+<qso_date:8>19971011
+<time_on:4>1741
+<freq:5>7.022
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 025
+<rst_rcvd:12>599 100/IGOR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY1DS
+<qso_date:8>19971011
+<time_on:4>1742
+<freq:5>7.023
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 027
+<rst_rcvd:11>599 121/DAN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK1MD
+<qso_date:8>19971011
+<time_on:4>1742
+<freq:5>7.023
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 026
+<rst_rcvd:11>599 084/DOS
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RA3XO
+<qso_date:8>19971011
+<time_on:4>1752
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 028
+<rst_rcvd:12>599 030/SANY
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>OF5JTD
+<qso_date:8>19971011
+<time_on:4>1753
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 029
+<rst_rcvd:12>599 001/NIKO
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>T94GB
+<qso_date:8>19971011
+<time_on:4>1758
+<freq:5>7.024
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 030
+<rst_rcvd:13>599 002/DRAGO
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YL1ZZ
+<qso_date:8>19971011
+<time_on:4>1802
+<freq:5>7.028
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 031
+<rst_rcvd:12>599 013/ALEX
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK2NCF
+<qso_date:8>19971011
+<time_on:4>1826
+<freq:5>3.527
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 032
+<rst_rcvd:11>599 002/FOR
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK1NR
+<qso_date:8>19971011
+<time_on:4>1827
+<freq:5>3.527
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 033
+<rst_rcvd:11>599 038/JAN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY1DD
+<qso_date:8>19971011
+<time_on:4>1829
+<freq:5>3.528
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 034
+<rst_rcvd:11>599 119/RON
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OK3FD
+<qso_date:8>19971011
+<time_on:4>1829
+<freq:5>3.528
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 035
+<rst_rcvd:13>599 036/KAREL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UU2JZ
+<qso_date:8>19971011
+<time_on:4>1831
+<freq:5>3.530
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 036
+<rst_rcvd:11>599 169/KEN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LY2IJ
+<qso_date:8>19971011
+<time_on:4>1832
+<freq:5>3.530
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 037
+<rst_rcvd:11>599 001/ALF
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>G0IKZ
+<qso_date:8>19971011
+<time_on:4>1835
+<freq:5>3.535
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 038
+<rst_rcvd:11>599 155/JAN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EU1TU
+<qso_date:8>19971011
+<time_on:4>1836
+<freq:5>3.535
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 039
+<rst_rcvd:11>599 135/ART
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>ON6NL
+<qso_date:8>19971012
+<time_on:4>0947
+<freq:5>3.535
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:11>599 071/NOL
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>ON7SS
+<qso_date:8>19971012
+<time_on:4>0949
+<freq:5>3.534
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:11>599 077/OSA
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>ON4ASW
+<qso_date:8>19971012
+<time_on:4>0950
+<freq:5>3.533
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:11>599 114/NOK
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>ON4AFU
+<qso_date:8>19971012
+<time_on:4>0951
+<freq:5>3.532
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 004
+<rst_rcvd:11>599 102/GBN
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:6>ON4AJZ
 <qso_date:8>19971012
 <time_on:4>0956
-<freq:3>3.5
+<freq:5>3.526
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 004
+<rst_rcvd:11>599 106/ACC
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
 <call:5>ON4UN
 <qso_date:8>19971012
 <time_on:4>0957
-<freq:3>3.5
+<freq:5>3.525
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:7>599 005
+<rst_rcvd:11>599 134/TLS
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:7>ON5OO/A
+<qso_date:8>19971012
+<time_on:4>0958
+<freq:5>3.523
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 007
+<rst_rcvd:11>599 080/ACC
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>ON6KD
+<qso_date:8>19971012
+<time_on:4>0959
+<freq:5>3.521
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 008
+<rst_rcvd:11>599 147/WLB
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>F6CEA
 <qso_date:8>19971014
@@ -5808,6 +8288,114 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>R
 <eor>
+<call:6>SP9XCN
+<qso_date:8>19971130
+<time_on:4>0011
+<freq:5>3.542
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>YT0A
+<qso_date:8>19971130
+<time_on:4>0011
+<freq:5>3.546
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>IK2UCK
+<qso_date:8>19971130
+<time_on:4>0012
+<freq:5>3.548
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S51OI
+<qso_date:8>19971130
+<time_on:4>0013
+<freq:5>3.549
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>9A0C
+<qso_date:8>19971130
+<time_on:4>0014
+<freq:5>3.551
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S57KM
+<qso_date:8>19971130
+<time_on:4>0016
+<freq:5>3.559
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>OL5T
+<qso_date:8>19971130
+<time_on:4>0017
+<freq:5>3.563
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RN6BY
+<qso_date:8>19971130
+<time_on:4>0018
+<freq:5>3.565
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 16
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>ON5KM
+<qso_date:8>19971130
+<time_on:4>0021
+<freq:5>3.548
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:6>DA0AMT
 <qso_date:8>19971130
 <time_on:4>0812
@@ -5819,16 +8407,88 @@ Amateur radio log file. Contains 614 record(s).
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
 <eor>
+<call:5>ER1CW
+<qso_date:8>19971130
+<time_on:4>1829
+<freq:5>3.548
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 16
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>UX2VA
+<qso_date:8>19971130
+<time_on:4>1831
+<freq:5>3.546
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 16
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>DL5KBA
+<qso_date:8>19971130
+<time_on:4>1832
+<freq:5>3.543
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>HA0IT
 <qso_date:8>19971130
 <time_on:4>1834
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:4>EU8T
+<qso_date:8>19971130
+<time_on:4>1835
+<freq:5>3.537
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 16
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>LA8W
+<qso_date:8>19971130
+<time_on:4>1836
+<freq:5>3.535
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>ES4MM
+<qso_date:8>19971130
+<time_on:4>1840
+<freq:5>3.532
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>Z31GX
 <qso_date:8>19971130
@@ -5836,19 +8496,91 @@ Amateur radio log file. Contains 614 record(s).
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:6>GW3YDX
+<qso_date:8>19971130
+<time_on:4>1843
+<freq:5>3.527
+<band:3>80m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K1KI
+<qso_date:8>19971130
+<time_on:4>1849
+<freq:6>14.002
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K1WD
+<qso_date:8>19971130
+<time_on:4>1850
+<freq:6>14.003
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K3WW
+<qso_date:8>19971130
+<time_on:4>1851
+<freq:6>14.006
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>YU1S
+<qso_date:8>19971130
+<time_on:4>1854
+<freq:6>14.013
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>K1AM
+<qso_date:8>19971130
+<time_on:4>1855
+<freq:6>14.021
+<band:3>20m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 14
+<rst_rcvd:6>599 05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:4>5V7A
 <qso_date:8>19971130
 <time_on:4>1903
-<freq:2>14
+<freq:6>14.028
 <band:3>20m
 <mode:2>CW
-<rst_sent:3>599
-<rst_rcvd:3>599
+<rst_sent:6>599 14
+<rst_rcvd:6>599 35
 <qsl_sent:1>N
 <qsl_rcvd:1>N
 <eor>
@@ -5972,6 +8704,162 @@ Amateur radio log file. Contains 614 record(s).
 <rst_rcvd:3>589
 <qsl_sent:1>Y
 <qsl_rcvd:1>Y
+<eor>
+<call:4>9A0C
+<qso_date:8>19971220
+<time_on:4>1624
+<freq:5>7.013
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>OH1AJ
+<qso_date:8>19971220
+<time_on:4>1627
+<freq:5>7.013
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 001
+<rst_rcvd:9>599 FN100
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>RA3XD
+<qso_date:8>19971220
+<time_on:4>1629
+<freq:5>7.011
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>HA3OV
+<qso_date:8>19971220
+<time_on:4>1630
+<freq:5>7.010
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YT1BB
+<qso_date:8>19971220
+<time_on:4>1631
+<freq:5>7.009
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 002
+<rst_rcvd:7>599 003
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>RZ6HWA
+<qso_date:8>19971220
+<time_on:4>1633
+<freq:5>7.004
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>UA6LTI
+<qso_date:8>19971220
+<time_on:4>1635
+<freq:5>7.004
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>S52ZW
+<qso_date:8>19971220
+<time_on:4>1637
+<freq:5>7.006
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 28
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>RZ3Q
+<qso_date:8>19971220
+<time_on:4>1641
+<freq:5>7.014
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:4>RO3A
+<qso_date:8>19971220
+<time_on:4>1644
+<freq:5>7.017
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:6>RZ4AWR
+<qso_date:8>19971220
+<time_on:4>1647
+<freq:5>7.019
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>EU1DM
+<qso_date:8>19971220
+<time_on:4>1649
+<freq:5>7.020
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:6>599 28
+<rst_rcvd:6>599 29
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>G3NCS
+<qso_date:8>19971220
+<time_on:4>1654
+<freq:5>7.021
+<band:3>40m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:7>599 003
+<rst_rcvd:9>599 RN453
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:5>DC8VK
 <qso_date:8>19971220
@@ -6606,7 +9494,8 @@ Amateur radio log file. Contains 614 record(s).
 <freq:3>3.5
 <band:3>80m
 <mode:2>CW
-<rst_rcvd:3>539
+<rst_sent:3>599
+<rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>N
 <eor>

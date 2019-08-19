@@ -13,15 +13,14 @@ shift $((OPTIND - 1))
 
 set -eux
 
-YEAR=$(date +%Y)
-
 git pull --ff-only
 
 ( cd wsjtx; ./import )
 ( cd sql; ./dump )
 ( cd lotw
-  ./export-adif $YEAR
+  YEAR=$(date +%Y)
   LOG=df7cb-$YEAR.adif
+  ./export-adif $YEAR $LOG
   ./tqsl-upload $LOG
   ./clublog-upload $LOG
   ./dcl-upload $LOG
