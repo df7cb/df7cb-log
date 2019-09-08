@@ -24,11 +24,7 @@ if len(sys.argv) == 2:
 
 select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call = %s"
 
-print("%s %s %s" % (date, mode, rsttx))
-#print("log> ", end='', flush=True)
-
-for line in sys.stdin:
-    l = line.strip()
+while True:
     log = {
         'mode': mode,
         'rsttx': rsttx,
@@ -38,7 +34,9 @@ for line in sys.stdin:
     if mycall:
         log['mycall'] = mycall
 
-    for tok in l.split(" "):
+    prompt = "%s %s %s> " % (date, mode, rsttx)
+    line = input(prompt)
+    for tok in line.split(" "):
         # mode
         if tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
             mode = tok.upper()
@@ -137,7 +135,3 @@ for line in sys.stdin:
             print(rec['start'], rec['call'], rec['qrg'], rec['mode'],
                   rec['rsttx'], rec['rstrx'],
                   rec['qsltx'], rec['qslrx'])
-
-    if auto_rst == "serial":
-        print("%s" % (rsttx))
-    #print("log> ", end='', flush=True)
