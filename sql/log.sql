@@ -85,28 +85,36 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     LANGUAGE plpgsql
     AS $$BEGIN
 
-  IF NEW.myqth IS NULL THEN
-    NEW.myqth := CASE WHEN NEW.start > '2010-01-01' THEN 'Krefeld' ELSE 'Blieskastel' END;
-  END IF;
+  -- fixed
+  IF NEW.mycall = 'DF7CB' THEN
+    IF NEW.myqth IS NULL THEN NEW.myqth := 'Krefeld'; END IF;
+    IF NEW.myqth = 'Krefeld' THEN
+      IF NEW.myloc IS NULL THEN NEW.myloc := 'JO31HI'; END IF;
+    END IF;
 
-  -- QTH defaults
-  IF NEW.myqth = 'Krefeld' THEN
-    IF NEW.myloc IS NULL THEN NEW.myloc := 'JO31HI'; END IF;
+    -- shortwave
+    IF NEW.qrg < 30 THEN
+      IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
+      IF NEW.mypwr IS NULL THEN
+        NEW.mypwr := CASE NEW.qrg::band WHEN '60m' THEN 15 ELSE 100 END;
+      END IF;
 
-  ELSIF NEW.myqth = 'Blieskastel' THEN
-    IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-    IF NEW.mypwr IS NULL THEN NEW.mypwr := 100; END IF;
-    IF NEW.myloc IS NULL THEN NEW.myloc := 'JN39PF'; END IF;
-    IF NEW.myant IS NULL THEN NEW.myant := 'Doppelzepp'; END IF;
-  END IF;
+    -- 2m
+    ELSIF NEW.qrg::band IN ('2m', '70cm') THEN
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
+      IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
+    END IF;
 
-  -- shortwave defaults
-  IF NEW.qrg < 30 THEN
-    IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
-    IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-    IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
-    IF NEW.mypwr IS NULL THEN
-      NEW.mypwr := CASE NEW.qrg::band WHEN '60m' THEN 15 ELSE 100 END;
+  -- mobile
+  ELSIF NEW.mycall IN ('DF7CB/M', 'DF7CB/P') THEN
+    IF NEW.qrg::band IN ('2m', '70cm') THEN
+      IF NEW.myloc IS NULL THEN NEW.myloc := 'JO31'; END IF;
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC02E'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := 'GP'; END IF;
+      IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
     END IF;
   END IF;
 
