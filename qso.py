@@ -7,8 +7,6 @@ import re
 import sys
 
 from pyhamtools import LookupLib, Callinfo
-my_lookuplib = LookupLib(lookuptype="countryfile", filename="cty.plist")
-cic = Callinfo(my_lookuplib)
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
@@ -17,96 +15,129 @@ date = datetime.datetime.now().strftime("%Y-%m-%d")
 mode = 'CW'
 rsttx = '599'
 auto_rst = None
+mycall = None
 
 contest = None
 if len(sys.argv) == 2:
     contest = sys.argv[1]
     print("Contest: %s" % contest)
 
-select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx, contest FROM log WHERE call = %s"
-insert = "INSERT INTO log (start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx, contest) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call = %s"
 
 print("%s %s %s" % (date, mode, rsttx))
 #print("log> ", end='', flush=True)
 
 for line in sys.stdin:
     l = line.strip()
-    (time, call, qrg, rstrx) = (None, None, None, None)
-    (qsltx, qslrx) = ('N', 'N')
+    log = {
+        'mode': mode,
+        'rsttx': rsttx,
+    }
+    if contest:
+        log['contest'] = contest
+    if mycall:
+        log['mycall'] = mycall
+
     for tok in l.split(" "):
-        if re.search('^\d{4}-\d{2}-\d{2}$', tok):
+        # mode
+        if tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
+            mode = tok.upper()
+            log['mode'] = mode
+        # date and time
+        elif re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
             print("Date:", date)
-        elif tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
-            mode = tok.upper()
-            print("Mode:", mode)
         elif re.search('^\d{1,2}:\d{2}$', tok):
-            time = tok
+            log['start'] = "%s %s" % (date, tok)
+        elif re.search('^(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$', tok):
+            match = re.search('^(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$', tok)
+            log['start'] = "%s %s" % (date, match.group(1))
+            log['stop'] = "%s %s" % (date, match.group(2))
+
+        # QRG
+        elif tok == "db0mg":
+            log['qrg'] = "145.6125"
+            log['qso_via'] = "DB0MG"
+
         elif re.search('^\d+(\.\d+)?$', tok):
-            qrg = tok
+            log['qrg'] = tok
 
         # RST handling
+        elif re.search('^(5\d+)/(5\d+)$', tok):
+            match = re.search('^(5\d+)/(5\d+)$', tok)
+            log['rsttx'] = match.group(1)
+            log['rstrx'] = match.group(2)
         elif re.search('^5\d', tok):
-            if time is None: # no time seen, probably a new default RST to send
-                rsttx = tok.upper()
-                if rsttx == '59914':
-                    auto_rst = 'cqz'
-                elif rsttx == '59928':
-                    auto_rst = 'ituz'
-                print("RST sent:", rsttx)
-            elif rstrx is None: # else store as received RST
-                rstrx = tok.upper()
-            else: # if rstrx was already seen, move rstrx to tx, and store new as rx
-                rsttx = rstrx
-                rstrx = tok.upper()
-            if rsttx == '599001': # enable automatic serial mode
-                auto_rst = "serial"
+            log['rstrx'] = tok.upper()
         elif tok == "+":
             rsttx = str(int(rsttx) + 1)
+            log['rsttx'] = rsttx
         elif tok == "-":
             rsttx = str(int(rsttx) - 1)
-        elif tok == "itumult":
-            auto_rst = "ituz"
-        elif tok == "cqmult":
-            auto_rst = "cqz"
+            log['rsttx'] = rsttx
+        elif tok in ("serial", "ituz", "cqz"):
+            auto_rst = tok
+            if tok == "serial":
+                tsttx = "599001"
+            else:
+                my_lookuplib = LookupLib(lookuptype="countryfile", filename="cty.plist")
+                cic = Callinfo(my_lookuplib)
 
         # QSL sent/received handling
         elif re.search('^[nNyYrR]{1,2}$', tok):
-            qsltx = tok.upper()[0]
+            log['qsltx'] = tok.upper()[0]
             if len(tok) > 1:
-                qslrx = tok.upper()[1]
+                log['qslrx'] = tok.upper()[1]
+
+        # mycall
+        elif re.search('^/([mMpP])$', tok):
+            match = re.search('^/([mMpP])$', tok)
+            mycall = 'DF7CB/' + match.group(1)
+            log['mycall'] = mycall
+
+        # mypwr
+        elif re.search('^(\d+)[wW]$', tok):
+            match = re.search('^(\d+)[wW]$', tok)
+            log['mypwr'] = int(match.group(1))
+
+        # generic fields
+        elif re.search('^(.+?):(.*)', tok):
+            match = re.search('^(.+?):(.*)', tok)
+            log[match.group(1)] = match.group(2).replace('_', ' ')
 
         else:
-            if call:
-                print("Two calls on one line?")
-                continue
-            call = tok.upper()
+            log['call'] = tok.upper()
 
-    if time and call:
+    if 'start' in log and 'call' in log:
         if auto_rst in ('ituz', 'cqz') and not rstrx:
             try:
                 info = cic.get_all(call)
                 rstrx = '599' + str(info[auto_rst]).zfill(2)
             except KeyError:
                 pass
-        if rstrx is None:
-            rstrx = '599'
-        args = ("%s %s" % (date, time), call, qrg, mode, rsttx, rstrx, qsltx, qslrx, contest)
-        print(args)
+        if 'rstrx' not in log and log['mode'] == 'CW':
+            log['rstrx'] = '599'
+
+        insert = "INSERT INTO log (" + \
+            ', '.join(log.keys()) + \
+            ') VALUES (' + \
+            ', '.join(['%s' for x in log]) + \
+            ')'
+        args = [x for x in log.values()]
+        print(insert, args)
         cur.execute(insert, args)
         conn.commit()
 
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)
 
-    elif call:
-        cur.execute(select, (call,))
+    elif 'call' in log:
+        cur.execute(select, (log['call'],))
         for rec in cur.fetchall():
             print(rec['start'], rec['call'], rec['qrg'], rec['mode'],
                   rec['rsttx'], rec['rstrx'],
                   rec['qsltx'], rec['qslrx'])
 
-
     if auto_rst == "serial":
-        print("%s %s %s" % (date, mode, rsttx))
+        print("%s" % (rsttx))
     #print("log> ", end='', flush=True)
