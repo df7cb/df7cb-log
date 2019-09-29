@@ -15,14 +15,14 @@ date = datetime.datetime.now().strftime("%Y-%m-%d")
 mode = 'CW'
 rsttx = '599'
 auto_rst = None
-mycall = None
+mycall = 'DF7CB'
 
 contest = None
 if len(sys.argv) == 2:
     contest = sys.argv[1]
     print("Contest: %s" % contest)
 
-select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call = %s"
+select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call ~ %s"
 
 while True:
     log = {
@@ -34,13 +34,16 @@ while True:
     if mycall:
         log['mycall'] = mycall
 
-    prompt = "%s %s %s> " % (date, mode, rsttx)
+    prompt = "%s %s %s %s> " % (mycall, date, mode, rsttx)
     line = input(prompt)
     for tok in line.split(" "):
         # mode
         if tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
             mode = tok.upper()
             log['mode'] = mode
+            if mode == 'FM':
+                log['rsttx'] = '5'
+                log['rstrx'] = '5'
         # date and time
         elif re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
@@ -56,16 +59,19 @@ while True:
         elif tok == "db0mg":
             log['qrg'] = "145.6125"
             log['qso_via'] = "DB0MG"
+            log['mode'] = 'FM'
+            log['rsttx'] = '5'
+            log['rstrx'] = '5'
 
         elif re.search('^\d+(\.\d+)?$', tok):
             log['qrg'] = tok
 
         # RST handling
-        elif re.search('^(5\d+)/(5\d+)$', tok):
-            match = re.search('^(5\d+)/(5\d+)$', tok)
+        elif re.search('^([45]\d*)/([45]\d*)$', tok):
+            match = re.search('^([45]\d*)/([45]\d*)$', tok)
             log['rsttx'] = match.group(1)
             log['rstrx'] = match.group(2)
-        elif re.search('^5\d', tok):
+        elif re.search('^[45]\d', tok):
             log['rstrx'] = tok.upper()
         elif tok == "+":
             rsttx = str(int(rsttx) + 1)
@@ -90,7 +96,7 @@ while True:
         # mycall
         elif re.search('^/([mMpP])$', tok):
             match = re.search('^/([mMpP])$', tok)
-            mycall = 'DF7CB/' + match.group(1)
+            mycall = 'DF7CB/' + match.group(1).upper()
             log['mycall'] = mycall
 
         # mypwr
