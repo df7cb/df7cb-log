@@ -23,22 +23,23 @@ CABRILLO=UNIVERSAL
 #                                #
 ##################################
 #
-F1=TEST DE % K
+F1=CQ % % TEST
 F2=@ DE %
-F3=@ 5NN#
-F4=TU 
-F5= @
+F3=@ 5NN #
+F4=TU
+F5=@
 F6=%
 F7=@ SRI QSO B4 GL
 F8=AGN
-F9= ?
-F10= QRZ?
-F11= PSE K
+F9=?
+F10=QRZ?
+F11=PSE K
 F12=TEST % %
 #
 CQ_TU_MSG=TU %
 S&P_TU_MSG=TU 5NN #
-#S&P_TU_MSG=TU 5NN28
+#S&P_TU_MSG=TU 5NN R10
+#S&P_TU_MSG=TU 5NN 28
 #
 #ALT_0=
 #ALT_1=
