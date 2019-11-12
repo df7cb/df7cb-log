@@ -105,9 +105,14 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
 
     -- 2m
     ELSIF NEW.qrg::band IN ('2m', '70cm') THEN
-      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
+      IF NEW.mode = 'FM' THEN
+        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
+        IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
+      ELSE
+        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
+        IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
+      END IF;
       IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
-      IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
     END IF;
 
   -- mobile
