@@ -38,7 +38,7 @@ while True:
     line = input(prompt)
     for tok in line.split(" "):
         # mode
-        if tok.upper() in ('CW', 'FM', 'FT8', 'SSB'):
+        if tok.upper() in ('CW', 'FM', 'FT8', 'RTTY', 'SSB'):
             mode = tok.upper()
             log['mode'] = mode
             if mode == 'FM':
