@@ -38,7 +38,7 @@ while True:
     line = input(prompt)
     for tok in line.split(" "):
         # mode
-        if tok.upper() in ('CW', 'FM', 'FT8', 'RTTY', 'SSB'):
+        if tok.upper() in ('CW', 'FM', 'FT8', 'PSK31', 'RTTY', 'SSB'):
             mode = tok.upper()
             log['mode'] = mode
             if mode == 'FM':
@@ -67,8 +67,8 @@ while True:
             log['qrg'] = tok
 
         # RST handling
-        elif re.search('^([45]\d*)/([45]\d*)$', tok):
-            match = re.search('^([45]\d*)/([45]\d*)$', tok)
+        elif re.search('^([45].*)/([45].*)$', tok):
+            match = re.search('^([45].*)/([45].*)$', tok)
             log['rsttx'] = match.group(1)
             log['rstrx'] = match.group(2)
         elif re.search('^[45]\d', tok):
@@ -82,7 +82,7 @@ while True:
         elif tok in ("serial", "ituz", "cqz"):
             auto_rst = tok
             if tok == "serial":
-                tsttx = "599001"
+                rsttx = "599001"
             else:
                 my_lookuplib = LookupLib(lookuptype="countryfile", filename="cty.plist")
                 cic = Callinfo(my_lookuplib)
