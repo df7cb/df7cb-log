@@ -20,34 +20,51 @@ if not noop:
 
 #40CW  14-Apr-19 08:11 0002  LY3B           599  599  29            LY   29  0   7029.1
 
+log = []
 for line in sys.stdin:
-    if line[0] == ';': # ; comment
+
+    # ; comment, append to last qso
+    if line[0] == ';':
+        if line[2:6] == 'via ':
+            log[-1]['qsl_via'] = line[6:].rstrip().upper()
+        else:
+            log[-1]['comment'] = line[2:].rstrip()
         continue
+
     if line[23] != '0':
         Exception('serial does not start with 0')
 
-    qrg = Decimal(line[79:87]) / 1000
+    qso = {}
+    qso['start'] = line[7:22] # date+time
+    qso['call'] = line[29:43].rstrip()
+    qso['qrg'] = Decimal(line[79:87]) / 1000
 
-    sql = "INSERT INTO LOG (start, call, qrg, rsttx, rstrx, contest) " + \
-          "VALUES (%s, %s, %s, %s, %s, %s)"
-    data = (line[7:22],              # date+time
-            line[29:43].rstrip(),    # call
-            qrg,                     # qrg
+    # my rst:
+    #qso['rsttx'] = line[44:47]+line[24:27] # my rst + serial (3 digits)
+    qso['rsttx'] = line[44:47]+'14'        # my rst + my WAZ/CQ zone
+    #qso['rsttx'] = line[44:47]+'28'       # my rst + my ITU zone
+    #qso['rsttx'] = line[44:47]+'42'       # my rst + my age
+    #qso['rsttx'] = 'JO31'
 
-            # my rst:
-            line[44:47]+line[24:27], # my rst + serial (3 digits)
-            #line[44:47]+'28',       # my rst + my ITU zone
-            #line[44:47]+'42',       # my rst + my age
-            #'JO31',
+    # their rst:
+    qso['rstrx'] = line[49:52]+line[54:67].rstrip() # their rst + serial
+    #qso['rstrx'] = line[54:64].rstrip()
 
-            # their rst:
-            line[49:52]+line[54:67].rstrip(), # their rst + serial
-            #line[54:64].rstrip(),
+    qso['contest'] = args[0] # contest name
 
-            args[0]) # contest name
-    print (sql % data)
+    log.append(qso)
+
+for qso in log:
+    print (qso)
+
     if not noop:
-        cur.execute(sql, data)
+        insert = "INSERT INTO log (" + \
+            ', '.join(qso.keys()) + \
+            ') VALUES (' + \
+            ', '.join(['%s' for x in qso]) + \
+            ')'
+        args = [x for x in qso.values()]
+        cur.execute(insert, args)
 
 if not noop:
     conn.commit()
