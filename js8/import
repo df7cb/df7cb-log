@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eux
+
+export PGSERVICE="cb"
+
+psql -c "TRUNCATE log2"
+
+# start               stop                call   loc    qrg   mode rsttx rstrx mypwr name
+# 2019-12-09,20:23:10,2019-12-09,20:31:13,2W0RGA,IO81AP,7.079154,JS8,-10,-6,,Roy
+
+< js8call.log \
+  sed -e 's/,/ /' -e 's/,/ /2' |
+  psql \
+    -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, name) FROM STDIN (FORMAT CSV, DELIMITER ',')"
+
+psql -c "INSERT INTO log
+    SELECT * FROM log2 WHERE NOT EXISTS
+        (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call));"

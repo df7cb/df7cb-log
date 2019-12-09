@@ -16,6 +16,7 @@ set -eux
 git pull --ff-only
 
 ( cd wsjtx; ./import )
+( cd js8; ./import )
 ( cd sql; ./dump )
 ( cd lotw
   YEAR=$(date +%Y)

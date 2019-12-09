@@ -1,0 +1,1 @@
+../../../../.local/share/JS8Call/ALL.TXT
