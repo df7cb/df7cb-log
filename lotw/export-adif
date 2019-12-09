@@ -35,4 +35,4 @@ adif = pyqso.adif.ADIF()
 adif.write(records, adiffile)
 
 # Remove timestamp from header to make output reproducible
-os.system("sed -i -e 's/Generated on .*\\. //' %s" % adiffile)
+os.system("sed -i -e 's/ Generated on .*//' %s" % adiffile)
