@@ -44,6 +44,7 @@ for line in sys.stdin:
     #qso['rsttx'] = line[44:47]+'14'        # my rst + my WAZ/CQ zone
     #qso['rsttx'] = line[44:47]+'28'       # my rst + my ITU zone
     #qso['rsttx'] = line[44:47]+'42'       # my rst + my age
+    #qso['rsttx'] = line[44:47]+'R10'      # my rst + my DOK
     #qso['rsttx'] = 'JO31'
 
     # their rst:
