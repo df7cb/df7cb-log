@@ -22,6 +22,7 @@ git pull --ff-only
   YEAR=$(date +%Y)
   LOG=df7cb-$YEAR.adif
   ./export-adif $YEAR $LOG
+  git add $LOG
   ./tqsl-upload $LOG
   ./clublog-upload $LOG
   ./dcl-upload $LOG

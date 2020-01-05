@@ -1,0 +1,93 @@
+Amateur radio log file.
+
+<adif_ver:5>3.0.4
+<programid:5>PyQSO
+<programversion:5>1.1.0
+<eoh>
+<call:5>DL0DA
+<qso_date:8>20200104
+<time_on:4>2033
+<freq:6>1.8156
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 /CHRIS/NM
+<rst_rcvd:18>599 /HARRY/AGCW/15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>F5LPY
+<qso_date:8>20200104
+<time_on:4>2045
+<freq:6>1.8132
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 /CHRIS/NM
+<rst_rcvd:17>599 /BERN/UFT/594
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>F6CEL
+<qso_date:8>20200104
+<time_on:4>2048
+<freq:6>1.8325
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 /CHRIS/NM
+<rst_rcvd:16>599 /GHIS/UFT/12
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>G4BWP
+<qso_date:8>20200104
+<time_on:4>2053
+<freq:6>1.8312
+<band:4>160m
+<mode:2>CW
+<tx_pwr:3>100
+<rst_sent:13>599 /CHRIS/NM
+<rst_rcvd:18>599 /FRED/FOC/1746
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>YL2BR
+<qso_date:8>20200105
+<time_on:4>2032
+<freq:8>1.842035
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-15
+<rst_rcvd:3>+02
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>KO26
+<eor>
+<call:6>EA7HPI
+<qso_date:8>20200105
+<time_on:4>2100
+<freq:8>5.357541
+<band:3>60m
+<mode:3>FT8
+<tx_pwr:2>15
+<rst_sent:3>+03
+<rst_rcvd:3>-17
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IM66
+<eor>
+<call:5>EA5EN
+<qso_date:8>20200105
+<time_on:4>2102
+<freq:8>5.357541
+<band:3>60m
+<mode:3>FT8
+<tx_pwr:2>15
+<rst_sent:3>+11
+<rst_rcvd:3>-12
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IM97
+<eor>
