@@ -45,10 +45,12 @@ for line in sys.stdin:
     #qso['rsttx'] = line[44:47]+'28'       # my rst + my ITU zone
     #qso['rsttx'] = line[44:47]+'42'       # my rst + my age
     #qso['rsttx'] = line[44:47]+'R10'      # my rst + my DOK
+    #qso['rsttx'] = line[44:47]+'/CHRIS/NM' # my rst + my DOK
     #qso['rsttx'] = 'JO31'
 
     # their rst:
     qso['rstrx'] = line[49:52]+line[54:67].rstrip() # their rst + serial
+    #qso['rstrx'] = line[49:52]+'/'+line[54:67].rstrip() # their rst / serial
     #qso['rstrx'] = line[54:64].rstrip()
 
     qso['contest'] = args[0] # contest name
