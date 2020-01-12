@@ -35,4 +35,4 @@ CATEGORY-TRANSMITTER: ONE' \
 echo >> $CBR
 
 vi $CBR
-git add $CBR
+git add $LOG $CBR
