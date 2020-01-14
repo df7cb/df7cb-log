@@ -11,9 +11,14 @@ done
 # shift away args
 shift $((OPTIND - 1))
 
+trap "ssh feynman.df7cb.de -O exit" EXIT
+
 set -eux
 
 git pull --ff-only
+
+ssh feynman.df7cb.de sleep 60 &
+sleep 1
 
 ( cd wsjtx; ./import )
 ( cd js8; ./import )
