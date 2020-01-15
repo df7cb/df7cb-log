@@ -1,3 +1,4 @@
 JS8Call ADIF Export<eoh>
 <call:6>HB9MOW <gridsquare:0> <mode:4>MFSK <submode:3>JS8 <rst_sent:2>-9 <rst_rcvd:0> <qso_date:8>20191209 <time_on:6>182318 <qso_date_off:8>20191209 <time_off:6>183937 <band:3>40m <freq:8>7.079198 <station_callsign:5>DF7CB <my_gridsquare:6>JO31HI <name:5>Erich <operator:5>DF7CB <eor>
 <call:6>2W0RGA <gridsquare:6>IO81AP <mode:4>MFSK <submode:3>JS8 <rst_sent:3>-10 <rst_rcvd:2>-6 <qso_date:8>20191209 <time_on:6>202310 <qso_date_off:8>20191209 <time_off:6>203113 <band:3>40m <freq:8>7.079154 <station_callsign:5>DF7CB <my_gridsquare:6>JO31HI <name:3>Roy <operator:5>DF7CB <eor>
+<call:6>SP5GSM <gridsquare:0> <mode:4>MFSK <submode:3>JS8 <rst_sent:0> <rst_rcvd:0> <qso_date:8>20200114 <time_on:6>205349 <qso_date_off:8>20200114 <time_off:6>210226 <band:3>80m <freq:8>3.579329 <station_callsign:5>DF7CB <my_gridsquare:6>JO31HI <name:7>Mariusz <operator:5>DF7CB <eor>
