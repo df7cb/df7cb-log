@@ -62,6 +62,13 @@ while True:
             log['mode'] = 'FM'
             log['rsttx'] = '5'
             log['rstrx'] = '5'
+        elif tok == "db0ca":
+            log['qrg'] = "438.975"
+            log['qso_via'] = "DB0CA"
+            log['mode'] = 'FM'
+            log['rsttx'] = '5'
+            log['rstrx'] = '5'
+            log['mypwr'] = '40'
 
         elif re.search('^\d+(\.\d+)?$', tok):
             log['qrg'] = tok
