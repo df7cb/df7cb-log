@@ -36,3 +36,4 @@ echo >> $CBR
 
 vi $CBR
 git add $LOG $CBR
+v commit -m "$CONTEST" --edit
