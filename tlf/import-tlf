@@ -21,6 +21,7 @@ if not noop:
 #40CW  14-Apr-19 08:11 0002  LY3B           599  599  29            LY   29  0   7029.1
 
 log = []
+laststart = ''
 for line in sys.stdin:
 
     # ; comment, append to last qso
@@ -36,6 +37,9 @@ for line in sys.stdin:
 
     qso = {}
     qso['start'] = line[7:22] # date+time
+    if laststart == qso['start']:
+        qso['start'] += ':30'
+    laststart = qso['start']
     qso['call'] = line[29:43].rstrip()
     qso['qrg'] = Decimal(line[79:87]) / 1000
 
