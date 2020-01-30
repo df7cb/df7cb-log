@@ -286,6 +286,18 @@ Amateur radio log file.
 <qsl_rcvd:1>N
 <gridsquare:4>KO23
 <eor>
+<call:5>DO8VC
+<qso_date:8>20200109
+<time_on:4>1540
+<freq:7>438.975
+<band:4>70cm
+<mode:2>FM
+<tx_pwr:2>40
+<rst_sent:1>5
+<rst_rcvd:1>5
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:5>M0TBQ
 <qso_date:8>20200110
 <time_on:4>0632
@@ -675,6 +687,18 @@ Amateur radio log file.
 <qsl_sent:1>N
 <qsl_rcvd:1>N
 <gridsquare:4>JN08
+<eor>
+<call:6>DO7RTH
+<qso_date:8>20200113
+<time_on:4>0800
+<freq:7>438.975
+<band:4>70cm
+<mode:2>FM
+<tx_pwr:2>40
+<rst_sent:1>5
+<rst_rcvd:1>5
+<qsl_sent:1>N
+<qsl_rcvd:1>N
 <eor>
 <call:4>SN1T
 <qso_date:8>20200113
@@ -2778,6 +2802,18 @@ Amateur radio log file.
 <qsl_rcvd:1>N
 <gridsquare:4>JN49
 <eor>
+<call:5>DO6IL
+<qso_date:8>20200121
+<time_on:4>0750
+<freq:7>438.975
+<band:4>70cm
+<mode:2>FM
+<tx_pwr:2>40
+<rst_sent:1>5
+<rst_rcvd:1>5
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
 <call:6>SP6ECQ
 <qso_date:8>20200122
 <time_on:4>0651
@@ -3019,7 +3055,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 001
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3031,7 +3067,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 002
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3043,7 +3079,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 003
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3055,7 +3091,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 004
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3067,7 +3103,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 005
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3079,7 +3115,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 006
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3091,7 +3127,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 007
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3103,7 +3139,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 008
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3115,7 +3151,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 009
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3127,7 +3163,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 010
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3139,7 +3175,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 011
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3151,7 +3187,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 012
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3163,7 +3199,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 013
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3175,7 +3211,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 014
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3187,7 +3223,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 015
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3199,7 +3235,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 016
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3211,7 +3247,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 017
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3223,7 +3259,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 018
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3235,7 +3271,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 019
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3247,7 +3283,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 020
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3259,7 +3295,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 021
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3271,7 +3307,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 022
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3283,7 +3319,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 023
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3295,7 +3331,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 024
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3307,7 +3343,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 025
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3319,7 +3355,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 026
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3331,7 +3367,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 027
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3343,7 +3379,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 028
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3355,7 +3391,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 029
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3367,7 +3403,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 030
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3379,7 +3415,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 031
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3391,7 +3427,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 032
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3403,7 +3439,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 033
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3415,7 +3451,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 034
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3427,7 +3463,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 035
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3439,7 +3475,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 036
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3451,7 +3487,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 037
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3463,7 +3499,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 038
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3475,7 +3511,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 039
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3487,7 +3523,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 040
+<rst_sent:6>599 14
 <rst_rcvd:6>599 20
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3499,7 +3535,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 041
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3511,7 +3547,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 042
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3523,7 +3559,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 043
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3535,7 +3571,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 044
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3547,7 +3583,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 045
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3559,7 +3595,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 046
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3571,7 +3607,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 047
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3583,7 +3619,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 048
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3595,7 +3631,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 049
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3607,7 +3643,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 050
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3619,7 +3655,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 051
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3631,7 +3667,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 052
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3643,7 +3679,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 053
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3655,7 +3691,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 054
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3667,7 +3703,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 055
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3679,7 +3715,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 056
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3691,7 +3727,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 057
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3703,7 +3739,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 058
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3715,7 +3751,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 059
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3727,7 +3763,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 060
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3739,7 +3775,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 061
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3751,7 +3787,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 062
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3763,7 +3799,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 063
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3775,7 +3811,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 064
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3787,7 +3823,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 065
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3799,7 +3835,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 066
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3811,7 +3847,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 067
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3823,7 +3859,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 068
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3835,7 +3871,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 069
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3847,7 +3883,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 070
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3859,7 +3895,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 071
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3871,7 +3907,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 072
+<rst_sent:6>599 14
 <rst_rcvd:6>599 20
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3883,7 +3919,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 073
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3895,7 +3931,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 074
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3907,7 +3943,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 075
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3919,7 +3955,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 076
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3931,7 +3967,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 077
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3943,7 +3979,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 078
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3955,7 +3991,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 079
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3967,7 +4003,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 080
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3979,7 +4015,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 081
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -3991,7 +4027,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 082
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4003,7 +4039,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 083
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4015,7 +4051,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 084
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4027,7 +4063,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 085
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4039,7 +4075,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 086
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4051,7 +4087,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 087
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4063,7 +4099,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 088
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4075,7 +4111,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 089
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4087,7 +4123,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 090
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4099,7 +4135,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 091
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4111,7 +4147,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 092
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4123,7 +4159,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 093
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4135,7 +4171,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 094
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4147,7 +4183,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 095
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4159,7 +4195,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 096
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4171,7 +4207,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 097
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4183,7 +4219,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 098
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4195,7 +4231,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 099
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4207,7 +4243,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 100
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4219,7 +4255,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 101
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4231,7 +4267,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 102
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4243,7 +4279,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 103
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4255,7 +4291,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 104
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4267,7 +4303,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 105
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4279,7 +4315,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 106
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4291,7 +4327,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 107
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4303,7 +4339,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 108
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4315,7 +4351,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 109
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4327,7 +4363,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 110
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4339,7 +4375,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 111
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4351,7 +4387,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 112
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4363,7 +4399,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 113
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4375,7 +4411,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 114
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4387,7 +4423,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 115
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4399,7 +4435,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 116
+<rst_sent:6>599 14
 <rst_rcvd:6>599 33
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4411,7 +4447,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 117
+<rst_sent:6>599 14
 <rst_rcvd:6>599 20
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4423,7 +4459,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 118
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4435,7 +4471,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 119
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4447,7 +4483,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 120
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4459,7 +4495,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 121
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4471,7 +4507,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 122
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4483,7 +4519,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 123
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4495,7 +4531,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 124
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4507,7 +4543,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 125
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4519,7 +4555,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 126
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4531,7 +4567,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 127
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4543,7 +4579,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 128
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4555,7 +4591,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 129
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4567,7 +4603,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 130
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4579,7 +4615,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 131
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4591,7 +4627,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 132
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4603,7 +4639,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 133
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4615,7 +4651,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 134
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4627,7 +4663,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 135
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4639,7 +4675,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 136
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4651,7 +4687,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 137
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4663,7 +4699,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 138
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4675,7 +4711,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 139
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4687,7 +4723,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 140
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4699,7 +4735,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 141
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4711,7 +4747,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 142
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4723,7 +4759,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 143
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4735,7 +4771,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 144
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4747,7 +4783,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 145
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4759,7 +4795,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 146
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4771,7 +4807,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 147
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4783,7 +4819,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 148
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4795,7 +4831,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 149
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4807,7 +4843,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 150
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4819,7 +4855,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 151
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4831,7 +4867,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 152
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4843,7 +4879,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 153
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4855,7 +4891,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 154
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4867,7 +4903,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 155
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4879,7 +4915,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 156
+<rst_sent:6>599 14
 <rst_rcvd:6>599 18
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4891,7 +4927,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 157
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4903,7 +4939,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 158
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4915,7 +4951,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 159
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4927,7 +4963,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 160
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4939,7 +4975,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 161
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4951,7 +4987,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 162
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4963,7 +4999,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 163
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4975,7 +5011,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 164
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4987,7 +5023,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 165
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -4999,7 +5035,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 166
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5011,7 +5047,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 167
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5023,7 +5059,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 168
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5035,7 +5071,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 169
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5047,7 +5083,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 170
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5059,7 +5095,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 171
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5071,7 +5107,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 172
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5083,7 +5119,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 173
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5095,7 +5131,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 174
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5107,7 +5143,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 175
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5119,7 +5155,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 176
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5131,7 +5167,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 177
+<rst_sent:6>599 14
 <rst_rcvd:6>599 16
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5143,7 +5179,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 178
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5155,7 +5191,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 179
+<rst_sent:6>599 14
 <rst_rcvd:6>599 15
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5167,7 +5203,7 @@ Amateur radio log file.
 <band:4>160m
 <mode:2>CW
 <tx_pwr:3>100
-<rst_sent:7>599 180
+<rst_sent:6>599 14
 <rst_rcvd:6>599 14
 <qsl_sent:1>N
 <qsl_rcvd:1>N
@@ -5183,4 +5219,263 @@ Amateur radio log file.
 <rst_rcvd:3>-03
 <qsl_sent:1>N
 <qsl_rcvd:1>N
+<eor>
+<call:5>DF3WV
+<qso_date:8>20200127
+<time_on:4>0740
+<freq:7>438.975
+<band:4>70cm
+<mode:2>FM
+<tx_pwr:2>40
+<rst_sent:1>5
+<rst_rcvd:1>5
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<eor>
+<call:5>LB8MG
+<qso_date:8>20200127
+<time_on:4>1920
+<freq:8>1.842480
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-07
+<rst_rcvd:3>-15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JO59
+<eor>
+<call:5>G3RED
+<qso_date:8>20200127
+<time_on:4>1922
+<freq:8>1.842480
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-02
+<rst_rcvd:3>-15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IO92
+<eor>
+<call:6>HB9FAX
+<qso_date:8>20200127
+<time_on:4>1924
+<freq:8>1.842480
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-09
+<rst_rcvd:3>-15
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JN46
+<eor>
+<call:6>IW3GRG
+<qso_date:8>20200127
+<time_on:4>1926
+<freq:8>1.842480
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+02
+<rst_rcvd:3>-05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JN65
+<eor>
+<call:5>DJ7JC
+<qso_date:8>20200127
+<time_on:4>1927
+<freq:8>1.842480
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+08
+<rst_rcvd:3>+00
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JO31
+<eor>
+<call:6>PA3DZA
+<qso_date:8>20200127
+<time_on:4>1934
+<freq:8>1.842710
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+07
+<rst_rcvd:3>+09
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JO31
+<eor>
+<call:6>UA1CEI
+<qso_date:8>20200127
+<time_on:4>1939
+<freq:8>1.842710
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-10
+<rst_rcvd:3>-18
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>KP50
+<eor>
+<call:6>IK0XBX
+<qso_date:8>20200127
+<time_on:4>1948
+<freq:8>1.842596
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-11
+<rst_rcvd:3>-14
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JN63
+<eor>
+<call:6>SM5EPO
+<qso_date:8>20200128
+<time_on:4>1931
+<freq:8>1.842695
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-05
+<rst_rcvd:3>-05
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JP80
+<eor>
+<call:5>F5PBG
+<qso_date:8>20200128
+<time_on:4>2020
+<freq:8>1.840378
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-11
+<rst_rcvd:3>-13
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IN78
+<eor>
+<call:6>MJ0LEL
+<qso_date:8>20200128
+<time_on:4>2023
+<freq:8>1.840655
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-05
+<rst_rcvd:3>-08
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IN89
+<eor>
+<call:5>OM7AX
+<qso_date:8>20200128
+<time_on:4>2033
+<freq:8>1.842518
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-09
+<rst_rcvd:3>-17
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JN98
+<eor>
+<call:5>DO3GE
+<qso_date:8>20200128
+<time_on:4>2039
+<freq:8>1.840552
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-04
+<rst_rcvd:3>-11
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JO31
+<eor>
+<call:6>IZ5MOQ
+<qso_date:8>20200129
+<time_on:4>1718
+<freq:8>1.842591
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+02
+<rst_rcvd:3>-19
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JN54
+<eor>
+<call:6>SP3DOF
+<qso_date:8>20200129
+<time_on:4>1718
+<freq:8>1.842591
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-03
+<rst_rcvd:3>+08
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>JO72
+<eor>
+<call:5>LY2HM
+<qso_date:8>20200129
+<time_on:4>2117
+<freq:8>1.842595
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-13
+<rst_rcvd:3>-20
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>KO15
+<eor>
+<call:6>MI1ERL
+<qso_date:8>20200130
+<time_on:4>1928
+<freq:8>1.841577
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>+03
+<rst_rcvd:3>-06
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IO74
+<eor>
+<call:5>EA2DR
+<qso_date:8>20200130
+<time_on:4>1933
+<freq:8>1.842503
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-04
+<rst_rcvd:3>-11
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>IN83
+<eor>
+<call:6>SP9HZW
+<qso_date:8>20200130
+<time_on:4>2108
+<freq:8>1.841264
+<band:4>160m
+<mode:3>FT8
+<tx_pwr:3>100
+<rst_sent:3>-03
+<rst_rcvd:3>-07
+<qsl_sent:1>N
+<qsl_rcvd:1>N
+<gridsquare:4>KO00
 <eor>
