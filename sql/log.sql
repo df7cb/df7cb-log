@@ -55,8 +55,8 @@ CREATE TABLE log (
     mode text NOT NULL,
     rsttx text,
     rstrx text,
-    qsltx character(1) DEFAULT 'N'::bpchar NOT NULL,
-    qslrx character(1) DEFAULT 'N'::bpchar NOT NULL,
+    qsltx character(1) CHECK (qsltx IN ('N', 'R', 'Y')),
+    qslrx character(1) CHECK (qslrx IN ('N', 'R', 'Y')),
     qsl_via call,
     name text,
     qth text,
@@ -70,6 +70,8 @@ CREATE TABLE log (
     myqth text,
     myloc text,
     myant text,
+    info jsonb,
+    last_update timestamptz,
     CONSTRAINT start_before_stop CHECK (start <= stop),
     -- so far, all QSOs over an hour have been 1995 only
     CONSTRAINT qso_length CHECK (stop <= start + '1h'::interval OR start < '1996-01-01'),
@@ -86,6 +88,13 @@ ALTER TABLE log CLUSTER ON log_pkey;
 \i logtrigger.sql
 
 CREATE TRIGGER log_insert BEFORE INSERT ON log FOR EACH ROW EXECUTE PROCEDURE logtrigger();
+
+CREATE OR REPLACE FUNCTION last_update() RETURNS trigger LANGUAGE plpgsql
+AS $$BEGIN
+    NEW.last_update := now();
+END;$$;
+
+CREATE TRIGGER log_update BEFORE UPDATE ON log FOR EACH ROW EXECUTE PROCEDURE last_update();
 
 GRANT SELECT ON TABLE log TO PUBLIC;
 
