@@ -19,6 +19,7 @@ EMAIL: cb@df7cb.de\
 ADDRESS: Rather Str. 76a\
 ADDRESS: 47802 Krefeld\
 ADDRESS: Germany\
+GRID-LOCATOR: JO31HI\
 CLUB: Rhein Ruhr DX Association' \
   -e '/^CONTEST:/ a \
 CATEGORY-ASSISTED: NON-ASSISTED\
