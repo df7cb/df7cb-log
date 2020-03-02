@@ -71,7 +71,7 @@ CREATE TABLE log (
     myloc text,
     myant text,
     info jsonb,
-    last_update timestamptz,
+    last_update timestamptz DEFAULT now(),
     CONSTRAINT start_before_stop CHECK (start <= stop),
     -- so far, all QSOs over an hour have been 1995 only
     CONSTRAINT qso_length CHECK (stop <= start + '1h'::interval OR start < '1996-01-01'),

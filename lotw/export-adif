@@ -6,8 +6,7 @@ import psycopg2
 import psycopg2.extras
 import sys
 
-year = sys.argv[1]
-adiffile = sys.argv[2]
+adiffile = sys.argv[1]
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
@@ -25,10 +24,9 @@ cur.execute("""SELECT qrg::text AS "FREQ",
         coalesce(loc, '') AS "GRIDSQUARE",
         coalesce(mypwr::text, '') AS "TX_PWR"
         FROM log
-        WHERE extract(year from start) = %s
+        WHERE coalesce(last_update, start) > now() - '1 week'::interval
             AND mycall LIKE 'DF7CB%%'
-        ORDER BY start, call""",
-        (year,))
+        ORDER BY start, call""")
 
 records = cur.fetchall()
 adif = pyqso.adif.ADIF()

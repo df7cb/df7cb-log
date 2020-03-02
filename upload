@@ -24,14 +24,12 @@ sleep 1
 ( cd js8; ./import )
 ( cd sql; ./dump )
 ( cd lotw
-  YEAR=$(date +%Y)
-  LOG=df7cb-$YEAR.adif
-  ./export-adif $YEAR $LOG
-  git add $LOG
+  LOG=df7cb-upload.adif
+  ./export-adif $LOG
   ./tqsl-upload $LOG
   ./clublog-upload $LOG
   ./dcl-upload $LOG
-  ./eqsl-upload $LOG &
+  ./eqsl-upload $LOG
 )
 
 if [ "$GIT" ]; then
