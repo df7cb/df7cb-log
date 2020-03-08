@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import adif
+import json
 import psycopg2
 import psycopg2.extras
 
@@ -14,15 +15,20 @@ cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 for qso in lotw:
     print(qso)
-    cur.execute("""INSERT INTO lotw (start, call, qrg, mode, country, iota, loc, cqz, ituz) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)""",
+    cur.execute("""INSERT INTO lotw (start, call, qrg, mode, country, loc, info)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (start, call) DO UPDATE
+            SET qrg = EXCLUDED.qrg,
+                mode = EXCLUDED.mode,
+                country = EXCLUDED.country,
+                loc = EXCLUDED.loc,
+                info = EXCLUDED.info""",
             ("%s %s" % (qso['QSO_DATE'], qso['TIME_ON']),
             qso.get('CALL'),
             qso.get('FREQ'),
             qso.get('MODE'),
             qso.get('COUNTRY'),
-            qso.get('IOTA'),
             qso.get('GRIDSQUARE'),
-            qso.get('CQZ'),
-            qso.get('ITUZ')))
+            json.dumps(qso)))
 
 conn.commit()

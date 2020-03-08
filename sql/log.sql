@@ -72,6 +72,7 @@ CREATE TABLE log (
     myant text,
     info jsonb,
     last_update timestamptz DEFAULT now(),
+    PRIMARY KEY (start, call),
     CONSTRAINT start_before_stop CHECK (start <= stop),
     -- so far, all QSOs over an hour have been 1995 only
     CONSTRAINT qso_length CHECK (stop <= start + '1h'::interval OR start < '1996-01-01'),
@@ -80,10 +81,8 @@ CREATE TABLE log (
 
 COMMENT ON COLUMN log.qrg IS 'Frequency in MHz';
 
-ALTER TABLE ONLY log
-    ADD CONSTRAINT log_pkey PRIMARY KEY (start, call);
-
 ALTER TABLE log CLUSTER ON log_pkey;
+CREATE INDEX ON log (call);
 
 \i logtrigger.sql
 
