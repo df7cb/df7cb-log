@@ -32,3 +32,35 @@ for qso in lotw:
             json.dumps(qso)))
 
 conn.commit()
+
+# locator import
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw}', to_jsonb(true))
+  FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.info->'lotw' IS NULL""")
+print("New LoTW QSLs: %s" % cur.rowcount)
+
+# locator import
+cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.loc IS NULL AND w.loc IS NOT NULL""")
+print("New locators: %s" % cur.rowcount)
+
+cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.loc::varchar(4) = w.loc::varchar(4)
+    AND l.loc <> w.loc""")
+print("Updated locators: %s" % cur.rowcount)
+
+# IOTA import:
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{iota}', w.info->'IOTA') FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA'""")
+print("Updated IOTAs: %s" % cur.rowcount)
+
+# orphaned LoTW QSLs
+cur.execute("""SELECT * FROM log l RIGHT JOIN lotw w ON (date_trunc('minute', l.start), l.call) = (w.start, w.call) WHERE l.start IS NULL""")
+for row in cur.fetchall():
+    print("Orphaned LoTW QSL:", row)
+
+conn.commit()

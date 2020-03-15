@@ -34,16 +34,4 @@ SELECT * FROM log l RIGHT JOIN lotw w ON (date_trunc('minute', l.start), l.call)
 -- locator mismatch:
 SELECT l.start, l.call, l.qrg, l.mode, l.loc, w.loc FROM log l JOIN lotw w ON (date_trunc('minute', l.start),l.call) = (w.start,w.call) WHERE l.loc::varchar(4) <> w.loc::varchar(4);
 SELECT l.start, l.call, l.qrg, l.mode, l.loc, w.loc FROM log l JOIN lotw w ON (date_trunc('minute', l.start),l.call) = (w.start,w.call) WHERE l.loc::varchar(4) = w.loc::varchar(4) AND l.loc <> w.loc;
-
--- locator import:
-UPDATE log l SET loc = w.loc FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
-    AND l.loc::varchar(4) = w.loc::varchar(4)
-    AND l.loc <> w.loc;
-
--- IOTA import:
-UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{iota}', w.info->'IOTA') FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
-    AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA';
-
 */
