@@ -1,8 +1,10 @@
 #!/bin/sh
 
+PATH=$PATH:$(dirname $0)
+
 CONTEST="$1"
 LOG="$2"
-CBR="${LOG%.log}.cbr"
+CBR="${LOG%.*}.cbr"
 
 set -eux
 
@@ -11,7 +13,7 @@ read ok
 ./import-tlf "$CONTEST" < $LOG
 
 # add address and category info, remove decimal part of frequencies
-./export-cabrillo "$CONTEST" "$CBR"
+export-cabrillo "$CONTEST" "$CBR"
 sed -i \
   -e '/^CALLSIGN:/ a \
 NAME: Christoph Berg\
