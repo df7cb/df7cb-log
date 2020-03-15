@@ -1,23 +1,56 @@
 #!/usr/bin/python3
 
-import adif
+import adif_io
+import json
+import psycopg2
 
-adif = adif.ADIF()
+dcl, header = adif_io.read_from_file('dcl.adif')
 
-dcl = adif.read('dcl.adif')
+# {'CALL': 'DL7ET', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '19951115', 'TIME_ON': '1932', 'RST_SENT': '599', 'RST_RCVD': '599', 'DXCC': '230', 'DARC_DOK': 'R09', 'APP_DCL_STATUS': 'i'}
 
-# {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor()
 
 for qso in dcl:
-    if qso['BAND'] == '80m':
-        qrg = '3.5'
+    print(qso)
+
+    if 'FREQ' in qso:
+        freq = qso['FREQ']
+    elif qso['BAND'] == '160m':
+        freq = '1.8'
+    elif qso['BAND'] == '80m':
+        freq = '3.5'
+    elif qso['BAND'] == '60m':
+        freq = '5.3'
     elif qso['BAND'] == '40m':
-        qrg = '7'
-    else:
-        raise Exception('unknown band')
-    if qso['DARC_DOK'] == '':
-        qso['DARC_DOK'] = '\\N'
-        rstrx = '599'
-    else:
-        rstrx = '599' + qso['DARC_DOK']
-    print(qso['CALL'] +'\t'+ qrg +'\t'+ qso['MODE'] +'\t599Q02\t' + rstrx +'\t'+ qso['QSO_DATE'], qso['TIME_ON'] +'\t'+ qso['DARC_DOK'] + '\tBlieskastel')
+        freq = '7'
+    elif qso['BAND'] == '30m':
+        freq = '10.1'
+    elif qso['BAND'] == '20m':
+        freq = '14'
+    elif qso['BAND'] == '17m':
+        freq = '18.1'
+    elif qso['BAND'] == '15m':
+        freq = '21'
+    elif qso['BAND'] == '12m':
+        freq = '24.8'
+    elif qso['BAND'] == '10m':
+        freq = '28'
+    elif qso['BAND'] == '2m':
+        freq = '144'
+    elif qso['BAND'] == '70cm':
+        freq = '430'
+
+    cur.execute("""INSERT INTO dcl (start, call, qrg, mode, info)
+            VALUES (%s, %s, %s, %s, %s)
+            ON CONFLICT (start, call) DO UPDATE
+            SET qrg = EXCLUDED.qrg,
+                mode = EXCLUDED.mode,
+                info = EXCLUDED.info""",
+            (adif_io.time_on(qso),
+            qso.get('CALL'),
+            freq,
+            qso.get('MODE'),
+            json.dumps(qso)))
+
+conn.commit()
