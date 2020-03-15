@@ -1,0 +1,1 @@
+../lotw/adif.py

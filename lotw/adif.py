@@ -31,6 +31,7 @@ from os.path import expanduser
 AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
                                "QSO_DATE": "D",
                                "TIME_ON": "T",
+                               "TIME_OFF": "T",
                                "FREQ": "N",
                                "BAND": "E",
                                "MODE": "E",
@@ -39,6 +40,8 @@ AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
                                "TX_PWR": "N",
                                "RST_SENT": "S",
                                "RST_RCVD": "S",
+                               "STX": "S",
+                               "SRX": "S",
                                "QSL_SENT": "S",
                                "QSL_RCVD": "S",
                                "GRIDSQUARE": "S",
@@ -56,13 +59,14 @@ AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
                                "SAT_MODE": "S"}
 # Note: The logbook uses the ADIF field names for the database column names.
 # This list is used to display the columns in a logical order.
-AVAILABLE_FIELD_NAMES_ORDERED = ["CALL", "QSO_DATE", "TIME_ON", "FREQ", "BAND", "MODE", "SUBMODE", "PROP_MODE", "TX_PWR",
-                                 "RST_SENT", "RST_RCVD", "QSL_SENT", "QSL_RCVD", "DARC_DOK", "NOTES", "NAME",
+AVAILABLE_FIELD_NAMES_ORDERED = ["CALL", "QSO_DATE", "TIME_ON", "TIME_OFF", "FREQ", "BAND", "MODE", "SUBMODE", "PROP_MODE", "TX_PWR",
+                                 "RST_SENT", "RST_RCVD", "STX", "SRX", "QSL_SENT", "QSL_RCVD", "DARC_DOK", "NOTES", "NAME",
                                  "ADDRESS", "STATE", "COUNTRY", "DXCC", "CQZ", "ITUZ", "IOTA", "GRIDSQUARE", "SAT_NAME", "SAT_MODE"]
 # Define the more user-friendly versions of the field names.
 AVAILABLE_FIELD_NAMES_FRIENDLY = {"CALL": "Callsign",
                                   "QSO_DATE": "Date",
                                   "TIME_ON": "Time",
+                                  "TIME_OFF": "End Time",
                                   "FREQ": "Frequency (MHz)",
                                   "BAND": "Band",
                                   "MODE": "Mode",
