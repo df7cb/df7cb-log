@@ -54,3 +54,28 @@ for qso in dcl:
             json.dumps(qso)))
 
 conn.commit()
+
+# DCL import
+cur.execute("""UPDATE log l
+  SET info = jsonb_set(coalesce(l.info, '{}'), '{dcl}', d.info->'APP_DCL_STATUS')
+  FROM dcl d
+  WHERE (date_trunc('minute', l.start), l.call) = (d.start, d.call)
+    AND l.info->'dcl' IS NULL""")
+print("New DCL QSLs: %s" % cur.rowcount)
+
+# DOK import
+cur.execute("""UPDATE log l SET dok = d.info->>'DARC_DOK' FROM dcl d
+  WHERE (date_trunc('minute', l.start), l.call) = (d.start, d.call)
+    AND l.dok IS NULL AND d.info->>'DARC_DOK' <> ''""")
+print("New DOKs: %s" % cur.rowcount)
+
+# DOK mismatch
+cur.execute("""SELECT l.start::text, l.call, l.qrg::text, l.mode, l.dok, d.info->>'DARC_DOK'
+  FROM log l JOIN dcl d
+    ON (date_trunc('minute', l.start), l.call) = (d.start, d.call)
+  WHERE l.dok IS DISTINCT FROM d.info->>'DARC_DOK'
+    AND d.info->>'DARC_DOK' <> ''""")
+for row in cur.fetchall():
+    print("DOK mismatch:", row)
+
+conn.commit()
