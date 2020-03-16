@@ -74,7 +74,8 @@ cur.execute("""SELECT l.start::text, l.call, l.qrg::text, l.mode, l.dok, d.info-
   FROM log l JOIN dcl d
     ON (date_trunc('minute', l.start), l.call) = (d.start, d.call)
   WHERE l.dok IS DISTINCT FROM d.info->>'DARC_DOK'
-    AND d.info->>'DARC_DOK' <> ''""")
+    AND d.info->>'DARC_DOK' <> ''
+  ORDER BY start""")
 for row in cur.fetchall():
     print("DOK mismatch:", row)
 

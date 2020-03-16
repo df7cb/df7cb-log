@@ -33,7 +33,7 @@
 1995-10-29 09:18:00+00	\N	DK4XE	DL	3.66	SSB	59	59	Y	Y	Hubert	Riegelsberg	JN39LH	Q01	\N	Saarlandrunde	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-10-29 10:02:00+00	\N	DL0SD/DL8FD	DL	3.66	SSB	59	59	Y	R	Hans	Elversberg	JN39NH	Q	\N	Saarlandrundspruch	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-10-29 11:29:00+00	\N	LX1KC	LX	7.075	SSB	59	59	Y	Y	Christian	Bettembourg	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"lotw": true}	2020-03-15 20:48:32.135595+00
-1995-10-29 12:32:00+00	1995-10-29 12:37:00+00	DJ0XR	DL	145.737	FM	5	\N	Y	R	Leif	St.Wendel	JN39OL	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
+1995-10-29 12:32:00+00	1995-10-29 12:37:00+00	DJ0XR	DL	145.737	FM	5	\N	Y	R	Leif	St.Wendel	JN39OL	Q10	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"dcl": "i"}	2020-03-16 21:29:54.719455+00
 1995-10-29 13:53:00+00	\N	Z30M	Z3	14.318	SSB	59	\N	N	N	\N	\N	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"lotw": true}	2020-03-15 20:48:32.135595+00
 1995-10-29 13:57:00+00	\N	9A6V	9A	14.315	SSB	59	\N	N	N	\N	\N	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-10-29 14:01:00+00	\N	LY2MW	LY	14.307	SSB	59	\N	N	N	\N	\N	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
@@ -115,7 +115,7 @@
 1995-11-12 00:43:00+00	\N	G0AIX	G	3.789	SSB	59	59	N	N	Dave	Land's End	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"lotw": true}	2020-03-15 20:48:32.135595+00
 1995-11-12 09:30:00+00	\N	DA0AMT	DL	3.658	SSB	59	59	Y	Y	Amtec 1995	Saarbrücken	\N	AMT95	\N	Ulli DL4VS	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-11-12 11:20:00+00	\N	EA1ALP	EA	21.031	CW	559	599	Y	Y	Nardo	Ferrol	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
-1995-11-13 14:13:00+00	1995-11-13 14:17:00+00	SV1DKL	SV	21.217	SSB	57	55	Y	Y	Stathis	Athen	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"lotw": true}	2020-03-15 20:48:32.135595+00
+1995-11-13 14:13:00+00	1995-11-13 14:17:00+00	SV1DKL	SV	21.217	SSB	57	55	Y	Y	Stathis	Athen	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:54.719455+00
 1995-11-13 16:40:00+00	\N	DJ5MF	DL	3.511	CW	579	599	Y	Y	Walter	Bad Neustadt	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-11-14 13:20:00+00	\N	I6LVT	I	18.075	CW	559	599	Y	Y	Vittorio	\N	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1995-11-14 17:15:00+00	\N	SM4CGI	SM	7.022	CW	599	579	Y	Y	Lars	Karlstad	JO69SJ	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"lotw": true}	2020-03-15 20:48:32.135595+00
