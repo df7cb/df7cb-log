@@ -33,7 +33,7 @@ for qso in lotw:
 
 conn.commit()
 
-# locator import
+# LoTW QSL import
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw}', to_jsonb(true))
   FROM lotw w
   WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
