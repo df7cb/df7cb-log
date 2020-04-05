@@ -14,7 +14,7 @@ cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 # {'CALL': 'YB1BML', 'BAND': '30m', 'FREQ': '10.13828', 'MODE': 'FT8', 'QSO_DATE': '20190302', 'TIME_ON': '161500', 'QSL_RCVD': 'Y', 'DXCC': '327', 'COUNTRY': 'INDONESIA', 'IOTA': 'OC-021', 'GRIDSQUARE': 'OI33KO', 'CQZ': '28', 'ITUZ': '54'}
 
 for qso in lotw:
-    print(qso)
+    #print(qso)
     cur.execute("""INSERT INTO lotw (start, call, qrg, mode, country, loc, info)
             VALUES (%s, %s, %s, %s, %s, %s, %s)
             ON CONFLICT (start, call) DO UPDATE

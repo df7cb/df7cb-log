@@ -30,6 +30,7 @@ sleep 1
   ./clublog-upload $LOG
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
+  ./lotw_download
 )
 
 if [ "$GIT" ]; then

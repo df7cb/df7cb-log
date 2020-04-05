@@ -1,0 +1,7 @@
+#!/bin/sh
+
+PW=$(cat ~/.priv/pw/lotw-pass)
+DATE=$(date +%Y-%m-%d -d '2 weeks ago')
+
+wget -O lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
+./lotw_import
