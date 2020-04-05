@@ -22,7 +22,8 @@ cur.execute("""SELECT qrg AS "FREQ",
         call AS "CALL"
         FROM log
         WHERE start > now() - '3 days'::interval
-        AND contest ~ %s""",
+        AND contest ~ %s
+        ORDER BY start, call""",
         (contest,))
 
 # {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
