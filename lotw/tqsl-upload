@@ -8,4 +8,5 @@ PASSWORD="$(cat ~/.priv/tqsl/password)"
 
 set -x
 
-tqsl -c DF7CB -l "$QTH" --password="$PASSWORD" -x -u -a compliant "$@"
+# exit 9 is "no new QSOs"
+tqsl -c DF7CB -l "$QTH" --password="$PASSWORD" -x -u -a compliant "$@" || [ $? = 9 ]

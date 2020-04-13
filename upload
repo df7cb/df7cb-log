@@ -22,7 +22,6 @@ sleep 1
 
 ( cd wsjtx; ./import )
 ( cd js8; ./import )
-( cd sql; ./dump )
 ( cd lotw
   LOG=df7cb-upload.adif
   ./export-adif $LOG
@@ -32,6 +31,7 @@ sleep 1
   ./eqsl-upload $LOG
   ./lotw_download
 )
+( cd sql; ./dump )
 
 if [ "$GIT" ]; then
   git add -u
