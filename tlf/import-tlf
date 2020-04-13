@@ -60,6 +60,7 @@ for line in sys.stdin:
     # multi
     #if line[68:76].rstrip() != '':
     #    qso['dok'] = line[68:76].rstrip()
+    #qso['dok'] = line[54:67].rstrip()
 
     qso['contest'] = args[0] # contest name
 
