@@ -1,7 +1,15 @@
 #!/bin/sh
 
-PW=$(cat ~/.priv/pw/lotw-pass)
-DATE=$(date +%Y-%m-%d -d '2 weeks ago')
+set -eu
 
-wget -O lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
+PW=$(cat ~/.priv/pw/lotw-pass)
+if [ -s .lotw_download.stamp ]; then
+  DATE=$(cat .lotw_download.stamp)
+else
+  DATE=$(date +%Y-%m-%d -d '1 week ago')
+fi
+
+wget --no-verbose -O lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
 ./lotw_import
+
+echo "$(date +%Y-%m-%d)" > .lotw_download.stamp
