@@ -57,6 +57,10 @@ for line in sys.stdin:
     #qso['rstrx'] = line[49:52]+'/'+line[54:67].rstrip() # their rst / serial
     #qso['rstrx'] = line[54:64].rstrip()
 
+    # multi
+    #if line[68:76].rstrip() != '':
+    #    qso['dok'] = line[68:76].rstrip()
+
     qso['contest'] = args[0] # contest name
 
     log.append(qso)
