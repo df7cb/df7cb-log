@@ -1,6 +1,8 @@
 #!/bin/sh
 
 GIT=git
+TODAY="$(date +%Y-%m-%d)"
+LOG=df7cb-upload.adif
 
 while getopts "n" opt ; do
   case $opt in
@@ -13,26 +15,33 @@ shift $((OPTIND - 1))
 
 trap "ssh feynman.df7cb.de -O exit" EXIT
 
-set -eux
+set -eu
 
 git pull --ff-only
 
 ssh feynman.df7cb.de sleep 60 &
 sleep 1
 
-( cd wsjtx; ./import )
-( cd js8; ./import )
-( cd lotw
-  LOG=df7cb-upload.adif
+( set -x
+
+  cd wsjtx
+  ./import
+
+  cd ../js8
+  ./import
+
+  cd ../lotw
   ./export-adif $LOG $(cat .upload.stamp || echo 'today')
   ./tqsl-upload $LOG
   ./clublog-upload $LOG
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
-  echo "$(date +%Y-%m-%d)" > .upload.stamp
+  echo "$TODAY" > .upload.stamp
   ./lotw_download
+
+  cd ../sql
+  ./dump
 )
-( cd sql; ./dump )
 
 if [ "$GIT" ]; then
   git add -u

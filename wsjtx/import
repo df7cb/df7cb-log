@@ -1,19 +1,21 @@
 #!/bin/sh
 
-set -eux
+set -eu
 
 export PGSERVICE="cb"
 
-psql -c "TRUNCATE log2"
+psql -qX -c "TRUNCATE log2"
 
 # start               stop                call   loc  qrg mode rsttx rstrx mypwr comment
 # 2018-12-25,21:40:45,2018-12-25,21:41:45,YU1WAT,KN04,3.574367,FT8,-15,-11,15,,
 
+echo -n "wsjtx.log: "
 < wsjtx.log \
   sed -e 's/,/ /' -e 's/,/ /2' -e 's/,$//' |
-  psql \
+  psql -X \
     -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment) FROM STDIN (FORMAT CSV, DELIMITER ',')"
 
-psql -c "INSERT INTO log
+echo -n "log: "
+psql -X -c "INSERT INTO log
     SELECT * FROM log2 WHERE NOT EXISTS
         (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call));"

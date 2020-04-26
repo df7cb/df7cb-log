@@ -5,10 +5,10 @@ set -eu
 export PGSERVICE=cb
 CALL_YEARS="SELECT DISTINCT mycall, extract(year FROM start) FROM log WHERE coalesce(last_update, start) > now() - '1 week'::interval ORDER BY 1"
 
-set -x
-
 psql -AXtF ' ' -c "$CALL_YEARS" | while read mycall year; do
+  echo -n "$mycall $year: "
   psql -Xc "\\copy (SELECT * FROM log WHERE mycall = '$mycall' AND extract(year FROM start) = $year ORDER BY start, call) to ${mycall//\//-}-$year.log"
 done
 
+echo -n "swl: "
 psql -Xc '\copy (SELECT * FROM swl ORDER BY start, call) to swl'
