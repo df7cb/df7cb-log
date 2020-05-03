@@ -28,6 +28,12 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
         IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
       END IF;
       IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
+
+    -- 13cm/QO100
+    ELSIF NEW.qrg::band IN ('13cm') THEN
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'LimeSDR'; END IF;
+      IF NEW.mypwr IS NULL THEN NEW.mypwr := '3'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := '1m dish'; END IF;
     END IF;
 
   -- mobile
