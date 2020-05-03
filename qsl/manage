@@ -8,28 +8,38 @@ import sys
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
+def update(qsl):
+    args = (qsl['start'], qsl['call'])
+    if qsl['qsltx'] == 'Y':
+        sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
+    elif qsl['qsltx'] in ('R', 'N'):
+        sql = """UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
+    else:
+        assert(0)
+    print(sql % args)
+    cur.execute(sql, args)
+    conn.commit()
+
+num = 1
 for line in sys.stdin:
     l = line.strip()
     m = re.search("^[0-9]+$", l)
     if m:
-        qsl = qsls[int(l)]
-        args = (qsl['start'], qsl['call'])
-        if qsl['qsltx'] == 'Y':
-            sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
-        elif qsl['qsltx'] in ('R', 'N'):
-            sql = """UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
-        else:
-            assert(0)
-        print(sql % args)
-        cur.execute(sql, args)
-        conn.commit()
-
+        num = int(l)
+        update(qsls[num])
+        num += 1
+    elif l == '':
+        update(qsls[num])
+        num += 1
     else:
         cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call ~* %s ORDER BY start""", (l,))
         qsls = [''] # numbers are 1-based
         for rec in cur.fetchall():
             qsls.append(rec)
-            print(str(rec['n']) + ':',
+            print("%d: %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s" %
+                    (rec['n'],
                     rec['start'], rec['call'], rec['qrg'], rec['mode'],
                     rec['rsttx'], rec['rstrx'],
-                    rec['qsltx'], rec['qslrx'])
+                    rec['qsltx'], rec['qslrx'],
+                    rec['contest'], rec['comment']))
+        num = 1
