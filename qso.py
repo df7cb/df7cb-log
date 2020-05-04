@@ -22,7 +22,7 @@ if len(sys.argv) == 2:
     contest = sys.argv[1]
     print("Contest: %s" % contest)
 
-select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call ~ %s"
+select = "SELECT start, call, qrg, mode, rsttx, rstrx, qsltx, qslrx FROM log WHERE call ~ %s ORDER BY start, call"
 
 while True:
     log = {
@@ -69,6 +69,8 @@ while True:
             log['rsttx'] = '5'
             log['rstrx'] = '5'
             log['mypwr'] = '40'
+        elif tok == "qo100":
+            log['qso_via'] = "QO100"
 
         elif re.search('^\d+(\.\d+)?$', tok):
             log['qrg'] = tok
