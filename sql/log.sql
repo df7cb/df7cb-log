@@ -46,8 +46,8 @@ CREATE DOMAIN qsl AS char(1)
     CONSTRAINT valid_qsl_request CHECK (VALUE IN ('Y', 'N', 'R'));
 
 CREATE TABLE log (
-    start timestamp with time zone NOT NULL,
-    stop timestamp with time zone,
+    start timestamptz(0) NOT NULL,
+    stop timestamptz(0),
     call call NOT NULL,
     cty cty REFERENCES country(cty),
     qrg numeric NOT NULL,
@@ -71,7 +71,7 @@ CREATE TABLE log (
     myloc text,
     myant text,
     info jsonb,
-    last_update timestamptz DEFAULT now(),
+    last_update timestamptz(0) DEFAULT now(),
     PRIMARY KEY (start, call),
     CONSTRAINT start_before_stop CHECK (start <= stop),
     -- so far, all QSOs over an hour have been 1995 only

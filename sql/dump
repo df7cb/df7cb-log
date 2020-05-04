@@ -3,7 +3,7 @@
 set -eu
 
 export PGSERVICE=cb
-CALL_YEARS="SELECT DISTINCT mycall, extract(year FROM start) FROM log WHERE coalesce(last_update, start) > now() - '1 week'::interval ORDER BY 1"
+CALL_YEARS="SELECT DISTINCT mycall, extract(year FROM start) FROM log WHERE coalesce(last_update, start) > now() - '${1:-1 week}'::interval ORDER BY 1, 2"
 
 psql -AXtF ' ' -c "$CALL_YEARS" | while read mycall year; do
   echo -n "$mycall $year: "
