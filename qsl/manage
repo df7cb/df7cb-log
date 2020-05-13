@@ -1,28 +1,47 @@
 #!/usr/bin/python3
 
+import atexit
 import psycopg2
 import psycopg2.extras
 import re
-import sys
+import readline
+
+# PG
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+# readline
+
+histfile = '.history'
+try:
+    readline.read_history_file(histfile)
+    # default history len is -1 (infinite), which may grow unruly
+    readline.set_history_length(1000)
+except FileNotFoundError:
+    pass
+
+atexit.register(readline.write_history_file, histfile)
+
+# main
 
 def update(qsl):
     args = (qsl['start'], qsl['call'])
     if qsl['qsltx'] == 'Y':
         sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
-    elif qsl['qsltx'] in ('R', 'N'):
+    else: # qsl['qsltx'] in ('R', 'N'):
         sql = """UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
-    else:
-        assert(0)
     print(sql % args)
     cur.execute(sql, args)
     conn.commit()
 
 num = 1
-for line in sys.stdin:
-    l = line.strip()
+while True:
+    try:
+        l = input('> ')
+    except (EOFError, KeyboardInterrupt):
+        print()
+        exit()
     m = re.search("^[0-9]+$", l)
     if m:
         num = int(l)
