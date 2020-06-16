@@ -10,12 +10,16 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     END IF;
 
     -- shortwave
-    IF NEW.qrg < 30 THEN
+    IF NEW.qrg < 60 THEN
       IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
       IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
       IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
       IF NEW.mypwr IS NULL THEN
-        NEW.mypwr := CASE NEW.qrg::band WHEN '60m' THEN 15 ELSE 100 END;
+        NEW.mypwr := CASE NEW.qrg::band
+          WHEN '60m' THEN 15
+          WHEN '6m' THEN 50
+          ELSE 100
+        END;
       END IF;
 
     -- 2m
