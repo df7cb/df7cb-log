@@ -17,7 +17,6 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.mypwr IS NULL THEN
         NEW.mypwr := CASE NEW.qrg::band
           WHEN '60m' THEN 15
-          WHEN '6m' THEN 50
           ELSE 100
         END;
       END IF;
