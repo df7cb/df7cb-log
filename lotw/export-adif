@@ -8,11 +8,15 @@ import sys
 
 adiffile = sys.argv[1]
 since = sys.argv[2]
+if len(sys.argv) > 3:
+    extra = sys.argv[3]
+else:
+    extra = "mycall LIKE 'DF7CB%%'"
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-cur.execute("""SELECT qrg::text AS "FREQ",
+cur.execute(f"""SELECT qrg::text AS "FREQ",
         qrg::band AS "BAND",
         mode AS "MODE",
         CASE qso_via
@@ -34,7 +38,7 @@ cur.execute("""SELECT qrg::text AS "FREQ",
         coalesce(mypwr::text, '') AS "TX_PWR"
         FROM log
         WHERE coalesce(last_update, start) >= %s
-            AND mycall LIKE 'DF7CB%%'
+            AND {extra}
         ORDER BY start, call""", [since])
 
 records = cur.fetchall()

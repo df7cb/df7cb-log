@@ -1,12 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
 
-FILE="$1"
-QTH="Krefeld-Traar"
+STAMP="$1"
 PASSWORD="$(cat ~/.priv/tqsl/password)"
+export PGSERVICE=cb
 
 set -x
 
-# exit 8 is "nothing to upload", exit 9 is "no new QSOs"
-tqsl -c DF7CB -l "$QTH" --password="$PASSWORD" -x -u -a compliant "$@" || case $? in 8|9) exit 0;; *) exit $?;; esac
+psql -AXtF ' ' -c "select mycall, upper(myloc) from log where start > '$STAMP' group by 1, 2 order by 1, 2" | \
+  while read MYCALL MYLOC; do
+    FILE="${MYCALL//\//-}-$MYLOC.adif"
+    echo "$MYCALL $MYLOC"
+    ./export-adif $FILE $STAMP "mycall LIKE '$MYCALL%%' AND upper(myloc)='$MYLOC'"
+
+    # exit 8 is "nothing to upload", exit 9 is "no new QSOs"
+    tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x || \
+      case $? in 8|9) ;; *) exit $?;; esac
+  done

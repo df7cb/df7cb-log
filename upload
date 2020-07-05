@@ -34,8 +34,9 @@ sleep 1
   ./import
 
   cd ../lotw
-  ./export-adif $LOG $(cat .upload.stamp || echo 'today')
-  ./tqsl-upload $LOG
+  STAMP=$(cat .upload.stamp || echo 'today')
+  ./export-adif $LOG $STAMP
+  ./tqsl-upload $STAMP
   ./clublog-upload $LOG
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
