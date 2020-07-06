@@ -6,15 +6,13 @@ STAMP="$1"
 PASSWORD="$(cat ~/.priv/tqsl/password)"
 export PGSERVICE=cb
 
-set -x
-
-psql -AXtF ' ' -c "select mycall, upper(myloc) from log where start > '$STAMP' group by 1, 2 order by 1, 2" | \
+psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$STAMP' group by 1, 2 order by 1, 2" | \
   while read MYCALL MYLOC; do
     FILE="${MYCALL//\//-}-$MYLOC.adif"
     echo "$MYCALL $MYLOC"
     ./export-adif $FILE $STAMP "mycall LIKE '$MYCALL%%' AND upper(myloc)='$MYLOC'"
 
     # exit 8 is "nothing to upload", exit 9 is "no new QSOs"
-    tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x || \
+    ( set -x; tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x ) || \
       case $? in 8|9) ;; *) exit $?;; esac
   done
