@@ -39,6 +39,13 @@ cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw}
     AND l.info->'lotw' IS NULL""")
 print("New LoTW QSLs: %s" % cur.rowcount)
 
+# mycall differs from my callsign in the LoTW QSL
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw_mycall}', w.info->'STATION_CALLSIGN')
+  FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.mycall <> w.info->>'STATION_CALLSIGN'
+    AND l.info->>'lotw_mycall' IS DISTINCT FROM w.info->>'STATION_CALLSIGN'""")
+
 # locator import
 cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
   WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
@@ -49,6 +56,12 @@ cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
   WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
     AND l.loc::varchar(4) = w.loc::varchar(4)
     AND l.loc <> w.loc""")
+print("Updated locators: %s" % cur.rowcount)
+
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw_loc}', to_jsonb(w.loc)) FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND l.loc::varchar(4) <> w.loc::varchar(4)
+    AND l.info->>'lotw_loc' IS DISTINCT FROM w.loc""")
 print("Updated locators: %s" % cur.rowcount)
 
 # zone import:
@@ -76,5 +89,26 @@ print("Updated IOTAs: %s" % cur.rowcount)
 cur.execute("""SELECT * FROM log l RIGHT JOIN lotw w ON (date_trunc('minute', l.start), l.call) = (w.start, w.call) WHERE l.start IS NULL""")
 for row in cur.fetchall():
     print("Orphaned LoTW QSL:", row)
+
+cty_mismatch = """
+select l.call, l.cty, w.country, c.country, c.cty
+  from log l
+  join lotw w on (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  left join country c on w.country =
+    case c.country
+      when 'Fed. Rep. of Germany' then 'FEDERAL REPUBLIC OF GERMANY'
+      when 'Macedonia' then 'NORTH MACEDONIA'
+      when 'Sov Mil Order of Malta' then 'SOVEREIGN MILITARY ORDER OF MALTA'
+      when 'South Africa' then 'REPUBLIC OF SOUTH AFRICA'
+      when 'St. Lucia' then 'SAINT LUCIA'
+      when 'Swaziland' then 'KINGDOM OF ESWATINI'
+      when 'European Turkey' then 'TURKEY'
+      when 'Asiatic Turkey' then 'TURKEY'
+      when 'United States' then 'UNITED STATES OF AMERICA'
+      else upper(c.country)
+    end
+  where l.cty is distinct from c.cty
+  order by l.cty, l.call;
+"""
 
 conn.commit()
