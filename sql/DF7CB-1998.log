@@ -4,7 +4,7 @@
 1998-01-12 21:49:00+00	\N	G4CSF	G	7	CW	589	579	Y	R	Reg	Manchester	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-01-13 08:17:00+00	\N	F6IGE	F	7	CW	599	599	Y	R	Rene	Metz	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-01-22 09:22:00+00	\N	UX1BZZ	UR	14	CW	599	599	Y	R	Alex	Chortkiv	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-01-23 17:15:00+00	\N	9K2ZZ	9K	7	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-01-23 17:15:00+00	\N	9K2ZZ	9K	7	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "21", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-01-28 08:45:00+00	\N	UU9JAI	UR	7	CW	559	589	Y	R	Valery	Svastopol	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-01-28 08:51:00+00	\N	F5ENF	F	7	CW	599	599	Y	R	Gerard	Brest	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-01-28 15:33:00+00	\N	W4ZCR	K	18.068	CW	559	569	Y	R	Roy	Marshall/VT	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -18,11 +18,11 @@
 1998-02-13 21:39:00+00	\N	DK7EW	DL	3.5	CW	599	579	Y	Y	Detlef	Meerbusch	\N	R31	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-13 21:52:00+00	\N	YU4NC	YU	3.5	CW	589	599	Y	R	Zeljo	Doboj	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-13 21:57:00+00	\N	RW4CET	UA	3.5	CW	559	579	Y	Y	Sergej	Balakov	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 20:18:00+00	\N	PA3ELD	PA	3.534	CW	599001	599NH	Y	Y	\N	\N	JO22LG	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-14 20:18:00+00	\N	PA3ELD	PA	3.534	CW	599001	599NH	Y	Y	\N	\N	JO22LG	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 20:20:00+00	\N	PA3EQK	PA	3.536	CW	599002	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 20:22:00+00	\N	PA3CCF	PA	3.540	CW	599003	599LB	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 20:24:00+00	\N	PA3AFG/A	PA	3.541	CW	599004	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 20:25:00+00	\N	PA3EZC	PA	3.543	CW	599005	599ZH	N	N	\N	\N	JO11TN	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:55+00
+1998-02-14 20:25:00+00	\N	PA3EZC	PA	3.543	CW	599005	599ZH	N	N	\N	\N	JO11TN	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 20:26:00+00	\N	PA3EMF	PA	3.546	CW	599006	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 20:32:00+00	1998-02-14 21:25:00+00	GM3JUD	GM	3.5	CW	599	579	Y	R	Chas	Kinrossie	\N	\N	\N	:-)	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:29:00+00	\N	PA3GFH	PA	3.543	CW	599007	599ZH	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -32,34 +32,34 @@
 1998-02-14 21:42:00+00	\N	PA0SOL	PA	3.525	CW	599012	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:42:00+00	\N	PA3BWK	PA	3.526	CW	599011	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:45:00+00	\N	PI4SHB	PA	3.525	CW	599013	599ZH	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 21:50:00+00	\N	PI4COM	PA	3.522	CW	599014	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-14 21:50:00+00	\N	PI4COM	PA	3.522	CW	599014	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 21:52:00+00	\N	PA3AYF	PA	3.521	CW	599015	599FR	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:53:00+00	\N	PA0RCT	PA	3.521	CW	599016	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:54:00+00	\N	PA0SKP	PA	3.519	CW	599017	599GD	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 21:58:00+00	\N	PA0CLN	PA	3.517	CW	599018	599GR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:02:00+00	\N	PI4DTC	PA	3.516	CW	599019	599GD	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:05:00+00	\N	PA3BDK	PA	3.514	CW	599020	599ZH	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 22:10:00+00	\N	PA3BFH	PA	3.514	CW	599021	599NH	Y	Y	Herman	Kudelstaart	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:55+00
+1998-02-14 22:10:00+00	\N	PA3BFH	PA	3.514	CW	599021	599NH	Y	Y	Herman	Kudelstaart	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 22:11:00+00	\N	PA0VDV	PA	3.513	CW	599022	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:19:00+00	\N	PA3BDQ	PA	3.511	CW	599023	599ZH	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:31:00+00	\N	PA3EWL	PA	3.522	CW	599024	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 22:32:00+00	\N	PI4CC	PA	3.522	CW	599025	599ZH	R	Y	\N	\N	JO21BX	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-14 22:32:00+00	\N	PI4CC	PA	3.522	CW	599025	599ZH	R	Y	\N	\N	JO21BX	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 22:35:00+00	\N	PA2JJB	PA	3.523	CW	599026	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:42:00+00	\N	PI4RDM	PA	3.528	CW	599027	599ZH	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:43:00+00	\N	PA0COR	PA	3.529	CW	599028	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 22:47:00+00	\N	PA3BHY	PA	3.534	CW	599029	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 22:53:00+00	\N	PI4ZLD	PA	3.544	CW	599030	599ZL	N	N	\N	\N	JO11WM	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-14 22:53:00+00	\N	PI4ZLD	PA	3.544	CW	599030	599ZL	N	N	\N	\N	JO11WM	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 23:31:00+00	\N	PA0BOR	PA	3.549	CW	599031	599GR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 23:35:00+00	\N	PA0MPM	PA	3.541	CW	599032	599LB	Y	Y	Thieu	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-14 23:39:00+00	\N	PA3FZV	PA	3.538	CW	599033	599UT	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-14 23:42:00+00	\N	PA0TCA	PA	3.537	CW	599034	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-14 23:42:00+00	\N	PA0TCA	PA	3.537	CW	599034	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-14 23:50:00+00	\N	PA3FNE	PA	3.532	CW	599035	599NB	Y	Y	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 10:37:00+00	\N	PA3AFF	PA	7.018	CW	599039	599NB	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 10:41:00+00	\N	PA6V	PA	3.530	CW	599036	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-15 10:44:00+00	\N	PI4CC	PA	7.025	CW	599037	599ZH	N	N	\N	\N	JO21BX	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-15 10:44:00+00	\N	PI4CC	PA	7.025	CW	599037	599ZH	N	N	\N	\N	JO21BX	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-15 10:46:00+00	\N	PA0RDY	PA	7.022	CW	599038	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 10:49:00+00	\N	PI4FRG	PA	7.017	CW	599040	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-15 10:50:00+00	\N	PA3BFH	PA	7.016	CW	599041	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:55+00
+1998-02-15 10:50:00+00	\N	PA3BFH	PA	7.016	CW	599041	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-02-15 10:52:00+00	\N	PA3FHA	PA	7.015	CW	599042	599NH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 10:57:00+00	\N	PA0PUR	PA	7.012	CW	599043	599FL	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 11:01:00+00	\N	PA0COR	PA	7.013	CW	599044	599FR	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -69,42 +69,42 @@
 1998-02-15 11:10:00+00	\N	PA3AEX	PA	7.009	CW	599048	599ZH	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 11:15:00+00	\N	PA3FZZ	PA	7.011	CW	599049	599NB	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-15 11:21:00+00	\N	PA3FDO	PA	7.016	CW	599050	599OV	N	N	\N	\N	\N	\N	PACC/Veron-Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 13:33:00+00	\N	N3RS	K	21.020	CW	599100	599PA	N	N	\N	\N	FN20	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 13:33:00+00	\N	N3RS	K	21.020	CW	599100	599PA	N	N	\N	\N	FN20	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
 1998-02-22 13:46:00+00	\N	K3ANS	K	21.010	CW	599100	599PA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 13:51:00+00	\N	N2RM	K	21.009	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 13:54:00+00	\N	K3WW	K	21.007	CW	599100	599PA	N	N	\N	\N	FN20	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 13:54:00+00	\N	K3WW	K	21.007	CW	599100	599PA	N	N	\N	\N	FN20	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
 1998-02-22 13:56:00+00	\N	NQ4I	K	21.007	CW	599100	599GA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 13:58:00+00	\N	N2NU	K	21.007	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 14:06:00+00	\N	W4MYA	K	21.005	CW	599100	599VA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-02-22 14:10:00+00	\N	K1ZZ	K	21.003	CW	599100	599CT	N	N	\N	\N	FN31TT	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 14:06:00+00	\N	W4MYA	K	21.005	CW	599100	599VA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "VA"}	2020-07-06 15:26:11+00
+1998-02-22 14:10:00+00	\N	K1ZZ	K	21.003	CW	599100	599CT	N	N	\N	\N	FN31TT	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "CT"}	2020-07-06 15:26:11+00
 1998-02-22 14:12:00+00	\N	WR3L	K	21.003	CW	599100	599MD	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:14:00+00	\N	W3LPL	K	21.001	CW	599100	599MD	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:15:00+00	\N	K9BG	K	21.001	CW	599100	599IL	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:16:00+00	\N	K1ZM	K	21.002	CW	599100	599MA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:18:00+00	\N	W2GD	K	21.004	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 14:21:00+00	\N	K1KI	K	21.008	CW	599100	599CT	Y	Y	\N	\N	FN32PA	\N	ARRL International DX Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 14:21:00+00	\N	K1KI	K	21.008	CW	599100	599CT	Y	Y	\N	\N	FN32PA	\N	ARRL International DX Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "CT"}	2020-07-06 15:26:11+00
 1998-02-22 14:25:00+00	\N	AA2FB	K	21.015	CW	599100	599NY	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 14:26:00+00	\N	N2MM	K	21.014	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 14:26:00+00	\N	N2MM	K	21.014	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NJ"}	2020-07-06 15:26:11+00
 1998-02-22 14:27:00+00	\N	N2LT	K	21.018	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:28:00+00	\N	K3OJ	K	21.020	CW	599100	599FJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:35:00+00	\N	AA4S	K	21.026	CW	599100	599NC	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 14:38:00+00	\N	W3PP	K	21.028	CW	599100	599DE	N	Y	\N	\N	FM28	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 14:38:00+00	\N	W3PP	K	21.028	CW	599100	599DE	N	Y	\N	\N	FM28	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "DE"}	2020-07-06 15:26:11+00
 1998-02-22 14:40:00+00	\N	W3BGN	K	21.029	CW	599100	599PA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 14:42:00+00	\N	WX0B	K	21.031	CW	599100	599TX	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 15:03:00+00	\N	W4MYA	K	14.023	CW	599100	599VA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 15:03:00+00	\N	W4MYA	K	14.023	CW	599100	599VA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "VA"}	2020-07-06 15:26:11+00
 1998-02-22 15:08:00+00	\N	W8WA	K	14.018	CW	599100	599MI	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 15:10:00+00	\N	K3ZZ	K	14.018	CW	599100	599MD	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 15:11:00+00	\N	K2BA	K	14.016	CW	599100	599OK	N	N	\N	\N	EM15JK	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 15:11:00+00	\N	K2BA	K	14.016	CW	599100	599OK	N	N	\N	\N	EM15JK	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "04", "ituz": "07", "lotw": true, "state": "OK"}	2020-07-06 15:26:11+00
 1998-02-22 18:09:00+00	\N	NS0Z	K	14.013	CW	599100	599MO	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:11:00+00	\N	K1RX	K	14.012	CW	599100	599NH	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 18:12:00+00	\N	K1AR	K	14.012	CW	599100	599MA	N	N	\N	\N	FN42	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 18:12:00+00	\N	K1AR	K	14.012	CW	599100	599MA	N	N	\N	\N	FN42	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MA"}	2020-07-06 15:26:11+00
 1998-02-22 18:12:00+00	\N	N2LT	K	14.012	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 18:16:00+00	\N	KC1F	K	14.011	CW	599100	599NH	N	N	\N	\N	FN42DU	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 18:16:00+00	\N	KC1F	K	14.011	CW	599100	599NH	N	N	\N	\N	FN42DU	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NH"}	2020-07-06 15:26:11+00
 1998-02-22 18:16:00+00	\N	W1KM	K	14.011	CW	599100	599MA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:17:00+00	\N	N4XM	K	14.010	CW	599100	599KY	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:19:00+00	\N	K8LX	K	14.010	CW	599100	599MI	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:20:00+00	\N	K1CA	K	14.009	CW	599100	599NH	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 18:23:00+00	\N	W3PP	K	14.009	CW	599100	599DE	N	Y	\N	\N	FM28	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 18:23:00+00	\N	W3PP	K	14.009	CW	599100	599DE	N	Y	\N	\N	FM28	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "DE"}	2020-07-06 15:26:11+00
 1998-02-22 18:29:00+00	\N	WR3L	K	14.005	CW	599100	599MD	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:39:00+00	\N	W4XJ	K	14.013	CW	599100	599NC	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:46:00+00	\N	KQ2M	K	14.017	CW	599100	599CT	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -113,7 +113,7 @@
 1998-02-22 18:49:00+00	\N	KT8X	K	14.018	CW	599100	599MI	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 18:56:00+00	\N	W3BGN	K	14.025	CW	599100	599PA	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-22 19:07:00+00	\N	N2NU	K	14.036	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-02-22 19:08:00+00	\N	N2MM	K	14.038	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-02-22 19:08:00+00	\N	N2MM	K	14.038	CW	599100	599NJ	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NJ"}	2020-07-06 15:26:11+00
 1998-02-22 19:09:00+00	\N	K1ZR	K	14.041	CW	599100	599NH	N	N	\N	\N	\N	\N	ARRL International DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-24 17:13:00+00	\N	RW4YR	UA	7	CW	559	559	Y	R	Vic	Cheb	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-02-24 17:23:00+00	\N	I0RMS	I	7	CW	599	599	Y	R	Mario	Roma	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -124,7 +124,7 @@
 1998-03-01 10:22:00+00	\N	OE1EMS	OE	7.007	CW	599004	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 10:24:00+00	\N	HA6IAM	HA	7.009	CW	599005	599193	Y	Y	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 10:25:00+00	\N	S52LW	S5	7.011	CW	599006	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-03-01 10:28:00+00	\N	ON4CCP	ON	7.013	CW	599007	599367/OV	Y	Y	\N	\N	JO10TS	\N	UBA Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-03-01 10:28:00+00	\N	ON4CCP	ON	7.013	CW	599007	599367/OV	Y	Y	\N	\N	JO10TS	\N	UBA Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-03-01 10:31:00+00	\N	DL1DQY	DL	7.014	CW	599008	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 10:42:00+00	\N	G4OTY	G	7.018	CW	599009	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 10:43:00+00	\N	EA6DX	EA6	7.019	CW	599010	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -147,14 +147,14 @@
 1998-03-01 11:34:00+00	\N	YO4GDP	YO	14.030	CW	599027	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 11:35:00+00	\N	YO9AGI	YO	14.031	CW	599028	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 11:37:00+00	\N	RZ3Q	UA	14.032	CW	599029	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-03-01 11:39:00+00	\N	UT5UIA	UR	14.039	CW	599030	599	Y	Y	\N	\N	KO50JW	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-03-01 11:40:00+00	\N	RW4FX	UA	14.014	CW	599031	599	R	Y	\N	\N	LO23LE	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-03-01 11:43:00+00	\N	RX9WN	UA9	14.046	CW	599032	599169	Y	Y	\N	\N	LO74XS	\N	UBA Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-03-01 11:39:00+00	\N	UT5UIA	UR	14.039	CW	599030	599	Y	Y	\N	\N	KO50JW	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "16", "ituz": "29", "lotw": true}	2020-07-06 15:26:11+00
+1998-03-01 11:40:00+00	\N	RW4FX	UA	14.014	CW	599031	599	R	Y	\N	\N	LO23LE	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "16", "ituz": "29", "lotw": true, "state": "PE"}	2020-07-06 15:26:11+00
+1998-03-01 11:43:00+00	\N	RX9WN	UA9	14.046	CW	599032	599169	Y	Y	\N	\N	LO74XS	\N	UBA Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "16", "ituz": "30", "lotw": true, "state": "BA"}	2020-07-06 15:26:11+00
 1998-03-01 11:45:00+00	\N	UA9SCX	UA9	14.048	CW	599033	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 11:49:00+00	\N	JA8BGR	JA	14	CW	589	579	Y	Y	Asa	Kushiro	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 12:13:00+00	\N	RA9AA	UA9	14.047	CW	599034	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 12:15:00+00	\N	UA3LPF	UA	14.044	CW	599035	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-03-01 12:18:00+00	\N	LY1DT	LY	14.042	CW	599036	599	N	N	\N	\N	KO25RF	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-03-01 12:18:00+00	\N	LY1DT	LY	14.042	CW	599036	599	N	N	\N	\N	KO25RF	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "29", "lotw": true}	2020-07-06 15:26:11+00
 1998-03-01 12:20:00+00	\N	RX3RB	UA	14.042	CW	599037	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 12:21:00+00	\N	UA3ABJ	UA	14.034	CW	599038	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-01 12:23:00+00	\N	LY4AA	LY	14.033	CW	599039	599	N	N	\N	\N	\N	\N	UBA Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -165,10 +165,10 @@
 1998-03-19 18:22:00+00	\N	YO5OMF	YO	3.5	CW	589	589	Y	R	Marius	Tulca	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-28 22:02:00+00	\N	DL6KWN	DL	3.5	CW	599	599	Y	Y	Helmut	Rostock	\N	V07	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-28 22:24:00+00	\N	G0SWO	G	3.5	CW	579	599	Y	Y	Ben	Hull	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-03-28 22:39:00+00	\N	YO5PBF	YO	3.5	CW	589	589	Y	Y	Boby	Basamare	KN17RO	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-03-28 22:39:00+00	\N	YO5PBF	YO	3.5	CW	589	589	Y	Y	Boby	Basamare	KN17RO	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-03-28 22:48:00+00	\N	UX5QT	UR	3.5	CW	559	\N	N	N	Lew	Lvov	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-28 22:58:00+00	\N	G0TAK	G	3.5	CW	599	599	Y	R	Roy	Blackpool	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-03-28 23:08:00+00	\N	DJ3XG	DL	3.5	CW	599	599	Y	Y	Rüdiger	Halberstadt	\N	Z85	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-03-28 23:08:00+00	\N	DJ3XG	DL	3.5	CW	599	599	Y	Y	Rüdiger	Halberstadt	\N	Z85	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-03-28 23:23:00+00	\N	DH6VK	DL	3.5	CW	599	599	Y	Y	Werner	Neunkirchen	\N	Q02	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-28 23:40:00+00	\N	F5NAF	F	3.5	CW	599	599	Y	Y	Vincent	Dax	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-03-28 23:50:00+00	\N	LA7NT	LA	3.5	CW	579	589	Y	Y	Thor	Larvek	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -187,11 +187,11 @@
 1998-04-04 22:32:00+00	\N	SP3LPR	SP	3.521	CW	599011	599GO	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-04 22:35:00+00	\N	SP0KYU/P	SP	3.522	CW	5990012	599WD	Y	Y	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-04 22:37:00+00	\N	SP2KJH	SP	3.525	CW	599012	599TO	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-04 22:40:00+00	\N	SP7JQQ	SP	3.531	CW	599013	599TG	N	N	\N	\N	KO00ST	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-04-04 22:40:00+00	\N	SP7JQQ	SP	3.531	CW	599013	599TG	N	N	\N	\N	KO00ST	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-04 22:41:00+00	\N	SP6BEN	SP	3.537	CW	599015	599WR	Y	Y	Andrzej	Wroclaw	\N	\N	SP DX Contest	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-04 22:45:00+00	\N	SP4Z	SP	3.509	CW	599016	599	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-04-04 22:45:00+00	\N	SP4Z	SP	3.509	CW	599016	599	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-04 22:46:00+00	\N	SP4BEU	SP	3.510	CW	599017	599OL	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-04 22:47:00+00	\N	SP9XCN	SP	3.511	CW	599018	599KA	N	N	\N	\N	JO90HH	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-04-04 22:47:00+00	\N	SP9XCN	SP	3.511	CW	599018	599KA	N	N	\N	\N	JO90HH	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-04 22:49:00+00	\N	SP7GPQ	SP	3.514	CW	599019	599TG	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-04 22:54:00+00	\N	SN0JG	SP	3.518	CW	599020	599GD	N	N	\N	\N	\N	\N	SP DX Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-11 13:06:00+00	\N	PP5/PA3AXH	PY	24.898	CW	439	539	Y	R	Rob	Araranga	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -208,13 +208,13 @@
 1998-04-13 22:52:00+00	\N	SM3VWB	SM	7	CW	589	579	Y	R	Tomas	Bollnas	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-13 23:03:00+00	\N	LY2FE	LY	7	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-04-13 23:09:00+00	\N	EC7ALW	EA	7	CW	579	579	Y	Y	Anastasto	Jaen	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-18 22:03:00+00	\N	MS0APF/P	GM	7	CW	599	599	Y	R	\N	\N	\N	\N	\N	via MM1AUF	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "EU-123", "lotw": true}	2020-03-15 20:48:32+00
+1998-04-18 22:03:00+00	\N	MS0APF/P	GM	7	CW	599	599	Y	R	\N	\N	\N	\N	\N	via MM1AUF	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "iota": "EU-123", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-18 22:08:00+00	\N	GM0KWL	GM	7	CW	559	579	Y	R	Brian	Falkirk	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-19 08:22:00+00	\N	GS2MP	GM	7	CW	599	599	N	Y	Chris	\N	IO77WS	\N	\N	via GM2MP, QSL back, does not col	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-04-24 18:57:00+00	\N	HB9JOE	HB	7	CW	599	599	Y	Y	\N	\N	JN47EG	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-04-25 18:40:00+00	\N	HB9AON	HB	7	CW	599	599	Y	Y	\N	\N	JN46FT	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-04-19 08:22:00+00	\N	GS2MP	GM	7	CW	599	599	N	Y	Chris	\N	IO77WS	\N	\N	via GM2MP, QSL back, does not col	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
+1998-04-24 18:57:00+00	\N	HB9JOE	HB	7	CW	599	599	Y	Y	\N	\N	JN47EG	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-04-25 18:40:00+00	\N	HB9AON	HB	7	CW	599	599	Y	Y	\N	\N	JN46FT	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-25 18:41:00+00	\N	HB9AII	HB	7	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-04-25 18:47:00+00	\N	HB9FBM	HB	7	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-04-25 18:47:00+00	\N	HB9FBM	HB	7	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-04-25 18:49:00+00	\N	RW9FB	UA	7	CW	559	559	Y	R	Vlad	Perm	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-09 18:10:00+00	\N	EP2MKO	EP	14	CW	599	599	Y	R	\N	\N	\N	\N	\N	via UA6HCW	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-09 21:52:00+00	\N	EO5JGP	UR	7	CW	599	599	N	N	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -230,14 +230,14 @@
 1998-05-30 10:43:00+00	\N	HG4I	HA	7.004	CW	599004	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 10:43:00+00	\N	IO2DMK	I	7.008	CW	599003	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 10:45:00+00	\N	LY7A	LY	7.002	CW	599005	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 10:50:00+00	\N	S51TA	S5	7.014	CW	599006	599	N	N	\N	\N	JN76FC	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 10:50:00+00	\N	S51TA	S5	7.014	CW	599006	599	N	N	\N	\N	JN76FC	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 10:51:00+00	\N	DL7USW/P	DL	7.014	CW	599007	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 10:52:00+00	\N	PA6WPX	PA	7.016	CW	599008	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 10:52:00+00	\N	PA6WPX	PA	7.016	CW	599008	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 10:54:00+00	\N	HG1S	HA	7.019	CW	599009	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 10:55:00+00	\N	9A1A	9A	7.020	CW	599010	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 10:55:00+00	\N	DF0GIF	DL	7.022	CW	599011	599109	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 10:56:00+00	\N	DF1DV	DL	7.023	CW	599012	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 10:57:00+00	\N	YT7TY	YU	7.024	CW	599013	599	N	N	\N	\N	JN95NS	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 10:57:00+00	\N	YT7TY	YU	7.024	CW	599013	599	N	N	\N	\N	JN95NS	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 11:01:00+00	\N	DF6VI/P	DL	7.022	CW	599014	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 11:02:00+00	\N	LY5A	LY	7.019	CW	599015	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 11:04:00+00	\N	LX/DH3MG	LX	7.017	CW	599016	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -247,39 +247,39 @@
 1998-05-30 11:19:00+00	\N	SP6YAQ	SP	7.001	CW	599020	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 11:24:00+00	\N	OK1FHL	OK	7.023	CW	599021	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 11:26:00+00	\N	DK7XS	DL	7.031	CW	599022	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 12:48:00+00	\N	9K2ZZ	9K	28.021	CW	599023	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 12:48:00+00	\N	9K2ZZ	9K	28.021	CW	599023	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "21", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 12:51:00+00	\N	YT1R	YU	28.010	CW	599024	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 13:05:00+00	\N	9A5D	9A	28.005	CW	599025	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 13:09:00+00	\N	NP4Z	KP4	21.009	CW	599026	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 13:28:00+00	\N	IQ7R	I	21.020	CW	599027	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 13:29:00+00	\N	4Z5FW	4X	21.021	CW	599028	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 13:35:00+00	\N	V26TT	V2	21.023	CW	599029	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-05-30 13:40:00+00	\N	LT1F	LU	21.027	CW	599030	599	N	N	\N	\N	FF96PU	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 13:35:00+00	\N	V26TT	V2	21.023	CW	599029	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "08", "ituz": "11", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-30 13:40:00+00	\N	LT1F	LU	21.027	CW	599030	599	N	N	\N	\N	FF96PU	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "13", "ituz": "14", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 13:45:00+00	\N	ZX5J	PY	21.041	CW	599031	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 13:49:00+00	\N	WP3A	KP4	21.046	CW	599032	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "NA-099", "lotw": true}	2020-03-15 20:48:32+00
-1998-05-30 13:55:00+00	\N	A45XR	A4	21.055	CW	599033	599	Y	R	\N	\N	LL93EN	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 13:49:00+00	\N	WP3A	KP4	21.046	CW	599032	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "08", "iota": "NA-099", "ituz": "11", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-30 13:55:00+00	\N	A45XR	A4	21.055	CW	599033	599	Y	R	\N	\N	LL93EN	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "21", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 13:59:00+00	\N	AZ4F	LU	21.066	CW	599034	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 14:03:00+00	\N	CP6AA	CP	21.058	CW	599035	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 14:31:00+00	\N	HZ1HZ	HZ	21.005	CW	599036	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 14:33:00+00	\N	3DA5A	3DA	21.003	CW	599037	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 14:33:00+00	\N	3DA5A	3DA	21.003	CW	599037	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "38", "ituz": "57", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 14:56:00+00	\N	AZ4F	LU	28.005	CW	599038	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:10:00+00	\N	UY5QQ	UR	14.007	CW	599039	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:12:00+00	\N	LZ1ZM	LZ	14.010	CW	599040	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 15:14:00+00	\N	VO1MP	VE	14.010	CW	599041	599	Y	R	\N	\N	GN37	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "NA-027", "lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 15:14:00+00	\N	VO1MP	VE	14.010	CW	599041	599	Y	R	\N	\N	GN37	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "iota": "NA-027", "ituz": "09", "lotw": true, "state": "NL"}	2020-07-06 15:26:11+00
 1998-05-30 15:15:00+00	\N	RK3AWE	UA	14.012	CW	599042	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:16:00+00	\N	YP3A	YO	14.014	CW	599043	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 15:18:00+00	\N	RN9XA	UA	14.014	CW	599044	599	N	N	\N	\N	LP51JP	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 15:18:00+00	\N	RN9XA	UA	14.014	CW	599044	599	N	N	\N	\N	LP51JP	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "17", "ituz": "20", "lotw": true, "state": "KO"}	2020-07-06 15:26:11+00
 1998-05-30 15:20:00+00	\N	LZ0B	LZ	14.016	CW	599045	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:22:00+00	\N	RW3AWO	UA	14.016	CW	599046	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:24:00+00	\N	RZ3FA	UA	14.018	CW	599047	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 15:28:00+00	\N	UT7I	UR	14.019	CW	599048	599	N	N	\N	\N	KN88XA	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 15:28:00+00	\N	UT7I	UR	14.019	CW	599048	599	N	N	\N	\N	KN88XA	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "16", "ituz": "29", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 15:32:00+00	\N	LZ5XQ	LZ	14.022	CW	599049	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:35:00+00	\N	EW4U	EU	14.023	CW	599050	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:38:00+00	\N	IT9XUC	IT9	14.029	CW	599051	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:53:00+00	\N	RZ3Q	UA	14.032	CW	599052	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 15:56:00+00	\N	ZB2/DL5JAN	ZB	14.046	CW	599053	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 17:53:00+00	\N	RJ9J	UA9	14.046	CW	599054	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 17:54:00+00	\N	YO4NF	YO	14.043	CW	599055	599	N	N	\N	\N	KN44HD	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 17:54:00+00	\N	YO4NF	YO	14.043	CW	599055	599	N	N	\N	\N	KN44HD	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 17:55:00+00	\N	IH9/OK5DX	IG9	14.041	CW	599056	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 17:57:00+00	\N	SV2BFL	SV	14.037	CW	599057	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 17:59:00+00	\N	UB6M	UA	14.035	CW	599058	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -289,12 +289,12 @@
 1998-05-30 18:10:00+00	\N	LZ1ZM	LZ	14.022	CW	599062	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 18:11:00+00	\N	YU1OL	YU	14.019	CW	599063	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-30 18:14:00+00	\N	RN0A	UA9	14.017	CW	599064	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-30 18:15:00+00	\N	EA4ML	EA	14.014	CW	599065	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-30 18:15:00+00	\N	EA4ML	EA	14.014	CW	599065	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-30 18:16:00+00	\N	P3A	5B	14.009	CW	599066	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:00:00+00	\N	DL3YGT	DL	3.5	CW	569	559	Y	Y	Joerg	Guetersloh	\N	N47	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:16:00+00	\N	AZ4F	LU	14.007	CW	599067	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:19:00+00	\N	YV1DIG	YV	14.003	CW	599068	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 00:29:00+00	\N	JY8B	JY	3.504	CW	599069	599	Y	Y	\N	\N	KM71XW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 00:29:00+00	\N	JY8B	JY	3.504	CW	599069	599	Y	Y	\N	\N	KM71XW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 00:30:00+00	\N	RN3R	UA	3.505	CW	599070	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:34:00+00	\N	SP3CW	SP	3.508	CW	599072	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:35:00+00	\N	DJ5CL	DL	3.506	CW	599071	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -308,7 +308,7 @@
 1998-05-31 00:47:00+00	\N	DL1AUZ	DL	3.514	CW	599080	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:49:00+00	\N	HA3KNA	HA	3.514	CW	599081	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:49:00+00	\N	OK1HX	OK	3.515	CW	599082	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 00:50:00+00	\N	YU1ANO	YU	3.517	CW	599083	599	N	N	\N	\N	KN04ER	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-05-31 21:49:16+00
+1998-05-31 00:50:00+00	\N	YU1ANO	YU	3.517	CW	599083	599	N	N	\N	\N	KN04ER	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 00:51:00+00	\N	S53BM	S5	3.518	CW	599084	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:52:00+00	\N	HG1S	HA	3.520	CW	599085	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 00:53:00+00	\N	P3A	5B	3.520	CW	599086	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -327,41 +327,41 @@
 1998-05-31 01:17:00+00	\N	OK2BU	OK	3.533	CW	599099	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:18:00+00	\N	OH3NE	OH	3.534	CW	599100	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:19:00+00	\N	UT1YW	UR	3.535	CW	599101	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 01:21:00+00	\N	SK3GW	SM	3.535	CW	599102	599	N	N	\N	\N	JP80JH	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 01:21:00+00	\N	SK3GW	SM	3.535	CW	599102	599	N	N	\N	\N	JP80JH	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "18", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 01:22:00+00	\N	US2IZ	UR	3.537	CW	599103	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:24:00+00	\N	TM2S	F	3.538	CW	599104	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:25:00+00	\N	I1XHV	I	3.540	CW	599105	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:27:00+00	\N	UT2II	UR	3.540	CW	599106	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 01:29:00+00	\N	S52FB	S5	3.543	CW	599107	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 01:29:00+00	\N	S52FB	S5	3.543	CW	599107	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 01:30:00+00	\N	S51RJ	S5	3.545	CW	599108	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:30:00+00	\N	ZA1M	ZA	3.5	CW	599	599	N	N	\N	\N	\N	\N	\N	QSL nicht zustellbar	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 01:31:00+00	\N	S57JA	S5	3.550	CW	599109	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 11:06:00+00	\N	EA1DAV	EA	28.012	CW	599110	599	N	N	\N	\N	IN53UG	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-05-31 11:08:00+00	\N	EA4ML	EA	28.022	CW	599111	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 11:06:00+00	\N	EA1DAV	EA	28.012	CW	599110	599	N	N	\N	\N	IN53UG	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-31 11:08:00+00	\N	EA4ML	EA	28.022	CW	599111	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 11:11:00+00	\N	EA1BAE	EA	28.030	CW	599112	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 11:14:00+00	\N	EA1EXE	EA	28.020	CW	599113	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 11:26:00+00	\N	CT1ELP	CT	28.010	CW	599114	599	Y	Y	\N	\N	IM58JP	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 11:26:00+00	\N	CT1ELP	CT	28.010	CW	599114	599	Y	Y	\N	\N	IM58JP	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 11:30:00+00	\N	ED5FV	EA	28.027	CW	599115	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 11:40:00+00	\N	ON4LIR	ON	21.001	CW	599116	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 11:48:00+00	\N	ZB2/DL5JAN	ZB	21.011	CW	599117	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 11:51:00+00	\N	TU2XZ	TU	21.013	CW	599118	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 11:57:00+00	\N	ED5FV	EA	21.018	CW	599119	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 11:59:00+00	\N	JY8B	JY	21.026	CW	599120	599	Y	Y	\N	\N	KM71XW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-05-31 12:03:00+00	\N	EA7TG	EA	21.047	CW	599122	599	Y	Y	\N	\N	IM87KH	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 11:59:00+00	\N	JY8B	JY	21.026	CW	599120	599	Y	Y	\N	\N	KM71XW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-31 12:03:00+00	\N	EA7TG	EA	21.047	CW	599122	599	Y	Y	\N	\N	IM87KH	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 12:04:00+00	\N	CP6AA	CP	21.032	CW	599121	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 12:16:00+00	\N	TN9C	TN	21.019	CW	599123	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 12:22:00+00	\N	EA8ASJ	EA8	21.015	CW	599124	599	Y	R	\N	\N	IL27GT	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "AF-004", "lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 12:22:00+00	\N	EA8ASJ	EA8	21.015	CW	599124	599	Y	R	\N	\N	IL27GT	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "33", "iota": "AF-004", "ituz": "36", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 12:27:00+00	\N	HG1S	HA	21.009	CW	599125	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 12:31:00+00	\N	VO1MP	VE	21.006	CW	599126	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 12:36:00+00	\N	OM3RKA	OM	21.001	CW	599127	599	N	N	\N	\N	JN97BW	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 12:36:00+00	\N	OM3RKA	OM	21.001	CW	599127	599	N	N	\N	\N	JN97BW	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 12:38:00+00	\N	KE3Q	K	21.000	CW	599128	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:30:00+00	\N	RM6A	UA	21.001	CW	599129	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:32:00+00	\N	UN6T	UN	21.001	CW	599130	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:35:00+00	\N	C4W	5B	21.007	CW	599131	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:43:00+00	\N	LU7AWP	LU	21.015	CW	599132	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:44:00+00	\N	II3T	I	21.017	CW	599133	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 18:46:00+00	\N	EA5WU	EA	21.018	CW	599134	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-05-31 18:49:00+00	\N	RN9XA	UA	21.019	CW	599135	599	N	N	\N	\N	LP51JP	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 18:46:00+00	\N	EA5WU	EA	21.018	CW	599134	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-31 18:49:00+00	\N	RN9XA	UA	21.019	CW	599135	599	N	N	\N	\N	LP51JP	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "17", "ituz": "20", "lotw": true, "state": "KO"}	2020-07-06 15:26:11+00
 1998-05-31 18:51:00+00	\N	PU2WIF	PY	21.020	CW	599136	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:52:00+00	\N	LU1EWL	LU	21.020	CW	599137	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:53:00+00	\N	3V8BB	3V	21.021	CW	599138	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -369,13 +369,13 @@
 1998-05-31 18:57:00+00	\N	6Y6A	6Y	21.027	CW	599140	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:59:00+00	\N	DL3OI	DL	21.028	CW	599142	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 18:59:00+00	\N	UD6M	UA	21.028	CW	599141	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 19:04:00+00	\N	OH7WW	OH	21.030	CW	599143	599	Y	Y	\N	\N	KP11VJ	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 19:04:00+00	\N	OH7WW	OH	21.030	CW	599143	599	Y	Y	\N	\N	KP11VJ	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "18", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 19:07:00+00	\N	UP0L	UN	21.031	CW	599145	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 19:08:00+00	\N	EA8ZS	EA8	21.032	CW	599146	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 19:15:00+00	\N	ZW2Z	PY	21.035	CW	599144	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 19:17:00+00	\N	EA3GCV	EA	21.034	CW	599147	599	Y	Y	\N	\N	JN11AI	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 19:17:00+00	\N	EA3GCV	EA	21.034	CW	599147	599	Y	Y	\N	\N	JN11AI	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 19:19:00+00	\N	IR4T	I	21.036	CW	599148	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 19:21:00+00	\N	5B4/T97M	5B	21.037	CW	599149	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 19:21:00+00	\N	5B4/T97M	5B	21.037	CW	599149	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 19:22:00+00	\N	RU4PL	UA	21.038	CW	599150	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 19:24:00+00	\N	L50V	LU	21.039	CW	599151	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 19:29:00+00	\N	RW9OW	UA9	21.041	CW	599152	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -386,14 +386,14 @@
 1998-05-31 19:51:00+00	\N	EA3BIM	EA	28.012	CW	599157	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 19:59:00+00	\N	PQ5L	PY	28.018	CW	599158	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 20:04:00+00	\N	PR5W	PY	28.029	CW	599159	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 20:06:00+00	\N	EA7AKJ	EA	28.025	CW	599160	599	Y	Y	Juan	Cordoba	IM77OV	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 20:06:00+00	\N	EA7AKJ	EA	28.025	CW	599160	599	Y	Y	Juan	Cordoba	IM77OV	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 20:10:00+00	\N	PU1RUX	PY	28.017	CW	599161	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 20:13:00+00	\N	PU1KDR	PY	28.011	CW	599162	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:12:00+00	\N	F5RZJ	F	1.820	CW	599163	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:13:00+00	\N	S55A	S5	1.818	CW	599164	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:16:00+00	\N	F6BWO	F	1.822	CW	599165	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:20:00+00	\N	YZ4IZ	YU	1.821	CW	599166	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 21:24:00+00	\N	PA6WPX	PA	1.826	CW	599167	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 21:24:00+00	\N	PA6WPX	PA	1.826	CW	599167	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 21:26:00+00	\N	F6CWA	F	1.828	CW	599168	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:27:00+00	\N	IH9/OL5Y	IG9	1.829	CW	599169	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:31:00+00	\N	HA8BE	HA	1.829	CW	599170	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -401,11 +401,11 @@
 1998-05-31 21:35:00+00	\N	9A7A	9A	3.526	CW	599185	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:35:00+00	\N	DJ5CL	DL	1.831	CW	599171	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:37:00+00	\N	LX/DL2SDS/P	LX	3.525	CW	599186	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 21:37:00+00	\N	S57J	S5	1.833	CW	599172	599	Y	Y	\N	\N	JN75IW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 21:37:00+00	\N	S57J	S5	1.833	CW	599172	599	Y	Y	\N	\N	JN75IW	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 21:39:00+00	\N	LY5A	LY	1.834	CW	599173	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:41:00+00	\N	9A1A	9A	1.835	CW	599174	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 21:48:00+00	\N	9A2TW	9A	1.825	CW	599175	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 21:51:00+00	\N	LY1DR	LY	1.824	CW	599176	599	Y	R	\N	\N	KO15TA	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 21:51:00+00	\N	LY1DR	LY	1.824	CW	599176	599	Y	R	\N	\N	KO15TA	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "29", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 22:01:00+00	\N	9A4D	9A	1.821	CW	599177	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 22:12:00+00	\N	HA1KRR	HA	1.831	CW	599178	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 22:13:00+00	\N	S50C	S5	1.830	CW	599179	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -423,10 +423,10 @@
 1998-05-31 22:52:00+00	\N	ER1LW	ER	3.513	CW	599194	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 22:53:00+00	\N	SP3FLR	SP	3.512	CW	599195	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 22:54:00+00	\N	UY0ZG	UR	3.512	CW	599196	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 22:56:00+00	\N	S53R	S5	3.5008	CW	599197	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 22:56:00+00	\N	S53R	S5	3.5008	CW	599197	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 22:58:00+00	\N	YU1ANO	YU	3.507	CW	599198	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 22:59:00+00	\N	OM3RKA	OM	3.505	CW	599199	599	N	N	\N	\N	JN97BW	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-05-31 23:00:00+00	\N	RV3LO	UA	3.504	CW	599200	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 22:59:00+00	\N	OM3RKA	OM	3.505	CW	599199	599	N	N	\N	\N	JN97BW	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-31 23:00:00+00	\N	RV3LO	UA	3.504	CW	599200	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "16", "ituz": "29", "lotw": true, "state": "SM"}	2020-07-06 15:26:11+00
 1998-05-31 23:07:00+00	\N	LY7A	LY	3.549	CW	599201	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:08:00+00	\N	GS0TOW	GM	3.547	CW	599202	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:10:00+00	\N	OZ5WQ	OZ	3.547	CW	599203	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -437,23 +437,23 @@
 1998-05-31 23:17:00+00	\N	S51OI	S5	3.537	CW	599208	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:19:00+00	\N	IK4WOB	I	3.536	CW	599209	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:20:00+00	\N	RX3QFM	UA	3.535	CW	599210	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:21:00+00	\N	GI0KOW	GI	3.534	CW	599211	599	Y	Y	Robert	\N	IO64PG	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "EU-115", "lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:21:00+00	\N	GI0KOW	GI	3.534	CW	599211	599	Y	Y	Robert	\N	IO64PG	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "iota": "EU-115", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:23:00+00	\N	UA3TJW	UA	3.533	CW	599212	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:26:00+00	\N	SM2DMU	SM	3.532	CW	599213	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:30:00+00	\N	DL6AG	DL	3.525	CW	599214	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:32:00+00	\N	DJ1TO	DL	3.525	CW	599215	599	N	N	\N	\N	JO62SL	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:32:00+00	\N	DJ1TO	DL	3.525	CW	599215	599	N	N	\N	\N	JO62SL	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:35:00+00	\N	S59UAR	S5	3.524	CW	599216	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:36:00+00	\N	EA4ML	EA	3.523	CW	599217	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:36:00+00	\N	EA4ML	EA	3.523	CW	599217	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "37", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:37:00+00	\N	OK1SI	OK	3.522	CW	599218	599	Y	Y	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:39:00+00	\N	SP8WJ	SP	3.520	CW	599219	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:41:00+00	\N	SP7NMW	SP	3.519	CW	599220	599	Y	Y	\N	\N	KO00HV	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:41:00+00	\N	SP7NMW	SP	3.519	CW	599220	599	Y	Y	\N	\N	KO00HV	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:43:00+00	\N	SK6TY	SM	3.517	CW	599221	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:45:00+00	\N	OM8AA	OM	3.515	CW	599222	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-05-31 23:47:00+00	\N	G2AFV	G	3.513	CW	599223	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:50:00+00	\N	GM4SID	GM/s	3.513	CW	599224	599	N	N	\N	\N	IO87UE	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "EU-005", "lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:50:00+00	\N	GM4SID	GM/s	3.513	CW	599224	599	N	N	\N	\N	IO87UE	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "iota": "EU-005", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:52:00+00	\N	HB0/DA1WA	HB0	3.512	CW	599225	599	Y	R	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-05-31 23:55:00+00	\N	M8T	G	3.508	CW	599226	599	N	N	\N	\N	JO02OD	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "EU-005", "lotw": true}	2020-03-15 20:48:32+00
-1998-05-31 23:58:00+00	\N	SP9XCN	SP	3.533	CW	599227	599	N	N	\N	\N	JO90HH	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-05-31 23:55:00+00	\N	M8T	G	3.508	CW	599226	599	N	N	\N	\N	JO02OD	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "iota": "EU-005", "ituz": "27", "lotw": true}	2020-07-06 15:26:11+00
+1998-05-31 23:58:00+00	\N	SP9XCN	SP	3.533	CW	599227	599	N	N	\N	\N	JO90HH	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-05-31 23:59:00+00	\N	Z30M	Z3	3.530	CW	599228	599	N	N	\N	\N	\N	\N	CQ WW WPX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-06-06 13:00:00+00	\N	DG1FE/P	DL	144.29	SSB	57	57	Y	Y	Gerald	Giessen	\N	F58	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1998-06-19 23:05:00+00	\N	SP8WJT	SP	3.5	CW	599	599	Y	Y	Tom	Vzeszow	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -461,10 +461,10 @@
 1998-07-19 16:44:00+00	\N	IZ6BYQ	I	10.1	CW	579	589	Y	Y	Marco	Montesilvano	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-07-19 16:54:00+00	\N	RU9CI	UA9	10.1	CW	429	559	Y	Y	Victor	Ural	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-07-19 17:00:00+00	\N	UA4PI	UA	10.1	CW	329	579	Y	Y	Rashid	Kazan	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-07-19 17:09:00+00	\N	DL6YEY	DL	10.1	CW	439	559	Y	Y	Juergen	\N	JO41MU	N30	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-07-19 17:09:00+00	\N	DL6YEY	DL	10.1	CW	439	559	Y	Y	Juergen	\N	JO41MU	N30	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-08-02 12:44:00+00	\N	OM6ANO	OM	10.1	CW	539	599	Y	Y	Dano	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-02 12:52:00+00	\N	YO7AKL	YO	10.1	CW	589	589	Y	R	Georg	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-08-02 13:02:00+00	\N	JY9QJ	JY	18.075	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-08-02 13:02:00+00	\N	JY9QJ	JY	18.075	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "39", "lotw": true}	2020-07-06 15:26:11+00
 1998-08-02 13:04:00+00	\N	RA2FBC	UA2	18.076	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-02 13:06:00+00	\N	EU5R	EU	18.078	CW	559	599	Y	R	Igor	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 12:52:00+00	\N	A4HZN	A4	21.041	CW	599001	599	Y	R	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -473,16 +473,16 @@
 1998-08-08 13:12:00+00	\N	4Z5FW	4X	21.020	CW	599004	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 13:13:00+00	\N	4X/OL7D	4X	21.020	CW	599005	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 13:16:00+00	\N	UU8CDV	UR	21.017	CW	599006	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-08-08 13:19:00+00	\N	KC1XX	K	21.016	CW	599007	599	N	Y	\N	\N	FN42	\N	WAEDC	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-08-08 13:19:00+00	\N	KC1XX	K	21.016	CW	599007	599	N	Y	\N	\N	FN42	\N	WAEDC	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NH"}	2020-07-06 15:26:11+00
 1998-08-08 13:25:00+00	\N	XR1X	CE	21.014	CW	599008	599	Y	R	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 13:28:00+00	\N	RK9AWN	UA9	21.012	CW	599007	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 13:28:00+00	\N	TU2XZ	TU	21.010	CW	599011	599	N	N	\N	\N	\N	\N	WAEDC	direct only	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-08 13:28:00+00	\N	UP0L	UN	21.012	CW	599010	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-09 23:38:00+00	\N	XJ3AT	\N	14.017	CW	599012	599	Y	Y	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-08-09 23:46:00+00	\N	W1ZT	K	14.003	CW	599014	599	N	N	\N	\N	FN42	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-08-09 23:46:00+00	\N	W1ZT	K	14.003	CW	599014	599	N	N	\N	\N	FN42	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MA"}	2020-07-06 15:26:11+00
 1998-08-09 23:48:00+00	\N	K0EA	K	14.012	CW	599013	599	N	N	\N	\N	\N	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-08-09 23:55:00+00	\N	KE9I	K	14.017	CW	599015	599	N	N	\N	\N	EN61	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-08-09 23:57:00+00	\N	K3WW	K	14.019	CW	599016	599	N	N	\N	\N	FN20	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-08-09 23:55:00+00	\N	KE9I	K	14.017	CW	599015	599	N	N	\N	\N	EN61	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "04", "ituz": "08", "lotw": true, "state": "IN"}	2020-07-06 15:26:11+00
+1998-08-09 23:57:00+00	\N	K3WW	K	14.019	CW	599016	599	N	N	\N	\N	FN20	\N	WAEDC	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
 1998-08-12 16:15:00+00	\N	HV2/IZ3ZAW	HV	18.068	CW	559	559	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-12 16:34:00+00	\N	PA0STN	PA	7	CW	559	599	Y	Y	\N	Alkmaar	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-12 16:52:00+00	\N	YU1ILM	YU	7	CW	479	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -502,13 +502,13 @@
 1998-08-22 20:23:00+00	\N	SP4GFG	SP	3.5	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-22 20:37:00+00	\N	DH2UL	DL	7	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-22 20:42:00+00	\N	DA0CV	DL	7	CW	599	599	Y	Y	\N	\N	\N	98V	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-08-29 22:16:00+00	\N	TL5A	TL	10.1	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-08-29 22:16:00+00	\N	TL5A	TL	10.1	CW	599	599	Y	Y	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "36", "ituz": "47", "lotw": true}	2020-07-06 15:26:11+00
 1998-08-29 22:19:00+00	\N	UU5JBB	UR	7	CW	599	579	Y	R	Leo	Dzhankoy	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-29 22:29:00+00	\N	IK0YUT	I	7	CW	599	599	N	N	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-29 22:39:00+00	\N	PA3DNZ	PA	3.5	CW	599	599	Y	R	Herman	Purmeren	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-30 14:15:00+00	\N	DJ4BA	DL	7	CW	579	579	Y	R	Elmar	Ueckermuende	\N	V25	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-08-30 14:26:00+00	\N	F5SGI/P	F	7	CW	599	579	Y	Y	Jean	Dreux	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-09-06 23:44:00+00	\N	I5NXH	I	7	CW	599	599	Y	Y	Fabrizio	Firenze	JN53NT	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-09-06 23:44:00+00	\N	I5NXH	I	7	CW	599	599	Y	Y	Fabrizio	Firenze	JN53NT	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-09-13 00:21:00+00	\N	YT1GA	YU	7	CW	599	599	Y	Y	Gagi	Prokuplje	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-09-13 17:11:00+00	\N	GX5MW	G	7	CW	599	599	Y	Y	John	Rochester	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-09-20 21:52:00+00	\N	EA3BCU	EA	7	CW	539	599	Y	Y	Jordi	Barcelona	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -519,15 +519,15 @@
 1998-10-06 14:43:00+00	\N	S52K	S5	7	CW	599	599	Y	R	Tone	Crnomelj	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-10-06 14:52:00+00	\N	G0SIK	G	7	CW	599	599	Y	R	Norman	Barnstaple	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-08 00:40:00+00	\N	TA1/KU0J	TA1	7	CW	599	599	Y	R	\N	\N	\N	\N	\N	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 20:40:00+00	\N	K8AZ	K	14.019	CW	59914	59904	R	Y	\N	\N	EN91	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 20:40:00+00	\N	K8AZ	K	14.019	CW	59914	59904	R	Y	\N	\N	EN91	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "04", "ituz": "08", "lotw": true, "state": "OH"}	2020-07-06 15:26:11+00
 1998-11-28 20:44:00+00	\N	LU8XW	LU	14.020	CW	59914	59913	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 20:46:00+00	\N	YT1AD	YU	14.022	CW	59914	59915	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 20:47:00+00	\N	YU1ZZ	YU	14.023	CW	59914	59915	N	N	\N	\N	JN93WU	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 20:49:00+00	\N	WC1M	K	14.023	CW	59914	59905	N	N	\N	\N	FN33JS	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 20:50:00+00	\N	W1UK	K	14.024	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 20:53:00+00	\N	J6DX	J6	14.028	CW	59914	59908	Y	R	\N	\N	FK94MC	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"iota": "NA-108", "lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 20:47:00+00	\N	YU1ZZ	YU	14.023	CW	59914	59915	N	N	\N	\N	JN93WU	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "15", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-11-28 20:49:00+00	\N	WC1M	K	14.023	CW	59914	59905	N	N	\N	\N	FN33JS	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NH"}	2020-07-06 15:26:11+00
+1998-11-28 20:50:00+00	\N	W1UK	K	14.024	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "CT"}	2020-07-06 15:26:11+00
+1998-11-28 20:53:00+00	\N	J6DX	J6	14.028	CW	59914	59908	Y	R	\N	\N	FK94MC	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "08", "iota": "NA-108", "ituz": "11", "lotw": true}	2020-07-06 15:26:11+00
 1998-11-28 20:55:00+00	\N	9A5D	9A	14.032	CW	59914	59915	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 20:58:00+00	\N	K1YR	K	14.035	CW	59914	59905	N	N	\N	\N	FN31	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 20:58:00+00	\N	K1YR	K	14.035	CW	59914	59905	N	N	\N	\N	FN31	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "CT"}	2020-07-06 15:26:11+00
 1998-11-28 20:59:00+00	\N	K2TW	K	14.038	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 20:59:00+00	\N	W3BGN	K	14.037	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:02:00+00	\N	EA6IB	EA6	14.042	CW	59914	59914	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -538,29 +538,29 @@
 1998-11-28 21:09:00+00	\N	AA3S	K	14.055	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:10:00+00	\N	K2XR	K	14.057	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:11:00+00	\N	N2NT	K	14.058	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 21:11:00+00	\N	N3RS	K	14.059	CW	59914	59905	N	N	\N	\N	FN20	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 21:11:00+00	\N	N3RS	K	14.059	CW	59914	59905	N	N	\N	\N	FN20	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
 1998-11-28 21:13:00+00	\N	N3OC	K	14.061	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 21:14:00+00	\N	W1ZT	K	14.063	CW	59914	59905	N	N	\N	\N	FN42	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 21:14:00+00	\N	W1ZT	K	14.063	CW	59914	59905	N	N	\N	\N	FN42	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MA"}	2020-07-06 15:26:11+00
 1998-11-28 21:16:00+00	\N	WE3E	K	14.064	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 21:18:00+00	\N	W3LPL	K	14.001	CW	59914	59905	N	N	\N	\N	FM19	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 21:20:00+00	\N	WO1N	K	14.003	CW	59914	59904	N	N	\N	\N	FN32KK	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 21:18:00+00	\N	W3LPL	K	14.001	CW	59914	59905	N	N	\N	\N	FM19	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MD"}	2020-07-06 15:26:11+00
+1998-11-28 21:20:00+00	\N	WO1N	K	14.003	CW	59914	59904	N	N	\N	\N	FN32KK	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MA"}	2020-07-06 15:26:11+00
 1998-11-28 21:22:00+00	\N	K1ZZ	K	14.003	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:23:00+00	\N	YZ9A	\N	14.006	CW	59914	59915	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:25:00+00	\N	K2WK	K	14.010	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-11-28 21:26:00+00	\N	KT3Y	K	14.010	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 21:30:00+00	\N	K3LR	K	14.016	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 21:31:00+00	\N	KC1XX	K	14.017	CW	59914	59905	N	N	\N	\N	FN42	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 21:30:00+00	\N	K3LR	K	14.016	CW	59914	59905	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
+1998-11-28 21:31:00+00	\N	KC1XX	K	14.017	CW	59914	59905	N	N	\N	\N	FN42	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "NH"}	2020-07-06 15:26:11+00
 1998-11-28 21:35:00+00	\N	I6WJB	I	14.015	CW	59914	59915	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-11-28 21:39:00+00	\N	P40E	P4	14.012	CW	59914	59909	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-11-28 21:43:00+00	\N	CE3F	CE	14.009	CW	59914	59912	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-11-28 21:39:00+00	\N	P40E	P4	14.012	CW	59914	59909	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "09", "ituz": "11", "lotw": true}	2020-07-06 15:26:11+00
+1998-11-28 21:43:00+00	\N	CE3F	CE	14.009	CW	59914	59912	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "12", "ituz": "14", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-13 15:00:00+00	\N	K9ZO	K	28.006	CW	599001	599IL	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-13 15:06:00+00	\N	K0SN	K	28.011	CW	599004	599WI	N	N	\N	\N	EN65	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-12-13 15:07:00+00	\N	K3UA	K	28.013	CW	599005	599PA	N	N	\N	\N	EN90	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-13 15:06:00+00	\N	K0SN	K	28.011	CW	599004	599WI	N	N	\N	\N	EN65	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "04", "ituz": "08", "lotw": true, "state": "WI"}	2020-07-06 15:26:11+00
+1998-12-13 15:07:00+00	\N	K3UA	K	28.013	CW	599005	599PA	N	N	\N	\N	EN90	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "PA"}	2020-07-06 15:26:11+00
 1998-12-13 15:08:00+00	\N	W4MR	K	28.14	CW	599006	599NC	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:09:00+00	\N	K4OJ	K	28.009	CW	599003	599FL	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:10:00+00	\N	W8PBO	K	28.015	CW	599007	599WV	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-13 15:14:00+00	\N	N3AM	K	28.021	CW	599008	599MD	N	N	\N	\N	FM19LB	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-12-13 15:15:00+00	\N	N4BP	K	28.021	CW	599009	599FL	N	N	\N	\N	EL96	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-13 15:14:00+00	\N	N3AM	K	28.021	CW	599008	599MD	N	N	\N	\N	FM19LB	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "MD"}	2020-07-06 15:26:11+00
+1998-12-13 15:15:00+00	\N	N4BP	K	28.021	CW	599009	599FL	N	N	\N	\N	EL96	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "05", "ituz": "08", "lotw": true, "state": "FL"}	2020-07-06 15:26:11+00
 1998-12-13 15:17:00+00	\N	K3ZO	K	28.022	CW	599010	599MD	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:19:00+00	\N	N4AR/8	K	28.024	CW	599011	599MI	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:20:00+00	\N	K3SA	K	28.025	CW	599012	599MD	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -568,33 +568,33 @@
 1998-12-13 15:24:00+00	\N	W3RJ	K	28.029	CW	599014	599PA	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:25:00+00	\N	N1BB	K	28.029	CW	599015	599MA	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:27:00+00	\N	AA5AK	K	28.033	CW	599016	599LA	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-13 15:30:00+00	\N	W8AV	K	28.007	CW	599002	599OH	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-13 15:30:00+00	\N	W8AV	K	28.007	CW	599002	599OH	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "04", "ituz": "08", "lotw": true, "state": "OH"}	2020-07-06 15:26:11+00
 1998-12-13 15:32:00+00	\N	K3MD	K	28.036	CW	599017	599PA	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:33:00+00	\N	KA3RDO	K	28.036	CW	599018	599NY	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:35:00+00	\N	KW2J	K	28.038	CW	599019	599NY	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-13 15:37:00+00	\N	K8BK	K	28.045	CW	599020	599MI	N	N	\N	\N	\N	\N	ARRL 10m Contest	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:07:00+00	\N	DK9PS	DL	3.5	CW	599Q02	599K03	Y	Y	\N	\N	JN39OS	K03	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:55+00
+1998-12-26 10:07:00+00	\N	DK9PS	DL	3.5	CW	599Q02	599K03	Y	Y	\N	\N	JN39OS	K03	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:10:00+00	\N	DF3ZE	DL	3.5	CW	599Q02	599F53	Y	Y	\N	\N	\N	F53	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:10:00+00	\N	DK9PD	DL	3.5	CW	599Q02	599K04	N	N	\N	\N	\N	K04	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:14:00+00	\N	DF3IR	DL	3.5	CW	599Q02	599K14	N	N	Edmund	Kandel	\N	K14	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i"}	2020-03-16 21:18:42+00
 1998-12-26 10:14:00+00	\N	DF6RIK	DL	3.5	CW	599Q02	599U15	N	N	\N	\N	\N	U15	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:18:00+00	\N	DF1GL	DL	3.5	CW	599Q02	599A13	Y	Y	\N	\N	\N	A13	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:18:00+00	\N	DJ9MH	DL	3.5	CW	599Q02	599B10	R	Y	\N	\N	JO50FA	B10	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:18:42+00
+1998-12-26 10:18:00+00	\N	DJ9MH	DL	3.5	CW	599Q02	599B10	R	Y	\N	\N	JO50FA	B10	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:21:00+00	\N	DK1OP	DL	3.5	CW	599Q02	599C01	Y	Y	\N	\N	\N	C01	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:21:00+00	\N	DL2MDU	DL	3.5	CW	599Q02	599C06	N	N	\N	\N	JN58RF	C06	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-26 10:21:00+00	\N	DL2MDU	DL	3.5	CW	599Q02	599C06	N	N	\N	\N	JN58RF	C06	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:24:00+00	\N	DL1ARJ	DL	3.5	CW	599Q02	599X28	N	N	\N	\N	\N	X28	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:25:00+00	\N	DL7UM	DL	3.5	CW	599Q02	599I54	N	N	\N	\N	\N	I54	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:27:00+00	\N	DJ5AV	DL	3.5	CW	599Q02	599A48	Y	Y	\N	\N	JN47PT	A48	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:29:55+00
+1998-12-26 10:27:00+00	\N	DJ5AV	DL	3.5	CW	599Q02	599A48	Y	Y	\N	\N	JN47PT	A48	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:27:00+00	\N	DK2DW	DL	3.5	CW	599Q02	599B12	N	N	\N	\N	\N	B12	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:31:00+00	\N	DJ8EF	DL	3.5	CW	599Q02	599F19	N	N	Feri	Braunfels	\N	F19	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:31:00+00	\N	DL5AWI	DL	3.5	CW	599Q02	599X11	Y	Y	\N	\N	JO50EX	X11	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-26 10:31:00+00	\N	DL5AWI	DL	3.5	CW	599Q02	599X11	Y	Y	\N	\N	JO50EX	X11	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:38:00+00	\N	DF5WN	DL	7	CW	599Q02	599K33	Y	Y	\N	\N	\N	K33	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:38:00+00	\N	DL4NAC	DL	7	CW	599Q02	599F36	N	N	\N	\N	\N	F36	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:18:42+00
-1998-12-26 10:42:00+00	\N	DK4YJ	DL	7	CW	599Q02	599C12	N	N	\N	\N	JN58TE	C12	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-12-26 10:42:00+00	\N	DL3BZZ	DL	7	CW	599Q02	599F21	Y	Y	\N	\N	JO41JB	F21	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-26 10:38:00+00	\N	DL4NAC	DL	7	CW	599Q02	599F36	N	N	\N	\N	\N	F36	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-12-26 10:42:00+00	\N	DK4YJ	DL	7	CW	599Q02	599C12	N	N	\N	\N	JN58TE	C12	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-12-26 10:42:00+00	\N	DL3BZZ	DL	7	CW	599Q02	599F21	Y	Y	\N	\N	JO41JB	F21	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:46:00+00	\N	DL2ARD	DL	7	CW	599Q02	599Z88	N	N	Oliver	\N	\N	Z88	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:46:00+00	\N	DL2NBU	DL	7	CW	599Q02	599C12	N	N	\N	\N	\N	C12	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 10:49:00+00	\N	DL5FU	DL	7	CW	599Q02	599F02	N	N	\N	\N	JO61EH	F02	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"dcl": "i", "lotw": true}	2020-03-16 21:18:42+00
+1998-12-26 10:49:00+00	\N	DL5FU	DL	7	CW	599Q02	599F02	N	N	\N	\N	JO61EH	F02	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1998-12-26 10:51:00+00	\N	DF7SY	DL	7	CW	599Q02	599P32	N	N	\N	\N	\N	P32	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:51:00+00	\N	S53EO	S5	7	CW	599Q02	599	Y	Y	Milos	Portoroz	\N	\N	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:54:00+00	\N	DL4RDJ	DL	7	CW	599Q02	599K24	Y	Y	\N	\N	\N	K24	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -602,5 +602,5 @@
 1998-12-26 10:57:00+00	\N	DF8TM	DL	7	CW	599Q02	599P50	N	N	\N	\N	\N	P50	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:57:00+00	\N	DL1ARJ	DL	7	CW	599Q02	599X28	N	N	\N	\N	\N	X28	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1998-12-26 10:59:00+00	\N	DL2OBF	DL	7	CW	599Q02	599S15	Y	Y	\N	\N	\N	S15	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1998-12-26 11:00:00+00	\N	DL4TJ	DL	7	CW	599Q02	599P37	Y	Y	\N	\N	JN48IL	P37	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
-1998-12-26 11:01:00+00	\N	DL4MCF	DL	7	CW	599Q02	599C26	N	N	\N	\N	JN58RH	C26	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"lotw": true}	2020-03-15 20:48:32+00
+1998-12-26 11:00:00+00	\N	DL4TJ	DL	7	CW	599Q02	599P37	Y	Y	\N	\N	JN48IL	P37	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
+1998-12-26 11:01:00+00	\N	DL4MCF	DL	7	CW	599Q02	599C26	N	N	\N	\N	JN58RH	C26	DARC XMAS	\N	DF7CB	IC706	\N	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
