@@ -52,10 +52,25 @@ cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
     AND l.loc <> w.loc""")
 print("Updated locators: %s" % cur.rowcount)
 
+# zone import:
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{cqz}', w.info->'CQZ') FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND w.info ? 'CQZ' AND l.info->'cqz' IS DISTINCT FROM w.info->'CQZ'""")
+
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{ituz}', w.info->'ITUZ') FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND w.info ? 'ITUZ' AND l.info->'ituz' IS DISTINCT FROM w.info->'ITUZ'""")
+
+# state import:
+cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{state}', w.info->'STATE') FROM lotw w
+  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+    AND w.info ? 'STATE' AND l.info->'state' IS DISTINCT FROM w.info->'STATE'""")
+print("Updated states: %s" % cur.rowcount)
+
 # IOTA import:
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{iota}', w.info->'IOTA') FROM lotw w
   WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
-    AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA'""")
+    AND w.info ? 'IOTA' AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA'""")
 print("Updated IOTAs: %s" % cur.rowcount)
 
 # orphaned LoTW QSLs
