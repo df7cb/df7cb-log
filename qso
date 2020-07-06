@@ -68,7 +68,6 @@ while True:
         # date and time
         elif re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
-            print("Date:", date)
         elif re.search('^\d{1,2}:\d{2}$', tok):
             log['start'] = "%s %s" % (date, tok)
         elif re.search('^(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$', tok):
@@ -152,13 +151,13 @@ while True:
         if 'rstrx' not in log and log['mode'] == 'CW':
             log['rstrx'] = '599'
 
+        print(log)
         insert = "INSERT INTO log (" + \
             ', '.join(log.keys()) + \
             ') VALUES (' + \
             ', '.join(['%s' for x in log]) + \
             ')'
         args = [x for x in log.values()]
-        print(insert, args)
         cur.execute(insert, args)
         conn.commit()
 
