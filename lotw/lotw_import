@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-import adif
+import adif_io
 import json
 import psycopg2
 import psycopg2.extras
 
-adif = adif.ADIF()
-lotw = adif.read('lotwreport.adi')
+lotw, header = adif_io.read_from_file('lotwreport.adi')
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)

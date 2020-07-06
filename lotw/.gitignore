@@ -1,6 +1,8 @@
 .dcl-cookies
 dcl.adif
 df7cb-upload.adif
+DF7CB-*.adif
+DG8VD-*.adif
 lotwreport.adi
 .lotw_download.stamp
 .upload.stamp

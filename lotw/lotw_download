@@ -10,6 +10,7 @@ else
 fi
 
 wget --no-verbose -O lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
+sed -i -e 's/\o372/u/g' lotwreport.adi # latin1 in <STATE:2>KO // Resp-u'-blika Komi (Komi Republic)
 ./lotw_import
 
 echo "$(date +%Y-%m-%d)" > .lotw_download.stamp
