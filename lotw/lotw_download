@@ -2,6 +2,8 @@
 
 set -eu
 
+export PGSERVICE=cb
+
 PW=$(cat ~/.priv/pw/lotw-pass)
 if [ -s .lotw_download.stamp ]; then
   DATE=$(cat .lotw_download.stamp)
@@ -9,8 +11,9 @@ else
   DATE=$(date +%Y-%m-%d -d '1 week ago')
 fi
 
-wget --no-verbose -O lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
+wget -qO lotwreport.adi "https://lotw.arrl.org/lotwuser/lotwreport.adi?login=DF7CB&password=$PW&qso_query=1&qso_withown=yes&qso_qslsince=$DATE&qso_qsldetail=yes&qso_owncall="
 sed -i -e 's/\o372/u/g' lotwreport.adi # latin1 in <STATE:2>KO // Resp-u'-blika Komi (Komi Republic)
 ./lotw_import
+psql -P null=- -AXtc "select start::timestamp, call, qrg, mode, loc, contest, info from log where last_update > now() - '1min'::interval order by start;" | column -s '|' -t
 
 echo "$(date +%Y-%m-%d)" > .lotw_download.stamp
