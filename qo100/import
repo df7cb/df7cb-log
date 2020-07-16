@@ -15,7 +15,7 @@ echo -n "wsjtx.log: "
   psql -X \
     -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment, qso_via) FROM STDIN (FORMAT CSV, DELIMITER ',')"
 
-echo -n "log: "
+echo -n "wsjtx.log: "
 psql -X -c "INSERT INTO log
     SELECT * FROM log2 WHERE NOT EXISTS
         (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call));"
