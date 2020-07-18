@@ -38,7 +38,7 @@ if len(sys.argv) == 2:
     contest = sys.argv[1]
     print("Contest: %s" % contest)
 
-select = "SELECT * FROM log WHERE call ~ %s ORDER BY start, call"
+select = "SELECT * FROM (SELECT * FROM log WHERE call ~ %s ORDER BY start DESC, call DESC LIMIT 50) sub ORDER BY start, call"
 
 while True:
     log = {
@@ -94,6 +94,8 @@ while True:
 
         elif re.search('^\d+(\.\d+)?$', tok):
             log['qrg'] = tok
+            if int(float(tok)) == 2400:
+                log['qso_via'] = "QO100"
 
         # RST handling
         elif re.search('^([45].*)/([45].*)$', tok):
@@ -138,7 +140,7 @@ while True:
             match = re.search('^(.+?):(.*)', tok)
             log[match.group(1)] = match.group(2).replace('_', ' ')
 
-        else:
+        elif len(tok) > 0:
             log['call'] = tok.upper()
 
     if 'start' in log and 'call' in log:
