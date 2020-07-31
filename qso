@@ -38,7 +38,13 @@ if len(sys.argv) == 2:
     contest = sys.argv[1]
     print("Contest: %s" % contest)
 
-select = "SELECT * FROM (SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, name, qth, loc, contest, comment, info FROM log WHERE call ~ %s ORDER BY start DESC, call DESC LIMIT 50) sub ORDER BY start, call"
+select = """SELECT * FROM (
+  SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, name, qth, loc, contest, comment, info
+  FROM log
+  WHERE call ~ %s OR name ~* %s OR loc ~* %s
+  ORDER BY start DESC, call DESC LIMIT 50
+) sub
+ORDER BY start, call"""
 
 while True:
     log = {
@@ -167,7 +173,7 @@ while True:
             rsttx = str(int(rsttx) + 1)
 
     elif 'call' in log:
-        cur.execute(select, (log['call'],))
+        cur.execute(select, (log['call'], log['call'], log['call']))
         for rec in cur.fetchall():
             print("%s \033[1m%s %s %s\033[0m %s/%s %s" %
                     (rec['start'], rec['call'], rec['qrg'], rec['mode'],
