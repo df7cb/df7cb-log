@@ -58,6 +58,21 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     END IF;
   END IF;
 
+  -- RST
+  IF NEW.rsttx IS NULL THEN
+    NEW.rsttx := CASE
+      WHEN NEW.mode IN ('CW', 'RTTY', 'HELL') THEN 599
+      WHEN NEW.qso_via IS NOT NULL THEN '5'
+      ELSE '59' END;
+  END IF;
+  IF NEW.rstrx IS NULL THEN
+    NEW.rstrx := CASE
+      WHEN NEW.mode IN ('CW', 'RTTY', 'HELL') THEN 599
+      WHEN NEW.qso_via IS NOT NULL THEN '5'
+      ELSE '59' END;
+  END IF;
+
+  -- cty
   IF NEW.cty IS NULL THEN
     NEW.cty = cty(NEW.call);
   END IF;

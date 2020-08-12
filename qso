@@ -49,7 +49,6 @@ ORDER BY start, call"""
 while True:
     log = {
         'mode': mode,
-        'rsttx': rsttx,
     }
     if contest:
         log['contest'] = contest
@@ -57,7 +56,7 @@ while True:
         log['mycall'] = mycall
 
     try:
-        prompt = "%s %s %s %s> " % (mycall, date, mode, rsttx)
+        prompt = "%s %s %s> " % (mycall, date, mode)
         line = input(prompt)
     except (EOFError, KeyboardInterrupt):
         print()
@@ -68,9 +67,6 @@ while True:
         if tok.upper() in ('CW', 'FM', 'FT8', 'PSK31', 'RTTY', 'SSB'):
             mode = tok.upper()
             log['mode'] = mode
-            if mode == 'FM':
-                log['rsttx'] = '5'
-                log['rstrx'] = '5'
         # date and time
         elif re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
@@ -86,14 +82,10 @@ while True:
             log['qrg'] = "145.6125"
             log['qso_via'] = "DB0MG"
             log['mode'] = 'FM'
-            log['rsttx'] = '5'
-            log['rstrx'] = '5'
         elif tok == "db0ca":
             log['qrg'] = "438.975"
             log['qso_via'] = "DB0CA"
             log['mode'] = 'FM'
-            log['rsttx'] = '5'
-            log['rstrx'] = '5'
             log['mypwr'] = '40'
 
         elif tok == "qo100":
@@ -167,8 +159,6 @@ while True:
                 rstrx = '599' + str(info[auto_rst]).zfill(2)
             except KeyError:
                 pass
-        if 'rstrx' not in log and log['mode'] == 'CW':
-            log['rstrx'] = '599'
 
         print(log)
         insert = "INSERT INTO log (" + \
