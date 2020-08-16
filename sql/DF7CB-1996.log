@@ -721,7 +721,7 @@
 1996-11-24 17:38:00+00	\N	LZ9A	LZ	7.001	CW	59914	59920	N	N	\N	\N	KN12QP	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	{"cqz": "20", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1996-11-24 17:52:00+00	\N	EM2I	UR	7.009	CW	59914	59916	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1996-11-24 18:06:00+00	\N	EA1DD	EA	7.013	CW	59914	59914	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
-1996-11-24 18:09:00+00	\N	OY1CT	OY	7	CW	59914	59914	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
+1996-11-24 18:09:00+00	\N	OY1CT	OY	7	CW	59914	59914	Y	R	\N	\N	IP62LC	\N	CQ WW DX	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "14", "iota": "EU-018", "ituz": "18", "lotw": true}	2020-08-14 06:48:04+00
 1996-11-24 18:14:00+00	\N	JA5THV	JA	7	CW	59914	59925	Y	R	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1996-11-24 18:16:00+00	\N	S57AL	S5	7.024	CW	59914	59915	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1996-11-24 18:22:00+00	\N	RU6LWZ	UA	7.027	CW	59914	59916	N	N	\N	\N	\N	\N	CQ WW DX	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
@@ -879,7 +879,7 @@
 1996-12-26 10:58:00+00	\N	DJ9CN	DL	3.5	CW	599Q02	599I05	Y	Y	Heinz	Bremerhaven	\N	I05	DARC XMAS	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1996-12-26 11:00:00+00	\N	DJ8RD	DL	3.534	CW	599Q02	599P50	N	N	\N	\N	\N	\N	DARC XMAS	\N	DF7CB	IC706	100	Blieskastel	JN39PF	Doppelzepp	\N	\N	\N	\N
 1996-12-30 17:03:00+00	\N	DL3ARM	DL	3.5	CW	599Q02	599X28	Y	Y	Jürgen	Elsterberg	\N	X28	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
-1996-12-30 17:08:00+00	\N	DL3BCU	DL	3.5	CW	599Q02	599I16	Y	Y	Wolfgang	Wilhelmshaven	\N	I16	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"dcl": "i"}	2020-03-16 21:18:42+00
+1996-12-30 17:08:00+00	\N	DL3BCU	DL	3.5	CW	599Q02	599I16	Y	Y	Wolfgang	Wilhelmshaven	JO43BM	I16	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "14", "dcl": "i", "ituz": "28", "lotw": true}	2020-08-03 14:48:04+00
 1996-12-30 17:12:00+00	\N	DL6OCK	DL	3.5	CW	599Q02	599W35	Y	Y	Julian	Celle	\N	W35	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1996-12-30 17:15:00+00	\N	DL9SUB	DL	3.5	CW	599Q02	599T53	Y	Y	Hans-Jürgen	Schwerin	JO53RO	V14	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "14", "ituz": "28", "lotw": true}	2020-07-06 15:26:11+00
 1996-12-30 17:22:00+00	\N	HA1VE	HA	3.5	CW	599Q02	599003	Y	Y	Joska	\N	\N	\N	DSW-Kurzkontest	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
