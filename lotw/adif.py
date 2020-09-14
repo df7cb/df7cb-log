@@ -44,6 +44,7 @@ AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
                                "SRX": "S",
                                "QSL_SENT": "S",
                                "QSL_RCVD": "S",
+                               "QTH": "S",
                                "GRIDSQUARE": "S",
                                "NOTES": "M",
                                "NAME": "S",
@@ -61,7 +62,7 @@ AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
 # This list is used to display the columns in a logical order.
 AVAILABLE_FIELD_NAMES_ORDERED = ["CALL", "QSO_DATE", "TIME_ON", "TIME_OFF", "FREQ", "BAND", "MODE", "SUBMODE", "PROP_MODE", "TX_PWR",
                                  "RST_SENT", "RST_RCVD", "STX", "SRX", "QSL_SENT", "QSL_RCVD", "DARC_DOK", "NOTES", "NAME",
-                                 "ADDRESS", "STATE", "COUNTRY", "DXCC", "CQZ", "ITUZ", "IOTA", "GRIDSQUARE", "SAT_NAME", "SAT_MODE"]
+                                 "ADDRESS", "STATE", "COUNTRY", "DXCC", "CQZ", "ITUZ", "IOTA", "QTH", "GRIDSQUARE", "SAT_NAME", "SAT_MODE"]
 # Define the more user-friendly versions of the field names.
 AVAILABLE_FIELD_NAMES_FRIENDLY = {"CALL": "Callsign",
                                   "QSO_DATE": "Date",
@@ -86,6 +87,7 @@ AVAILABLE_FIELD_NAMES_FRIENDLY = {"CALL": "Callsign",
                                   "CQZ": "CQ Zone",
                                   "ITUZ": "ITU Zone",
                                   "IOTA": "IOTA Designator",
+                                  "QTH": "QTH",
                                   "GRIDSQUARE": "Grid Square",
                                   "SAT_NAME": "Satellite Name",
                                   "SAT_MODE": "Satellite Mode"}

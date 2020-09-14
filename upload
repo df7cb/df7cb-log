@@ -33,6 +33,9 @@ sleep 1
   cd ../js8
   ./import
 
+  cd ../fldigi
+  ./import logbook.adif
+
   cd ../lotw
   STAMP=$(cat .upload.stamp || echo 'today')
   ./export-adif $LOG $STAMP

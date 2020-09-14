@@ -1,0 +1,66 @@
+#!/usr/bin/python3
+
+import adif
+from sys import argv
+import psycopg2
+import re
+
+adifreader = adif.ADIF()
+adiflog = adifreader.read(argv[1])
+if len(argv) > 2:
+    contest = argv[2]
+
+# {'FREQ': '14.069245', 'CALL': 'R3WA', 'MODE': 'PSK63', 'QSO_DATE': '20200315', 'TIME_OFF': '114608', 'TIME_ON': '114500', 'RST_RCVD': '238', 'RST_SENT': '238', 'BAND': '20m', 'COUNTRY': 'European Russia', 'CQZ': '16', 'SRX': '239', 'STX': '000'}
+# <FREQ:9>14.071636<CALL:6>EA3FYO<MODE:5>PSK31<NAME:4>Joan<QSO_DATE:8>20200912<QSO_DATE_OFF:8>20200912<TIME_OFF:6>092315<TIME_ON:6>091900<QTH:6>Besora<RST_RCVD:3>599<RST_SENT:3>599<GRIDSQUARE:6>JN12CC<BAND:3>20m<COUNTRY:5>Spain<CQZ:2>14<STX:3>000<OPERATOR:5>DF7CB<STATION_CALLSIGN:5>DF7CB<MY_GRIDSQUARE:6>JO31hi<MY_CITY:7>Krefeld<EOR>
+
+log = []
+
+for qso in adiflog:
+    rec = {}
+    rec['start'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_ON'])
+    rec['stop'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_OFF'])
+    rec['call'] = qso['CALL']
+    rec['mode'] = qso['MODE']
+    rec['qrg'] = qso['FREQ']
+    if len(argv) > 2:
+        rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
+        rec['rstrx'] = "%s%s" % ("599", qso['SRX'])
+        rec['contest'] = contest
+    else:
+        rec['rsttx'] = qso['RST_SENT']
+        if 'RST_RCVD' in qso:
+            rec['rstrx'] = qso['RST_RCVD']
+        else:
+            rec['rstrx'] = '599'
+    if 'NAME' in qso:
+        rec['name'] = qso['NAME']
+    if 'QTH' in qso:
+        rec['qth'] = qso['QTH']
+    for key in ['name', 'qth']:
+        if key in rec and re.match('[A-Z ]*$', rec[key]):
+            rec[key] = rec[key].title()
+    if 'GRIDSQUARE' in qso:
+        rec['loc'] = qso['GRIDSQUARE'][0:2].upper() + qso['GRIDSQUARE'][2:].lower()
+
+    log.append(rec)
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor()
+cur.execute("TRUNCATE log2")
+
+for rec in log:
+    print(rec)
+    insert = "INSERT INTO log2 (" + \
+        ', '.join(rec.keys()) + \
+        ') VALUES (' + \
+        ', '.join(['%s' for x in rec]) + \
+        ')'
+    args = [x for x in rec.values()]
+    cur.execute(insert, args)
+
+cur.execute("""INSERT INTO log
+    SELECT * FROM log2 WHERE NOT EXISTS
+        (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call))""")
+print(cur.rowcount, "new QSOs")
+
+conn.commit()
