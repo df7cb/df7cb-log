@@ -27,9 +27,6 @@ sleep 1
   cd wsjtx
   ./import
 
-  cd ../qo100
-  ./import
-
   cd ../js8
   ./import
 

@@ -37,6 +37,7 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.mytrx IS NULL THEN NEW.mytrx := 'LimeSDR'; END IF;
       IF NEW.mypwr IS NULL THEN NEW.mypwr := '1'; END IF;
       IF NEW.myant IS NULL THEN NEW.myant := '1m dish'; END IF;
+      IF NEW.qso_via IS NULL THEN NEW.qso_via := 'QO-100'; END IF;
     END IF;
 
   -- mobile
