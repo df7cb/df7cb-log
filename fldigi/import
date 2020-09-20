@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
-import adif
+import adif_io
 from sys import argv
 import psycopg2
 import re
 
-adifreader = adif.ADIF()
-adiflog = adifreader.read(argv[1])
+adiflog, header = adif_io.read_from_file(argv[1])
 if len(argv) > 2:
     contest = argv[2]
 
