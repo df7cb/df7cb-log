@@ -2,7 +2,7 @@
 
 import adif_io
 from sys import argv
-import psycopg2
+import psycopg2, psycopg2.extras
 import re
 
 adiflog, header = adif_io.read_from_file(argv[1])
@@ -40,9 +40,11 @@ for qso in adiflog:
             rec[key] = rec[key].title()
     if 'GRIDSQUARE' in qso:
         rec['loc'] = qso['GRIDSQUARE'][0:2].upper() + qso['GRIDSQUARE'][2:].lower()
+    rec['info'] = { 'cqz': qso['CQZ'] }
 
     log.append(rec)
 
+psycopg2.extensions.register_adapter(dict, psycopg2.extras.Json) # allow inserting dicts as jsonb
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor()
 cur.execute("TRUNCATE log2")
