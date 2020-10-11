@@ -6,12 +6,12 @@ export PGSERVICE="cb"
 
 psql -qX -c "TRUNCATE log2"
 
-# start               stop                call   loc  qrg mode rsttx rstrx mypwr comment
-# 2018-12-25,21:40:45,2018-12-25,21:41:45,YU1WAT,KN04,3.574367,FT8,-15,-11,15,,
+# start               stop                call   loc  qrg mode rsttx rstrx mypwr comment operator propagation (since 2.3)
+# 2018-12-25,21:40:45,2018-12-25,21:41:45,YU1WAT,KN04,3.574367,FT8,-15,-11,15,,,
 
 echo -n "wsjtx.log: "
 < wsjtx.log \
-  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,$//' |
+  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,,$//' |
   psql -X \
     -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment) FROM STDIN (FORMAT CSV, DELIMITER ',')"
 
