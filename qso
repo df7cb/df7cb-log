@@ -152,13 +152,21 @@ while True:
         elif len(tok) > 0:
             log['call'] = tok.upper()
 
-    if 'start' in log and 'call' in log and 'qrg' in log:
+    if 'start' in log and 'call' in log:
         if auto_rst in ('ituz', 'cqz') and not rstrx:
             try:
                 info = cic.get_all(call)
                 rstrx = '599' + str(info[auto_rst]).zfill(2)
             except KeyError:
                 pass
+
+        if 'qrg' not in log:
+            # get frequency from rigctld
+            import Hamlib
+            Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
+            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
+            my_rig.open()
+            log['qrg'] = round(my_rig.get_freq() / 1000000.0, 4)
 
         print(log)
         insert = "INSERT INTO log (" + \
