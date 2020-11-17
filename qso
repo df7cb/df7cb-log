@@ -175,8 +175,11 @@ while True:
             ', '.join(['%s' for x in log]) + \
             ')'
         args = [x for x in log.values()]
-        cur.execute(insert, args)
-        conn.commit()
+        try:
+            cur.execute(insert, args)
+            conn.commit()
+        except Exception as e:
+            print("ERROR: ", e)
 
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)
