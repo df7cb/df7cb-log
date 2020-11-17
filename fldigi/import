@@ -41,6 +41,8 @@ for qso in adiflog:
     if 'GRIDSQUARE' in qso:
         rec['loc'] = qso['GRIDSQUARE'][0:2].upper() + qso['GRIDSQUARE'][2:].lower()
     rec['info'] = { 'cqz': qso['CQZ'] }
+    if 'CONTEST_ID' in qso:
+        rec['contest'] = qso['CONTEST_ID']
 
     log.append(rec)
 
