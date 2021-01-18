@@ -11,7 +11,7 @@ psql -qX -c "TRUNCATE log2"
 
 echo -n "wsjtx.log: "
 < wsjtx.log \
-  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,,$//' |
+  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,,\(SAT\)\?$//' |
   psql -X \
     -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment) FROM STDIN (FORMAT CSV, DELIMITER ',')"
 
