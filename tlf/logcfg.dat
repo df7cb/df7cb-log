@@ -44,7 +44,7 @@ RIGPORT=localhost
 #################################
 #
 #CLUSTER
-BANDMAP=S,3600  # skipdupes, livetime
+BANDMAP=S,1800  # skipdupes, livetime
 #FILTER
 #
 SCOREWINDOW
