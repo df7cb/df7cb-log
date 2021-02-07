@@ -3,7 +3,7 @@
 ########################
 #
 CONTEST=contest
-LOGFILE=ref.log
+LOGFILE=contest.log
 CONTEST_MODE
 CABRILLO=UNIVERSAL
 #ITUMULT
