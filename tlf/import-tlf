@@ -36,6 +36,7 @@ for line in sys.stdin:
         Exception('serial does not start with 0')
 
     qso = {}
+    qso['mode'] = line[3:6].rstrip()
     qso['start'] = line[7:22] # date+time
     if laststart == qso['start']: # 2nd QSO in this minute
         qso['start'] += ':30'
@@ -55,9 +56,10 @@ for line in sys.stdin:
     #qso['rsttx'] = 'JO31'
 
     # their rst:
-    qso['rstrx'] = line[49:52]+line[54:67].rstrip() # their rst + serial
+    qso['rstrx'] = line[49:52]+line[54:67].strip() # their rst + serial
     #qso['rstrx'] = line[49:52]+'/'+line[54:67].rstrip() # their rst / serial
     #qso['rstrx'] = line[54:64].rstrip()
+    #qso['loc'] = line[56:64].rstrip()
 
     # multi
     #if line[68:76].rstrip() != '':
