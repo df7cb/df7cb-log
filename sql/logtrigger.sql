@@ -33,11 +33,11 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
 
     -- 13cm/QO100
-    ELSIF NEW.qrg::band IN ('13cm') THEN
+    ELSIF NEW.qrg BETWEEN 2400 AND 2450 THEN
       IF NEW.mytrx IS NULL THEN NEW.mytrx := 'LimeSDR'; END IF;
       IF NEW.mypwr IS NULL THEN NEW.mypwr := '1'; END IF;
       IF NEW.myant IS NULL THEN NEW.myant := '1m dish'; END IF;
-      IF NEW.qso_via IS NULL THEN NEW.qso_via := 'QO-100'; END IF;
+      IF NEW.qso_via IS NULL THEN NEW.qso_via := 'QO100'; END IF;
     END IF;
 
   -- mobile
