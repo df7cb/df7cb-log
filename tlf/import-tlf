@@ -53,6 +53,7 @@ for line in sys.stdin:
     #qso['rsttx'] = line[44:47]+'42'       # my rst + my age
     #qso['rsttx'] = line[44:47]+'R10'      # my rst + my DOK
     #qso['rsttx'] = line[44:47]+'/CHRIS/NM' # my rst + my DOK
+    #qso['rsttx'] = line[44:47]+'JO31'
     #qso['rsttx'] = 'JO31'
 
     # their rst:
@@ -65,6 +66,7 @@ for line in sys.stdin:
     #if line[68:76].rstrip() != '':
     #    qso['dok'] = line[68:76].rstrip()
     #qso['dok'] = line[54:67].rstrip()
+    #qso['loc'] = line[54:67].rstrip()
 
     qso['contest'] = args[0] # contest name
 
