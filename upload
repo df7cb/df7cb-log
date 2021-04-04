@@ -13,7 +13,7 @@ done
 # shift away args
 shift $((OPTIND - 1))
 
-trap "ssh feynman.df7cb.de -O exit" EXIT
+#trap "ssh feynman.df7cb.de -O exit" EXIT
 
 set -eu
 
