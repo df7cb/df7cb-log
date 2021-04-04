@@ -1,24 +1,28 @@
 ########################
 # General contest mode #
 ########################
-#
+
 CONTEST=contest
 LOGFILE=contest.log
 CONTEST_MODE
 CABRILLO=UNIVERSAL
+
 #ITUMULT
 #WAZMULT
 COUNTRY_MULT
 #WYSIWYG_MULTIBAND
 #DX_&_SECTIONS
 #MULT_LIST=rules/ua_mult
+#INITIAL_EXCHANGE=rules/spdx.txt
+RECALL_MULTS
 #COUNTRYLIST="Russia:UA,UA9,UA2"
 #SERIAL_OR_SECTION
+
 MY_COUNTRY_POINTS=2
 MY_CONTINENT_POINTS=3
 DX_POINTS=5
 #COUNTRY_LIST_POINTS=10
-#
+
 ##################################
 #                                #
 #  Messages F1= to F12=          #
