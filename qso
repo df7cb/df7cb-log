@@ -180,6 +180,7 @@ while True:
             conn.commit()
         except Exception as e:
             print("ERROR: ", e)
+            conn.rollback()
 
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)
