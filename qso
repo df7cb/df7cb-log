@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import atexit
-import datetime
+from datetime import datetime, timezone
 import psycopg2
 import psycopg2.extras
 import re
@@ -22,12 +22,22 @@ except FileNotFoundError:
 
 atexit.register(readline.write_history_file, histfile)
 
+def completion(text, state):
+    if text == '':
+        if state == 0:
+            return datetime.now(timezone.utc).strftime("%H:%M")
+        else:
+            return None
+    else:
+        return None
+readline.set_completer(completion)
+
 # PG
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-date = datetime.datetime.now().strftime("%Y-%m-%d")
+date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 mode = 'CW'
 rsttx = '599'
 auto_rst = None
