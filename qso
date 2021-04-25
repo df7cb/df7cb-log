@@ -74,7 +74,7 @@ while True:
 
     for tok in line.split(" "):
         # mode
-        if tok.upper() in ('CW', 'FM', 'FT8', 'PSK31', 'RTTY', 'SSB'):
+        if tok.upper() in ('CW', 'FM', 'FT8', 'PSK31', 'RTTY', 'SSB', 'SSTV'):
             mode = tok.upper()
             log['mode'] = mode
         # date and time
