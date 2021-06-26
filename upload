@@ -4,8 +4,9 @@ GIT=git
 TODAY="$(date +%Y-%m-%d)"
 LOG=df7cb-upload.adif
 
-while getopts "n" opt ; do
+while getopts "fn" opt ; do
   case $opt in
+    f) FLDIGI="fldigi" ;;
     n) GIT="" ;;
     *) exit 5 ;;
   esac
@@ -25,8 +26,10 @@ git pull --ff-only
   cd ../js8
   ./import
 
-  cd ../fldigi
-  ./import logbook.adif
+  if [ ${FLDIGI:-} ]; then
+    cd ../fldigi
+    ./import logbook.adif
+  fi
 
   cd ../lotw
   STAMP=$(cat .upload.stamp || echo 'today')
