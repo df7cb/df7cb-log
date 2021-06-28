@@ -206,10 +206,15 @@ SELECT split_country('Venezuela', 'Aves Island', ST_Locator('FK85'));
  * Willis Island (QH43XR)
  */
 
+INSERT INTO map_import (country, geom)
+  VALUES ('Market Reef', 'POLYGON(((19.1294 60.302,19.1297 60.3008,19.1312 60.3001,19.1355 60.2999,19.1351 60.300700000000006,19.1294 60.302)))');
+
 UPDATE country c SET geom = m.geom
   FROM map_import m
   WHERE c.country = m.country
   AND c.geom IS distinct from m.geom;
+
+--update country set geom2 = st_simplify(geom, 0.02, true);
 
 CLUSTER country USING country_pkey;
 
