@@ -35,7 +35,10 @@ for line in sys.stdin:
     if line[23] != '0':
         Exception('serial does not start with 0')
 
-    qso = {}
+    qso = { 'mycall': 'DF7CB',
+            'mytrx': 'IC706',
+            'mypwr': 100,
+            'myant': 'FD4' }
     qso['mode'] = line[3:6].rstrip()
     qso['start'] = line[7:22] # date+time
     if laststart == qso['start']: # 2nd QSO in this minute
@@ -45,6 +48,7 @@ for line in sys.stdin:
     laststart = qso['start']
     qso['call'] = line[29:43].rstrip()
     qso['qrg'] = Decimal(line[79:87]) / 1000
+    #qso['qrg'] = 7
 
     # my rst:
     qso['rsttx'] = line[44:47]+line[24:27] # my rst + serial (3 digits)
@@ -54,6 +58,7 @@ for line in sys.stdin:
     #qso['rsttx'] = line[44:47]+'R10'      # my rst + my DOK
     #qso['rsttx'] = line[44:47]+'/CHRIS/NM' # my rst + my DOK
     #qso['rsttx'] = line[44:47]+'JO31'
+    #qso['rsttx'] = line[24:27]+' CHRIS' # my serial (3 digits)
     #qso['rsttx'] = 'JO31'
 
     # their rst:
