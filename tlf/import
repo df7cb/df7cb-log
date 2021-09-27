@@ -2,9 +2,11 @@
 
 PATH=$PATH:$(dirname $0)
 
-CONTEST="$1"
-LOG="$2"
+CONTEST="${1:-OK1WC Memorial Contest}"
+LOG="${2:-$(date +%F)-ok1wc.log}"
 CBR="${LOG%.*}.cbr"
+
+[ -f "$LOG" ] || mv contest.log "$LOG"
 
 set -eux
 
