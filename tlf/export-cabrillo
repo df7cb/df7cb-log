@@ -1,36 +1,37 @@
-#!/usr/bin/python3
+#!/bin/sh
 
-# usage: export-cabrillo <contest name> <filename>
+PATH=$PATH:$(dirname $0)
 
-import pyqso.cabrillo
-import psycopg2
-import psycopg2.extras
-import sys
+set -eux
 
-conn = psycopg2.connect("service=cb")
-cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+CONTEST="$1"
+CBR="$2"
 
-contest = sys.argv[1]
-filename = sys.argv[2]
+# add address and category info, remove decimal part of frequencies
+export-cabrillo.py "$CONTEST" "$CBR"
+sed -i \
+  -e '/^CALLSIGN:/ a \
+NAME: Christoph Berg\
+EMAIL: cb@df7cb.de\
+ADDRESS: Rather Str. 76a\
+ADDRESS: 47802 Krefeld\
+ADDRESS: Germany\
+GRID-LOCATOR: JO31HI\
+CLUB: Rhein Ruhr DX Association' \
+  -e '/^CONTEST:/ a \
+CATEGORY-ASSISTED: NON-ASSISTED\
+CATEGORY-BAND: ALL\
+CATEGORY-MODE: CW\
+CATEGORY-OPERATOR: SINGLE-OP\
+CATEGORY-POWER: LOW\
+CATEGORY-STATION: FIXED\
+CATEGORY-TRANSMITTER: ONE' \
+  -e '/^QSO:/ s/\.[0-9]* / /' \
+  $CBR
 
-cur.execute("""SELECT qrg AS "FREQ",
-        mode AS "MODE",
-        to_char(start, 'YYYYMMDD') AS "QSO_DATE",
-        to_char(start, 'hh24mi') AS "TIME_ON",
-        regexp_replace(rsttx, '^599', '599 ') AS "RST_SENT",
-        regexp_replace(rstrx, '^599', '599 ') AS "RST_RCVD",
-        call AS "CALL"
-        FROM log
-        WHERE start > now() - '3 days'::interval
-        AND contest ~ %s
-        ORDER BY start, call""",
-        (contest,))
+# fix missing trailing newline
+echo >> $CBR
 
-# {'CALL': 'DL3NCI', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '20021226', 'TIME_ON': '1050', 'RST_SENT': '', 'DARC_DOK': 'B25'}
-
-records = cur.fetchall()
-cabrillo = pyqso.cabrillo.Cabrillo()
-cabrillo.write(records,
-        filename,
-        contest=contest,
-        mycall='DF7CB')
+vi $CBR
+git add $CBR
+v commit -m "$CONTEST" --edit

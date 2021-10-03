@@ -53,6 +53,9 @@ for qso in adiflog:
         rec['contest'] = qso['CONTEST_ID']
 
     log.append(rec)
+    print(rec)
+
+#exit(0)
 
 psycopg2.extensions.register_adapter(dict, psycopg2.extras.Json) # allow inserting dicts as jsonb
 conn = psycopg2.connect("service=cb")
@@ -60,7 +63,6 @@ cur = conn.cursor()
 cur.execute("TRUNCATE log2")
 
 for rec in log:
-    print(rec)
     insert = "INSERT INTO log2 (" + \
         ', '.join(rec.keys()) + \
         ') VALUES (' + \
