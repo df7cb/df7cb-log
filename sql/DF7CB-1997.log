@@ -31,7 +31,7 @@
 1997-01-20 17:13:00+00	1997-01-20 17:25:00+00	FB1AZH	F	7	CW	599	599	Y	R	Marc	Lille	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-01-21 17:47:00+00	1997-01-21 17:56:00+00	GI5TK	GI	7	CW	599	599	Y	Y	Arthur	Belfast	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-01-23 15:41:00+00	\N	VK0IR	VK0H	14.024	CW	599	599	Y	Y	\N	Heard Island	MD66	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "39", "ituz": "68", "lotw": true}	2021-05-28 22:23:24+00
-1997-01-23 15:59:00+00	1997-01-23 16:06:00+00	YO4GDP	YO	7	CW	579	579	Y	Y	Gabriel	Mangalia	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
+1997-01-23 15:59:00+00	1997-01-23 16:06:00+00	YO4GDP	YO	7	CW	579	579	Y	Y	Gabriel	Mangalia	KN43GT	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "20", "ituz": "28", "lotw": true}	2021-09-05 08:47:20+00
 1997-01-23 16:12:00+00	1997-01-23 16:24:00+00	G3VZM	G	7	CW	599	599	Y	R	Fred	Chester	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-01-26 20:17:00+00	1997-01-26 20:28:00+00	G4HEQ	G	3.5	CW	599	599	N	N	Alan	Pool	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-01-29 13:04:00+00	\N	8P9DX	8P	14	CW	599	599	Y	R	\N	Barbados	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
@@ -202,7 +202,7 @@
 1997-04-13 18:22:00+00	1997-04-13 18:31:00+00	G0WWH	G	7	CW	439	559	Y	R	Alan	Bolton	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-04-13 18:32:00+00	1997-04-13 18:41:00+00	F8AXL	F	7	CW	599	599	Y	Y	Christian	Nantes	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-04-14 17:35:00+00	1997-04-14 17:47:00+00	DF8MC/P	DL	7	CW	599	599	Y	Y	Herbert	Kampen	\N	C03	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
-1997-04-14 17:49:00+00	1997-04-14 17:54:00+00	YO4GDP	YO	7	CW	589	579	Y	R	Gabriel	Mangalia	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
+1997-04-14 17:49:00+00	1997-04-14 17:54:00+00	YO4GDP	YO	7	CW	589	579	Y	R	Gabriel	Mangalia	KN43GT	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "20", "ituz": "28", "lotw": true}	2021-09-05 08:47:20+00
 1997-04-14 17:59:00+00	1997-04-14 18:08:00+00	DF4FZ	DL	7	CW	599	579	Y	R	Dieter	Wiesbaden	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
 1997-04-14 18:12:00+00	1997-04-14 18:18:00+00	UY3IC	UR	7	CW	559	599	Y	R	Alex	Doneck	KN98CG	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	{"cqz": "16", "dcl": "i", "ituz": "29", "lotw": true}	2020-07-06 15:26:11+00
 1997-04-14 18:20:00+00	1997-04-14 18:34:00+00	F8AWA	F	7	CW	589	599	Y	Y	Phil	Paris	\N	\N	\N	\N	DF7CB	\N	\N	Blieskastel	JN39PF	\N	\N	\N	\N	\N
