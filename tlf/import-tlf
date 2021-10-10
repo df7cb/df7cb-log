@@ -36,7 +36,8 @@ for line in sys.stdin:
         Exception('serial does not start with 0')
 
     qso = { 'mycall': 'DF7CB',
-            'mytrx': 'IC706',
+            'mytrx': 'IC7610',
+            #'mytrx': 'IC706',
             'mypwr': 100,
             'myant': 'FD4' }
     qso['mode'] = line[3:6].rstrip()
