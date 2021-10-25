@@ -51,34 +51,31 @@ for line in sys.stdin:
     qso['qrg'] = Decimal(line[79:87]) / 1000
     #qso['qrg'] = 7
 
+    rsttx = line[44:47]
+    serial = line[24:27]
+    rstrx = line[49:52]
+    exchange = line[54:67].strip()
+
     # my rst:
-    qso['rsttx'] = line[44:47]+line[24:27] # my rst + serial (3 digits)
-    #qso['rsttx'] = line[44:47]+'14'        # my rst + my WAZ/CQ zone
-    #qso['rsttx'] = line[44:47]+'28'       # my rst + my ITU zone
-    #qso['rsttx'] = line[44:47]+'42'       # my rst + my age
-    #qso['rsttx'] = line[44:47]+'R10'      # my rst + my DOK
-    #qso['rsttx'] = line[44:47]+'/CHRIS/NM' # my rst + my DOK
-    #qso['rsttx'] = line[44:47]+'JO31'
-    #qso['rsttx'] = line[24:27]+' CHRIS' # my serial (3 digits)
-    #qso['rsttx'] = 'JO31'
+    qso['rsttx'] = rsttx + serial       # my rst + serial (3 digits)
+    #qso['rsttx'] = rsttx + '14'        # my rst + my WAZ/CQ zone
+    #qso['rsttx'] = rsttx + '28'        # my rst + my ITU zone
+    #qso['rsttx'] = rsttx + 'R10'       # my rst + my DOK
+    #qso['rsttx'] = rsttx + 'JO31'
+    #qso['rsttx'] = rsttx + ' CHRIS'
 
     # their rst:
-    qso['rstrx'] = line[49:52]+line[54:67].strip() # their rst + serial
-    #qso['rstrx'] = line[49:52]+'/'+line[54:67].rstrip() # their rst / serial
-    #qso['rstrx'] = line[54:64].rstrip()
-    #qso['loc'] = line[56:64].rstrip()
-
-    # multi
-    #if line[68:76].rstrip() != '':
-    #    qso['dok'] = line[68:76].rstrip()
+    qso['rstrx'] = rstrx + exchange     # their rst + serial
+    #qso['rstrx'] = rstrx +'/'+exchange # their rst / serial
+    #qso['rstrx'] = exchange
 
     # extract DOK if it's not a serial:
     #try:
-    #    rst = int(line[54:67].rstrip())
+    #    rst = int(exchange)
     #except:
-    #    qso['dok'] = line[54:67].rstrip()
+    #    qso['dok'] = exchange
 
-    #qso['loc'] = line[54:67].rstrip()
+    #qso['loc'] = exchange
 
     qso['contest'] = args[0] # contest name
 
