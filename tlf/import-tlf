@@ -51,9 +51,9 @@ for line in sys.stdin:
     qso['qrg'] = Decimal(line[79:87]) / 1000
     #qso['qrg'] = 7
 
-    rsttx = line[44:47]
+    rsttx = line[44:47].rstrip()
     serial = line[24:27]
-    rstrx = line[49:52]
+    rstrx = line[49:52].rstrip()
     exchange = line[54:67].strip()
 
     # my rst:
