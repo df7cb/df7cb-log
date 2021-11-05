@@ -5,20 +5,22 @@ EDITOR=vi
 CALL=DF7CB
 TIME_OFFSET=0
 TIME_MASTER
-NETKEYER
-NETKEYERPORT=6789
+HAMLIB_KEYER
+#NETKEYER
+#NETKEYERPORT=6789
 #NETKEYERPORT=6790
-NETKEYERHOST=127.0.0.1
+#NETKEYERHOST=127.0.0.1
 #---speed (6 ... 60 wpm)
-CWSPEED=30
+CWSPEED=22
 #---weight (-5 ... 5 ms)
 WEIGHT=1
 #---cq delay (in 0,5 s)
-CQDELAY=10
+CQDELAY=5
 #---txdelay (ms)
 TXDELAY=2
 #---sidetone (200...800, 0 = mute)
 CWTONE=800
+CWBANDWIDTH=500
 #################################
 #                               #
 #  RADIO CONTROL                #
@@ -29,6 +31,8 @@ CWTONE=800
 #
 RADIO_CONTROL
 RIGMODEL=2
+#RIGMODEL=3009
+#RIGMODEL=3078
 #RIGSPEED=19200
 RIGPORT=localhost
 #RIGPORT=localhost:4534
@@ -46,7 +50,7 @@ RIGPORT=localhost
 #################################
 #
 #CLUSTER
-BANDMAP=S,1800  # skipdupes, livetime
+BANDMAP=S,2700  # skipdupes, livetime
 #FILTER
 #
 SCOREWINDOW
