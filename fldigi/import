@@ -25,7 +25,12 @@ for qso in adiflog:
     if len(argv) > 2:
         rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
-        rec['rstrx'] = "%s%s" % ("599", qso['SRX'])
+        if 'SRX' in qso:
+            rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX'])
+        elif 'SRX_STRING' in qso:
+            rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX_STRING'])
+        else:
+            rec['rstrx'] = qso['RST_RCVD']
         #if 'STATE' in qso:
         #    rec['rstrx'] = "%s%02d%s" % ("599", int(qso['CQZ']), qso['STATE'])
         #else:
@@ -55,7 +60,7 @@ for qso in adiflog:
     log.append(rec)
     print(rec)
 
-#exit(0)
+input("Continue? ")
 
 psycopg2.extensions.register_adapter(dict, psycopg2.extras.Json) # allow inserting dicts as jsonb
 conn = psycopg2.connect("service=cb")
