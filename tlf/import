@@ -10,9 +10,9 @@ CBR="${LOG%.*}.cbr"
 
 set -eux
 
-./import-tlf -n "$CONTEST" < $LOG
+./import-tlf -n "$CONTEST" $LOG
 read ok
-./import-tlf "$CONTEST" < $LOG
+./import-tlf "$CONTEST" $LOG
 
 git add $LOG
 export-cabrillo "$CONTEST" "$CBR"
