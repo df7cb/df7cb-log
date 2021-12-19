@@ -2,6 +2,7 @@
 
 from decimal import Decimal
 import getopt
+import re
 import sys
 import psycopg2
 
@@ -83,7 +84,8 @@ with open(args[1]) as f:
     #except:
     #    qso['dok'] = exchange
 
-    #qso['loc'] = exchange
+    if m := re.search('([A-Z]{2}[0-9]{2})', exchange):
+        qso['loc'] = m.group(1)
 
     qso['contest'] = args[0] # contest name
 
