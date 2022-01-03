@@ -1,5 +1,5 @@
-CREATE EXTENSION prefix;
-CREATE EXTENSION postgis;
+CREATE EXTENSION if not exists prefix;
+CREATE EXTENSION if not exists postgis;
 
 -- 1A,Sov Mil Order of Malta,246,EU,15,28,41.90,-12.43,-1.0,1A;
 
@@ -8,8 +8,8 @@ CREATE TABLE country (
   country text NOT NULL,
   beam int NOT NULL,
   continent text NOT NULL,
-  itu int NOT NULL,
   cq int NOT NULL,
+  itu int NOT NULL,
   lat numeric NOT NULL,
   lon numeric NOT NULL,
   tz numeric NOT NULL,
@@ -28,7 +28,7 @@ SELECT '''' || string_agg(cty, ''',''') || '''' AS cty FROM country \gset
 CREATE TYPE cty AS ENUM(:cty);
 
 ALTER TABLE country ALTER COLUMN cty TYPE cty USING cty::cty,
-  DROP COLUMN beam,
+  --DROP COLUMN beam,
   ADD COLUMN geom geometry(MULTIPOLYGON, 4326);
 
 CREATE TABLE prefix (
