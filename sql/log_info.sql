@@ -24,12 +24,12 @@ SELECT
   (SELECT jsonb_agg(DISTINCT qrg::band)) AS bands,
   (SELECT jsonb_agg(DISTINCT mode)) AS modes,
   (SELECT jsonb_agg(DISTINCT mycall)) AS mycalls
-FROM log;
+FROM alllog;
 
 CREATE OR REPLACE VIEW contest_info(contests) AS
 WITH contest_list AS (
   SELECT week(start), dayspan(min(start::date), max(start::date)), contest
-  FROM log
+  FROM alllog
   WHERE contest IS NOT NULL
   GROUP BY 1, 3
   ORDER BY 1 DESC, 3 DESC
