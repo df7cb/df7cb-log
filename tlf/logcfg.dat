@@ -11,7 +11,7 @@ HAMLIB_KEYER
 #NETKEYERPORT=6790
 #NETKEYERHOST=127.0.0.1
 #---speed (6 ... 60 wpm)
-CWSPEED=22
+CWSPEED=24
 #---weight (-5 ... 5 ms)
 WEIGHT=1
 #---cq delay (in 0,5 s)
@@ -21,6 +21,14 @@ TXDELAY=2
 #---sidetone (200...800, 0 = mute)
 CWTONE=800
 CWBANDWIDTH=500
+# cluster
+#TELNETHOST=arcluster.reversebeacon.net
+#TELNETPORT=7000
+#TELNETHOST=db0sue.de
+#TELNETPORT=8000
+TELNETHOST=localhost
+TELNETPORT=7000
+CLUSTERLOGIN=DF7CB
 #################################
 #                               #
 #  RADIO CONTROL                #
