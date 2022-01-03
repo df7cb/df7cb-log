@@ -178,6 +178,22 @@ while True:
             my_rig.open()
             log['qrg'] = round(my_rig.get_freq() / 1000000.0, 4)
 
+        if log['mode'] in ('CW', 'RTTY'):
+            if 'rsttx' not in log:
+                log['rsttx'] = '599'
+            if 'rstrx' not in log:
+                log['rstrx'] = '599'
+        elif log['mode'] in ('SSB', 'FM'):
+            if 'rsttx' not in log:
+                log['rsttx'] = '59'
+            if 'rstrx' not in log:
+                log['rstrx'] = '59'
+
+        if 'qsltx' not in log:
+            log['qsltx'] = 'N'
+        if 'qslrx' not in log:
+            log['qslrx'] = 'N'
+
         print(log)
         insert = "INSERT INTO log (" + \
             ', '.join(log.keys()) + \
