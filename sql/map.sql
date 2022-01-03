@@ -40,6 +40,7 @@ WITH rename (rename_to, rename_from) AS (VALUES
   ('Madeira Islands', 'Madeira'),
   ('Mariana Islands', 'N. Mariana Islands'),
   ('Midway Island', 'Midway Islands'),
+  ('North Macedonia', 'Macedonia'),
   ('Northern Ireland', 'N. Ireland'),
   ('N.Z. Subantarctic Is.', 'N.Z. SubAntarctic Islands'),
   ('Peter 1 Island', 'Peter I Island'),
@@ -56,7 +57,7 @@ WITH rename (rename_to, rename_from) AS (VALUES
   ('St. Martin', 'St-Martin'),
   ('St. Vincent', 'St. Vin. & Gren.'),
   ('Svalbard', 'Svalbard Islands'),
-  ('Swaziland', 'eSwatini'),
+  ('Kingdom of Eswatini', 'eSwatini'),
   ('Timor - Leste', 'Timor-Leste'),
   ('The Gambia', 'Gambia'),
   ('Tokelau Islands', 'Tokelau'),
@@ -110,7 +111,7 @@ SELECT join_country('Republic of Korea','South Korea', 'Baengnyeongdo', 'Dokdo',
 SELECT join_country('Palestine', 'Gaza', 'West Bank');
 SELECT join_country('Papua New Guinea', 'Papua New Guinea', 'Bougainville'); -- Bougainville is an autonomous province without assigned prefix
 SELECT join_sovereignt('Sao Tome & Principe', 'São Tomé and Principe');
-SELECT join_country('Somalia', 'Somalia' /*, 'Somaliland'*/);
+--SELECT join_country('Somalia', 'Somalia' /*, 'Somaliland'*/);
 SELECT join_country('Syria', 'Syria', 'UNDOF Zone');
 SELECT join_country('Serbia', 'Serbia', 'Vojvodina');
 SELECT join_country('Tanzania', 'Tanzania', 'Zanzibar');
@@ -207,7 +208,7 @@ SELECT split_country('Venezuela', 'Aves Island', ST_Locator('FK85'));
  */
 
 INSERT INTO map_import (country, geom)
-  VALUES ('Market Reef', 'POLYGON(((19.1294 60.302,19.1297 60.3008,19.1312 60.3001,19.1355 60.2999,19.1351 60.300700000000006,19.1294 60.302)))');
+  VALUES ('Market Reef', 'MULTIPOLYGON(((19.1294 60.302,19.1297 60.3008,19.1312 60.3001,19.1355 60.2999,19.1351 60.300700000000006,19.1294 60.302)))');
 
 UPDATE country c SET geom = m.geom
   FROM map_import m
