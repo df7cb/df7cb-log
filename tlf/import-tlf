@@ -78,12 +78,13 @@ with open(args[1]) as f:
     #qso['rstrx'] = rstrx +'/'+exchange # their rst / serial
     #qso['rstrx'] = exchange
 
-    # extract DOK if it's not a serial:
-    #try:
-    #    rst = int(exchange)
-    #except:
-    #    qso['dok'] = exchange
+    # extract dok from exchange
+    print(exchange)
+    if qso['call'][0] == 'D' and (m := re.search('\\b([A-Z][0-9]{2})\\b', exchange)):
+        print("yes")
+        qso['dok'] = m.group(1)
 
+    # extract locator from exchange
     if m := re.search('([A-Z]{2}[0-9]{2})', exchange):
         qso['loc'] = m.group(1)
 
