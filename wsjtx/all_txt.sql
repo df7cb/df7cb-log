@@ -69,3 +69,97 @@ $$;
 
 create trigger all_txt_notify after insert on all_txt
 for each row execute function all_txt_notify();
+
+
+create table notification (
+  start timestamptz(0),
+  band band,
+  mode text,
+  item text,
+  primary key (band, mode, item)
+);
+
+
+create or replace function notification(msg text, p_band band, p_mode text, p_item text)
+  returns void
+  language plpgsql
+as $$
+begin
+  perform start from notification
+    where start > now() - '1 hour'::interval
+    and band = p_band
+    and mode = p_mode
+    and item = p_item;
+  if found then return; end if;
+
+  perform telegram(msg);
+
+  insert into notification values (now(), p_band, p_mode, p_item)
+  on conflict on constraint notification_pkey do update set start = now();
+
+  return;
+end;
+$$;
+
+create or replace function all_txt_notification()
+  returns trigger
+  language plpgsql
+as $$
+declare
+  new_cty cty;
+  msg text;
+begin
+  -- new country
+  new_cty := cty(new.call::call);
+  perform start from log where cty = new_cty and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
+  if not found then
+    msg := format('New cty: %s %s %s', new.qrg, new.mode, new.msg);
+    perform notification(msg, new.qrg::band, 'DATA', new_cty::text);
+    return new; -- skip new call check
+  end if;
+
+  -- new locator
+  if new.loc is not null then
+    perform start from log where loc::varchar(4) = new.loc::varchar(4) and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
+    if not found then
+      msg := format('New loc: %s %s %s', new.qrg, new.mode, new.msg);
+      perform notification(msg, new.qrg::band, 'DATA', new.loc::varchar(4));
+      return new; -- skip new call check
+    end if;
+  end if;
+
+  -- new call
+  perform start from log where call = new.call and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
+  if not found then
+    msg := format('%s %s %s', new.qrg, new.mode, new.msg);
+    perform notification(msg, new.qrg::band, 'DATA', new.call);
+  end if;
+
+  return new;
+end
+$$;
+
+create or replace trigger all_txt_notification after insert on all_txt
+  for each row when (new.rx = 'Rx' and new.qrg is not null and new.call is not null)
+  execute function all_txt_notification();
+
+create or replace function qo100_notification()
+  returns trigger
+  language plpgsql
+as $$
+declare
+  msg text;
+begin
+  perform start from log where call = new.call and mode = 'CW' and qrg::band = '13cm';
+  if not found then
+    msg := format('%s CW %s%s %s WPM', new.qrg, new.extra||' ', new.call, new.wpm);
+    perform notification(msg, '13cm', 'CW', new.call);
+  end if;
+
+  return new;
+end
+$$;
+
+create or replace trigger qo100_notification after insert on qo100
+  for each row when (new.call <> 'DF7CB')
+  execute function qo100_notification();
