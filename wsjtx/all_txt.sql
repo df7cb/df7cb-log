@@ -113,7 +113,7 @@ begin
   new_cty := cty(new.call::call);
   perform start from log where cty = new_cty and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
   if not found then
-    msg := format('New cty: %s %s %s', new.qrg, new.mode, new.msg);
+    msg := format('New cty *%s*: %s *%s* %s %s', new_cty, new.qrg, new.mode, new.call, new.loc);
     perform notification(msg, new.qrg::band, 'DATA', new_cty::text);
     return new; -- skip new call check
   end if;
@@ -122,7 +122,7 @@ begin
   if new.loc is not null then
     perform start from log where loc::varchar(4) = new.loc::varchar(4) and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
     if not found then
-      msg := format('New loc: %s %s %s', new.qrg, new.mode, new.msg);
+      msg := format('New loc: %s *%s* %s *%s*', new.qrg, new.mode, new.call, new.loc);
       perform notification(msg, new.qrg::band, 'DATA', new.loc::varchar(4));
       return new; -- skip new call check
     end if;
@@ -131,7 +131,7 @@ begin
   -- new call
   perform start from log where call = new.call and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
   if not found then
-    msg := format('%s %s %s', new.qrg, new.mode, new.msg);
+    msg := format('%s *%s* *%s* %s', new.qrg, new.mode, new.call, new.loc);
     perform notification(msg, new.qrg::band, 'DATA', new.call);
   end if;
 
@@ -152,7 +152,7 @@ declare
 begin
   perform start from log where call = new.call and mode = 'CW' and qrg::band = '13cm';
   if not found then
-    msg := format('%s CW %s%s %s WPM', new.qrg, new.extra||' ', new.call, new.wpm);
+    msg := format('%s *CW* %s*%s* %s wpm', new.qrg, new.extra||' ', new.call, new.wpm);
     perform notification(msg, '13cm', 'CW', new.call);
   end if;
 
