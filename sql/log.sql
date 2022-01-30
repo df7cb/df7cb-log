@@ -62,6 +62,8 @@ CREATE TABLE log (
     qth text,
     loc locator,
     dok text,
+    cq smallint,
+    itu smallint,
     contest text,
     comment text,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
@@ -111,5 +113,5 @@ CREATE TABLE livelog (LIKE log INCLUDING ALL);
 CREATE TRIGGER log_insert BEFORE INSERT ON livelog FOR EACH ROW EXECUTE PROCEDURE logtrigger();
 GRANT SELECT ON TABLE livelog TO PUBLIC;
 
-CREATE VIEW alllog AS SELECT * FROM log UNION ALL SELECT * FROM livelog;
+CREATE OR REPLACE VIEW alllog AS SELECT * FROM log UNION ALL SELECT * FROM livelog;
 GRANT SELECT ON alllog TO PUBLIC;

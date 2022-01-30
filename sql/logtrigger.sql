@@ -78,6 +78,12 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
   IF NEW.cty IS NULL THEN
     NEW.cty = cty(NEW.call);
   END IF;
+  IF NEW.cq IS NULL THEN
+    NEW.cq = cq(NEW.call);
+  END IF;
+  IF NEW.itu IS NULL THEN
+    NEW.itu = itu(NEW.call);
+  END IF;
 
   RETURN NEW;
 END;$$;
