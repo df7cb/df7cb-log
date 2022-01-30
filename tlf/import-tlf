@@ -79,6 +79,9 @@ with open(args[1]) as f:
     #qso['rstrx'] = rstrx +'/'+exchange # their rst / serial
     #qso['rstrx'] = exchange
 
+    # extract CQ zone
+    #qso['cq'] = exchange
+
     # extract dok from exchange
     if qso['call'][0] == 'D' and (m := re.search('\\b([A-Z][0-9]{2})\\b', exchange)):
         qso['dok'] = m.group(1)
