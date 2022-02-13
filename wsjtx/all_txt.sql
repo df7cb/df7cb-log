@@ -140,7 +140,7 @@ end
 $$;
 
 create or replace trigger all_txt_notification after insert on all_txt
-  for each row when (new.rx = 'Rx' and new.qrg is not null and new.call is not null)
+  for each row when (new.rx = 'Rx' and new.qrg is not null and new.call is not null and new.qrg::band = '13cm' and new.call <> 'DF7CB')
   execute function all_txt_notification();
 
 create or replace function qo100_notification()
