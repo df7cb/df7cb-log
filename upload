@@ -38,6 +38,7 @@ git pull --ff-only
   ./clublog-upload $LOG
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
+  ./rrdxa-upload $LOG
   echo "$TODAY" > .upload.stamp
   ./lotw_download
 

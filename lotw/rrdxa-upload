@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -eu
+
+LOG="$1"
+PW="$(cat $HOME/.priv/pw/rrdxa-pass)"
+
+set -x
+
+curl -fsS \
+  --cookie-jar .rrdxa-cookies \
+  -F log=DF7CB \
+  -F pass=$PW \
+  -o /dev/null \
+  https://rrdxa.org/wp-login.php \
+  --cookie PHPSESSID \
+  -F ownCall=DF7CB \
+  -F userfile=@$LOG \
+  -o /dev/null \
+  https://rrdxa.org/rrdxa/applications/log/upload/readlog.php
