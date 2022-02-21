@@ -16,5 +16,4 @@ curl -fsS \
   --cookie PHPSESSID \
   -F ownCall=DF7CB \
   -F userfile=@$LOG \
-  -o /dev/null \
   https://rrdxa.org/rrdxa/applications/log/upload/readlog.php
