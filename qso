@@ -100,15 +100,26 @@ while True:
 
         elif tok == "qo100":
             # get frequency from sdrangel
-            import requests
-            api = "http://127.0.0.1:8091/sdrangel/deviceset"
-            device = requests.get(api + "/1/device/settings").json()
-            channel = requests.get(api + "/1/channel/0/settings").json()
-            qrg = device['limeSdrOutputSettings']['centerFrequency'] + \
-                  channel['SSBModSettings']['inputFrequencyOffset']
+            #import requests
+            #api = "http://127.0.0.1:8091/sdrangel/deviceset"
+            #device = requests.get(api + "/1/device/settings").json()
+            #channel = requests.get(api + "/1/channel/0/settings").json()
+            #qrg = device['limeSdrOutputSettings']['centerFrequency'] + \
+            #      channel['SSBModSettings']['inputFrequencyOffset']
+            #if log['mode'] == 'CW':
+            #      qrg += channel['SSBModSettings']['toneFrequency']
+
+            # get frequency from rigctld on port 4534
+            import Hamlib
+            Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
+            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
+            my_rig.set_conf("rig_pathname", "localhost:4534")
+            my_rig.open()
+            freq = my_rig.get_freq()
             if log['mode'] == 'CW':
-                  qrg += channel['SSBModSettings']['toneFrequency']
-            log['qrg'] = round(qrg / 1000000.0, 4)
+                freq += 850
+            log['qrg'] = round(freq / 1000000.0, 4)
+
             log['qso_via'] = "QO100"
 
         elif re.search('^\d+(\.\d+)?$', tok):
