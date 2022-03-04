@@ -76,7 +76,7 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
 
   -- cty
   IF NEW.cty IS NULL THEN
-    NEW.cty = cty(NEW.call);
+    NEW.cty = call2cty(NEW.call);
   END IF;
   IF NEW.cq IS NULL THEN
     NEW.cq = cq(NEW.call);

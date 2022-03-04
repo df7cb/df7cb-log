@@ -110,7 +110,7 @@ declare
   msg text;
 begin
   -- new country
-  new_cty := cty(new.call::call);
+  new_cty := call2cty(new.call::call);
   perform start from log where cty = new_cty and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
   if not found then
     msg := format('New cty *%s*: %s *%s* %s %s', new_cty, new.qrg, new.mode, new.call, new.loc);

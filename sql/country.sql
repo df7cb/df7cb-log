@@ -43,19 +43,19 @@ CREATE INDEX ON prefix USING gist(prefix);
 CREATE DOMAIN call AS text
   CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+(/[A-Z0-9]+)*$'::text));
 
-CREATE OR REPLACE FUNCTION cty(call call)
+CREATE OR REPLACE FUNCTION call2cty(call call)
   RETURNS cty
   LANGUAGE SQL
-  AS $$SELECT cty FROM prefix WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  AS $$SELECT cty FROM prefix WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
 
---CREATE CAST (call AS cty) WITH FUNCTION cty AS ASSIGNMENT;
+CREATE CAST (call AS cty) WITH FUNCTION call2cty AS ASSIGNMENT;
 
 CREATE OR REPLACE FUNCTION cq(call call)
   RETURNS text
   LANGUAGE SQL
-  AS $$SELECT lpad(cq::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  AS $$SELECT lpad(cq::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
 
 CREATE OR REPLACE FUNCTION itu(call call)
   RETURNS text
   LANGUAGE SQL
-  AS $$SELECT lpad(itu::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  AS $$SELECT lpad(itu::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;

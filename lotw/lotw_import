@@ -35,7 +35,7 @@ conn.commit()
 # LoTW QSL import
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw}', to_jsonb(true))
   FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND l.info->'lotw' IS NULL""")
 if cur.rowcount > 0:
     print("New LoTW QSLs: %s" % cur.rowcount)
@@ -43,26 +43,26 @@ if cur.rowcount > 0:
 # mycall differs from my callsign in the LoTW QSL
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw_mycall}', w.info->'STATION_CALLSIGN')
   FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND l.mycall <> w.info->>'STATION_CALLSIGN'
     AND l.info->>'lotw_mycall' IS DISTINCT FROM w.info->>'STATION_CALLSIGN'""")
 
 # locator import
 cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND l.loc IS NULL AND w.loc IS NOT NULL""")
 if cur.rowcount > 0:
     print("New locators: %s" % cur.rowcount)
 
 cur.execute("""UPDATE log l SET loc = w.loc FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND l.loc::varchar(4) = w.loc::varchar(4)
     AND l.loc <> w.loc""")
 if cur.rowcount > 0:
     print("Updated locators: %s" % cur.rowcount)
 
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw_loc}', to_jsonb(w.loc)) FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND l.loc::varchar(4) <> w.loc::varchar(4)
     AND l.info->>'lotw_loc' IS DISTINCT FROM w.loc""")
 if cur.rowcount > 0:
@@ -70,36 +70,38 @@ if cur.rowcount > 0:
 
 # zone import:
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{cqz}', w.info->'CQZ') FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND w.info ? 'CQZ' AND l.info->'cqz' IS DISTINCT FROM w.info->'CQZ'""")
 
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{ituz}', w.info->'ITUZ') FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND w.info ? 'ITUZ' AND l.info->'ituz' IS DISTINCT FROM w.info->'ITUZ'""")
 
 # state import:
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{state}', w.info->'STATE') FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND w.info ? 'STATE' AND l.info->'state' IS DISTINCT FROM w.info->'STATE'""")
 if cur.rowcount > 0:
     print("Updated states: %s" % cur.rowcount)
 
 # IOTA import:
 cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{iota}', w.info->'IOTA') FROM lotw w
-  WHERE (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
     AND w.info ? 'IOTA' AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA'""")
 if cur.rowcount > 0:
     print("Updated IOTAs: %s" % cur.rowcount)
 
 # orphaned LoTW QSLs
-cur.execute("""SELECT * FROM log l RIGHT JOIN lotw w ON (date_trunc('minute', l.start), l.call) = (w.start, w.call) WHERE l.start IS NULL""")
+cur.execute("""SELECT * FROM log l RIGHT JOIN lotw w
+        ON date_trunc('minute', l.start) = w.start and l.call = w.call
+        WHERE l.start IS NULL""")
 for row in cur.fetchall():
     print("Orphaned LoTW QSL:", row)
 
 cty_mismatch = """
 select l.call, l.cty, w.country, c.country, c.cty
   from log l
-  join lotw w on (date_trunc('minute', l.start), l.call) = (w.start, w.call)
+  join lotw w on date_trunc('minute', l.start) = w.start and l.call = w.call
   left join country c on w.country =
     case c.country
       when 'Fed. Rep. of Germany' then 'FEDERAL REPUBLIC OF GERMANY'

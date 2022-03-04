@@ -18,4 +18,4 @@ echo -n "js8call.log: "
 echo -n "log: "
 psql -X -c "INSERT INTO log
     SELECT * FROM log2 WHERE NOT EXISTS
-        (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call));"
+        (SELECT * FROM log WHERE log2.start = log.start and log2.call = log.call);"
