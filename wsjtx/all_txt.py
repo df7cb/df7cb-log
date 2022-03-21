@@ -3,7 +3,9 @@
 import psycopg2
 import sys
 
-conn = psycopg2.connect("service=cb application_name=all_txt")
+name = sys.argv[1]
+
+conn = psycopg2.connect(f"service=cb application_name={name}")
 cur = conn.cursor()
 
 # 220111_212215  2400.040 Rx FT8      2  0.8 1136 CQ DL5AKF JO50

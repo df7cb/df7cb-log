@@ -2,4 +2,6 @@
 
 set -eu
 
-tail -n 100 -f ALL.TXT | ./all_txt.py
+name="${1:-ALL.TXT}"
+
+tail -n 100 -f $name | ./all_txt.py $name
