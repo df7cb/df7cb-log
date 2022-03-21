@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+
+"""
+Connect to an IRC server and announce the PostgreSQL NOTIFY we are LISTENing to
+
+Copyright (C) 2022 Christoph Berg DF7CB
+License: MIT
+"""
+
+import psycopg2
+import socket
+import select
+
+def irc_read(msg):
+    try:
+        msg = msg.decode('UTF-8')
+    except:
+        return
+    print(f"<< {msg}")
+
+    fields = msg.split(None, 2)
+    if len(fields) >= 2 and fields[1] == '376': # :kinetic.oftc.net 376 feynman :End of /MOTD command.
+        irc_send("JOIN #myon")
+    elif len(fields) >= 2 and fields[1] == '433': # :liquid.oftc.net 433 * feynman :Nickname is already in use.
+        exit(1)
+    elif fields[0] == 'PING': # PING :kinetic.oftc.net
+        irc_send(f"PONG {fields[1]}")
+
+def irc_send(msg):
+    print(f">> {msg}")
+    ircsocket.send((msg + "\r\n").encode())
+
+pgconn = psycopg2.connect("service=cb application_name=pgirc")
+cur = pgconn.cursor()
+cur.execute("LISTEN irc")
+cur.execute("LISTEN irc_notice")
+pgconn.commit()
+
+ircsocket = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+ircsocket.connect(("irc.oftc.net", 6667))
+irc_send("NICK feynman")
+irc_send("USER myon - - :Christoph Berg")
+
+buf = b""
+while True:
+    r, w, x = select.select([ircsocket, pgconn], [], [], None)
+
+    if ircsocket in r:
+        buf += ircsocket.recv(1024)
+        while b"\r\n" in buf:
+            msg, _, buf = buf.partition(b"\r\n")
+            irc_read(msg)
+
+    if pgconn in r:
+        pgconn.poll()
+        while pgconn.notifies:
+            notify = pgconn.notifies.pop(0)
+            print("Got NOTIFY:", notify.pid, notify.channel, notify.payload)
+
+            if notify.channel == 'irc':
+                irc_send(f"PRIVMSG #myon :{notify.payload}")
+            elif notify.channel == 'irc_notice':
+                irc_send(f"NOTICE #myon :{notify.payload}")
