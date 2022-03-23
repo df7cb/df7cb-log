@@ -71,36 +71,6 @@ create trigger all_txt_notify after insert on all_txt
 for each row execute function all_txt_notify();
 
 
-create table notification (
-  start timestamptz(0),
-  band band,
-  mode text,
-  item text,
-  primary key (band, mode, item)
-);
-
-
-create or replace function notification(msg text, p_band band, p_mode text, p_item text)
-  returns void
-  language plpgsql
-as $$
-begin
-  perform start from notification
-    where start > now() - '1 hour'::interval
-    and band = p_band
-    and mode = p_mode
-    and item = p_item;
-  if found then return; end if;
-
-  perform telegram(msg);
-
-  insert into notification values (now(), p_band, p_mode, p_item)
-  on conflict on constraint notification_pkey do update set start = now();
-
-  return;
-end;
-$$;
-
 create or replace function all_txt_notification()
   returns trigger
   language plpgsql
@@ -109,12 +79,15 @@ declare
   new_cty cty;
   msg text;
 begin
+  --msg := format('%s %s %s %s', new.qrg, new.mode, new.call, new.loc);
+  --perform pg_notify('irc_notice', msg);
+
   -- new country
   new_cty := call2cty(new.call::call);
   perform start from log where cty = new_cty and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
   if not found then
     msg := format('New cty *%s*: %s *%s* %s %s', new_cty, new.qrg, new.mode, new.call, new.loc);
-    perform notification(msg, new.qrg::band, 'DATA', new_cty::text);
+    perform notification(msg, new.qrg::band, 'DATA', new_cty::text, notify := 'irc', telegram := true);
     return new; -- skip new call check
   end if;
 
@@ -123,7 +96,7 @@ begin
     perform start from log where loc::varchar(4) = new.loc::varchar(4) and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
     if not found then
       msg := format('New loc: %s *%s* %s *%s*', new.qrg, new.mode, new.call, new.loc);
-      perform notification(msg, new.qrg::band, 'DATA', new.loc::varchar(4));
+      perform notification(msg, new.qrg::band, 'DATA', new.loc::varchar(4), notify := 'irc', telegram := true);
       return new; -- skip new call check
     end if;
   end if;
@@ -132,7 +105,7 @@ begin
   perform start from log where call = new.call and major_mode(mode) = 'DATA' and qrg::band = new.qrg::band;
   if not found then
     msg := format('%s *%s* *%s* %s', new.qrg, new.mode, new.call, new.loc);
-    perform notification(msg, new.qrg::band, 'DATA', new.call);
+    perform notification(msg, new.qrg::band, 'DATA', new.call, notify := 'irc', telegram := true);
   end if;
 
   return new;
@@ -154,6 +127,9 @@ begin
   if not found then
     msg := format('%s *CW* %s*%s* %s wpm', new.qrg, new.extra||' ', new.call, new.wpm);
     perform notification(msg, '13cm', 'CW', new.call);
+  else
+    msg := format('%s CW %s%s %s wpm', new.qrg, new.extra||' ', new.call, new.wpm);
+    perform pg_notify('irc_notice', msg);
   end if;
 
   return new;
