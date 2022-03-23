@@ -25,6 +25,7 @@ for qso in adiflog:
     if len(argv) > 2:
         rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
+        #rec['rsttx'] = f"{qso['RST_SENT']}{qso['STX']} {qso['TIME_ON'][:4]}" # BARTG HF RTTY Contest
         if 'SRX' in qso:
             rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX'])
         elif 'SRX_STRING' in qso:
@@ -78,7 +79,7 @@ for rec in log:
 
 cur.execute("""INSERT INTO log
     SELECT * FROM log2 WHERE NOT EXISTS
-        (SELECT * FROM log WHERE (log2.start, log2.call) = (log.start, log.call))""")
+        (SELECT * FROM log WHERE log2.start = log.start and log2.call = log.call)""")
 print(cur.rowcount, "new QSOs")
 
 conn.commit()
