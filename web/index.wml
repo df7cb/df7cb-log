@@ -1,0 +1,125 @@
+#include <cb.wml>
+
+{#HEADERS#:
+    <!-- https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css -->
+    <link rel="stylesheet" href="ol.css" type="text/css">
+    <style>
+      .map {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
+    <!-- https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js -->
+    <script src="ol.js"></script>
+
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js -->
+    <script src="chart.min.js"></script>
+    <!-- https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels -->
+    <script src="chartjs-plugin-datalabels.min.js"></script>
+:##}
+
+<title>DF7CB Logbook</title>
+
+<div id="map" class="map" style="resize: vertical; overflow: hidden;"></div>
+
+<div>
+<form action="">
+  <select name="type" id="type">
+    <option value="cty">Countries</option>
+    <option value="loc2">Locators 2</option>
+    <option value="loc4">Locators 4</option>
+    <option value="loc6">Locators 6</option>
+    <option value="ctyloc2">Cty/Loc 2</option>
+    <option value="ctyloc4">Cty/Loc 4</option>
+    <option value="ctyloc6">Cty/Loc 6</option>
+    <option value="cqzone">CQ Zones</option>
+    <option value="ituzone">ITU Zones</option>
+  </select>
+Band
+  <select name="band" id="band">
+    <option>all</option>
+    <option value="hf">HF</option>
+    <option>low</option>
+    <option>high</option>
+    <option>main</option>
+    <option value="warc">WARC</option>
+    <option value="vhf">VHF+</option>
+    <!-- specific bands added by map.js -->
+  </select>
+Mode
+  <select name="mode" id="mode">
+    <option>all</option>
+    <option>CW</option>
+    <option>PHONE</option>
+    <option>DATA</option>
+    <!-- more modes added by map.js -->
+  </select>
+Time
+  <select name="time" id="time">
+    <option>all</option>
+    <option>today</option>
+    <option>yesterday</option>
+    <option value="2day">2 days</option>
+    <option value="3day">3 days</option>
+    <option value="1week" >1 week</option>
+    <option value="4week" >4 weeks</option>
+    <option>month</option>
+    <!-- specific years added by map.js -->
+  </select>
+Contest
+  <select name="contest" id="contest">
+    <option>---</option>
+    <!-- specific contests added by map.js -->
+  </select>
+
+<br />
+Color
+  <select name="color" id="color">
+    <option value="all">---</option>
+    <option value="random">Random</option>
+    <option value="qsl">QSL/LoTW</option>
+    <option value="bands">Bands</option>
+    <option value="modes">Modes</option>
+    <option value="qso_via">QSO via</option>
+  </select>
+My Call
+  <select name="mycall" id="mycall">
+    <option>all</option>
+    <!-- specific calls added by map.js -->
+  </select>
+Call <input type="text" name="call" id="call">
+<button type="submit">Update</button>
+</form>
+</div>
+
+<table>
+<tr>
+  <td><canvas id="qsl_stats_canvas" width="300" height="300"></canvas></td>
+  <td><canvas id="band_stats_canvas" width="300" height="300"></canvas></td>
+  <td><canvas id="mode_stats_canvas" width="300" height="300"></canvas></td>
+</tr>
+<table>
+
+<div id="info">&nbsp;</div>
+
+<div id="summary">&nbsp;</div>
+
+<table id="log">
+<thead>
+<tr>
+  <th>Start</th>
+  <th>Call</th>
+  <th>Cty</th>
+  <th>Mode</th>
+  <th>MHz</th>
+  <th>RST</th>
+  <th>Loc</th>
+  <th>QSL</th>
+  <th>LoTW</th>
+  <th>Contest</th>
+  <th>QSO via</th>
+</tr>
+</thead>
+</table>
+
+<script type="text/javascript" src="map.js"></script>
