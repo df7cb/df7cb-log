@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -eu
+
+LOG="$1"
+PW="$(cat $HOME/.priv/pw/qo100-pass)"
+
+set -x
+
+curl -fsS \
+  --cookie-jar .qo100-cookies \
+  -F email=cb@df7cb.de \
+  -F password=$PW \
+  https://qo100dx.club/login \
+  --cookie PHPSESSID \
+  -F callSign=DF7CB \
+  -F adifFile=@$LOG \
+  https://qo100dx.club/profile/upload-log

@@ -18,7 +18,18 @@ cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 cur.execute(f"""SELECT qrg::text AS "FREQ",
         qrg::band AS "BAND",
-        mode AS "MODE",
+        case mode
+          when 'FSQ' then 'MFSK'
+          when 'FST4' then 'MFSK'
+          when 'FT4' then 'MFSK'
+          else mode
+        end AS "MODE",
+        case mode
+          when 'FSQ' then 'FSQCALL'
+          when 'FST4' then 'FST4'
+          when 'FT4' then 'FT4'
+          else ''
+        end AS "SUBMODE",
         CASE qso_via
           WHEN 'QO100' THEN 'SAT'
           ELSE ''
@@ -36,7 +47,8 @@ cur.execute(f"""SELECT qrg::text AS "FREQ",
         call AS "CALL",
         coalesce(loc, '') AS "GRIDSQUARE",
         coalesce(contest, '') AS "CONTEST",
-        coalesce(mypwr::text, '') AS "TX_PWR"
+        coalesce(mypwr::text, '') AS "TX_PWR",
+        coalesce(myloc, '') AS "MY_GRIDSQUARE"
         FROM log
         WHERE coalesce(last_update, start) >= %s
             AND {extra}
