@@ -20,7 +20,7 @@ begin
   perform call from log where cty = new_cty and qrg::band = new_band;
   if not found then
     msg := format('%s %s (cluster de %s)', new.qrg, new.dx, new.spotter);
-    perform notification(msg, new_band, 'xxx', new.dx, notify := 'irc');
+    perform notification(msg, new_band, 'xxx', new.dx, notify := 'irc_notice');
   end if;
 
   return new;

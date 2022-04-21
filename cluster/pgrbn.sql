@@ -21,7 +21,7 @@ begin
   perform call from log where cty = new_cty and qrg::band = new_band and mode = new.mode;
   if not found then
     msg := format('%s %s %s (%s wpm, de %s)', new.qrg, new.mode, new.dx, new.wpm, new.spotter);
-    perform notification(msg, new_band, new.mode, new.dx, notify := 'irc');
+    perform notification(msg, new_band, new.mode, new.dx, notify := 'irc_notice');
   end if;
 
   return new;
