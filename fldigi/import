@@ -24,6 +24,7 @@ for qso in adiflog:
     rec['qrg'] = qso['FREQ']
     if len(argv) > 2:
         rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
+        #rec['rsttx'] = "%s%s 14" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
         #rec['rsttx'] = f"{qso['RST_SENT']}{qso['STX']} {qso['TIME_ON'][:4]}" # BARTG HF RTTY Contest
         if 'SRX' in qso:
