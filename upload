@@ -37,7 +37,7 @@ git pull --ff-only
   ./export-adif df7cb-qo100.adif $STAMP "qso_via='QO100'"
   ./tqsl-upload $STAMP
   ./clublog-upload $LOG
-  ./dcl-upload $LOG
+  #./dcl-upload $LOG
   ./eqsl-upload $LOG
   ./rrdxa-upload $LOG
   ./qo100-upload df7cb-qo100.adif
