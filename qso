@@ -51,7 +51,7 @@ if len(sys.argv) == 2:
 select = """SELECT * FROM (
   SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, name, qth, loc, contest, comment, info
   FROM log
-  WHERE call ~ %s OR name ~* %s OR qth ~* %s OR loc ~* %s
+  WHERE call collate "C" ~ %s OR name collate "C" ~* %s OR qth collate "C" ~* %s OR loc collate "C" ~* %s
   ORDER BY start DESC, call DESC LIMIT 50
 ) sub
 ORDER BY start, call"""
