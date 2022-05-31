@@ -11,7 +11,7 @@ since = sys.argv[2]
 if len(sys.argv) > 3:
     extra = sys.argv[3]
 else:
-    extra = "mycall LIKE 'DF7CB%%'"
+    extra = "mycall COLLATE \"C\" LIKE 'DF7CB%%'"
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
