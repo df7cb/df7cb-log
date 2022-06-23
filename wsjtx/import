@@ -11,7 +11,7 @@ psql -qX -c "TRUNCATE log2"
 
 echo -n "wsjtx.log: "
 tail -30 wsjtx.log |
-  sed -e 's/,/ /' -e 's/,/ /2' -e 's/,,\(SAT\)\?$//' |
+  sed -e 's/,/ /' -e 's/,/ /2' -e 's/^\(\([^,]*,\)\{8\}[^,]*\).*/\1,/' |
   psql -X \
     -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment) FROM STDIN (FORMAT CSV, DELIMITER ',')"
 
