@@ -17,8 +17,8 @@ cur.execute("""SELECT qrg AS "FREQ",
         mode AS "MODE",
         to_char(start, 'YYYYMMDD') AS "QSO_DATE",
         to_char(start, 'hh24mi') AS "TIME_ON",
-        regexp_replace(rsttx, '^(5[1-9]9?)', '\1 ') AS "RST_SENT",
-        regexp_replace(rstrx, '^(5[1-9]9?)', '\1 ') AS "RST_RCVD",
+        regexp_replace(rsttx, '^(5[1-9]9?)', '\\1 ') AS "RST_SENT",
+        regexp_replace(rstrx, '^(5[1-9]9?)', '\\1 ') AS "RST_RCVD",
         call AS "CALL"
         FROM log
         WHERE start > now() - '3 days'::interval
