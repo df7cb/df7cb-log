@@ -1,0 +1,143 @@
+#!/usr/bin/python3
+
+# usage: export-edi <contest name> [<filename>]
+
+import psycopg2
+import psycopg2.extras
+import sys
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+contest = sys.argv[1]
+age = '7 days'
+
+cur.execute("""select
+    to_char(min(start::date), 'YYYY-MM-DD') iso_date,
+    to_char(min(start::date), 'YYYYMMDD') min_date,
+    to_char(max(start::date), 'YYYYMMDD') max_date,
+    max(round(qrg)) band,
+    count(distinct cty) ctys,
+    count(distinct loc::varchar(4)) wwls,
+
+    max(mycall::text) mycall,
+    max(myloc) myloc,
+    max(myqth) myqth,
+    max(mytrx) mytrx,
+    max(mypwr) mypwr,
+    max(myant) myant
+    from log
+    where start > now() - %s::interval
+    and contest = %s
+    """,
+    (age, contest))
+
+info = cur.fetchall()[0]
+
+cur.execute("""select
+    call,
+    loc,
+    round(st_distance(st_locatorpoint(myloc)::geography, st_locatorpoint(loc)::geography)/1000.0)::text distance
+
+    from log
+    where start > now() - %s::interval
+    and contest = %s
+    order by st_distance(st_locatorpoint(myloc)::geography, st_locatorpoint(loc)::geography) desc
+    limit 1
+    """,
+    (age, contest))
+
+odx = cur.fetchall()[0]
+
+cur.execute("""select
+    to_char(start, 'YYMMDD') as date,
+    to_char(start, 'hh24mi') as time,
+    call as call,
+    case mode when 'SSB' then '1' when 'CW' then '2' else mode||'-FIXME' end as mode_code,
+    regexp_replace(rsttx, '^(5[1-9]9?)', '\\1 ') as rst_sent,
+    regexp_replace(rstrx, '^(5[1-9]9?)', '\\1 ') as rst_rcvd,
+    loc,
+    round(st_distance(st_locatorpoint(myloc)::geography, st_locatorpoint(loc)::geography)/1000.0)::text distance,
+    loc::varchar(4) = any (array_agg(loc::varchar(4)) over (order by start rows between unbounded preceding and 1 preceding)) is not true as new_wwl,
+    cty = any (array_agg(cty) over (order by start rows between unbounded preceding and 1 preceding)) is not true as new_cty,
+    call = any (array_agg(call) over (order by start rows between unbounded preceding and 1 preceding)) is true as duplicate
+    from log
+    where start > now() - %s::interval
+    and contest = %s
+    order by start, call""",
+    (age, contest))
+
+records = cur.fetchall()
+
+# write output
+
+if len(sys.argv) > 2:
+    filename = sys.argv[2]
+else:
+    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}.edi"
+print(f"Writing {filename}")
+f = open(filename, 'w')
+
+f.write(f"""[REG1TEST;1]
+TName={contest}
+TDate={info['min_date']};{info['max_date']}
+PCall={info['mycall']}
+PWWLo={info['myloc']}
+PExch=
+PAdr1={info['myqth']}
+PAdr2=
+PSect=
+PBand={info['band']} MHz
+PClub=RHEIN RUHR DX ASSOCIATION
+RName=Christoph Berg
+RCall=DF7CB
+RAdr1=Rather Str. 76a
+RAdr2=
+RPoCo=47802
+RCity=Krefeld
+RCoun=Germany
+RPhon=
+RHBBS=cb@df7cb.de
+MOpe1=
+MOpe2=
+STXEq={info['mytrx']}
+SPowe={info['mypwr']}
+SRXEq={info['mytrx']}
+SAnte={info['myant']}
+SAntH=
+CQSOs={len(records)};1
+CQSOP=
+CWWLs={info['wwls']};0;1
+CWWLB=
+CExcs=
+CExcB=
+CDXCs={info['ctys']};0;1
+CDXCB=0
+CToSc=
+CODXC={odx['call']};{odx['loc']};{odx['distance']}
+[Remarks]
+[QSORecords;{len(records)}]
+""")
+
+#220619;0949;R6KA;2;599;001;599;124;;KN75VH;2242;;N;;
+
+for qso in records:
+    rsttx, _, nrtx = qso['rst_sent'].partition(' ')
+    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
+    f.write(';'.join([
+        qso['date'],
+        qso['time'],
+        qso['call'],
+        qso['mode_code'],
+        rsttx,
+        nrtx[:3],
+        rstrx,
+        nrrx[:3],
+        '', # received exchange
+        qso['loc'],
+        qso['distance'],
+        '', # new exchange
+        'N' if qso['new_wwl'] else '',
+        'N' if qso['new_cty'] else '',
+        'D' if qso['duplicate'] else '',
+        ]) + '\n')

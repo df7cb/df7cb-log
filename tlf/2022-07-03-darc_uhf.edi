@@ -1,0 +1,40 @@
+[REG1TEST;1]
+TName=DARC UHF
+TDate=20220703;20220703
+PCall=DF7CB
+PWWLo=JO31HJ
+PExch=
+PAdr1=Egelsberg
+PAdr2=
+PSect=
+PBand=432 MHz
+PClub=RHEIN RUHR DX ASSOCIATION
+RName=Christoph Berg
+RCall=DF7CB
+RAdr1=Rather Str. 76a
+RAdr2=
+RPoCo=47802
+RCity=Krefeld
+RCoun=Germany
+RPhon=
+RHBBS=cb@df7cb.de
+MOpe1=
+MOpe2=
+STXEq=IC-705
+SPowe=5
+SRXEq=IC-705
+SAnte=5ele Yagi
+SAntH=
+CQSOs=1;1
+CQSOP=
+CWWLs=1;0;1
+CWWLB=
+CExcs=
+CExcB=
+CDXCs=1;0;1
+CDXCB=0
+CToSc=
+CODXC=OZ1ALS;JO31MH;30
+[Remarks]
+[QSORecords;1]
+220703;1110;OZ1ALS;1;59;001;59;010;;JO31MH;30;;N;N;
