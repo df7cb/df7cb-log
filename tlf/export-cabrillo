@@ -1,37 +1,116 @@
-#!/bin/sh
+#!/usr/bin/python3
 
-PATH=$PATH:$(dirname $0)
+# usage: export-cabrillo <contest name> [<filename>]
 
-set -eux
+import psycopg2
+import psycopg2.extras
+import sys
 
-CONTEST="$1"
-CBR="$2"
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-# add address and category info, remove decimal part of frequencies
-export-cabrillo.py "$CONTEST" "$CBR"
-sed -i \
-  -e '/^CALLSIGN:/ a \
-NAME: Christoph Berg\
-EMAIL: cb@df7cb.de\
-ADDRESS: Rather Str. 76a\
-ADDRESS: 47802 Krefeld\
-ADDRESS: Germany\
-GRID-LOCATOR: JO31HI\
-CLUB: Rhein Ruhr DX Association' \
-  -e '/^CONTEST:/ a \
-CATEGORY-ASSISTED: ASSISTED\
-CATEGORY-BAND: ALL\
-CATEGORY-MODE: CW\
-CATEGORY-OPERATOR: SINGLE-OP\
-CATEGORY-POWER: LOW\
-CATEGORY-STATION: FIXED\
-CATEGORY-TRANSMITTER: ONE' \
-  -e '/^QSO:/ s/\.[0-9]* / /' \
-  $CBR
+contest = sys.argv[1]
+age = '7 days'
 
-# fix missing trailing newline
-echo >> $CBR
+cur.execute("""select
+    to_char(min(start::date), 'YYYY-MM-DD') iso_date,
+    array_agg(distinct upper(qrg::band::text)) band,
+    array_agg(distinct mode) mode,
 
-vi $CBR
-git add $CBR
-v commit -m "$CONTEST" --edit
+    max(mycall::text) mycall,
+    max(myloc) myloc,
+    max(myqth) myqth,
+    max(mypwr) mypwr
+    from log
+    where start > now() - %s::interval
+    and contest = %s
+    """,
+    (age, contest))
+
+info = cur.fetchall()[0]
+
+cur.execute("""select
+    round(qrg * 1000.0)::text qrg,
+    to_char(start, 'YYYY-MM-DD') as date,
+    to_char(start, 'hh24mi') as time,
+    call as call,
+    case mode when 'SSB' then 'PH'
+              when 'CW' then 'CW'
+              when 'RTTY' then 'RY'
+              else mode||'-FIXME' end as mode,
+    regexp_replace(rsttx, '^(5[1-9]9?)', '\\1 ') as rst_sent,
+    regexp_replace(rstrx, '^(5[1-9]9?)', '\\1 ') as rst_rcvd
+    from log
+    where start > now() - %s::interval
+    and contest = %s
+    order by start, call""",
+    (age, contest))
+
+records = cur.fetchall()
+
+# write output
+
+if len(sys.argv) > 2:
+    filename = sys.argv[2]
+else:
+    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}.cbr"
+print(f"Writing {filename}")
+f = open(filename, 'w')
+
+if info['mypwr'] <= 10:
+    mypwr = 'QRP'
+elif info['mypwr'] <= 100:
+    mypwr = 'LOW'
+else:
+    mypwr = 'HIGH'
+
+f.write(f"""START-OF-LOG: 3.0
+CALLSIGN: {info['mycall']}
+NAME: Christoph Berg
+EMAIL: cb@df7cb.de
+ADDRESS: Rather Str. 76a
+ADDRESS: 47802 Krefeld
+ADDRESS: Germany
+GRID-LOCATOR: {info['myloc']}
+LOCATION: {info['myqth']}
+CLUB: Rhein Ruhr DX Association
+CONTEST: OK1WC Memorial Contest
+CATEGORY-ASSISTED: ASSISTED
+CATEGORY-BAND: {info['band'][0] if len(info['band']) == 1 else 'ALL'}
+CATEGORY-MODE: {info['mode'][0] if len(info['mode']) == 1 else 'MIXED'}
+CATEGORY-OPERATOR: SINGLE-OP
+CATEGORY-POWER: {mypwr}
+CATEGORY-STATION: FIXED
+CATEGORY-TRANSMITTER: ONE
+""")
+
+# QSO: 7036 CW 2022-06-27 1639 DF7CB 599 001 SD6M 599 014 0
+
+call_len = 0
+nr_len = 0
+
+for qso in records:
+    if len(qso['call']) > call_len:
+        call_len = len(qso['call'])
+    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
+    if len(nrrx) > nr_len:
+        nr_len = len(nrrx)
+
+for qso in records:
+    rsttx, _, nrtx = qso['rst_sent'].partition(' ')
+    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
+    f.write('QSO: ' + ' '.join([
+        qso['qrg'],
+        qso['mode'],
+        qso['date'],
+        qso['time'],
+        info['mycall'],
+        rsttx,
+        nrtx, #nrtx[:3],
+        qso['call'].ljust(call_len),
+        rstrx,
+        nrrx.ljust(nr_len), #nrrx[:3],
+        '0', # transmitter number
+        ]) + '\n')
+
+f.write(f"""END-OF-LOG:\n""")

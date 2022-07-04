@@ -3,16 +3,19 @@
 PATH=$PATH:$(dirname $0)
 
 CONTEST="${1:-OK1WC Memorial Contest}"
-LOG="${2:-$(date +%F)-ok1wc.log}"
+LOG="${2:-$(date +%F)-$(echo $CONTEST | tr 'A-Z ' 'a-z_').log}"
 CBR="${LOG%.*}.cbr"
 
 [ -f "$LOG" ] || mv contest.log "$LOG"
 
 set -eux
 
-./import-tlf -n "$CONTEST" $LOG
+import-tlf -n "$CONTEST" $LOG
 read ok
-./import-tlf "$CONTEST" $LOG
+import-tlf "$CONTEST" $LOG
 
 git add $LOG
 export-cabrillo "$CONTEST" "$CBR"
+vi $CBR
+git add $CBR
+v commit -m "$CONTEST" --edit
