@@ -74,7 +74,7 @@ ADDRESS: Germany
 GRID-LOCATOR: {info['myloc']}
 LOCATION: {info['myqth']}
 CLUB: Rhein Ruhr DX Association
-CONTEST: OK1WC Memorial Contest
+CONTEST: {contest}
 CATEGORY-ASSISTED: ASSISTED
 CATEGORY-BAND: {info['band'][0] if len(info['band']) == 1 else 'ALL'}
 CATEGORY-MODE: {info['mode'][0] if len(info['mode']) == 1 else 'MIXED'}
@@ -100,7 +100,7 @@ for qso in records:
     rsttx, _, nrtx = qso['rst_sent'].partition(' ')
     rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
     f.write('QSO: ' + ' '.join([
-        qso['qrg'],
+        qso['qrg'].ljust(5),
         qso['mode'],
         qso['date'],
         qso['time'],

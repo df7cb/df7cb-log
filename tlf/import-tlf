@@ -71,6 +71,7 @@ with open(args[1]) as f:
     qso['rsttx'] = rsttx + serial       # my rst + serial (3 digits)
     #qso['rsttx'] = rsttx + '14'        # my rst + my WAZ/CQ zone
     #qso['rsttx'] = rsttx + '28'        # my rst + my ITU zone
+    #qso['itu'] = exchange
     #qso['rsttx'] = rsttx + 'R10'       # my rst + my DOK
     #qso['rsttx'] = rsttx + 'JO31'
     #qso['rsttx'] = rsttx + ' CHRIS'
