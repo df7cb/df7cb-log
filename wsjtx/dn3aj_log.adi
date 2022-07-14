@@ -1,0 +1,8 @@
+ADIF Export
+<adif_ver:5>3.1.1
+<created_timestamp:15>20220713 193924
+<programid:6>WSJT-X
+<programversion:5>2.5.4
+<eoh>
+<call:5>DF2FA <gridsquare:4>JN57 <mode:3>FT8 <rst_sent:3>+06 <rst_rcvd:3>-04 <qso_date:8>20220713 <time_on:6>193800 <qso_date_off:8>20220713 <time_off:6>193900 <band:4>70cm <freq:10>432.175814 <station_callsign:5>DN3AJ <my_gridsquare:6>JN39PF <tx_pwr:1>5 <comment:6>IC-705 <eor>
+<call:6>DF4IAE <gridsquare:4>JN49 <mode:3>FT8 <rst_sent:3>+07 <rst_rcvd:3>-16 <qso_date:8>20220713 <time_on:6>194930 <qso_date_off:8>20220713 <time_off:6>195030 <band:4>70cm <freq:10>432.175814 <station_callsign:5>DN3AJ <my_gridsquare:6>JN39PF <tx_pwr:1>5 <comment:6>IC-705 <eor>
