@@ -1,0 +1,1 @@
+../bin/adif_io.py

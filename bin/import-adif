@@ -9,9 +9,12 @@ adiflog, header = adif_io.read_from_file(argv[1])
 if len(argv) > 2:
     contest = argv[2]
 
+# fldigi:
 # {'FREQ': '14.069245', 'CALL': 'R3WA', 'MODE': 'PSK63', 'QSO_DATE': '20200315', 'TIME_OFF': '114608', 'TIME_ON': '114500', 'RST_RCVD': '238', 'RST_SENT': '238', 'BAND': '20m', 'COUNTRY': 'European Russia', 'CQZ': '16', 'SRX': '239', 'STX': '000'}
 # <FREQ:9>14.071636<CALL:6>EA3FYO<MODE:5>PSK31<NAME:4>Joan<QSO_DATE:8>20200912<QSO_DATE_OFF:8>20200912<TIME_OFF:6>092315<TIME_ON:6>091900<QTH:6>Besora<RST_RCVD:3>599<RST_SENT:3>599<GRIDSQUARE:6>JN12CC<BAND:3>20m<COUNTRY:5>Spain<CQZ:2>14<STX:3>000<OPERATOR:5>DF7CB<STATION_CALLSIGN:5>DF7CB<MY_GRIDSQUARE:6>JO31hi<MY_CITY:7>Krefeld<EOR>
 # <FREQ:9>14.117493<CALL:6>VE2RYY<MODE:4>RTTY<QSO_DATE:8>20210925<QSO_DATE_OFF:8>20210925<TIME_OFF:6>205327<TIME_ON:6>205300<RST_RCVD:3>599<RST_SENT:3>599<STATE:2>QC<BAND:3>20m<COUNTRY:6>Canada<CQZ:1>5<STX:3>001<STX_STRING:2>14<STATION_CALLSIGN:5>DF7CB<MY_GRIDSQUARE:6>JO31hi<MY_CITY:7>Krefeld<EOR>
+# wsjtx:
+# <call:6>DF4IAE <gridsquare:4>JN49 <mode:3>FT8 <rst_sent:3>+07 <rst_rcvd:3>-16 <qso_date:8>20220713 <time_on:6>194930 <qso_date_off:8>20220713 <time_off:6>195030 <band:4>70cm <freq:10>432.175814 <station_callsign:5>DN3AJ <my_gridsquare:6>JN39PF <tx_pwr:1>5 <comment:6>IC-705 <eor>
 
 log = []
 
@@ -22,42 +25,57 @@ for qso in adiflog:
     rec['call'] = qso['CALL']
     rec['mode'] = qso['MODE']
     rec['qrg'] = qso['FREQ']
+
     if len(argv) > 2:
+        rec['contest'] = contest
+    elif 'CONTEST_ID' in qso:
+        rec['contest'] = qso['CONTEST_ID']
+
+    if 'STX' in qso:
         rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s 14" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
         #rec['rsttx'] = f"{qso['RST_SENT']}{qso['STX']} {qso['TIME_ON'][:4]}" # BARTG HF RTTY Contest
-        if 'SRX' in qso:
-            rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX'])
-        elif 'SRX_STRING' in qso:
-            rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX_STRING'])
-        else:
-            rec['rstrx'] = qso['RST_RCVD']
-        #if 'STATE' in qso:
-        #    rec['rstrx'] = "%s%02d%s" % ("599", int(qso['CQZ']), qso['STATE'])
-        #else:
-        #    rec['rstrx'] = "%s%02d" % ("599", int(qso['CQZ']))
-        rec['contest'] = contest
     else:
         rec['rsttx'] = qso['RST_SENT']
-        if 'RST_RCVD' in qso:
-            rec['rstrx'] = qso['RST_RCVD']
-        else:
-            rec['rstrx'] = '599'
+
+    if 'SRX' in qso:
+        rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX'])
+    elif 'SRX_STRING' in qso:
+        rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX_STRING'])
+    elif 'RST_RCVD' in qso:
+        rec['rstrx'] = qso['RST_RCVD']
+    else:
+        rec['rstrx'] = '599'
+
+    #if 'STATE' in qso:
+    #    rec['rstrx'] = "%s%02d%s" % ("599", int(qso['CQZ']), qso['STATE'])
+    #else:
+    #    rec['rstrx'] = "%s%02d" % ("599", int(qso['CQZ']))
+
     if 'NAME' in qso:
         rec['name'] = qso['NAME']
     if 'QTH' in qso:
         rec['qth'] = qso['QTH']
-    for key in ['name', 'qth']:
+    for key in ['name', 'qth']: # Title Case These Keys
         if key in rec and re.match('[A-Z ]*$', rec[key]):
             rec[key] = rec[key].title()
     if 'GRIDSQUARE' in qso:
-        rec['loc'] = qso['GRIDSQUARE'][0:2].upper() + qso['GRIDSQUARE'][2:].lower()
-    rec['info'] = { 'cqz': qso['CQZ'] }
+        rec['loc'] = qso['GRIDSQUARE'].upper()
+    if 'CQZ' in qso:
+        rec['cq'] = qso['CQZ']
     if 'STATE' in qso:
+        if 'info' not in rec: rec['info'] = {}
         rec['info']['state'] = qso['STATE']
-    if 'CONTEST_ID' in qso:
-        rec['contest'] = qso['CONTEST_ID']
+
+    if 'STATION_CALLSIGN' in qso:
+        rec['mycall'] = qso['STATION_CALLSIGN']
+    if 'MY_CITY' in qso:
+        rec['myqth'] = qso['MY_CITY']
+    if 'MY_GRIDSQUARE' in qso:
+        rec['myloc'] = qso['MY_GRIDSQUARE']
+    if 'TX_PWR' in qso:
+        rec['mypwr'] = qso['TX_PWR']
 
     log.append(rec)
     print(rec)
