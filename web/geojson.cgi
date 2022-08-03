@@ -47,7 +47,7 @@ if 'band' in form:
 if 'call' in form:
     call = form.getvalue('call')
     if re.search('^[A-Za-z0-9/]+$', call):
-        qual += "and call ~ upper(%s) "
+        qual += "and call collate \"C\" ~ upper(%s) "
         param.append(call)
 
 if 'contest' in form:
@@ -99,7 +99,7 @@ common_columns = f"""count(*) as count,
   array_agg(distinct qso_via) as qso_via,
   string_agg(distinct call, ' ') as calls,
   bool_or(qslrx = 'Y') as qsl,
-  bool_or(info ? 'lotw') as lotw,
+  bool_or(lotw) as lotw,
 """
 
 json_build_object = f"""
@@ -114,9 +114,9 @@ summary as (select
   from {logtable} where true {qual}),
 stats as (select major_mode(mode),
   qrg::band as band,
-  case when qslrx = 'Y' and info ? 'lotw' then 'QSL+LoTW'
+  case when qslrx = 'Y' and lotw then 'QSL+LoTW'
        when qslrx = 'Y' then 'QSL'
-       when info ? 'lotw' then 'LoTW'
+       when lotw then 'LoTW'
        else 'none'
   end as qsl,
   count(*) from {logtable}
@@ -131,7 +131,7 @@ last_qsos as (select
   concat(rsttx, '/', rstrx) as rst,
   loc,
   case qslrx when 'Y' then '✅' when 'R' then '⌛' end as qsl,
-  case when info ? 'lotw' then '✅' end as lotw,
+  case when lotw then '✅' end as lotw,
   contest,
   qso_via
 from {logtable} log where true {qual} order by log.start desc limit 50),
