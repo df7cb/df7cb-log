@@ -52,6 +52,7 @@ AVAILABLE_FIELD_NAMES_TYPES = {"CALL": "S",
                                "NAME": "S",
                                "ADDRESS": "S",
                                "STATE": "S",
+                               "STATION_CALLSIGN": "S",
                                "COUNTRY": "S",
                                "DXCC": "N",
                                "CQZ": "N",
@@ -84,6 +85,7 @@ AVAILABLE_FIELD_NAMES_ORDERED = ["CALL",
                                  "NAME",
                                  "ADDRESS",
                                  "STATE",
+                                 "STATION_CALLSIGN",
                                  "COUNTRY",
                                  "DXCC",
                                  "CQZ",
@@ -389,7 +391,7 @@ class ADIF:
 <adif_ver:%d>%s
 <programid:5>PyQSO
 <programversion:5>1.1.0
-<eoh>\n""" % (dt, len(records), len(str(ADIF_VERSION)), ADIF_VERSION))
+<eoh>\n\n""" % (dt, len(records), len(str(ADIF_VERSION)), ADIF_VERSION))
 
             # Then write each record to the file.
             for r in records:
@@ -401,7 +403,7 @@ class ADIF:
                     else:
                         if((r[field_name] != "NULL") and (r[field_name] != "")):
                             f.write("<%s:%d>%s\n" % (field_name.lower(), len(r[field_name]), r[field_name]))
-                f.write("<eor>\n")
+                f.write("<eor>\n\n")
 
             logging.debug("Finished writing records to the ADIF file.")
             f.close()
