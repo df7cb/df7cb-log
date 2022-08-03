@@ -12,9 +12,8 @@ curl -fsS \
   -F user=DF7CB \
   -F pass=$PW \
   -o /dev/null \
-  https://dcl.darc.de/~dcl/public/login.php \
-  --cookie PHPSESSID \
+  https://dcl.darc.de/public/login.php \
   -F Datei=@$LOG \
-  -F aktionADIF=uploadADIF \
+  -F aktionADIF=submitADIF \
   -o /dev/null \
-  https://dcl.darc.de/~dcl/public/job_upload_adif.php
+  https://dcl.darc.de/public/job_upload_adif.php
