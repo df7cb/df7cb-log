@@ -2,7 +2,6 @@
 
 GIT=git
 TODAY="$(date +%Y-%m-%d)"
-LOG=df7cb-upload.adif
 
 while getopts "fn" opt ; do
   case $opt in
@@ -32,11 +31,12 @@ git pull --ff-only
   fi
 
   cd ../lotw
+  LOG=tmp/df7cb-upload.adif
   STAMP=$(cat .upload.stamp || echo 'today')
   ./export-adif $LOG $STAMP
-  ./tqsl-upload $STAMP
+  ./lotw-upload $STAMP
   ./clublog-upload $STAMP
-  #./dcl-upload $LOG
+  ./dcl-upload $LOG
   ./eqsl-upload $LOG
   ./rrdxa-upload $LOG
 

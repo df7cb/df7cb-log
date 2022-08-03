@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -eu
+
+STAMP="${1:-yesterday}"
+PASSWORD="$(cat ~/.priv/tqsl/password)"
+export PGSERVICE=cb
+
+mkdir -p tmp
+
+psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$STAMP' group by 1, 2 order by 1, 2" | \
+  while read MYCALL MYLOC; do
+    FILE="tmp/${MYCALL//\//-}-$MYLOC.adif"
+    echo "$MYCALL $MYLOC"
+    ( set -x
+      ./export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%' AND upper(myloc)='$MYLOC'"
+
+      # exit 8 is "nothing to upload", exit 9 is "no new QSOs"
+      tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x
+    ) || case $? in 8|9) ;; *) exit $?;; esac
+  done
