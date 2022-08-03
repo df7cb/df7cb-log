@@ -34,17 +34,19 @@ git pull --ff-only
   cd ../lotw
   STAMP=$(cat .upload.stamp || echo 'today')
   ./export-adif $LOG $STAMP
-  ./export-adif df7cb-qo100.adif $STAMP "qso_via='QO100'"
   ./tqsl-upload $STAMP
-  ./clublog-upload $LOG
+  ./clublog-upload $STAMP
   #./dcl-upload $LOG
   ./eqsl-upload $LOG
   ./rrdxa-upload $LOG
+
+  ./export-adif df7cb-qo100.adif $STAMP "qso_via='QO100'"
   grep -q '<eor>' df7cb-qo100.adif && ./qo100-upload df7cb-qo100.adif
+
   echo "$TODAY" > .upload.stamp
   ./lotw_download
 
-  cd ../sql
+  cd ../dump
   ./dump
 )
 

@@ -1,34 +1,40 @@
-CREATE DOMAIN qsl AS char(1)
-    CONSTRAINT valid_qsl_request CHECK (VALUE IN ('Y', 'N', 'R'));
-
 CREATE TABLE log (
     start timestamptz(0) NOT NULL,
     stop timestamptz(0),
     call call NOT NULL,
     cty cty REFERENCES country(cty),
     qrg qrg NOT NULL,
-    qso_via call,
     mode text NOT NULL,
     rsttx text,
+    stx smallint,
+    extx text,
     rstrx text,
-    qsltx character(1) CHECK (qsltx IN ('N', 'R', 'Y')),
-    qslrx character(1) CHECK (qslrx IN ('N', 'R', 'Y')),
-    qsl_via call,
+    srx smallint,
+    exrx text,
+    qso_via call,
     name text,
     qth text,
+    state text,
     loc locator,
     dok text,
     cq smallint,
     itu smallint,
+    iota text,
+    qsltx character(1) CHECK (qsltx IN ('N', 'R', 'Y')),
+    qslrx character(1) CHECK (qslrx IN ('N', 'R', 'Y')),
+    lotw boolean,
+    eqsl boolean,
+    dcl character(1),
+    qsl_via call,
     contest text,
     comment text,
+    info jsonb,
     mycall call DEFAULT 'DF7CB'::text NOT NULL,
     mytrx text,
     mypwr numeric,
     myqth text,
     myloc text,
     myant text,
-    info jsonb,
     last_update timestamptz(0) DEFAULT now(),
     PRIMARY KEY (start, call),
     CONSTRAINT start_before_stop CHECK (start <= stop),
@@ -54,20 +60,15 @@ END;$$;
 
 CREATE TRIGGER log_update BEFORE UPDATE ON log FOR EACH ROW EXECUTE PROCEDURE last_update();
 
-GRANT SELECT ON TABLE log TO PUBLIC;
-
 CREATE OR REPLACE VIEW logview AS
     SELECT start, stop::time, call, cty, band(qrg), qrg, mode, rsttx, rstrx, qsltx ||'/'|| qslrx AS qsl, name, qth, loc, dok, contest, comment, mycall, mytrx, mypwr, myqth, myloc, myant FROM log;
 
-GRANT SELECT ON TABLE logview TO PUBLIC;
-
+DROP TABLE IF EXISTS log2;
 CREATE TABLE log2 (LIKE log INCLUDING ALL);
 CREATE TRIGGER log_insert BEFORE INSERT ON log2 FOR EACH ROW EXECUTE PROCEDURE logtrigger();
-GRANT SELECT ON TABLE log2 TO PUBLIC;
 
+DROP VIEW IF EXISTS alllog;
+DROP TABLE IF EXISTS livelog;
 CREATE TABLE livelog (LIKE log INCLUDING ALL);
 CREATE TRIGGER log_insert BEFORE INSERT ON livelog FOR EACH ROW EXECUTE PROCEDURE logtrigger();
-GRANT SELECT ON TABLE livelog TO PUBLIC;
-
 CREATE OR REPLACE VIEW alllog AS SELECT * FROM log UNION ALL SELECT * FROM livelog;
-GRANT SELECT ON alllog TO PUBLIC;

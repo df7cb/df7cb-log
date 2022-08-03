@@ -33,10 +33,10 @@ for qso in lotw:
 conn.commit()
 
 # LoTW QSL import
-cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{lotw}', to_jsonb(true))
+cur.execute("""UPDATE log l SET lotw = true
   FROM lotw w
   WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
-    AND l.info->'lotw' IS NULL""")
+    AND l.lotw IS NULL""")
 if cur.rowcount > 0:
     print("New LoTW QSLs: %s" % cur.rowcount)
 
@@ -69,25 +69,25 @@ if cur.rowcount > 0:
     print("Updated locators: %s" % cur.rowcount)
 
 # zone import:
-cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{cqz}', w.info->'CQZ') FROM lotw w
+cur.execute("""UPDATE log l SET cq = (w.info->>'CQZ')::smallint FROM lotw w
   WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
-    AND w.info ? 'CQZ' AND l.info->'cqz' IS DISTINCT FROM w.info->'CQZ'""")
+    AND w.info ? 'CQZ' AND l.cq IS DISTINCT FROM (w.info->>'CQZ')::smallint""")
 
-cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{ituz}', w.info->'ITUZ') FROM lotw w
+cur.execute("""UPDATE log l SET itu = (w.info->>'ITUZ')::smallint FROM lotw w
   WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
-    AND w.info ? 'ITUZ' AND l.info->'ituz' IS DISTINCT FROM w.info->'ITUZ'""")
+    AND w.info ? 'ITUZ' AND l.itu IS DISTINCT FROM (w.info->>'ITUZ')::smallint""")
 
 # state import:
-cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{state}', w.info->'STATE') FROM lotw w
+cur.execute("""UPDATE log l SET state = w.info->>'STATE' FROM lotw w
   WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
-    AND w.info ? 'STATE' AND l.info->'state' IS DISTINCT FROM w.info->'STATE'""")
+    AND w.info ? 'STATE' AND l.state IS DISTINCT FROM w.info->>'STATE'""")
 if cur.rowcount > 0:
     print("Updated states: %s" % cur.rowcount)
 
 # IOTA import:
-cur.execute("""UPDATE log l SET info = jsonb_set(coalesce(l.info, '{}'), '{iota}', w.info->'IOTA') FROM lotw w
+cur.execute("""UPDATE log l SET iota = w.info->>'IOTA' FROM lotw w
   WHERE date_trunc('minute', l.start) = w.start and l.call = w.call
-    AND w.info ? 'IOTA' AND l.info->'iota' IS DISTINCT FROM w.info->'IOTA'""")
+    AND w.info ? 'IOTA' AND l.iota IS DISTINCT FROM w.info->>'IOTA'""")
 if cur.rowcount > 0:
     print("Updated IOTAs: %s" % cur.rowcount)
 

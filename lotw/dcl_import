@@ -57,10 +57,10 @@ conn.commit()
 
 # DCL import
 cur.execute("""UPDATE log l
-  SET info = jsonb_set(coalesce(l.info, '{}'), '{dcl}', d.info->'APP_DCL_STATUS')
+  SET dcl = d.info->>'APP_DCL_STATUS'
   FROM dcl d
   WHERE (date_trunc('minute', l.start), l.call) = (d.start, d.call)
-    AND l.info->'dcl' IS NULL""")
+    AND l.dcl IS DISTINCT FROM d.info->>'APP_DCL_STATUS'""")
 print("New DCL QSLs: %s" % cur.rowcount)
 
 # DOK import

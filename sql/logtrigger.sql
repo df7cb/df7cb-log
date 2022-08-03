@@ -76,13 +76,13 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
 
   -- cty
   IF NEW.cty IS NULL THEN
-    NEW.cty = call2cty(NEW.call);
+    NEW.cty = public.call2cty(NEW.call);
   END IF;
   IF NEW.cq IS NULL THEN
-    NEW.cq = cq(NEW.call);
+    NEW.cq = public.cq(NEW.call);
   END IF;
   IF NEW.itu IS NULL THEN
-    NEW.itu = itu(NEW.call);
+    NEW.itu = public.itu(NEW.call);
   END IF;
 
   RETURN NEW;
