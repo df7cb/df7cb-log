@@ -2,17 +2,22 @@
 
 import adif_io
 import json
-import psycopg2
+import psycopg
+import sys
 
-dcl, header = adif_io.read_from_file('dcl.adif')
+dcl, header = adif_io.read_from_file(sys.argv[1])
 
 # {'CALL': 'DL7ET', 'BAND': '80m', 'MODE': 'CW', 'QSO_DATE': '19951115', 'TIME_ON': '1932', 'RST_SENT': '599', 'RST_RCVD': '599', 'DXCC': '230', 'DARC_DOK': 'R09', 'APP_DCL_STATUS': 'i'}
 
-conn = psycopg2.connect("service=cb")
+conn = psycopg.connect("service=cb")
 cur = conn.cursor()
 
-for qso in dcl:
-    print(qso)
+cur.execute("truncate dcl2")
+
+with cur.copy("copy dcl2 from stdin") as copy:
+
+  for qso in dcl:
+    #print(qso)
 
     if 'FREQ' in qso:
         freq = qso['FREQ']
@@ -41,19 +46,27 @@ for qso in dcl:
     elif qso['BAND'] == '70cm':
         freq = '430'
 
-    cur.execute("""INSERT INTO dcl (start, call, qrg, mode, info)
-            VALUES (%s, %s, %s, %s, %s)
-            ON CONFLICT (start, call) DO UPDATE
-            SET qrg = EXCLUDED.qrg,
-                mode = EXCLUDED.mode,
-                info = EXCLUDED.info""",
-            (adif_io.time_on(qso),
+    data = (adif_io.time_on(qso),
             qso.get('CALL'),
             freq,
             qso.get('MODE'),
-            json.dumps(qso)))
+            json.dumps(qso))
 
-conn.commit()
+    copy.write_row(data)
+
+cur.execute("""INSERT INTO dcl (start, call, qrg, mode, info)
+        SELECT * FROM dcl2 WHERE info->>'APP_DCL_STATUS' <> 'c'
+        ON CONFLICT (start, call) DO UPDATE
+        SET qrg = EXCLUDED.qrg,
+            mode = EXCLUDED.mode,
+            info = EXCLUDED.info""")
+
+cur.execute("""INSERT INTO dcl (start, call, qrg, mode, info)
+        SELECT * FROM dcl2 WHERE info->>'APP_DCL_STATUS' = 'c'
+        ON CONFLICT (start, call) DO UPDATE
+        SET qrg = EXCLUDED.qrg,
+            mode = EXCLUDED.mode,
+            info = EXCLUDED.info""")
 
 # DCL import
 cur.execute("""UPDATE log l

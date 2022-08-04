@@ -14,3 +14,11 @@ done
 
 echo -n "swl: "
 psql -Xc '\copy (SELECT json_strip_nulls(row_to_json(l.*)) FROM swl l ORDER BY start, call) to swl.log'
+
+psql -AXt -c "SELECT DISTINCT extract(year from start) FROM lotw ORDER BY 1" | while read year; do
+  echo -n "lotw-$year: "
+  psql -Xc "\\copy (SELECT * FROM lotw WHERE start >= '$year-01-01' and start <= '$year-01-01'::date + '1 year'::interval ORDER BY start, call) to lotw-$year.dump"
+done
+
+echo -n "dcl: "
+psql -Xc '\copy (SELECT * FROM dcl ORDER BY start, call) to dcl.dump'

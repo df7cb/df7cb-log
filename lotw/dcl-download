@@ -1,0 +1,53 @@
+#!/bin/sh
+
+set -eu
+
+PW="$(cat $HOME/.priv/pw/dcl-pass)"
+
+set -x
+
+curl -fsS \
+  --cookie-jar .dcl-cookies \
+  -F user=DF7CB \
+  -F pass=$PW \
+  -o /dev/null \
+  https://dcl.darc.de/public/login.php \
+  -F von=1970-01-01 \
+  -F bis=2099-12-31 \
+  -F txmode[]=CW \
+  -F txmode[]=SSB \
+  -F txmode[]=RTTY \
+  -F txmode[]=PSK \
+  -F txmode[]=FM \
+  -F txmode[]=JT65 \
+  -F txmode[]=FT8 \
+  -F txmode[]=FT4 \
+  -F txmode[]=AM \
+  -F txmode[]=SSTV \
+  -F txmode[]=ATV \
+  -F band[]=160 \
+  -F band[]=80 \
+  -F band[]=60 \
+  -F band[]=40 \
+  -F band[]=30 \
+  -F band[]=20 \
+  -F band[]=17 \
+  -F band[]=15 \
+  -F band[]=12 \
+  -F band[]=10 \
+  -F band[]=6 \
+  -F band[]=4 \
+  -F band[]=2 \
+  -F band[]=70 \
+  -F band[]=23 \
+  -F band[]=13 \
+  -F band[]=9 \
+  -F band[]=5 \
+  -F band[]=3 \
+  -F band[]=1 \
+  -F onlyDCL=y \
+  -F prefixList= \
+  -o DML_DF7CB.adi \
+  https://dcl.darc.de/dml/export_adif.php
+
+./dcl-import DML_DF7CB.adi

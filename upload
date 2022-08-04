@@ -40,11 +40,13 @@ git pull --ff-only
   ./eqsl-upload $LOG
   ./rrdxa-upload $LOG
 
-  ./export-adif df7cb-qo100.adif $STAMP "qso_via='QO100'"
-  grep -q '<eor>' df7cb-qo100.adif && ./qo100-upload df7cb-qo100.adif
+  ./export-adif tmp/df7cb-qo100.adif $STAMP "qso_via='QO100'"
+  grep -q '<eor>' tmp/df7cb-qo100.adif && ./qo100-upload tmp/df7cb-qo100.adif
 
   echo "$TODAY" > .upload.stamp
+
   ./lotw_download
+  ./dcl-download
 
   cd ../dump
   ./dump
