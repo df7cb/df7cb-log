@@ -59,3 +59,17 @@ CREATE OR REPLACE FUNCTION itu(call call)
   RETURNS text
   LANGUAGE SQL
   AS $$SELECT lpad(itu::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+
+CREATE OR REPLACE FUNCTION continent(call call)
+  RETURNS text
+  LANGUAGE SQL
+  AS $$SELECT continent FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+
+-- from https://wiki.postgresql.org/wiki/Round_time
+CREATE FUNCTION date_round(base_date timestamptz, round_interval interval)
+  RETURNS timestamptz AS $BODY$
+SELECT to_timestamp((EXTRACT(epoch FROM $1)::integer + EXTRACT(epoch FROM $2)::integer / 2)
+                / EXTRACT(epoch FROM $2)::integer * EXTRACT(epoch FROM $2)::integer)
+$BODY$
+  LANGUAGE SQL STABLE;
+
