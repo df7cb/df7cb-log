@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -eu
+set -o pipefail
 
 STAMP="${1:-yesterday}"
 PW="$(cat $HOME/.priv/pw/clublog-app-pass)"
@@ -8,7 +9,7 @@ APIKEY="$(cat $HOME/.priv/pw/clublog-api-key)"
 
 mkdir -p tmp
 
-psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by 1 order by 1" | \
+psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by 1 order by 1" service=cb | \
   while read MYCALL; do
     FILE="tmp/${MYCALL//\//-}.adif"
     echo "$MYCALL"
@@ -16,7 +17,7 @@ psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by
     ( set -x
       ./export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%'"
 
-      curl -f -S \
+      curl -S \
         --form email=cb@df7cb.de \
         --form password=$PW \
         --form callsign=$MYCALL \
