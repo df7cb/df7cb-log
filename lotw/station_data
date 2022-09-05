@@ -1,0 +1,128 @@
+<StationDataFile>
+  <StationData name="Blieskastel-Webenheim DG8VD">
+    <CALL>DG8VD</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JN39pf</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31HI">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31hi</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JN39PF">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JN39pf</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO43AQ/P">
+    <CALL>DF7CB/P</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO43aq</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO43AQ">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO43aq</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31/M">
+    <CALL>DF7CB/M</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31HI/P">
+    <CALL>DF7CB/P</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31hi</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JN39JK">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JN39jk</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JN39LF">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JN39lf</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JN39MG">
+    <CALL>DF7CB</CALL>
+    <CQZ>0</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JN39mg</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31ED">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31ed</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO30DP">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO30dp</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31FE">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31fe</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO53PW">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO53pw</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO53PW/P">
+    <CALL>DF7CB/P</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO53pw</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO43XN">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO43xn</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="JO31HJ">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31hj</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+</StationDataFile>
