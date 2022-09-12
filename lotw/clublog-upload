@@ -15,15 +15,16 @@ psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by
     echo "$MYCALL"
 
     ( set -x
-      ./export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%'"
+      ../bin/export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%'"
 
-      curl -S \
+      curl -f -S \
         --form email=cb@df7cb.de \
         --form password=$PW \
         --form callsign=$MYCALL \
         --form file=@$FILE \
         --form api=$APIKEY \
-        https://secure.clublog.org/putlogs.php
+        https://secure.clublog.org/putlogs.php \
+      || [ $? = 22 ] # ignore error 403 on re-upload of same file
     )
     echo
   done

@@ -33,14 +33,14 @@ git pull --ff-only
   cd ../lotw
   LOG=tmp/df7cb-upload.adif
   STAMP=$(cat .upload.stamp || echo 'today')
-  ./export-adif $LOG $STAMP
+  ../bin/export-adif $LOG $STAMP
   ./lotw-upload $STAMP
   ./clublog-upload $STAMP
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
   ./rrdxa-upload $LOG
 
-  ./export-adif tmp/df7cb-qo100.adif $STAMP "qso_via='QO100'"
+  ../bin/export-adif tmp/df7cb-qo100.adif $STAMP "qso_via='QO100'"
   grep -q '<eor>' tmp/df7cb-qo100.adif && ./qo100-upload tmp/df7cb-qo100.adif
 
   echo "$TODAY" > .upload.stamp
