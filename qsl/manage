@@ -25,40 +25,72 @@ atexit.register(readline.write_history_file, histfile)
 
 # main
 
+def print_qsls(qsls, num):
+    i = 1
+    for qsl in qsls[1:]:
+        print("%s%s%d: %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s" %
+              ('>' if num == i else ' ',
+               '\033[1m' if qsl['qslrx'] == 'Y' else '', qsl['n'],
+               qsl['start'].strftime('%d.%m.%Y %H:%M'),
+               qsl['call'],
+               qsl['qrg'], qsl['mode'],
+               qsl['rsttx'], qsl['rstrx'],
+               qsl['qsltx'] or '-', qsl['qslrx'] or '-',
+               qsl['contest'] or '', qsl['comment'] or ''))
+        i += 1
+
+def via(qsl, manager):
+    args = (manager, qsl['start'], qsl['call'])
+    sql = """UPDATE log SET qsl_via = %s WHERE (start, call) = (%s, %s)"""
+    print(sql % args)
+    cur.execute(sql, args)
+
 def update(qsl):
     args = (qsl['start'], qsl['call'])
     if qsl['qsltx'] == 'Y':
         sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
+        qsl['qslrx'] = 'Y'
     else: # qsl['qsltx'] in ('R', 'N'):
         sql = """UPDATE log SET qsltx = 'R', qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
+        qsl['qsltx'] = 'R'
+        qsl['qslrx'] = 'Y'
     print(sql % args)
     cur.execute(sql, args)
     conn.commit()
 
 num = 1
+prompt = 'QSL'
 while True:
     try:
-        l = input('> ')
+        l = input(f'\033[1m{prompt}>\033[0m ')
     except (EOFError, KeyboardInterrupt):
         print()
         exit()
-    m = re.search("^[0-9]+$", l)
-    if m:
+
+    if m := re.search("^([0-9]+) (.+)$", l):
+        num = int(m.group(1))
+        via(qsls[num], m.group(2))
+        update(qsls[num])
+        num += 1
+        print_qsls(qsls, num)
+    elif m := re.search("^[0-9]+$", l):
         num = int(l)
         update(qsls[num])
         num += 1
+        print_qsls(qsls, num)
     elif l == '':
         update(qsls[num])
         num += 1
+        print_qsls(qsls, num)
     else:
-        cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call ~* %s ORDER BY start""", (l,))
-        qsls = [''] # numbers are 1-based
+        cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call COLLATE "C" ~* %s ORDER BY start""", (l,))
+        qsls = [{'qslrx': 'Y'}] # numbers are 1-based
         for rec in cur.fetchall():
             qsls.append(rec)
-            print("%d: %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s" %
-                    (rec['n'],
-                    rec['start'], rec['call'], rec['qrg'], rec['mode'],
-                    rec['rsttx'], rec['rstrx'],
-                    rec['qsltx'], rec['qslrx'],
-                    rec['contest'], rec['comment']))
-        num = 1
+        qsl_not_y = [i for i in range(len(qsls)) if qsls[i]['qslrx'] != 'Y']
+        if qsl_not_y:
+            num = min(qsl_not_y)
+        else:
+            num = 1
+        prompt = l
+        print_qsls(qsls, num)
