@@ -20,7 +20,11 @@ else:
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-cur.execute(f"""SELECT qrg::text AS "FREQ",
+cur.execute(f"""SELECT
+        to_char(start, 'YYYYMMDD') AS "QSO_DATE",
+        to_char(start, 'hh24mi') AS "TIME_ON",
+        call AS "CALL",
+        qrg::text AS "FREQ",
         qrg::band AS "BAND",
         case mode
           when 'FSQ' then 'MFSK'
@@ -34,6 +38,7 @@ cur.execute(f"""SELECT qrg::text AS "FREQ",
           when 'FT4' then 'FT4'
           else ''
         end AS "SUBMODE",
+
         CASE qso_via
           WHEN 'QO100' THEN 'SAT'
           ELSE ''
@@ -42,19 +47,22 @@ cur.execute(f"""SELECT qrg::text AS "FREQ",
           WHEN 'QO100' THEN 'QO-100'
           ELSE ''
         END AS "SAT_NAME",
-        to_char(start, 'YYYYMMDD') AS "QSO_DATE",
-        to_char(start, 'hh24mi') AS "TIME_ON",
+        CASE qso_via
+          WHEN 'QO100' THEN '3cm'
+          ELSE ''
+        END AS "BAND_RX",
+
         coalesce(regexp_replace(rsttx, '^599(.)', '599 \\1'), '') AS "RST_SENT",
         coalesce(regexp_replace(rstrx, '^599(.)', '599 \\1'), '') AS "RST_RCVD",
         coalesce(qsltx, 'N') AS "QSL_SENT",
         coalesce(qslrx, 'N') AS "QSL_RCVD",
-        call AS "CALL",
         coalesce(loc, '') AS "GRIDSQUARE",
         coalesce(contest, '') AS "CONTEST",
+
         mycall AS "STATION_CALLSIGN",
         coalesce(mypwr::text, '') AS "TX_PWR",
         coalesce(myloc, '') AS "MY_GRIDSQUARE"
-        FROM log
+        FROM log l
         WHERE coalesce(last_update, start) >= %s
             AND {extra}
         ORDER BY start, call""", [since])
