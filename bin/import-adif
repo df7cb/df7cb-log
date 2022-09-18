@@ -8,6 +8,8 @@ import re
 adiflog, header = adif_io.read_from_file(argv[1])
 if len(argv) > 2:
     contest = argv[2]
+if len(argv) > 3:
+    extx = argv[3]
 
 # fldigi:
 # {'FREQ': '14.069245', 'CALL': 'R3WA', 'MODE': 'PSK63', 'QSO_DATE': '20200315', 'TIME_OFF': '114608', 'TIME_ON': '114500', 'RST_RCVD': '238', 'RST_SENT': '238', 'BAND': '20m', 'COUNTRY': 'European Russia', 'CQZ': '16', 'SRX': '239', 'STX': '000'}
@@ -31,22 +33,24 @@ for qso in adiflog:
     elif 'CONTEST_ID' in qso:
         rec['contest'] = qso['CONTEST_ID']
 
+    rec['rsttx'] = qso['RST_SENT']
     if 'STX' in qso:
-        rec['rsttx'] = "%s%s" % (qso['RST_SENT'], qso['STX'])
+        rec['stx'] = qso['STX']
+    if len(argv) > 3:
+        rec['extx'] = extx
+    elif 'STX_STRING' in qso:
+        rec['extx'] = qso['STX_STRING']
         #rec['rsttx'] = "%s%s 14" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
         #rec['rsttx'] = f"{qso['RST_SENT']}{qso['STX']} {qso['TIME_ON'][:4]}" # BARTG HF RTTY Contest
-    else:
-        rec['rsttx'] = qso['RST_SENT']
 
+    rec['rstrx'] = qso['RST_RCVD']
     if 'SRX' in qso:
-        rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX'])
-    elif 'SRX_STRING' in qso:
-        rec['rstrx'] = "%s%s" % (qso['RST_RCVD'], qso['SRX_STRING'])
-    elif 'RST_RCVD' in qso:
-        rec['rstrx'] = qso['RST_RCVD']
-    else:
-        rec['rstrx'] = '599'
+        rec['srx'] = qso['SRX']
+    if 'SRX_STRING' in qso:
+        rec['exrx'] = qso['SRX_STRING']
+        if m := re.search(r'\b([A-R][A-R][0-9][0-9](?:[A-Xa-x][A-Xa-x])?)\b', qso['SRX_STRING']):
+            rec['loc'] = m.group(1)
 
     #if 'STATE' in qso:
     #    rec['rstrx'] = "%s%02d%s" % ("599", int(qso['CQZ']), qso['STATE'])
