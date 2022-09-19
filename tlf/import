@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PATH=$PATH:$(dirname $0)
+PATH=$PATH:$(dirname $0):$(dirname $0/../bin)
 
 CONTEST="${1:-OK1WC Memorial Contest}"
 LOG="${2:-$(date +%F)-$(echo $CONTEST | tr 'A-Z ' 'a-z_').log}"

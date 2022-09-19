@@ -29,17 +29,24 @@ cur.execute("""select
 
 info = cur.fetchall()[0]
 
-cur.execute("""select
+cur.execute(r"""select
     round(qrg * 1000.0)::text qrg,
     to_char(start, 'YYYY-MM-DD') as date,
     to_char(start, 'hh24mi') as time,
     call as call,
     case mode when 'SSB' then 'PH'
               when 'CW' then 'CW'
+              when 'FM' then 'FM'
               when 'RTTY' then 'RY'
-              else mode||'-FIXME' end as mode,
-    regexp_replace(rsttx, '^(5[1-9]9?)', '\\1 ') as rst_sent,
-    regexp_replace(rstrx, '^(5[1-9]9?)', '\\1 ') as rst_rcvd
+              else 'DG' end as mode,
+    concat_ws(' ',
+      regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\1 \2'),
+      nnn(stx),
+      extx) as rst_sent,
+    concat_ws(' ',
+      regexp_replace(rstrx, '^(5[1-9]9?)(..)', '\1 \2'),
+      nnn(srx),
+      exrx) as rst_rcvd
     from log
     where start > now() - %s::interval
     and contest = %s
@@ -87,29 +94,24 @@ CATEGORY-TRANSMITTER: ONE
 # QSO: 7036 CW 2022-06-27 1639 DF7CB 599 001 SD6M 599 014 0
 
 call_len = 0
-nr_len = 0
+rst_rcvd_len = 0
 
 for qso in records:
     if len(qso['call']) > call_len:
         call_len = len(qso['call'])
-    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
-    if len(nrrx) > nr_len:
-        nr_len = len(nrrx)
+    if len(qso['rst_rcvd']) > rst_rcvd_len:
+        rst_rcvd_len = len(qso['rst_rcvd'])
 
 for qso in records:
-    rsttx, _, nrtx = qso['rst_sent'].partition(' ')
-    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
     f.write('QSO: ' + ' '.join([
         qso['qrg'].ljust(5),
         qso['mode'],
         qso['date'],
         qso['time'],
         info['mycall'],
-        rsttx,
-        nrtx, #nrtx[:3],
+        qso['rst_sent'],
         qso['call'].ljust(call_len),
-        rstrx,
-        nrrx.ljust(nr_len), #nrrx[:3],
+        qso['rst_rcvd'].ljust(rst_rcvd_len),
         '0', # transmitter number
         ]) + '\n')
 

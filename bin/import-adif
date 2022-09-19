@@ -39,7 +39,8 @@ for qso in adiflog:
     if len(argv) > 3:
         rec['extx'] = extx
     elif 'STX_STRING' in qso:
-        rec['extx'] = qso['STX_STRING']
+        if qso['STX_STRING'] != qso['STX']:
+            rec['extx'] = qso['STX_STRING']
         #rec['rsttx'] = "%s%s 14" % (qso['RST_SENT'], qso['STX'])
         #rec['rsttx'] = "%s%s" % (qso['RST_SENT'], '14')
         #rec['rsttx'] = f"{qso['RST_SENT']}{qso['STX']} {qso['TIME_ON'][:4]}" # BARTG HF RTTY Contest

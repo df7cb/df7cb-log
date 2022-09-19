@@ -55,7 +55,11 @@ cur.execute(f"""SELECT
         coalesce(regexp_replace(rsttx, '^599(.)', '599 \\1'), '') AS "RST_SENT",
         coalesce(regexp_replace(rstrx, '^599(.)', '599 \\1'), '') AS "RST_RCVD",
         coalesce(qsltx, 'N') AS "QSL_SENT",
-        coalesce(qslrx, 'N') AS "QSL_RCVD",
+        case qslrx
+          when 'Y' then 'Y' -- TNX
+          when 'R' then 'R' -- PSE
+          else 'i' -- N means PSE at qslshop.de
+        end as "QSL_RCVD",
         coalesce(loc, '') AS "GRIDSQUARE",
         coalesce(contest, '') AS "CONTEST",
 
