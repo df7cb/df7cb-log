@@ -4,6 +4,9 @@
     <!-- https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css -->
     <link rel="stylesheet" href="ol.css" type="text/css">
     <style>
+      body {
+       overflow-y: scroll; /* show vertical scroll bar */
+      }
       .map {
         height: 600px;
         width: 100%;
