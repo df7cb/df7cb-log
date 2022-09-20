@@ -34,11 +34,13 @@ cur.execute(r"""select
     to_char(start, 'YYYY-MM-DD') as date,
     to_char(start, 'hh24mi') as time,
     call as call,
-    case mode when 'SSB' then 'PH'
-              when 'CW' then 'CW'
-              when 'FM' then 'FM'
-              when 'RTTY' then 'RY'
-              else 'DG' end as mode,
+    case
+      when mode in ('CW', 'FM') then mode
+      when mode in ('RTTY') then 'RY'
+      when mode in ('SSB') then 'PH'
+      when mode ~ 'PSK' then 'PS'
+      else 'DG'
+    end as mode,
     concat_ws(' ',
       regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\1 \2'),
       nnn(stx),
