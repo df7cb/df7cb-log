@@ -1,15 +1,24 @@
 #!/usr/bin/python3
 
 import adif_io
-from sys import argv
+import argparse
 import psycopg2, psycopg2.extras
 import re
 
-adiflog, header = adif_io.read_from_file(argv[1])
-if len(argv) > 2:
-    contest = argv[2]
-if len(argv) > 3:
-    extx = argv[3]
+argparser = argparse.ArgumentParser(description="Import an ADIF log into PostgreSQL")
+argparser.add_argument("-l", "--livelog",
+                       action=argparse.BooleanOptionalAction,
+                       help="import into livelog table")
+argparser.add_argument("logfile", help="logfile")
+argparser.add_argument("contest", help="contest")
+argparser.add_argument("extx", help="exchange sent by us")
+args = argparser.parse_args()
+
+adiflog, header = adif_io.read_from_file(args.logfile)
+#if len(argv) > 2:
+#    contest = argv[2]
+#if len(argv) > 3:
+#    extx = argv[3]
 
 # fldigi:
 # {'FREQ': '14.069245', 'CALL': 'R3WA', 'MODE': 'PSK63', 'QSO_DATE': '20200315', 'TIME_OFF': '114608', 'TIME_ON': '114500', 'RST_RCVD': '238', 'RST_SENT': '238', 'BAND': '20m', 'COUNTRY': 'European Russia', 'CQZ': '16', 'SRX': '239', 'STX': '000'}
@@ -28,16 +37,16 @@ for qso in adiflog:
     rec['mode'] = qso['MODE']
     rec['qrg'] = qso['FREQ']
 
-    if len(argv) > 2:
-        rec['contest'] = contest
+    if len(args.contest) > 2:
+        rec['contest'] = args.contest
     elif 'CONTEST_ID' in qso:
         rec['contest'] = qso['CONTEST_ID']
 
     rec['rsttx'] = qso['RST_SENT']
     if 'STX' in qso:
         rec['stx'] = qso['STX']
-    if len(argv) > 3:
-        rec['extx'] = extx
+    if args.extx:
+        rec['extx'] = args.extx
     elif 'STX_STRING' in qso:
         if qso['STX_STRING'] != qso['STX']:
             rec['extx'] = qso['STX_STRING']
@@ -90,10 +99,14 @@ input("Continue? ")
 psycopg2.extensions.register_adapter(dict, psycopg2.extras.Json) # allow inserting dicts as jsonb
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor()
-cur.execute("TRUNCATE log2")
+if args.livelog:
+    logtable = "livelog"
+else:
+    logtable = "log2"
+cur.execute(f"TRUNCATE {logtable}")
 
 for rec in log:
-    insert = "INSERT INTO log2 (" + \
+    insert = f"INSERT INTO {logtable} (" + \
         ', '.join(rec.keys()) + \
         ') VALUES (' + \
         ', '.join(['%s' for x in rec]) + \
@@ -101,9 +114,10 @@ for rec in log:
     args = [x for x in rec.values()]
     cur.execute(insert, args)
 
-cur.execute("""INSERT INTO log
-    SELECT * FROM log2 WHERE NOT EXISTS
-        (SELECT * FROM log WHERE log2.start = log.start and log2.call = log.call)""")
+if not args.livelog:
+    cur.execute("""INSERT INTO log
+        SELECT * FROM log2 WHERE NOT EXISTS
+            (SELECT * FROM log WHERE log2.start = log.start and log2.call = log.call)""")
 print(cur.rowcount, "new QSOs")
 
 conn.commit()
