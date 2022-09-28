@@ -128,7 +128,7 @@ last_qsos as (select
   cty,
   mode,
   round(qrg, 3) as qrg,
-  concat(rsttx, '/', rstrx) as rst,
+  concat_ws(' ', rsttx, extx, '/', rstrx, exrx) as rst,
   loc,
   case qslrx when 'Y' then '✅' when 'R' then '⌛' end as qsl,
   case when lotw then '✅' end as lotw,

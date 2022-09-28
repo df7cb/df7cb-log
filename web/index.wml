@@ -115,7 +115,7 @@ Call <input type="text" name="call" id="call">
   <th>Cty</th>
   <th>Mode</th>
   <th>MHz</th>
-  <th>RST</th>
+  <th>RST TX/RX</th>
   <th>Loc</th>
   <th>QSL</th>
   <th>LoTW</th>
