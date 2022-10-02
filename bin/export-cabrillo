@@ -43,11 +43,9 @@ cur.execute(r"""select
     end as mode,
     concat_ws(' ',
       regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\1 \2'),
-      nnn(stx),
       extx) as rst_sent,
     concat_ws(' ',
       regexp_replace(rstrx, '^(5[1-9]9?)(..)', '\1 \2'),
-      nnn(srx),
       exrx) as rst_rcvd
     from log
     where start > now() - %s::interval
@@ -56,6 +54,9 @@ cur.execute(r"""select
     (age, contest))
 
 records = cur.fetchall()
+if len(records) == 0:
+    print("No QSOs found")
+    exit(1)
 
 # write output
 
@@ -66,9 +67,9 @@ else:
 print(f"Writing {filename}")
 f = open(filename, 'w')
 
-if info['mypwr'] <= 10:
+if info['mypwr'] is not None and info['mypwr'] <= 10:
     mypwr = 'QRP'
-elif info['mypwr'] <= 100:
+elif info['mypwr'] is None or info['mypwr'] <= 100:
     mypwr = 'LOW'
 else:
     mypwr = 'HIGH'
