@@ -6,13 +6,16 @@ import re
 import sys
 import psycopg2
 
-opts, args = getopt.getopt(sys.argv[1:], "ln")
+opts, args = getopt.getopt(sys.argv[1:], "e:ln")
 noop = False
 
+extx = None
 logtable = "log"
 
 for o, a in opts:
-    if o == '-l':
+    if o == '-e':
+        extx = a
+    elif o == '-l':
         logtable = "livelog"
     elif o == '-n':
         noop = True
@@ -69,7 +72,10 @@ with open(args[1]) as f:
 
     # my rst:
     qso['rsttx'] = rsttx
-    qso['extx'] = serial
+    if extx:
+        qso['extx'] = extx
+    else:
+        qso['extx'] = serial
     #qso['extx'] = '14'        # my WAZ/CQ zone
     #qso['extx'] = '28'        # my ITU zone
     #qso['extx'] = 'R10'       # my DOK
