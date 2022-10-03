@@ -1,5 +1,6 @@
 \set contest 'XYZ Contest'
 \pset null ''
+\pset title :contest
 
 -- generic contest
 with bands as (
@@ -39,6 +40,24 @@ union all
 select null, sum(qso), sum(dxcc), sum(cqzone), sum(states), sum(points) from bands
 union all
 select null, null, null, null, null, (sum(dxcc) + sum(cqzone) + sum(states)) * sum(points) from bands;
+
+-- Deutscher Telegrafie Contest
+with bands as (
+    select qrg::band as "Band",
+        count(*) as "QSO",
+        sum(case when call COLLATE "C" ~ '0(HSC|ACW|AGC|AG|DA)$' then 2
+                else 1 end)
+          as "QSO-Punkte",
+        count(distinct exrx) as "LDK",
+        array_agg(distinct exrx) as "Multis"
+        from log
+        where contest = :'contest' and start >= current_date - '5 days'::interval
+        group by qrg::band)
+select "Band"::text, "QSO", "QSO-Punkte", "LDK", "Multis" from bands
+union all
+select 'Summe', sum("QSO"), sum("QSO-Punkte"), sum("LDK"), null from bands
+union all
+select 'Score', null, null, sum("QSO-Punkte") * sum("LDK"), null from bands;
 
 -- YO DX
 with bands as (
