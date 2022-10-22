@@ -20,7 +20,6 @@ CQDELAY=5
 TXDELAY=2
 #---sidetone (200...800, 0 = mute)
 CWTONE=800
-CWBANDWIDTH=500
 # cluster
 #TELNETHOST=arcluster.reversebeacon.net
 #TELNETPORT=7000
