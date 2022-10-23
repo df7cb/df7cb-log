@@ -1,0 +1,9 @@
+version: '1'
+streams:
+- uri: '/log_update'
+  type: 'websocket'
+  datasource: 'cb'
+  channel: 'log_update'
+datasources:
+- name: 'cb'
+  dbname: 'cb'
