@@ -70,3 +70,15 @@ DROP TABLE IF EXISTS livelog;
 CREATE TABLE livelog (LIKE log INCLUDING ALL);
 CREATE TRIGGER log_insert BEFORE INSERT ON livelog FOR EACH ROW EXECUTE PROCEDURE logtrigger();
 CREATE OR REPLACE VIEW alllog AS SELECT * FROM log UNION ALL SELECT * FROM livelog;
+
+-- websocket notification
+create or replace function log_notify()
+  returns trigger
+  language plpgsql
+as $$begin notify log_update; return new; end;$$;
+
+create trigger log_notify after insert or update or delete on log
+for each statement execute function log_notify();
+
+create trigger log_notify after insert or update or delete on livelog
+for each statement execute function log_notify();

@@ -662,6 +662,9 @@ var main = function (data) { // called when log info has been received
   mode.addEventListener('change', map_update);
   mycall.addEventListener('change', map_update);
   time.addEventListener('change', map_update);
+
+  notifier = new WebSocket('wss://www.df7cb.de/df7cb/log/log_update');
+  notifier.onmessage = map_update;
 };
 
 send_loginfo_request(main);
