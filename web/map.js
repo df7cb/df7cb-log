@@ -649,6 +649,12 @@ vectorSource.addEventListener('change', log_update);
 
 // main //////////////////////////////////////////////////////
 
+var start_notifier = function () {
+  notifier = new WebSocket('wss://www.df7cb.de/df7cb/log/log_update');
+  notifier.onmessage = map_update;
+  notifier.onclose = start_notifier;
+}
+
 var main = function (data) { // called when log info has been received
   populate_dropdowns(data);
   update_menus_from_url();
@@ -663,8 +669,7 @@ var main = function (data) { // called when log info has been received
   mycall.addEventListener('change', map_update);
   time.addEventListener('change', map_update);
 
-  notifier = new WebSocket('wss://www.df7cb.de/df7cb/log/log_update');
-  notifier.onmessage = map_update;
+  start_notifier();
 };
 
 send_loginfo_request(main);
