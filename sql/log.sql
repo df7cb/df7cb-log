@@ -75,10 +75,11 @@ CREATE OR REPLACE VIEW alllog AS SELECT * FROM log UNION ALL SELECT * FROM livel
 create or replace function log_notify()
   returns trigger
   language plpgsql
-as $$begin notify log_update; return new; end;$$;
+as $$begin perform pg_notify('log_update', TG_OP); return new; end;$$;
 
 create trigger log_notify after insert or update or delete on log
 for each statement execute function log_notify();
 
-create trigger log_notify after insert or update or delete on livelog
+-- no delete trigger on livelog so refreshes don't trigger two notifications
+create trigger livelog_notify after insert or update on livelog
 for each statement execute function log_notify();
