@@ -37,7 +37,7 @@ for qso in adiflog:
     rec['mode'] = qso['MODE']
     rec['qrg'] = qso['FREQ']
 
-    if len(args.contest) > 2:
+    if args.contest:
         rec['contest'] = args.contest
     elif 'CONTEST_ID' in qso:
         rec['contest'] = qso['CONTEST_ID']
