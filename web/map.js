@@ -627,7 +627,7 @@ var log_update = function (evt) {
 
   for (qso of qsos) {
     let row = logTable.insertRow();
-    for (field of ['start', 'call', 'cty', 'mode', 'qrg', 'rst', 'loc', 'qsl', 'lotw', 'contest', 'qso_via']) {
+    for (field of ['mycall', 'start', 'call', 'cty', 'mode', 'qrg', 'rsttx', 'rstrx', 'loc', 'qsl', 'lotw', 'contest', 'qso_via']) {
       let cell = row.insertCell();
       let inner;
       if (qso[field]) {

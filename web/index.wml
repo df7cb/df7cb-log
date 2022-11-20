@@ -110,12 +110,14 @@ Call <input type="text" name="call" id="call">
 <table id="log">
 <thead>
 <tr>
+  <th>My Call</th>
   <th>Start</th>
   <th>Call</th>
   <th>Cty</th>
   <th>Mode</th>
   <th>MHz</th>
-  <th>RST TX/RX</th>
+  <th>RST TX</th>
+  <th>RST RX</th>
   <th>Loc</th>
   <th>QSL</th>
   <th>LoTW</th>
