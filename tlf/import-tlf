@@ -47,11 +47,13 @@ with open(args[1]) as f:
     if line[23] != '0':
         raise Exception('serial does not start with 0')
 
-    qso = { #'mycall': 'PA/DF7CB',
+    qso = { #'mycall': 'DF7CB',
             #'mytrx': 'IC7610',
             #'mytrx': 'IC706',
-            #'mypwr': 5,
-            #'myant': 'FD4'
+            #'mypwr': 100,
+            #'myant': 'Windom',
+            #'myloc': 'JO31HI',
+            #'myqth': 'Krefeld',
             'contest': args[0], # contest name
             }
 
