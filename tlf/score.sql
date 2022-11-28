@@ -22,6 +22,25 @@ select 'Summe', sum("QSO"), sum("QSO-Punkte"), sum("DXCC"), null from bands
 union all
 select 'Score', null, null, sum("QSO-Punkte") * sum("DXCC"), null from bands;
 
+-- CQWWDX
+with bands as (
+    select qrg::band as band,
+        count(distinct call) as qso,
+        count(distinct cty) as dxcc,
+        count(distinct exrx) as cqzone,
+        sum(case when cty = 'DL' then 0
+                when continent(cty::text) = 'EU' then 1
+                else 3 end) as points
+        from log
+        where contest = :'contest' and start >= current_date - '5 days'::interval
+        group by qrg::band
+        order by qrg::band desc)
+select * from bands
+union all
+select null, sum(qso), sum(dxcc), sum(cqzone), sum(points) from bands
+union all
+select null, null, null, null, (sum(dxcc) + sum(cqzone)) * sum(points) from bands;
+
 -- CQWW
 with bands as (
     select qrg::band as band,
@@ -78,8 +97,15 @@ select null, sum(qso), sum(dxcc), sum(county), sum(points) from bands
 union all
 select null, null, null, null, (sum(dxcc) + sum(county)) * sum(points) from bands;
 
+-- operating time
 select
   count(distinct date_round(start, '10 min')) * '10 min'::interval as operating_time
 from log
 where contest = :'contest' and start >= current_date - '5 days'::interval;
 
+-- 5-band QSOs
+select call, array_agg(distinct qrg::band) as bands
+from log
+where contest = :'contest' and start >= current_date - '5 days'::interval
+group by call
+having count(distinct qrg::band) >= 5;
