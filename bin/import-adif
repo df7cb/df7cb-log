@@ -50,7 +50,7 @@ for qso in adiflog:
     elif 'STX_STRING' in qso:
         rec['extx'] = qso['STX_STRING']
 
-    rec['rstrx'] = qso['RST_RCVD']
+    rec['rstrx'] = qso.get('RST_RCVD')
     if 'SRX_STRING' in qso:
         rec['exrx'] = qso['SRX_STRING']
         if m := re.search(r'\b([A-R][A-R][0-9][0-9](?:[A-Xa-x][A-Xa-x])?)\b', qso['SRX_STRING']):

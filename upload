@@ -27,7 +27,7 @@ git pull --ff-only
 
   if [ ${FLDIGI:-} ]; then
     cd ../fldigi
-    ./import logbook.adif
+    ../bin/import-adif logbook.adif
   fi
 
   cd ../lotw
@@ -36,9 +36,9 @@ git pull --ff-only
   ../bin/export-adif $LOG $STAMP
   ./lotw-upload $STAMP
   ./clublog-upload $STAMP
+  ./rrdxa-upload $STAMP
   ./dcl-upload $LOG
   ./eqsl-upload $LOG
-  ./rrdxa-upload $LOG
 
   ../bin/export-adif tmp/df7cb-qo100.adif $STAMP "qso_via='QO100'"
   grep -q '<eor>' tmp/df7cb-qo100.adif && ./qo100-upload tmp/df7cb-qo100.adif

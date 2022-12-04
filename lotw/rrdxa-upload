@@ -1,19 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
+set -o pipefail
 
-LOG="$1"
-PW="$(cat $HOME/.priv/pw/rrdxa-pass)"
+STAMP="${1:-yesterday}"
 
-set -x
+mkdir -p tmp
 
-curl -fsS \
-  --cookie-jar .rrdxa-cookies \
-  -F log=DF7CB \
-  -F pass=$PW \
-  -o /dev/null \
-  https://rrdxa.org/wp-login.php \
-  --cookie PHPSESSID \
-  -F ownCall=DF7CB \
-  -F userfile=@$LOG \
-  https://rrdxa.org/rrdxa/applications/log/upload/readlog.php
+psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by 1 order by 1" service=cb | \
+  while read MYCALL; do
+    FILE="tmp/${MYCALL//\//-}.adif"
+    echo "$MYCALL"
+
+    ( set -x
+      ../bin/export-adif $FILE $STAMP "mycall = '$MYCALL'"
+
+      curl --netrc -fsS --output /dev/null \
+        --form station_callsign=$MYCALL \
+        --form operator=DF7CB \
+        --form logfile=@$FILE \
+        https://logbook.rrdxa.org/log/upload/
+    )
+    echo
+  done
