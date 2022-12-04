@@ -61,7 +61,7 @@ cur.execute(f"""SELECT
           else 'i' -- N means PSE at qslshop.de
         end as "QSL_RCVD",
         coalesce(loc, '') AS "GRIDSQUARE",
-        coalesce(contest, '') AS "CONTEST",
+        coalesce(contest, '') AS "CONTEST_ID",
 
         mycall AS "STATION_CALLSIGN",
         coalesce(mypwr::text, '') AS "TX_PWR",
