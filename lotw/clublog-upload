@@ -23,7 +23,7 @@ psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by
         --form callsign=$MYCALL \
         --form file=@$FILE \
         --form api=$APIKEY \
-        https://secure.clublog.org/putlogs.php \
+        https://clublog.org/putlogs.php \
       || [ $? = 22 ] # ignore error 403 on re-upload of same file
     )
     echo
