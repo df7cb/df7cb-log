@@ -78,12 +78,7 @@ with open(args[1]) as f:
         qso['extx'] = extx
     else:
         qso['extx'] = serial
-    #qso['extx'] = '14'        # my WAZ/CQ zone
-    #qso['extx'] = '28'        # my ITU zone
-    #qso['extx'] = 'R10'       # my DOK
-    #qso['extx'] = 'JO31'
-    #qso['extx'] = 'JO31HI'
-    #qso['extx'] = 'CHRIS'
+        qso['extx'] = f"{serial} R10"
 
     # their rst:
     qso['rstrx'] = rstrx
