@@ -573,10 +573,17 @@ var log_update = function (evt) {
   let properties = summaryfeature.getProperties();
 
   summary.innerHTML = "<b>Log:</b> " + properties['count'] + " QSO<br />\n";
-  if (properties['countries'])
-    summary.innerHTML += "Countries: " + properties['countries'].join(' ') + "<br />";
-  if (properties['locs'])
-    summary.innerHTML += "Locators: " + properties['locs'].join(' ') + "<br />";
+  if (properties['countries']) {
+    let c = properties['countries'].length;
+    summary.innerHTML += c + " countries: " + properties['countries'].join(' ') + "<br />";
+  }
+  if (properties['locs']) {
+    let c = properties['locs'].length;
+    summary.innerHTML += c + " locators";
+    if (c <= 100)
+      summary.innerHTML += ": " + properties['locs'].join(' ');
+    summary.innerHTML += "<br />";
+  }
   summary.innerHTML +=
     "Years: " + properties['years'] + "<br />" +
     "Modes: " + properties['modes'] + "<br />" +
