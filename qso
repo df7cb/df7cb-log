@@ -38,7 +38,6 @@ conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-mode = 'CW'
 rsttx = '599'
 auto_rst = None
 mycall = 'DF7CB'
@@ -57,16 +56,14 @@ select = """SELECT * FROM (
 ORDER BY start, call"""
 
 while True:
-    log = {
-        'mode': mode,
-    }
+    log = {}
     if contest:
         log['contest'] = contest
     if mycall:
         log['mycall'] = mycall
 
     try:
-        prompt = "%s %s %s> " % (mycall, date, mode)
+        prompt = "%s %s> " % (mycall, date)
         line = input(prompt)
     except (EOFError, KeyboardInterrupt):
         print()
@@ -75,8 +72,7 @@ while True:
     for tok in line.split(" "):
         # mode
         if tok.upper() in ('CW', 'FM', 'FT8', 'PSK31', 'RTTY', 'SSB', 'SSTV'):
-            mode = tok.upper()
-            log['mode'] = mode
+            log['mode'] = tok.upper()
         # date and time
         elif re.search('^\d{4}-\d{2}-\d{2}$', tok):
             date = tok
@@ -188,6 +184,18 @@ while True:
             my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
             my_rig.open()
             log['qrg'] = round(my_rig.get_freq() / 1000000.0, 4)
+
+        if 'mode' not in log:
+            # get frequency from rigctld
+            import Hamlib
+            Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
+            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
+            my_rig.open()
+            (mode_num, bandwidth) = my_rig.get_mode()
+            mode = Hamlib.rig_strrmode(mode_num)
+            if mode in ('USB', 'LSB'):
+                mode = 'SSB'
+            log['mode'] = mode
 
         if log['mode'] in ('CW', 'RTTY'):
             if 'rsttx' not in log:
