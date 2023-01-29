@@ -2,13 +2,14 @@
 
 import atexit
 from datetime import datetime, timezone
+import Hamlib
 import psycopg2
 import psycopg2.extras
 import re
 import readline
+import requests
 import sys
-
-from pyhamtools import LookupLib, Callinfo
+from pyhamtools import LookupLib, Callinfo, frequency
 
 # readline
 
@@ -42,6 +43,12 @@ rsttx = '599'
 auto_rst = None
 mycall = 'DF7CB'
 
+# Hamlib
+Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
+my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
+my_rig.open()
+
+# arguments
 contest = None
 if len(sys.argv) == 2:
     contest = sys.argv[1]
@@ -106,22 +113,25 @@ while True:
             #      qrg += channel['SSBModSettings']['toneFrequency']
 
             # get frequency from rigctld on port 4534
-            import Hamlib
             Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
-            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-            my_rig.set_conf("rig_pathname", "localhost:4534")
-            my_rig.open()
-            freq = my_rig.get_freq()
+            qo100_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
+            qo100_rig.set_conf("rig_pathname", "localhost:4534")
+            qo100_rig.open()
+            freq = qo100_rig.get_freq()
             if log['mode'] == 'CW':
                 freq += 850
             log['qrg'] = round(freq / 1000000.0, 4)
 
             log['qso_via'] = "QO100"
 
-        elif re.search('^\d+(\.\d+)?$', tok):
+        elif re.search('^\d+(\.\d+)?$', tok): # frequency in MHz
             log['qrg'] = tok
-            if int(float(tok)) == 2400:
+            freq = float(tok)
+            if int(freq) == 2400:
                 log['qso_via'] = "QO100"
+            elif freq >= 1000: # guess it's kHz
+                freq /= 1000.0
+                log['qrg'] = freq
 
         # RST handling
         elif re.search('^([45].*)/([45].*)$', tok):
@@ -179,18 +189,10 @@ while True:
 
         if 'qrg' not in log:
             # get frequency from rigctld
-            import Hamlib
-            Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
-            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-            my_rig.open()
             log['qrg'] = round(my_rig.get_freq() / 1000000.0, 4)
 
         if 'mode' not in log:
             # get frequency from rigctld
-            import Hamlib
-            Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
-            my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-            my_rig.open()
             (mode_num, bandwidth) = my_rig.get_mode()
             mode = Hamlib.rig_strrmode(mode_num)
             if mode in ('USB', 'LSB'):
@@ -213,6 +215,7 @@ while True:
         if 'qslrx' not in log:
             log['qslrx'] = 'N'
 
+        # store in database
         print(log)
         insert = "INSERT INTO log (" + \
             ', '.join(log.keys()) + \
@@ -226,6 +229,29 @@ while True:
         except Exception as e:
             print("ERROR: ", e)
             conn.rollback()
+            continue
+
+        # submit spot
+        info = log['mode']
+        if my_rig.get_func(Hamlib.RIG_FUNC_XIT):
+            xit = my_rig.get_xit()
+            if xit >= 500:
+                info += " up " + str(round(xit/1000, 1))
+        data = {
+                'de_call': "DF7CB",
+                'dx_call': log['call'],
+                'frequency': round(log['qrg'] * 1000.0, 1),
+                'info': info,
+               }
+        try:
+            print(f"Submitting to dxsummit.fi: {info} ... ", end='')
+            request = requests.post("http://www.dxsummit.fi/api/v1/spots",
+                                    json=data)
+            print(request.text)
+            request.raise_for_status()
+        except Exception as e:
+            print(e)
+            pass
 
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)
@@ -244,3 +270,16 @@ while True:
                         rec['comment'],
                         str(rec['info'])
                     ]))))
+
+    elif 'qrg' in log:
+        # set frequency and mode in rigctld
+        freq = int(float(log['qrg']) * 1000000)
+        my_rig.set_freq(Hamlib.RIG_VFO_CURR, freq)
+        band_mode = frequency.freq_to_band(freq/1000)
+        if band_mode['mode'] == None:
+            continue
+        if band_mode['mode'] == 'DIGITAL':
+            mode_num = Hamlib.RIG_MODE_PKTUSB
+        else:
+            mode_num = Hamlib.rig_parse_mode(band_mode['mode'])
+        my_rig.set_mode(mode_num)
