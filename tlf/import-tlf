@@ -78,7 +78,7 @@ with open(args[1]) as f:
         qso['extx'] = extx
     else:
         qso['extx'] = serial
-        qso['extx'] = f"{serial} R10"
+        #qso['extx'] = f"{serial} R10"
 
     # their rst:
     qso['rstrx'] = rstrx
