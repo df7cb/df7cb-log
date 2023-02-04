@@ -96,7 +96,7 @@ with open(args[1]) as f:
         qso['dok'] = m.group(1)
 
     # extract locator from exchange
-    if m := re.search('([A-Z]{2}[0-9]{2}(?:[A-Z]{2})?)$', exchange):
+    if m := re.search('([A-R]{2}[0-9]{2}(?:[A-X]{2})?)$', exchange):
         qso['loc'] = m.group(1)
 
     log.append(qso)
