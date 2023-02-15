@@ -139,4 +139,11 @@
     <GRIDSQUARE>JO41ct</GRIDSQUARE>
     <ITUZ>28</ITUZ>
   </StationData>
+  <StationData name="JN87CT">
+    <CALL>OE/DF7CB</CALL>
+    <CQZ>15</CQZ>
+    <DXCC>206</DXCC>
+    <GRIDSQUARE>JN87ct</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
 </StationDataFile>
