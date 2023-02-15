@@ -14,12 +14,7 @@ psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by
 
     ( set -x
       ../bin/export-adif $FILE $STAMP "mycall = '$MYCALL'"
-
-      curl --netrc -fsS --output /dev/null \
-        --form station_callsign=$MYCALL \
-        --form operator=DF7CB \
-        --form logfile=@$FILE \
-        https://logbook.rrdxa.org/log/upload/
+      ./rrdxa-post "$FILE" "$MYCALL"
     )
     echo
   done
