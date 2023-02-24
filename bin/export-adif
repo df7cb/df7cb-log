@@ -64,6 +64,7 @@ cur.execute(f"""SELECT
         coalesce(contest, '') AS "CONTEST_ID",
 
         mycall AS "STATION_CALLSIGN",
+        case mycall when 'DF7CB' then '' else 'DF7CB' end as "OPERATOR",
         coalesce(mypwr::text, '') AS "TX_PWR",
         coalesce(myloc, '') AS "MY_GRIDSQUARE"
         FROM log l

@@ -11,13 +11,14 @@ Amateur radio log file.
 <freq:6>21.255
 <band:3>15m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -27,13 +28,14 @@ Amateur radio log file.
 <freq:6>21.228
 <band:3>15m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -43,13 +45,14 @@ Amateur radio log file.
 <freq:7>28.0279
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -59,13 +62,14 @@ Amateur radio log file.
 <freq:5>28.03
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -75,13 +79,14 @@ Amateur radio log file.
 <freq:7>28.0207
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -91,13 +96,14 @@ Amateur radio log file.
 <freq:5>28.02
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -107,13 +113,14 @@ Amateur radio log file.
 <freq:7>28.0112
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -123,13 +130,14 @@ Amateur radio log file.
 <freq:6>28.002
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -139,13 +147,14 @@ Amateur radio log file.
 <freq:7>28.0383
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -155,13 +164,14 @@ Amateur radio log file.
 <freq:7>28.0331
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -171,13 +181,14 @@ Amateur radio log file.
 <freq:7>28.0309
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -187,13 +198,14 @@ Amateur radio log file.
 <freq:7>28.0076
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -203,13 +215,14 @@ Amateur radio log file.
 <freq:6>28.005
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -219,13 +232,14 @@ Amateur radio log file.
 <freq:7>28.0011
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -235,13 +249,14 @@ Amateur radio log file.
 <freq:7>14.1725
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -251,13 +266,14 @@ Amateur radio log file.
 <freq:7>14.1833
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -267,13 +283,14 @@ Amateur radio log file.
 <freq:6>14.186
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -283,13 +300,14 @@ Amateur radio log file.
 <freq:6>14.196
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -299,13 +317,14 @@ Amateur radio log file.
 <freq:7>14.2029
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -315,13 +334,14 @@ Amateur radio log file.
 <freq:6>14.215
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -331,13 +351,14 @@ Amateur radio log file.
 <freq:7>14.2185
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -347,13 +368,14 @@ Amateur radio log file.
 <freq:7>14.2225
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -363,13 +385,14 @@ Amateur radio log file.
 <freq:6>14.243
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -379,13 +402,14 @@ Amateur radio log file.
 <freq:6>14.255
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -395,13 +419,14 @@ Amateur radio log file.
 <freq:7>14.2581
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -411,13 +436,14 @@ Amateur radio log file.
 <freq:6>14.279
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -427,13 +453,14 @@ Amateur radio log file.
 <freq:4>14.3
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -443,13 +470,14 @@ Amateur radio log file.
 <freq:6>14.318
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -459,13 +487,14 @@ Amateur radio log file.
 <freq:7>14.0512
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -475,13 +504,14 @@ Amateur radio log file.
 <freq:7>14.0535
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -491,13 +521,14 @@ Amateur radio log file.
 <freq:7>14.0485
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -507,13 +538,14 @@ Amateur radio log file.
 <freq:6>14.048
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -523,13 +555,14 @@ Amateur radio log file.
 <freq:7>14.0456
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -539,13 +572,14 @@ Amateur radio log file.
 <freq:7>14.0429
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -555,13 +589,14 @@ Amateur radio log file.
 <freq:7>14.0413
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -571,13 +606,14 @@ Amateur radio log file.
 <freq:7>14.0387
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -587,13 +623,14 @@ Amateur radio log file.
 <freq:6>14.033
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -603,13 +640,14 @@ Amateur radio log file.
 <freq:7>14.0289
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -619,13 +657,14 @@ Amateur radio log file.
 <freq:7>14.0277
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -635,13 +674,14 @@ Amateur radio log file.
 <freq:7>14.0266
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -651,13 +691,14 @@ Amateur radio log file.
 <freq:6>14.025
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -667,13 +708,14 @@ Amateur radio log file.
 <freq:6>14.024
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -683,13 +725,14 @@ Amateur radio log file.
 <freq:6>14.023
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -699,13 +742,14 @@ Amateur radio log file.
 <freq:6>14.021
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -715,13 +759,14 @@ Amateur radio log file.
 <freq:7>14.0192
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -731,13 +776,14 @@ Amateur radio log file.
 <freq:7>14.0127
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -747,13 +793,14 @@ Amateur radio log file.
 <freq:7>21.0291
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -763,13 +810,14 @@ Amateur radio log file.
 <freq:7>21.0318
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -779,13 +827,14 @@ Amateur radio log file.
 <freq:7>21.0163
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -795,13 +844,14 @@ Amateur radio log file.
 <freq:7>21.0141
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -811,13 +861,14 @@ Amateur radio log file.
 <freq:7>21.0349
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -827,13 +878,14 @@ Amateur radio log file.
 <freq:7>21.0337
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -843,13 +895,14 @@ Amateur radio log file.
 <freq:7>21.0332
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -859,13 +912,14 @@ Amateur radio log file.
 <freq:7>21.0218
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -875,13 +929,14 @@ Amateur radio log file.
 <freq:6>21.018
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -891,13 +946,14 @@ Amateur radio log file.
 <freq:7>21.0159
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -907,13 +963,14 @@ Amateur radio log file.
 <freq:7>21.0078
 <band:3>15m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -923,13 +980,14 @@ Amateur radio log file.
 <freq:7>28.0268
 <band:3>10m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -939,13 +997,14 @@ Amateur radio log file.
 <freq:7>14.1861
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -955,13 +1014,14 @@ Amateur radio log file.
 <freq:7>14.2225
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -971,13 +1031,14 @@ Amateur radio log file.
 <freq:6>14.209
 <band:3>20m
 <mode:3>SSB
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:2>59
 <rst_rcvd:2>59
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -987,13 +1048,14 @@ Amateur radio log file.
 <freq:7>14.0252
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1003,13 +1065,14 @@ Amateur radio log file.
 <freq:7>14.0204
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1019,13 +1082,14 @@ Amateur radio log file.
 <freq:7>14.0187
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1035,13 +1099,14 @@ Amateur radio log file.
 <freq:7>14.0182
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1051,13 +1116,14 @@ Amateur radio log file.
 <freq:7>14.0178
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1067,13 +1133,14 @@ Amateur radio log file.
 <freq:7>14.0161
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1083,13 +1150,14 @@ Amateur radio log file.
 <freq:6>14.015
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1099,13 +1167,14 @@ Amateur radio log file.
 <freq:7>14.0144
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1115,13 +1184,14 @@ Amateur radio log file.
 <freq:7>14.0075
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1131,13 +1201,14 @@ Amateur radio log file.
 <freq:7>14.0436
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1147,13 +1218,14 @@ Amateur radio log file.
 <freq:7>14.0362
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1163,13 +1235,14 @@ Amateur radio log file.
 <freq:6>14.034
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1179,13 +1252,14 @@ Amateur radio log file.
 <freq:7>14.0278
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1195,13 +1269,14 @@ Amateur radio log file.
 <freq:7>14.0292
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1211,13 +1286,14 @@ Amateur radio log file.
 <freq:7>14.0325
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1227,13 +1303,14 @@ Amateur radio log file.
 <freq:7>14.0342
 <band:3>20m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1243,13 +1320,14 @@ Amateur radio log file.
 <freq:6>7.0395
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1259,13 +1337,14 @@ Amateur radio log file.
 <freq:6>7.0376
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1275,13 +1354,14 @@ Amateur radio log file.
 <freq:6>7.0364
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1291,13 +1371,14 @@ Amateur radio log file.
 <freq:6>7.0315
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1307,13 +1388,14 @@ Amateur radio log file.
 <freq:6>7.0292
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1323,13 +1405,14 @@ Amateur radio log file.
 <freq:6>7.0288
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1339,13 +1422,14 @@ Amateur radio log file.
 <freq:5>7.025
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1355,13 +1439,14 @@ Amateur radio log file.
 <freq:6>7.0242
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1371,13 +1456,14 @@ Amateur radio log file.
 <freq:5>7.024
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1387,13 +1473,14 @@ Amateur radio log file.
 <freq:6>7.0229
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1403,13 +1490,14 @@ Amateur radio log file.
 <freq:6>7.0203
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1419,13 +1507,14 @@ Amateur radio log file.
 <freq:5>7.017
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1435,13 +1524,14 @@ Amateur radio log file.
 <freq:6>7.0135
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1451,13 +1541,14 @@ Amateur radio log file.
 <freq:6>7.0115
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1467,13 +1558,14 @@ Amateur radio log file.
 <freq:6>7.0225
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1483,13 +1575,14 @@ Amateur radio log file.
 <freq:6>3.5493
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1499,13 +1592,14 @@ Amateur radio log file.
 <freq:4>3.54
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1515,13 +1609,14 @@ Amateur radio log file.
 <freq:6>3.5394
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1531,13 +1626,14 @@ Amateur radio log file.
 <freq:5>3.539
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1547,13 +1643,14 @@ Amateur radio log file.
 <freq:6>3.5384
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1563,13 +1660,14 @@ Amateur radio log file.
 <freq:6>3.5376
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1579,13 +1677,14 @@ Amateur radio log file.
 <freq:6>3.5327
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1595,13 +1694,14 @@ Amateur radio log file.
 <freq:5>3.531
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1611,13 +1711,14 @@ Amateur radio log file.
 <freq:6>3.5295
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1627,13 +1728,14 @@ Amateur radio log file.
 <freq:6>3.5292
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1643,13 +1745,14 @@ Amateur radio log file.
 <freq:6>3.5285
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1659,13 +1762,14 @@ Amateur radio log file.
 <freq:6>3.5281
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1675,13 +1779,14 @@ Amateur radio log file.
 <freq:6>3.5274
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1691,13 +1796,14 @@ Amateur radio log file.
 <freq:6>3.5271
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1707,13 +1813,14 @@ Amateur radio log file.
 <freq:6>3.5228
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1723,13 +1830,14 @@ Amateur radio log file.
 <freq:6>3.5203
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1739,13 +1847,14 @@ Amateur radio log file.
 <freq:6>3.5157
 <band:3>80m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1755,13 +1864,14 @@ Amateur radio log file.
 <freq:6>7.0336
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1771,13 +1881,14 @@ Amateur radio log file.
 <freq:6>7.0309
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1787,13 +1898,14 @@ Amateur radio log file.
 <freq:6>7.0293
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1803,13 +1915,14 @@ Amateur radio log file.
 <freq:5>7.027
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1819,13 +1932,14 @@ Amateur radio log file.
 <freq:6>7.0261
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1835,13 +1949,14 @@ Amateur radio log file.
 <freq:5>7.023
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1851,13 +1966,14 @@ Amateur radio log file.
 <freq:5>7.019
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1867,13 +1983,14 @@ Amateur radio log file.
 <freq:6>7.0168
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1883,13 +2000,14 @@ Amateur radio log file.
 <freq:6>7.0162
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1899,13 +2017,14 @@ Amateur radio log file.
 <freq:6>7.0148
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
@@ -1915,13 +2034,14 @@ Amateur radio log file.
 <freq:6>7.0138
 <band:3>40m
 <mode:2>CW
-<contest:13>LZ DX Contest
+<contest_id:13>LZ DX Contest
 <tx_pwr:3>100
 <rst_sent:3>599
 <rst_rcvd:3>599
 <qsl_sent:1>N
 <qsl_rcvd:1>i
 <station_callsign:5>DF0MG
+<operator:5>DF7CB
 <my_gridsquare:6>JO31FE
 <eor>
 
