@@ -232,26 +232,26 @@ while True:
             continue
 
         # submit spot
-        info = log['mode']
-        if my_rig.get_func(Hamlib.RIG_FUNC_XIT):
-            xit = my_rig.get_xit()
-            if xit >= 500:
-                info += " up " + str(round(xit/1000, 1))
-        data = {
-                'de_call': "DF7CB",
-                'dx_call': log['call'],
-                'frequency': round(log['qrg'] * 1000.0, 1),
-                'info': info,
-               }
-        try:
-            print(f"Submitting to dxsummit.fi: {info} ... ", end='')
-            request = requests.post("http://www.dxsummit.fi/api/v1/spots",
-                                    json=data)
-            print(request.text)
-            request.raise_for_status()
-        except Exception as e:
-            print(e)
-            pass
+        #info = log['mode']
+        #if my_rig.get_func(Hamlib.RIG_FUNC_XIT):
+        #    xit = my_rig.get_xit()
+        #    if xit >= 500:
+        #        info += " up " + str(round(xit/1000, 1))
+        #data = {
+        #        'de_call': "DF7CB",
+        #        'dx_call': log['call'],
+        #        'frequency': round(float(log['qrg']) * 1000.0, 1),
+        #        'info': info,
+        #       }
+        #try:
+        #    print(f"Submitting to dxsummit.fi: {info} ... ", end='')
+        #    request = requests.post("http://www.dxsummit.fi/api/v1/spots",
+        #                            json=data)
+        #    print(request.text)
+        #    request.raise_for_status()
+        #except Exception as e:
+        #    print(e)
+        #    pass
 
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)

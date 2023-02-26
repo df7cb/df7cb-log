@@ -2,7 +2,7 @@
 \pset null ''
 \pset title :contest
 
--- generic contest
+-- generic contest with country as multiplier
 with bands as (
     select qrg::band as "Band",
         count(*) as "QSO",
@@ -21,6 +21,26 @@ union all
 select 'Summe', sum("QSO"), sum("QSO-Punkte"), sum("DXCC"), null from bands
 union all
 select 'Score', null, null, sum("QSO-Punkte") * sum("DXCC"), null from bands;
+
+-- generic contest with exchange as multiplier
+with bands as (
+    select qrg::band as "Band",
+        count(*) as "QSO",
+        --sum(case when cty = 'DL' then 1
+        --        when continent(cty::text) = 'EU' then 2
+        --        else 3 end)
+        sum(1)
+          as "QSO-Punkte",
+        count(distinct exrx) as "Multi",
+        array_agg(distinct exrx) as "Multis"
+        from log
+        where contest = :'contest' and start >= current_date - '5 days'::interval
+        group by qrg::band)
+select "Band"::text, "QSO", "QSO-Punkte", "Multi", "Multis" from bands
+union all
+select 'Summe', sum("QSO"), sum("QSO-Punkte"), sum("Multi"), null from bands
+union all
+select 'Score', null, null, sum("QSO-Punkte") * sum("Multi"), null from bands;
 
 -- CQWWDX
 with bands as (
