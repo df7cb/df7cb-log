@@ -53,7 +53,10 @@ cur.execute(f"""SELECT
         END AS "BAND_RX",
 
         coalesce(regexp_replace(rsttx, '^599(.)', '599 \\1'), '') AS "RST_SENT",
+        coalesce(extx, '') as "STX_STRING",
         coalesce(regexp_replace(rstrx, '^599(.)', '599 \\1'), '') AS "RST_RCVD",
+        coalesce(exrx, '') as "SRX_STRING",
+
         coalesce(qsltx, 'N') AS "QSL_SENT",
         case qslrx
           when 'Y' then 'Y' -- TNX
