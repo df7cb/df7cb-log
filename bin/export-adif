@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import os
-import adif
+import adif_export
 import psycopg2
 import psycopg2.extras
 import sys
@@ -36,26 +36,22 @@ cur.execute(f"""SELECT
           when 'FSQ' then 'FSQCALL'
           when 'FST4' then 'FST4'
           when 'FT4' then 'FT4'
-          else ''
         end AS "SUBMODE",
 
         CASE qso_via
           WHEN 'QO100' THEN 'SAT'
-          ELSE ''
         END AS "PROP_MODE",
         CASE qso_via
           WHEN 'QO100' THEN 'QO-100'
-          ELSE ''
         END AS "SAT_NAME",
         CASE qso_via
           WHEN 'QO100' THEN '3cm'
-          ELSE ''
         END AS "BAND_RX",
 
-        coalesce(regexp_replace(rsttx, '^599(.)', '599 \\1'), '') AS "RST_SENT",
-        coalesce(extx, '') as "STX_STRING",
-        coalesce(regexp_replace(rstrx, '^599(.)', '599 \\1'), '') AS "RST_RCVD",
-        coalesce(exrx, '') as "SRX_STRING",
+        regexp_replace(rsttx, '^599(.)', '599 \\1') AS "RST_SENT",
+        extx as "STX_STRING",
+        regexp_replace(rstrx, '^599(.)', '599 \\1') AS "RST_RCVD",
+        exrx as "SRX_STRING",
 
         coalesce(qsltx, 'N') AS "QSL_SENT",
         case qslrx
@@ -63,21 +59,17 @@ cur.execute(f"""SELECT
           when 'R' then 'R' -- PSE
           else 'i' -- N means PSE at qslshop.de
         end as "QSL_RCVD",
-        coalesce(loc, '') AS "GRIDSQUARE",
-        coalesce(contest, '') AS "CONTEST_ID",
+        loc AS "GRIDSQUARE",
+        contest AS "CONTEST_ID",
 
         mycall AS "STATION_CALLSIGN",
         case mycall when 'DF7CB' then '' else 'DF7CB' end as "OPERATOR",
-        coalesce(mypwr::text, '') AS "TX_PWR",
-        coalesce(myloc, '') AS "MY_GRIDSQUARE"
+        mypwr AS "TX_PWR",
+        myloc AS "MY_GRIDSQUARE"
         FROM log l
         WHERE coalesce(last_update, start) >= %s
             AND {extra}
         ORDER BY start, call""", [since])
 
 records = cur.fetchall()
-adif = adif.ADIF()
-adif.write(records, adiffile)
-
-# Remove timestamp from header to make output reproducible
-os.system("sed -i -e 's/ Generated on .*//' %s" % adiffile)
+adif_export.write(records, adiffile)
