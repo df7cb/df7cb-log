@@ -19,7 +19,6 @@ cur.execute("""select
 
     max(mycall::text) mycall,
     max(myloc) myloc,
-    max(myqth) myqth,
     max(mypwr) mypwr
     from log
     where start > now() - %s::interval
@@ -82,7 +81,7 @@ ADDRESS: Rather Str. 76a
 ADDRESS: 47802 Krefeld
 ADDRESS: Germany
 GRID-LOCATOR: {info['myloc']}
-LOCATION: {info['myqth']}
+LOCATION: DX
 CLUB: Rhein Ruhr DX Association
 CONTEST: {contest}
 CATEGORY-ASSISTED: ASSISTED
