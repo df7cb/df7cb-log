@@ -58,6 +58,17 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       --IF NEW.myant IS NULL THEN NEW.myant := 'GP'; END IF;
       IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
     END IF;
+
+  -- Canada
+  ELSIF NEW.mycall = 'VE7/DF7CB' THEN
+    IF NEW.qrg < 60 THEN
+      IF NEW.myqth IS NULL THEN NEW.myqth := 'North Vancouver'; END IF;
+      IF NEW.myloc IS NULL THEN NEW.myloc := 'CN89KH'; END IF;
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC705'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := 'LW'; END IF;
+      IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
+    END IF;
+
   END IF;
 
   -- RST

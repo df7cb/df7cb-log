@@ -2,13 +2,18 @@
 
 import adif_io
 import argparse
-import psycopg2, psycopg2.extras
+import psycopg #, psycopg.extras
 import re
 
 argparser = argparse.ArgumentParser(description="Import an ADIF log into PostgreSQL")
 argparser.add_argument("-l", "--livelog",
                        action=argparse.BooleanOptionalAction,
                        help="import into livelog table")
+argparser.add_argument("-n", "--number",
+                       help="take only this many QSO from the tail of the log")
+argparser.add_argument("-q", "--quiet",
+                       action=argparse.BooleanOptionalAction,
+                       help="don't print QSOs and don't ask for confirmation")
 argparser.add_argument("logfile", help="logfile")
 argparser.add_argument("contest", nargs='?', help="contest")
 argparser.add_argument("extx", nargs='?', help="exchange sent by us")
@@ -19,6 +24,8 @@ adiflog, header = adif_io.read_from_file(args.logfile)
 #    contest = argv[2]
 #if len(argv) > 3:
 #    extx = argv[3]
+if args.number:
+    adiflog = adiflog[-int(args.number):]
 
 # fldigi:
 # {'FREQ': '14.069245', 'CALL': 'R3WA', 'MODE': 'PSK63', 'QSO_DATE': '20200315', 'TIME_OFF': '114608', 'TIME_ON': '114500', 'RST_RCVD': '238', 'RST_SENT': '238', 'BAND': '20m', 'COUNTRY': 'European Russia', 'CQZ': '16', 'SRX': '239', 'STX': '000'}
@@ -28,11 +35,13 @@ adiflog, header = adif_io.read_from_file(args.logfile)
 # <call:6>DF4IAE <gridsquare:4>JN49 <mode:3>FT8 <rst_sent:3>+07 <rst_rcvd:3>-16 <qso_date:8>20220713 <time_on:6>194930 <qso_date_off:8>20220713 <time_off:6>195030 <band:4>70cm <freq:10>432.175814 <station_callsign:5>DN3AJ <my_gridsquare:6>JN39PF <tx_pwr:1>5 <comment:6>IC-705 <eor>
 
 log = []
+fields = []
 
 for qso in adiflog:
     rec = {}
     rec['start'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_ON'])
-    rec['stop'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_OFF'])
+    if 'TIME_OFF' in qso:
+        rec['stop'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_OFF'])
     rec['call'] = qso['CALL']
     rec['mode'] = qso['MODE']
     rec['qrg'] = qso['FREQ']
@@ -70,7 +79,7 @@ for qso in adiflog:
     for key in ['name', 'qth']: # Title Case These Keys
         if key in rec and re.match('[A-Z ]*$', rec[key]):
             rec[key] = rec[key].title()
-    if 'GRIDSQUARE' in qso:
+    if 'GRIDSQUARE' in qso and qso['GRIDSQUARE']:
         rec['loc'] = qso['GRIDSQUARE'].upper()
     if 'CQZ' in qso:
         rec['cq'] = qso['CQZ']
@@ -86,14 +95,22 @@ for qso in adiflog:
         rec['myloc'] = qso['MY_GRIDSQUARE']
     if 'TX_PWR' in qso:
         rec['mypwr'] = qso['TX_PWR']
+    if 'COMMENT' in qso:
+        rec['comment'] = qso['COMMENT']
 
     log.append(rec)
-    print(rec)
+    for field in rec:
+        if not args.quiet:
+            print(f"{field} \033[1m{rec[field]}\033[0m", end=" ")
+        if field not in fields: fields.append(field)
+    if not args.quiet:
+        print()
 
-input("Continue? ")
+if not args.quiet:
+    input("Continue? ")
 
-psycopg2.extensions.register_adapter(dict, psycopg2.extras.Json) # allow inserting dicts as jsonb
-conn = psycopg2.connect("service=cb")
+#psycopg.extensions.register_adapter(dict, psycopg.extras.Json) # allow inserting dicts as jsonb
+conn = psycopg.connect("service=cb")
 cur = conn.cursor()
 
 cur.execute(f"TRUNCATE livelog")
@@ -103,14 +120,10 @@ else:
     logtable = "log2"
     cur.execute(f"TRUNCATE log2")
 
-for rec in log:
-    insert = f"INSERT INTO {logtable} (" + \
-        ', '.join(rec.keys()) + \
-        ') VALUES (' + \
-        ', '.join(['%s' for x in rec]) + \
-        ')'
-    params = [x for x in rec.values()]
-    cur.execute(insert, params)
+copy_q = f"COPY {logtable} ({', '.join(fields)}) FROM STDIN"
+with cur.copy(copy_q) as copy:
+    for rec in log:
+        copy.write_row([rec.get(field) for field in fields])
 
 if not args.livelog:
     cur.execute("""INSERT INTO log

@@ -2,20 +2,4 @@
 
 set -eu
 
-export PGSERVICE="cb"
-
-psql -qX -c "TRUNCATE log2"
-
-# start               stop                call   loc  qrg mode rsttx rstrx mypwr comment operator propagation (since 2.3)
-# 2018-12-25,21:40:45,2018-12-25,21:41:45,YU1WAT,KN04,3.574367,FT8,-15,-11,15,,,
-
-echo -n "wsjtx.log: "
-tail -30 wsjtx.log |
-  sed -e 's/,/ /' -e 's/,/ /2' -e 's/^\(\([^,]*,\)\{8\}[^,]*\).*/\1,/' |
-  psql -X \
-    -c "COPY log2 (start, stop, call, loc, qrg, mode, rsttx, rstrx, mypwr, comment) FROM STDIN (FORMAT CSV, DELIMITER ',')"
-
-echo -n "log: "
-psql -X -c "INSERT INTO log
-    SELECT * FROM log2 WHERE NOT EXISTS
-        (SELECT * FROM log WHERE log2.start = log.start and log2.call = log.call);"
+../bin/import-adif -q -n 20 wsjtx_log.adi
