@@ -146,4 +146,12 @@
     <GRIDSQUARE>JN87ct</GRIDSQUARE>
     <ITUZ>28</ITUZ>
   </StationData>
+  <StationData name="CN89KH">
+    <CALL>VE7/DF7CB</CALL>
+    <CA_PROVINCE>BC</CA_PROVINCE>
+    <CQZ>3</CQZ>
+    <DXCC>1</DXCC>
+    <GRIDSQUARE>CN89kh</GRIDSQUARE>
+    <ITUZ>2</ITUZ>
+  </StationData>
 </StationDataFile>
