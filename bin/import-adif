@@ -53,6 +53,7 @@ for qso in adiflog:
 
     rec['rsttx'] = qso['RST_SENT']
     if args.extx:
+        #rec['extx'] = qso['STX'] + ' ' + args.extx
         rec['extx'] = args.extx
     elif 'STX' in qso:
         rec['extx'] = qso['STX']
