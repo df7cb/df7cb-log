@@ -102,7 +102,9 @@ with open(args[1]) as f:
     log.append(qso)
 
 for qso in log:
-    print (qso)
+    for field in qso:
+        print(f"{field} \033[1m{qso[field]}\033[0m", end=" ")
+    print()
 
     if not noop:
         insert = "INSERT INTO " + logtable + " (" + \
