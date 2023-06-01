@@ -36,6 +36,7 @@ cur.execute(f"""SELECT
           when 'FSQ' then 'FSQCALL'
           when 'FST4' then 'FST4'
           when 'FT4' then 'FT4'
+          else submode
         end AS "SUBMODE",
 
         CASE qso_via

@@ -5,6 +5,7 @@ CREATE TABLE log (
     cty cty REFERENCES country(cty),
     qrg qrg NOT NULL,
     mode text NOT NULL,
+    submode text,
     rsttx text,
     extx text,
     rstrx text,
@@ -59,7 +60,7 @@ END;$$;
 CREATE TRIGGER log_update BEFORE UPDATE ON log FOR EACH ROW EXECUTE PROCEDURE last_update();
 
 CREATE OR REPLACE VIEW logview AS
-    SELECT start, stop::time, call, cty, band(qrg), qrg, mode, rsttx, rstrx, qsltx ||'/'|| qslrx AS qsl, name, qth, loc, dok, contest, comment, mycall, mytrx, mypwr, myqth, myloc, myant FROM log;
+    SELECT start, stop::time, call, cty, band(qrg), qrg, mode, submode, rsttx, rstrx, qsltx ||'/'|| qslrx AS qsl, name, qth, loc, dok, contest, comment, mycall, mytrx, mypwr, myqth, myloc, myant FROM log;
 
 DROP TABLE IF EXISTS log2;
 CREATE TABLE log2 (LIKE log INCLUDING ALL);

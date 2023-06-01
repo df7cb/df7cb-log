@@ -127,7 +127,7 @@ last_qsos as (select
   to_char(start, 'YYYY-MM-DD HH24:MI') as start,
   call,
   cty,
-  mode,
+  concat_ws('/', mode, submode) as mode,
   round(qrg, 3) as qrg,
   concat_ws(' ', rsttx, extx) as rsttx,
   concat_ws(' ', rstrx, exrx) as rstrx,

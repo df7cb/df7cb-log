@@ -44,6 +44,7 @@ for qso in adiflog:
         rec['stop'] = "%s %s" % (qso['QSO_DATE'], qso['TIME_OFF'])
     rec['call'] = qso['CALL']
     rec['mode'] = qso['MODE']
+    if 'SUBMODE' in qso: rec['submode'] = qso['SUBMODE']
     rec['qrg'] = qso['FREQ']
 
     if args.contest:
@@ -90,6 +91,8 @@ for qso in adiflog:
 
     if 'STATION_CALLSIGN' in qso:
         rec['mycall'] = qso['STATION_CALLSIGN']
+    else:
+        rec['mycall'] = 'DF7CB'
     if 'MY_CITY' in qso:
         rec['myqth'] = qso['MY_CITY']
     if 'MY_GRIDSQUARE' in qso:
