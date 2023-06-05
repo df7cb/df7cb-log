@@ -2,7 +2,7 @@
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
 
-CONTEST="${1:-OK1WC}"
+CONTEST="${1:-MWC}"
 EXTX="${2:-}"
 LOG="${3:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__').log}"
 CBR="${LOG%.*}.cbr"
