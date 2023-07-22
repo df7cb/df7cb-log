@@ -6,17 +6,23 @@ import re
 import sys
 import psycopg2
 
-opts, args = getopt.getopt(sys.argv[1:], "e:ln")
+opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:n")
+comment = None
+mycall = None
 noop = False
 
 extx = None
 logtable = "log"
 
 for o, a in opts:
-    if o == '-e':
+    if o == '-c':
+        comment = a
+    elif o == '-e':
         extx = a
     elif o == '-l':
         logtable = "livelog"
+    elif o == '-m':
+        mycall = a
     elif o == '-n':
         noop = True
     else:
@@ -47,7 +53,7 @@ with open(args[1]) as f:
     if line[23] != '0':
         raise Exception('serial does not start with 0')
 
-    qso = { #'mycall': 'DF7CB',
+    qso = {
             #'mytrx': 'IC7610',
             #'mytrx': 'IC706',
             #'mypwr': 100,
@@ -56,6 +62,9 @@ with open(args[1]) as f:
             #'myqth': 'Krefeld',
             'contest': args[0], # contest name
             }
+
+    if mycall: qso['mycall'] = mycall
+    if comment: qso['comment'] = comment
 
     qso['mode'] = line[3:6].rstrip()
     qso['start'] = line[7:22] # date+time
