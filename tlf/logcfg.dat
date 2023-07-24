@@ -15,7 +15,7 @@ CWSPEED=24
 #---weight (-5 ... 5 ms)
 WEIGHT=1
 #---cq delay (in 0,5 s)
-CQDELAY=5
+CQDELAY=4
 #---txdelay (ms)
 TXDELAY=2
 #---sidetone (200...800, 0 = mute)
