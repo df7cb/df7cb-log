@@ -125,6 +125,7 @@ Call <input type="text" name="call" id="call">
   <th>LoTW</th>
   <th>Contest</th>
   <th>QSO via</th>
+  <th><!--QSL image--></th>
 </tr>
 </thead>
 </table>

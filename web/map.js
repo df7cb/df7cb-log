@@ -635,15 +635,23 @@ var log_update = function (evt) {
 
   for (qso of qsos) {
     let row = logTable.insertRow();
-    for (field of ['mycall', 'start', 'call', 'cty', 'mode', 'qrg', 'rsttx', 'rstrx', 'loc', 'qsl', 'lotw', 'contest', 'qso_via']) {
+    for (field of ['mycall', 'start', 'call', 'cty', 'mode', 'qrg', 'rsttx', 'rstrx', 'loc', 'qsl', 'lotw', 'contest', 'qso_via', 'qslid']) {
       let cell = row.insertCell();
       let inner;
       if (qso[field]) {
         if (field == "loc") {
-          inner = document.createElement('a')
+          inner = document.createElement('a');
           inner.innerHTML = qso[field];
           inner.href = "https://k7fry.com/grid/?qth=" + qso[field];
           inner.title = "Show locator grid on external map";
+        } else if (field == "qslid") {
+          img = document.createElement('img');
+          img.src = "qslimage.cgi?qslid=" + qso[field];
+          img.height = 80;
+          inner = document.createElement('a');
+          inner.appendChild(img);
+          inner.href = "qslimage.cgi?qslid=" + qso[field];
+          inner.title = "QSL from " + qso['call'];
         } else {
           inner = document.createTextNode(qso[field]);
         }

@@ -135,7 +135,8 @@ last_qsos as (select
   case qslrx when 'Y' then '✅' when 'R' then '⌛' end as qsl,
   case when lotw then '✅' end as lotw,
   contest,
-  qso_via
+  qso_via,
+  qslid
 from {logtable} log where true {qual} order by log.start desc limit 50),
 u(geojson) as (select st_asgeojson(l.*, 'geometry', '4')::jsonb from l
   union all
