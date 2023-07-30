@@ -154,4 +154,11 @@
     <GRIDSQUARE>CN89kh</GRIDSQUARE>
     <ITUZ>2</ITUZ>
   </StationData>
+  <StationData name="KN25SP">
+    <CALL>YO/DF7CB</CALL>
+    <CQZ>20</CQZ>
+    <DXCC>275</DXCC>
+    <GRIDSQUARE>KN25sp</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
 </StationDataFile>
