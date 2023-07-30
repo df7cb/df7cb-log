@@ -8,8 +8,10 @@
        overflow-y: scroll; /* show vertical scroll bar */
       }
       .map {
-        height: 600px;
+        #height: 600px;
+        max-width: 100%;
         width: 100%;
+        aspect-ratio: 2 / 1;
       }
     </style>
     <!-- https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js -->

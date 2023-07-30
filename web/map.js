@@ -325,8 +325,9 @@ var map = new ol.Map({
     df7cbLayer,
   ],
   view: new ol.View({
-    center: ol.proj.fromLonLat([6.60, 51.37]),
-    zoom: 4
+    center: ol.proj.fromLonLat([0, 0]),
+    zoom: 0,
+    projection: ol.proj.get("EPSG:4326"),
   })
 });
 
