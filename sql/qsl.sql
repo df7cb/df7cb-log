@@ -1,2 +1,10 @@
-CREATE DOMAIN qsl AS char(1)
-    CONSTRAINT valid_qsl_request CHECK (VALUE IN ('Y', 'N', 'R'));
+create table qslimage (
+    qslid integer primary key generated always as identity,
+    width integer,
+    height integer,
+    twidth integer,
+    theight integer,
+    replied boolean,
+    image bytea,
+    thumbnail bytea
+);

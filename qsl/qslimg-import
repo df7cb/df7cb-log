@@ -1,0 +1,103 @@
+#!/usr/bin/python3
+
+import atexit
+import psycopg2
+import psycopg2.extras
+import re
+import readline
+import sys
+
+# PG
+
+conn = psycopg2.connect("service=cb")
+cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+
+# readline
+
+histfile = '.history'
+try:
+    readline.read_history_file(histfile)
+    # default history len is -1 (infinite), which may grow unruly
+    readline.set_history_length(1000)
+except FileNotFoundError:
+    pass
+
+atexit.register(readline.write_history_file, histfile)
+
+# main
+
+def print_qsls(qsls, num):
+    i = 1
+    for qsl in qsls[1:]:
+        print("%s%s%d: %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s %s" %
+              ('>' if num == i else ' ',
+               '\033[1m' if qsl['qslrx'] == 'Y' else '', qsl['n'],
+               qsl['start'].strftime('%d.%m.%Y %H:%M'),
+               qsl['call'],
+               qsl['qrg'], qsl['mode'],
+               qsl['rsttx'], qsl['rstrx'],
+               qsl['qsltx'] or '-', qsl['qslrx'] or '-',
+               qsl['qslid'] or '-',
+               qsl['contest'] or '', qsl['comment'] or ''))
+        i += 1
+
+def via(qsl, manager):
+    args = (manager, qsl['start'], qsl['call'])
+    sql = """UPDATE log SET qsl_via = %s WHERE (start, call) = (%s, %s)"""
+    print(sql % args)
+    cur.execute(sql, args)
+
+def update(qsl, qslid):
+    args = (qslid, qsl['start'], qsl['call'])
+    sql = """UPDATE log SET qslid = %s WHERE (start, call) = (%s, %s)"""
+    print(sql % args)
+    cur.execute(sql, args)
+    conn.commit()
+    qsl['qslid'] = qslid
+
+img = sys.argv[1]
+call = sys.argv[2]
+
+with open(img, "rb") as f:
+    imgdata = f.read()
+cur.execute("insert into qslimage (image) values (%s) returning qslid", (imgdata,))
+(qslid,) = cur.fetchone()
+conn.commit()
+
+num = 1
+cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call COLLATE "C" ~* %s ORDER BY start""", (call,))
+qsls = [{'qslrx': 'Y'}] # numbers are 1-based
+for rec in cur.fetchall():
+    qsls.append(rec)
+print_qsls(qsls, num)
+
+prompt = f'QSL {qslid}'
+while True:
+    try:
+        l = input(f'\033[1m{prompt}>\033[0m ')
+    except (EOFError, KeyboardInterrupt):
+        print()
+        exit()
+
+    if m := re.search("^([0-9]+) (.+)$", l):
+        num = int(m.group(1))
+        via(qsls[num], m.group(2))
+        update(qsls[num], qslid)
+        num += 1
+        print_qsls(qsls, num)
+    elif m := re.search("^[0-9]+$", l):
+        num = int(l)
+        update(qsls[num], qslid)
+        num += 1
+        print_qsls(qsls, num)
+    elif l == '':
+        update(qsls[num], qslid)
+        num += 1
+        print_qsls(qsls, num)
+    else:
+        qsl_not_y = [i for i in range(len(qsls)) if qsls[i]['qslrx'] != 'Y']
+        if qsl_not_y:
+            num = min(qsl_not_y)
+        else:
+            num = 1
+        prompt = l

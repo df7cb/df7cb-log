@@ -24,6 +24,7 @@ CREATE TABLE log (
     lotw boolean,
     eqsl boolean,
     dcl character(1),
+    qslid int references qslimage(qslid),
     qsl_via call,
     contest text,
     comment text,
