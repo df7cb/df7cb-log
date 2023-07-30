@@ -118,14 +118,15 @@ Call <input type="text" name="call" id="call">
   <th>Cty</th>
   <th>Mode</th>
   <th>MHz</th>
+  <th><!--QSO via--></th>
   <th>RST TX</th>
   <th>RST RX</th>
   <th>Loc</th>
+  <th>Contest</th>
   <th>QSL</th>
   <th>LoTW</th>
-  <th>Contest</th>
-  <th>QSO via</th>
   <th><!--QSL image--></th>
+  <th>QSL</th>
 </tr>
 </thead>
 </table>

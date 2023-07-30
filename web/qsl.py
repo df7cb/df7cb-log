@@ -11,43 +11,49 @@ from reportlab.graphics import renderPDF
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-mycall = "DF7CB"
 (qslwidth, qslheight) = (140*mm, 90*mm)
 qslmargin = 2*mm
 
-def qsl(c, call):
+def qsl(c, call, mycall="DF7CB"):
+    # background picture
+    height = 90*mm
+    width = height * 4032/2268 # keep aspect ratio
+    c.setFillAlpha(0.5)
+    c.drawImage('traarer_muehle_r.jpg', 0*mm, 0*mm, width=width, height=height)
+    c.setFillAlpha(1.0)
+
     # QSO table
     cur.execute("""SELECT
-            regexp_replace(call, '0', 'Ø', 'g') AS call,
+            mycall,
+            call,
+            regexp_replace(call collate "C", '0', 'Ø', 'g') AS call_formatted,
             regexp_replace(date_trunc('minute', start::timestamp)::text, ':00$', '') AS start,
             start::date AS qso_date,
             regexp_replace(date_trunc('minute', start::time)::text, ':00$', '') AS time_on,
             round(qrg, 3) AS freq,
             mode,
-            rsttx, rstrx,
-            mycall,
+            concat_ws(' ', rsttx, extx) as rsttx,
+            concat_ws(' ', rstrx, exrx) as rstrx,
             concat_ws(E'\n',
+              nullif(concat_ws(', ',
+                nullif(mycall, 'DF7CB'),
+                nullif(myqth, 'Krefeld'),
+                nullif(upper(myloc), 'JO31HI')
+              ), ''),
               nullif(concat_ws(', ',
                 mytrx,
                 mypwr || ' W',
                 myant
-              ), ''),
-              nullif(concat_ws(', ',
-                nullif(mycall, 'DF7CB'),
-                nullif(myqth, 'Krefeld'),
-                nullif(myloc, 'JO31HI')
               ), '')
             ) AS mystn,
-            CASE WHEN qslrx = 'Y' THEN 'QSL rcvd, tnx!'
-                 WHEN qslrx IN ('N', 'R') THEN 'Pse QSL'
-                 ELSE qsltx || ' ' || qslrx
-            END AS qsl,
-            CASE WHEN qslrx = 'J' THEN 'TNX' ELSE 'PSE' END AS qsl_rcvd
-            FROM log WHERE call = %s
-            ORDER BY start, call""", (call,))
+            CASE WHEN qslrx = 'Y' OR lotw IS NOT NULL or qslid IS NOT NULL THEN 'TNX'
+            ELSE 'PSE' END AS qsl_rcvd
+            FROM log
+            WHERE call = %s AND mycall = %s
+            ORDER BY start, call""", (call, mycall))
 
     qsos = [['Confirming our QSO\nDate',
-             'Freq', 'Mode',
+             'Freq\nMHz', 'Mode\n2-way',
              'RST\nsent', 'RST\nrcvd',
              'My Station\nTrx, Power, Ant',
              'QSL',
@@ -56,14 +62,14 @@ def qsl(c, call):
 
     call_formatted = ''
     for qso in cur.fetchall():
-        mycall = qso['mycall']
-        call_formatted = qso['call']
+        call_formatted = qso['call_formatted']
         qsos.append([qso['start'], qso['freq'], qso['mode'],
                      qso['rsttx'], qso['rstrx'],
                      qso['mystn'],
-                     qso['qsl'],
+                     qso['qsl_rcvd'],
                     ])
-        adif += "\n%s;%s;%s;%s;%s;%s;%s;" % (qso['mycall'],
+        adif += "\n%s;%s;%s;%s;%s;%s;%s;" % \
+                (qso['mycall'],
                 qso['qso_date'], qso['time_on'],
                 qso['freq'], qso['mode'],
                 qso['rsttx'],
@@ -98,11 +104,12 @@ def qsl(c, call):
     # picture
     height = 60*mm
     width = height * 768/996 # keep aspect ratio
-    c.drawImage('traarer_muehle.png', 10*mm, 29*mm, width=width, height=height)
+    c.drawImage('traarer_muehle.png', 10*mm, 29*mm, width=width, height=height,
+            mask=[255,256, 255,256, 255,256])
     c.saveState()
     c.setFont("Helvetica", 5)
     c.rotate(90)
-    c.drawString(30*mm, -3.5*mm, "Picture (c) Julia Berg")
+    c.drawString(30*mm, -3.5*mm, "Picture (C) Julia Berg")
     c.restoreState()
 
     # recipient
@@ -153,8 +160,8 @@ def qsl(c, call):
     text.textLines("""
         cb@df7cb.de
         www.df7cb.de
-        Twitter @df7cb
-        DOK QØ2
+        DARC DOK R10
+        Rhein Ruhr DX Association
         """)
     c.drawText(text)
 

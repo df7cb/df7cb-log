@@ -635,11 +635,13 @@ var log_update = function (evt) {
 
   for (qso of qsos) {
     let row = logTable.insertRow();
-    for (field of ['mycall', 'start', 'call', 'cty', 'mode', 'qrg', 'rsttx', 'rstrx', 'loc', 'qsl', 'lotw', 'contest', 'qso_via', 'qslid']) {
+    for (field of ['mycall', 'start', 'call', 'cty', 'mode', 'qrg', 'qso_via', 'rsttx', 'rstrx', 'loc', 'contest', 'qsl', 'lotw', 'qslid']) {
       let cell = row.insertCell();
       let inner;
       if (qso[field]) {
-        if (field == "loc") {
+        if (field == 'qso_via') {
+          inner = document.createTextNode("via " + qso[field]);
+        } else if (field == "loc") {
           inner = document.createElement('a');
           inner.innerHTML = qso[field];
           inner.href = "https://k7fry.com/grid/?qth=" + qso[field];
@@ -659,6 +661,14 @@ var log_update = function (evt) {
         inner = document.createTextNode('');
       cell.appendChild(inner);
     }
+    let cell = row.insertCell();
+    let link = document.createElement('a');
+    link.innerHTML = "Get QSL";
+    link.href = "qsl.cgi?call=" + qso['call'];
+    if (qso['mycall'] != "DF7CB")
+      link.href += "&mycall=" + qso['mycall'];
+    link.title = qso['mycall'] + " QSL for QSOs with " + qso['call'];
+    cell.appendChild(link);
   }
 };
 vectorSource.addEventListener('change', log_update);
