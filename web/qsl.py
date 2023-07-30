@@ -17,7 +17,7 @@ qslmargin = 2*mm
 def qsl(c, call, mycall="DF7CB"):
     # background picture
     height = 90*mm
-    width = height * 4032/2268 # keep aspect ratio
+    width = height * 1778/1000 # keep aspect ratio
     c.setFillAlpha(0.5)
     c.drawImage('traarer_muehle_r.jpg', 0*mm, 0*mm, width=width, height=height)
     c.setFillAlpha(1.0)
