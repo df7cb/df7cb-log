@@ -48,6 +48,10 @@ Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
 my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
 my_rig.open()
 
+my_rot = Hamlib.Rot(Hamlib.ROT_MODEL_NETROTCTL)
+my_rot.set_conf("rot_pathname", "192.168.0.3")
+my_rot.open()
+
 # arguments
 contest = None
 if len(sys.argv) == 2:
@@ -170,6 +174,10 @@ while True:
         elif re.search('^(\d+)[wW]$', tok):
             match = re.search('^(\d+)[wW]$', tok)
             log['mypwr'] = int(match.group(1))
+
+        # rotator control
+        elif match := re.search('^(\d+)°$', tok):
+            my_rot.set_position(int(match.group(1)), 0)
 
         # generic fields
         elif re.search('^(.+?):(.*)', tok):
