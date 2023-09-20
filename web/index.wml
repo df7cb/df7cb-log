@@ -125,6 +125,8 @@ Call <input type="text" name="call" id="call">
   <th>Contest</th>
   <th>QSL</th>
   <th>LoTW</th>
+  <th colspan="2">My QTH</th>
+  <th colspan="3">My Station</th>
   <th><!--QSL image--></th>
   <th>QSL</th>
 </tr>
