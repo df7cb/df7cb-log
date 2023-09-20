@@ -59,7 +59,10 @@ buf = b""
 while True:
     r, w, x = select.select([s], [], [], None)
     if s in r:
-        buf += s.recv(1024)
+        data = s.recv(1024)
+        if not data:
+            exit(0)
+        buf += data
         while b"\r\n" in buf:
             pos = buf.index(b"\r\n")
             dx(buf[:pos])
