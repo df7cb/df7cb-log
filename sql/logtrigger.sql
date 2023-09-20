@@ -14,7 +14,15 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.mode IS NULL THEN NEW.mode := 'CW'; END IF;
       IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC7610'; END IF;
       --IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-      IF NEW.myant IS NULL THEN NEW.myant := 'FD4'; END IF;
+      IF NEW.myant IS NULL THEN
+        IF NEW.qrg >= 14 THEN
+          NEW.myant := 'Spiderbeam';
+        ELSIF NEW.qrg between 7 and 7.2 THEN
+          NEW.myant := 'Rotary dipole';
+        ELSE
+          NEW.myant := 'FD4';
+        END IF;
+      END IF;
       IF NEW.mypwr IS NULL THEN
         NEW.mypwr := CASE NEW.qrg::band
           WHEN '60m' THEN 15
@@ -27,9 +35,9 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.mode = 'FM' THEN
         IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
         IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
-      ELSE
-        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-        IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
+      --ELSE
+      --  IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
+      --  IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
       END IF;
       IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
 
@@ -66,6 +74,16 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
       IF NEW.myloc IS NULL THEN NEW.myloc := 'CN89KH'; END IF;
       IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC705'; END IF;
       IF NEW.myant IS NULL THEN NEW.myant := 'LW'; END IF;
+      IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
+    END IF;
+
+  -- Romania
+  ELSIF NEW.mycall = 'YO/DF7CB' THEN
+    IF NEW.qrg < 60 THEN
+      IF NEW.myqth IS NULL THEN NEW.myqth := 'Brasov'; END IF;
+      IF NEW.myloc IS NULL THEN NEW.myloc := 'KN25sp'; END IF;
+      IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC705'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := 'Magloop'; END IF;
       IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
     END IF;
 
