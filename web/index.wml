@@ -123,6 +123,7 @@ Call <input type="text" name="call" id="call">
   <th>RST RX</th>
   <th>Loc</th>
   <th>Contest</th>
+  <th>Comment</th>
   <th>QSL</th>
   <th>LoTW</th>
   <th colspan="2">My QTH</th>

@@ -135,6 +135,7 @@ last_qsos as (select
   case qslrx when 'Y' then '✅' when 'R' then '⌛' end as qsl,
   case when lotw then '✅' end as lotw,
   contest,
+  comment,
   qso_via,
   qslid,
   myqth, myloc,
