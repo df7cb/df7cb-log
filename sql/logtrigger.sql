@@ -1,6 +1,9 @@
 CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
     LANGUAGE plpgsql
-    AS $$BEGIN
+    AS $$
+DECLARE
+  ts timestamptz;
+BEGIN
 
   -- fixed
   IF NEW.mycall = 'DF7CB' THEN
@@ -113,6 +116,20 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
   IF NEW.itu IS NULL THEN
     NEW.itu = public.itu(NEW.call);
   END IF;
+
+  -- comment: note new bandpoints
+  if new.comment is null and new.cty is not null then
+    select start into ts from log where cty = new.cty limit 1;
+    if not found then
+      new.comment = 'ATNO';
+    end if;
+  end if;
+  if new.comment is null and new.cty is not null then
+    select start into ts from log where cty = new.cty and qrg::band = new.qrg::band and major_mode(mode) = major_mode(new.mode) limit 1;
+    if not found then
+      new.comment = 'new bandpoint';
+    end if;
+  end if;
 
   RETURN NEW;
 END;$$;
