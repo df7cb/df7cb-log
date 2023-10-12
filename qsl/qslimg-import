@@ -62,7 +62,6 @@ with open(img, "rb") as f:
     imgdata = f.read()
 cur.execute("insert into qslimage (image) values (%s) returning qslid", (imgdata,))
 (qslid,) = cur.fetchone()
-conn.commit()
 
 num = 1
 cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call COLLATE "C" ~* %s ORDER BY start""", (call,))
