@@ -57,7 +57,8 @@ for qso in adiflog:
         #rec['extx'] = qso['STX'] + ' ' + args.extx
         rec['extx'] = args.extx
     elif 'STX' in qso:
-        rec['extx'] = qso['STX']
+        if qso['STX'] != '000':
+            rec['extx'] = qso['STX']
     elif 'STX_STRING' in qso:
         rec['extx'] = qso['STX_STRING']
 
