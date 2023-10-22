@@ -140,7 +140,7 @@ last_qsos as (select
   qslid,
   myqth, myloc,
   mytrx, mypwr, myant
-from {logtable} log where true {qual} order by log.start desc limit 100),
+from {logtable} log where true {qual} order by log.start desc limit 1000),
 u(geojson) as (select st_asgeojson(l.*, 'geometry', '4')::jsonb from l
   union all
   select jsonb_build_object(
