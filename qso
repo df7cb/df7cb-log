@@ -50,7 +50,7 @@ my_rig.open()
 
 my_rot = Hamlib.Rot(Hamlib.ROT_MODEL_NETROTCTL)
 my_rot.set_conf("rot_pathname", "192.168.0.3")
-my_rot.open()
+#my_rot.open()
 
 # arguments
 contest = None
