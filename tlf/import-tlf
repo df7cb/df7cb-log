@@ -69,8 +69,10 @@ with open(args[1]) as f:
     qso['mode'] = line[3:6].rstrip()
     qso['start'] = line[7:22] # date+time
     if laststart == qso['start']: # 2nd QSO in this minute
+        qso['start'] += ':15'
+    elif laststart == qso['start'] + ':15': # 3rd QSO in this minute
         qso['start'] += ':30'
-    elif laststart == qso['start'] + ':30': # 3rd QSO in this minute
+    elif laststart == qso['start'] + ':30': # 4th QSO in this minute
         qso['start'] += ':45'
     laststart = qso['start']
     qso['call'] = line[29:43].rstrip()
