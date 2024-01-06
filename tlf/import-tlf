@@ -11,7 +11,7 @@ comment = None
 mycall = None
 noop = False
 
-extx = None
+extx = "#"
 logtable = "log"
 
 for o, a in opts:
@@ -85,11 +85,7 @@ with open(args[1]) as f:
 
     # my rst:
     qso['rsttx'] = rsttx
-    if extx:
-        qso['extx'] = extx
-    else:
-        qso['extx'] = serial
-        #qso['extx'] = f"{serial} R10"
+    qso['extx'] = extx.replace("#", serial)
 
     # their rst:
     qso['rstrx'] = rstrx

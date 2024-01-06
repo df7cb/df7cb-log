@@ -1,10 +1,23 @@
 #!/bin/sh
 
+set -eu
+
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
 
-CONTEST="${1:-MWC}"
-EXTX="${2:-}"
-LOG="${3:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__').log}"
+while getopts "c:e:" opt ; do
+    case $opt in
+        c) CONTEST="$OPTARG" ;;
+        e) EXTX="$OPTARG" ;;
+        *) exit 5 ;;
+    esac
+done
+# shift away args
+shift $(($OPTIND - 1))
+
+: ${CONTEST:=MWC}
+: ${EXTX:="#"}
+
+LOG="${1:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__').log}"
 CBR="${LOG%.*}.cbr"
 
 [ -f "$LOG" ] || mv contest.log "$LOG"
