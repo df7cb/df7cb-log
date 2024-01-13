@@ -81,7 +81,7 @@ with open(args[1]) as f:
     rsttx = line[44:47].rstrip()
     serial = line[24:27]
     rstrx = line[49:52].rstrip()
-    exchange = line[54:67].strip()
+    exchange = line[54:68].strip()
 
     # my rst:
     qso['rsttx'] = rsttx
