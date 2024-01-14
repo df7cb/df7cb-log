@@ -4,10 +4,12 @@ set -eu
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
 
-while getopts "c:e:" opt ; do
+while getopts "ac:e:u" opt ; do
     case $opt in
+        a) ASSISTED="-a" ;;
         c) CONTEST="$OPTARG" ;;
         e) EXTX="$OPTARG" ;;
+        u) ASSISTED="-u" ;;
         *) exit 5 ;;
     esac
 done
@@ -29,7 +31,7 @@ read ok
 import-tlf ${EXTX:+-e "$EXTX"} "$CONTEST" "$LOG"
 
 git add $LOG
-export-cabrillo "$CONTEST" "$CBR"
+export-cabrillo ${ASSISTED:-} "$CONTEST" "$CBR"
 vi $CBR
 git add $CBR
 v commit -m "$CONTEST" --edit

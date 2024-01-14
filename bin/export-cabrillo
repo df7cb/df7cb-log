@@ -2,14 +2,26 @@
 
 # usage: export-cabrillo <contest name> [<filename>]
 
+import getopt
 import psycopg2
 import psycopg2.extras
 import sys
 
+opts, args = getopt.getopt(sys.argv[1:], "au")
+assisted = 'ASSISTED'
+
+for o, a in opts:
+    if o == '-a':
+        assisted = 'ASSISTED'
+    elif o == '-u':
+        assisted = 'NON-ASSISTED'
+    else:
+        assert False, "Unknown option %s" % (o)
+
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-contest = sys.argv[1]
+contest = args[0]
 age = '7 days'
 
 cur.execute("""select
@@ -59,8 +71,8 @@ if len(records) == 0:
 
 # write output
 
-if len(sys.argv) > 2:
-    filename = sys.argv[2]
+if len(args) > 1:
+    filename = args[1]
 else:
     filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}.cbr"
 print(f"Writing {filename}")
@@ -84,7 +96,7 @@ GRID-LOCATOR: {info['myloc']}
 LOCATION: DX
 CLUB: Rhein Ruhr DX Association
 CONTEST: {contest}
-CATEGORY-ASSISTED: ASSISTED
+CATEGORY-ASSISTED: {assisted}
 CATEGORY-BAND: {info['band'][0] if len(info['band']) == 1 else 'ALL'}
 CATEGORY-MODE: {info['mode'][0] if len(info['mode']) == 1 else 'MIXED'}
 CATEGORY-OPERATOR: SINGLE-OP
