@@ -1,41 +1,40 @@
 RULES=contest
+#RULES=mwc
+CALL=DF7CB
 #ITUMULT
 SHORT_SERIAL
+#
 EDITOR=vi
-CALL=DF7CB
-TIME_OFFSET=0
-TIME_MASTER
+# 0 black, 1 red, 2 green, 3 yellow, 4 blue, 5 magenta, 6 cyan, 7 white
+# (Header and footer)
+TLFCOLOR1=20
+# (Pop up windows)
+TLFCOLOR2=67
+# (Log window)
+TLFCOLOR3=70
+# (Markers/dupe colour)
+TLFCOLOR4=57
+# (Input fields)
+TLFCOLOR5=43
+# (Window frames)
+TLFCOLOR6=63
+#
 HAMLIB_KEYER
-#NETKEYER
-#NETKEYERPORT=6789
-#NETKEYERPORT=6790
-#NETKEYERHOST=127.0.0.1
 #---speed (6 ... 60 wpm)
 CWSPEED=24
-#---weight (-5 ... 5 ms)
-WEIGHT=1
 #---cq delay (in 0,5 s)
 CQDELAY=4
-#---txdelay (ms)
-TXDELAY=2
-#---sidetone (200...800, 0 = mute)
-CWTONE=800
 # cluster
 #TELNETHOST=arcluster.reversebeacon.net
 #TELNETPORT=7000
 #TELNETHOST=db0sue.de
 #TELNETPORT=8000
-TELNETHOST=localhost
-TELNETPORT=7000
-CLUSTERLOGIN=DF7CB-1
+#TELNETHOST=localhost
+#TELNETPORT=7000
+#CLUSTERLOGIN=DF7CB-1
 #################################
-#                               #
 #  RADIO CONTROL                #
-# (comment out if not present)  #
-# Rigmodel = Hamlib index, here #
-#           for ten tec OMNI VI #
 #################################
-#
 RADIO_CONTROL
 # rigctld
 RIGMODEL=2
@@ -48,7 +47,6 @@ RIGSPEED=115200
 RIGPORT=localhost
 #RIGPORT=localhost:4533
 #RIGPORT=/dev/ttyUSB7610
-#RIGPORT=/dev/ttyACM1
 #RIGPORT=/tmp/kappanhang-IC-705.pty
 #RIGPTT
 #
@@ -57,13 +55,11 @@ RIGPORT=localhost
 #RIT_CLEAR
 #
 #################################
-#                               #
 #  INFORMATION WINDOWS          #
-#                               #
 #################################
-#
 #CLUSTER
-BANDMAP=S,720  # skipdupes, livetime
+BANDMAP=S,3600  # skipdupes, livetime
+#BANDMAP=S,720  # skipdupes, livetime
 BMAUTOGRAB
 #FILTER
 #
@@ -71,38 +67,14 @@ SCOREWINDOW
 #
 CHECKWINDOW
 #################################
-#                               #
 #  CHECK PARTIAL FUNCTION       #
-#                               #
 #################################
-# 
 PARTIALS
 #USEPARTIALS
 #
 #################################
-#                               #
-#  CONDX (info for muf calc.)   #
-#                               #
-#################################
-#
-SUNSPOTS=30
-SFI=100
-#
-#################################
-#                               #
 #     Misc commands             #
-#                               #
 #################################
 # No automatic 'qso before msg'
 NOB4
-#
-# No automatic cq
-#NOAUTOCQ
-#
-# Left/right arrows don't change band...
-#NO_BANDSWITCH_ARROWKEYS
-#
-# Marker file for Xplanet
-#MARKERS=tlfmarkers
-#
 #############END#################
