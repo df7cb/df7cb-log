@@ -59,7 +59,7 @@ if len(sys.argv) == 2:
     print("Contest: %s" % contest)
 
 select = """SELECT * FROM (
-  SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, name, qth, loc, contest, comment, info
+  SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, lotw, name, qth, loc, contest, comment, info
   FROM log
   WHERE call collate "C" ~ %s OR name collate "C" ~* %s OR qth collate "C" ~* %s OR loc collate "C" ~* %s
   ORDER BY start DESC, call DESC LIMIT 50
@@ -267,9 +267,9 @@ while True:
     elif 'call' in log:
         cur.execute(select, (log['call'], log['call'], log['call'], log['call']))
         for rec in cur.fetchall():
-            print("%s \033[1m%s %s %s\033[0m %s/%s %s" %
+            print("%s \033[1m%s %s %s\033[0m %s/%s/%s %s" %
                     (rec['start'], rec['call'], rec['qrg'], rec['mode'],
-                    rec['qsltx'], rec['qslrx'],
+                    rec['qsltx'], rec['qslrx'], rec['lotw'],
                     ' '.join(filter(None, [
                         rec['name'],
                         rec['qth'],
