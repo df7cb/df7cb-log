@@ -4,11 +4,12 @@ set -eu
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
 
-while getopts "ac:e:u" opt ; do
+while getopts "ac:e:m:u" opt ; do
     case $opt in
         a) ASSISTED="-a" ;;
         c) CONTEST="$OPTARG" ;;
         e) EXTX="$OPTARG" ;;
+        m) MYCALL="$OPTARG" ;;
         u) ASSISTED="-u" ;;
         *) exit 5 ;;
     esac
@@ -26,9 +27,9 @@ CBR="${LOG%.*}.cbr"
 
 set -eux
 
-import-tlf ${EXTX:+-e "$EXTX"} -n "$CONTEST" "$LOG"
+import-tlf ${EXTX:+-e "$EXTX"} ${MYCALL:+-m "$MYCALL"} -n "$CONTEST" "$LOG"
 read ok
-import-tlf ${EXTX:+-e "$EXTX"} "$CONTEST" "$LOG"
+import-tlf ${EXTX:+-e "$EXTX"} ${MYCALL:+-m "$MYCALL"} "$CONTEST" "$LOG"
 
 git add $LOG
 export-cabrillo ${ASSISTED:-} "$CONTEST" "$CBR"
