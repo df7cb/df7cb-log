@@ -161,4 +161,11 @@
     <GRIDSQUARE>KN25sp</GRIDSQUARE>
     <ITUZ>28</ITUZ>
   </StationData>
+  <StationData name="JO20ET">
+    <CALL>ON/DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>209</DXCC>
+    <GRIDSQUARE>JO20et</GRIDSQUARE>
+    <ITUZ>27</ITUZ>
+  </StationData>
 </StationDataFile>
