@@ -16,6 +16,7 @@ shift $((OPTIND - 1))
 set -eu
 
 git pull --ff-only
+mkdir -p lotw/tmp
 
 ( set -x
 

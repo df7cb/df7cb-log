@@ -10,6 +10,11 @@ mkdir -p tmp
 
 psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$STAMP' group by 1, 2 order by 1, 2" | \
   while read MYCALL MYLOC; do
+    case $MYCALL in
+      *DF7CB*|*DG8VD*|*DN3AJ*) ;;
+      DA0RR) continue ;;
+      *) echo "Won't upload for mycall $MYCALL"; exit 1 ;;
+    esac
     FILE="tmp/${MYCALL//\//-}-$MYLOC.adif"
     echo "$MYCALL $MYLOC"
     ( set -x
