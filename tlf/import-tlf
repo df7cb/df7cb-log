@@ -28,6 +28,11 @@ for o, a in opts:
     else:
         assert False, "Unknown option %s" % (o)
 
+contest = args[0]
+
+if contest == 'CWT':
+    extx = 'CHRIS 3484'
+
 if not noop:
     conn = psycopg2.connect("service=cb")
     cur = conn.cursor()
@@ -60,7 +65,7 @@ with open(args[1]) as f:
             #'myant': 'Windom',
             #'myloc': 'JO31HI',
             #'myqth': 'Krefeld',
-            'contest': args[0], # contest name
+            'contest': contest,
             }
 
     if mycall: qso['mycall'] = mycall
