@@ -74,7 +74,7 @@ if len(records) == 0:
 if len(args) > 1:
     filename = args[1]
 else:
-    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}.cbr"
+    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}-{mycall.lower().translate({47: 45})}.cbr"
 print(f"Writing {filename}")
 f = open(filename, 'w')
 

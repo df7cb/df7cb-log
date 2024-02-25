@@ -3,6 +3,7 @@
 set -eu
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
+MYCALL="DF7CB"
 
 while getopts "ac:e:m:u" opt ; do
     case $opt in
@@ -19,16 +20,16 @@ shift $(($OPTIND - 1))
 
 : ${CONTEST:=MWC}
 
-LOG="${1:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__').log}"
+LOG="${1:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__')-$(echo $MYCALL | tr 'A-Z/' 'a-z-').log}"
 CBR="${LOG%.*}.cbr"
 
 [ -f "$LOG" ] || mv contest.log "$LOG"
 
 set -eux
 
-import-tlf ${EXTX:+-e "$EXTX"} ${MYCALL:+-m "$MYCALL"} -n "$CONTEST" "$LOG"
+import-tlf ${EXTX:+-e "$EXTX"} -m "$MYCALL" -n "$CONTEST" "$LOG"
 read ok
-import-tlf ${EXTX:+-e "$EXTX"} ${MYCALL:+-m "$MYCALL"} "$CONTEST" "$LOG"
+import-tlf ${EXTX:+-e "$EXTX"} -m "$MYCALL" "$CONTEST" "$LOG"
 
 git add $LOG
 export-cabrillo ${ASSISTED:-} "$CONTEST" "$CBR"
