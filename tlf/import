@@ -3,7 +3,7 @@
 set -eu
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
-MYCALL="DF7CB"
+MYCALL="DF7C"
 
 while getopts "ac:e:m:u" opt ; do
     case $opt in
