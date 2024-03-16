@@ -6,9 +6,10 @@ import re
 import sys
 import psycopg2
 
-opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:n")
+opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:np:")
 comment = None
 mycall = None
+mypwr = None
 noop = False
 
 extx = "#"
@@ -25,6 +26,8 @@ for o, a in opts:
         mycall = a
     elif o == '-n':
         noop = True
+    elif o == '-p':
+        mypwr = a
     else:
         assert False, "Unknown option %s" % (o)
 
@@ -69,6 +72,7 @@ with open(args[1]) as f:
             }
 
     if mycall: qso['mycall'] = mycall
+    if mypwr: qso['mypwr'] = mypwr
     if comment: qso['comment'] = comment
 
     qso['mode'] = line[3:6].rstrip()

@@ -6,7 +6,7 @@ DECLARE
 BEGIN
 
   -- fixed
-  IF NEW.mycall = 'DF7CB' THEN
+  IF NEW.mycall in ('DF7CB', 'DF7C') THEN
     IF NEW.myqth IS NULL THEN NEW.myqth := 'Krefeld'; END IF;
     IF NEW.myqth = 'Krefeld' THEN
       IF NEW.myloc IS NULL THEN NEW.myloc := 'JO31HI'; END IF;
@@ -21,7 +21,7 @@ BEGIN
         IF NEW.qrg >= 14 THEN
           NEW.myant := 'Spiderbeam';
         ELSIF NEW.qrg between 7 and 7.2 THEN
-          NEW.myant := 'Rotary dipole';
+          NEW.myant := 'Dipole';
         ELSE
           NEW.myant := 'FD4';
         END IF;
@@ -38,11 +38,11 @@ BEGIN
       IF NEW.mode = 'FM' THEN
         IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
         IF NEW.mypwr IS NULL THEN NEW.mypwr := '5'; END IF;
-      --ELSE
-      --  IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC706'; END IF;
-      --  IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
+      ELSE
+        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC705'; END IF;
+        IF NEW.mypwr IS NULL THEN NEW.mypwr := '10'; END IF;
       END IF;
-      IF NEW.myant IS NULL THEN NEW.myant := 'X200'; END IF;
+      IF NEW.myant IS NULL THEN NEW.myant := '3-ele'; END IF;
 
     -- 13cm/QO100
     ELSIF NEW.qrg BETWEEN 2400 AND 2450 THEN
