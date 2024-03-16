@@ -54,8 +54,8 @@ cur.execute("""select
     to_char(start, 'hh24mi') as time,
     call as call,
     case mode when 'SSB' then '1' when 'CW' then '2' else mode||'-FIXME' end as mode_code,
-    regexp_replace(rsttx, '^(5[1-9]9?)', '\\1 ') as rst_sent,
-    regexp_replace(rstrx, '^(5[1-9]9?)', '\\1 ') as rst_rcvd,
+    rsttx, extx,
+    rstrx, exrx,
     loc,
     round(st_distance(st_locatorpoint(myloc)::geography, st_locatorpoint(loc)::geography)/1000.0)::text distance,
     loc::varchar(4) = any (array_agg(loc::varchar(4)) over (order by start rows between unbounded preceding and 1 preceding)) is not true as new_wwl,
@@ -122,18 +122,18 @@ CODXC={odx['call']};{odx['loc']};{odx['distance']}
 #220619;0949;R6KA;2;599;001;599;124;;KN75VH;2242;;N;;
 
 for qso in records:
-    rsttx, _, nrtx = qso['rst_sent'].partition(' ')
-    rstrx, _, nrrx = qso['rst_rcvd'].partition(' ')
+    nrtx, classtx, loctx = qso['extx'].split(' ')
+    nrrx, classrx, locrx = qso['exrx'].split(' ')
     f.write(';'.join([
         qso['date'],
         qso['time'],
         qso['call'],
         qso['mode_code'],
-        rsttx,
-        nrtx[:3],
-        rstrx,
-        nrrx[:3],
-        '', # received exchange
+        qso['rsttx'],
+        nrtx,
+        qso['rstrx'],
+        nrrx,
+        classrx,
         qso['loc'],
         qso['distance'],
         '', # new exchange
