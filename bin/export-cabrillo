@@ -86,7 +86,9 @@ else:
     mypwr = 'HIGH'
 
 f.write(f"""START-OF-LOG: 3.0
+CONTEST: {contest}
 CALLSIGN: {info['mycall']}
+OPERATORS: DF7CB
 NAME: Christoph Berg
 EMAIL: cb@df7cb.de
 ADDRESS: Rather Str. 76a
@@ -95,7 +97,6 @@ ADDRESS: Germany
 GRID-LOCATOR: {info['myloc']}
 LOCATION: DX
 CLUB: Rhein Ruhr DX Association
-CONTEST: {contest}
 CATEGORY-ASSISTED: {assisted}
 CATEGORY-BAND: {info['band'][0] if len(info['band']) == 1 else 'ALL'}
 CATEGORY-MODE: {info['mode'][0] if len(info['mode']) == 1 else 'MIXED'}
@@ -104,9 +105,6 @@ CATEGORY-POWER: {mypwr}
 CATEGORY-STATION: FIXED
 CATEGORY-TRANSMITTER: ONE
 """)
-
-if info['mycall'] != 'DF7CB':
-    f.write("OPERATORS: DF7CB\n")
 
 # QSO: 7036 CW 2022-06-27 1639 DF7CB 599 001 SD6M 599 014 0
 
