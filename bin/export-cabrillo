@@ -9,6 +9,7 @@ import sys
 
 opts, args = getopt.getopt(sys.argv[1:], "au")
 assisted = 'ASSISTED'
+claimed_score = None
 
 for o, a in opts:
     if o == '-a':
@@ -69,6 +70,20 @@ if len(records) == 0:
     print("No QSOs found")
     exit(1)
 
+if contest == 'MWC':
+    cur.execute("""
+        with raw as (select qrg::band, count(distinct call) qso, count(distinct mwc_multi(call)) multi
+            from log where start > now() - %s::interval and contest = %s group by qrg::band)
+        select * from raw union all
+        select null, sum(qso), sum(multi) from raw union all
+        select null, null, sum(qso) * sum(multi) score from raw;
+        """, [age, contest])
+
+    for row in cur.fetchall():
+        print(row)
+
+    claimed_score = row[-1]
+
 # write output
 
 if len(args) > 1:
@@ -105,6 +120,9 @@ CATEGORY-POWER: {mypwr}
 CATEGORY-STATION: FIXED
 CATEGORY-TRANSMITTER: ONE
 """)
+
+if claimed_score:
+    f.write(f"CLAIMED-SCORE: {claimed_score}\n")
 
 # QSO: 7036 CW 2022-06-27 1639 DF7CB 599 001 SD6M 599 014 0
 
