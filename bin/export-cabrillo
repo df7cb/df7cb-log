@@ -9,6 +9,7 @@ import sys
 
 opts, args = getopt.getopt(sys.argv[1:], "au")
 assisted = 'ASSISTED'
+soapbox = []
 claimed_score = None
 
 for o, a in opts:
@@ -72,15 +73,33 @@ if len(records) == 0:
 
 if contest == 'MWC':
     cur.execute("""
-        with raw as (select qrg::band, count(distinct call) qso, count(distinct mwc_multi(call)) multi
-            from log where start > now() - %s::interval and contest = %s group by qrg::band)
+        with raw as (select qrg::band::text, count(distinct call) qso, count(distinct mwc_multi(call)) multi
+            from log where start > now() - %s::interval and contest = %s group by qrg::band order by qrg::band desc)
         select * from raw union all
-        select null, sum(qso), sum(multi) from raw union all
-        select null, null, sum(qso) * sum(multi) score from raw;
+        select 'Sum', sum(qso), sum(multi) from raw union all
+        select 'Score', null, sum(qso) * sum(multi) score from raw;
         """, [age, contest])
 
     for row in cur.fetchall():
-        print(row)
+        row = [field or '' for field in row]
+        soapbox.append(f"{row[0]:5} {row[1]:5} {row[2]:5}")
+
+    claimed_score = row[-1]
+
+elif contest == 'CWT':
+    cur.execute("""
+        with qso as (select qrg::band::text, count(distinct call) qso
+            from log where start > now() - %s::interval and contest = %s group by qrg::band order by qrg::band desc),
+        multi as (select count(distinct call) multi
+            from log where start > now() - %s::interval and contest = %s)
+        select * from qso union all
+        select 'QSO', sum(qso) from qso union all
+        select 'Multi', multi from multi union all
+        select 'Score', sum(qso) * multi from qso, multi group by multi;
+        """, [age, contest, age, contest])
+
+    for row in cur.fetchall():
+        soapbox.append(f"{row[0]:5} {row[1]:5}")
 
     claimed_score = row[-1]
 
@@ -120,6 +139,9 @@ CATEGORY-POWER: {mypwr}
 CATEGORY-STATION: FIXED
 CATEGORY-TRANSMITTER: ONE
 """)
+
+for row in soapbox:
+    f.write(f"SOAPBOX: {row}\n")
 
 if claimed_score:
     f.write(f"CLAIMED-SCORE: {claimed_score}\n")
