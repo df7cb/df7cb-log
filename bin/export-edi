@@ -122,8 +122,10 @@ CODXC={odx['call']};{odx['loc']};{odx['distance']}
 #220619;0949;R6KA;2;599;001;599;124;;KN75VH;2242;;N;;
 
 for qso in records:
-    nrtx, classtx, loctx = qso['extx'].split(' ')
-    nrrx, classrx, locrx = qso['exrx'].split(' ')
+    #nrtx, classtx, loctx = qso['extx'].split(' ')
+    #nrrx, classrx, locrx = qso['exrx'].split(' ')
+    nrtx, loctx = qso['extx'].split(' ')
+    nrrx, locrx = qso['exrx'].split(' ')
     f.write(';'.join([
         qso['date'],
         qso['time'],
@@ -133,7 +135,7 @@ for qso in records:
         nrtx,
         qso['rstrx'],
         nrrx,
-        classrx,
+        '', #classrx,
         qso['loc'],
         qso['distance'],
         '', # new exchange
