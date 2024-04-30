@@ -24,7 +24,7 @@ conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 contest = args[0]
-age = '7 days'
+age = '5 days'
 
 cur.execute("""select
     to_char(min(start::date), 'YYYY-MM-DD') iso_date,
@@ -63,7 +63,7 @@ cur.execute(r"""select
     from log
     where start > now() - %s::interval
     and contest = %s
-    order by start, call""",
+    order by start, extx, call""",
     (age, contest))
 
 records = cur.fetchall()
