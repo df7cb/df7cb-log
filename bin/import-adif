@@ -54,8 +54,7 @@ for qso in adiflog:
 
     rec['rsttx'] = qso['RST_SENT']
     if args.extx:
-        #rec['extx'] = qso['STX'] + ' ' + args.extx
-        rec['extx'] = args.extx
+        rec['extx'] = args.extx.replace('#', qso['STX'])
     elif 'STX' in qso:
         if qso['STX'] != '000':
             rec['extx'] = qso['STX']
@@ -110,6 +109,8 @@ for qso in adiflog:
         if field not in fields: fields.append(field)
     if not args.quiet:
         print()
+
+if not log: exit()
 
 if not args.quiet:
     input("Continue? ")
