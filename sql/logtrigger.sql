@@ -4,8 +4,12 @@ CREATE OR REPLACE FUNCTION logtrigger() RETURNS trigger
 DECLARE
   ts timestamptz;
 BEGIN
+  -- fixups
+  NEW.loc = upper(NEW.loc);
+  NEW.myloc = upper(NEW.myloc);
+  IF NEW.mypwr = 0 THEN NEW.mypwr := NULL; END IF;
 
-  -- fixed
+  -- fixed station
   IF NEW.mycall in ('DF7CB', 'DF7C') THEN
     IF NEW.myqth IS NULL THEN NEW.myqth := 'Krefeld'; END IF;
     IF NEW.myqth = 'Krefeld' THEN
