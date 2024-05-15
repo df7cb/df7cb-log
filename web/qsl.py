@@ -173,7 +173,7 @@ if __name__ == "__main__":
 
     call = sys.argv[1]
     c = canvas.Canvas("qsl.pdf", pagesize=(qslwidth, qslheight))
-    c.setTitle("%s QSL for %s" % (mycall, call))
+    c.setTitle("%s QSL for %s" % ('DF7CB', call))
     qsl(c, call)
 
     c.showPage()
