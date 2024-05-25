@@ -4,7 +4,7 @@ from decimal import Decimal
 import getopt
 import re
 import sys
-import psycopg2
+import psycopg
 
 opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:np:")
 comment = None
@@ -36,17 +36,11 @@ contest = args[0]
 if contest == 'CWT':
     extx = 'CHRIS 3484'
 
-if not noop:
-    conn = psycopg2.connect("service=cb")
-    cur = conn.cursor()
-
-    # empty livelog since we are loading the real log now
-    cur.execute("delete from livelog")
-
 #40CW  14-Apr-19 08:11 0002  LY3B           599  599  29            LY   29  0   7029.1
 
 log = []
 laststart = ''
+fields = set()
 with open(args[1]) as f:
   for line in f:
 
@@ -85,7 +79,7 @@ with open(args[1]) as f:
         qso['start'] += ':45'
     laststart = qso['start']
     qso['call'] = line[29:43].rstrip()
-    qso['qrg'] = Decimal(line[79:87]) / 1000
+    qso['qrg'] = str(Decimal(line[79:87]) / 1000)
 
     rsttx = line[44:47].rstrip()
     serial = line[24:27]
@@ -117,19 +111,20 @@ with open(args[1]) as f:
 
     log.append(qso)
 
-for qso in log:
     for field in qso:
+        fields.add(field)
         print(f"{field} \033[1m{qso[field]}\033[0m", end=" ")
     print()
 
-    if not noop:
-        insert = "INSERT INTO " + logtable + " (" + \
-            ', '.join(qso.keys()) + \
-            ') VALUES (' + \
-            ', '.join(['%s' for x in qso]) + \
-            ')'
-        args = [x for x in qso.values()]
-        cur.execute(insert, args)
-
 if not noop:
+    conn = psycopg.connect("service=cb")
+    cur = conn.cursor()
+
+    # empty livelog since we are loading the real log now
+    cur.execute("delete from livelog")
+
+    with cur.copy(f"copy {logtable} ({', '.join(fields)}) from stdin") as copy:
+        for qso in log:
+            copy.write_row([qso.get(f) for f in fields])
+
     conn.commit()
