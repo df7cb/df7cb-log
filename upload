@@ -32,16 +32,16 @@ mkdir -p lotw/tmp
   fi
 
   cd ../lotw
-  LOG=tmp/df7cb-upload.adif
   STAMP=$(cat .upload.stamp || echo 'today')
-  ../bin/export-adif $LOG $STAMP
+  ../bin/export-adif -s $STAMP tmp/upload.adif
   ./lotw-upload $STAMP
   ./clublog-upload $STAMP
-  ./rrdxa-upload $STAMP
-  ./dcl-upload $LOG
-  ./eqsl-upload $LOG
+  ./rrdxa-post tmp/upload.adif
+  ./dcl-upload tmp/upload.adif
+  ../bin/export-adif -s $STAMP -m DF7CB tmp/DF7CB.adif
+  ./eqsl-upload tmp/DF7CB.adif
 
-  ../bin/export-adif tmp/df7cb-qo100.adif $STAMP "qso_via='QO100'"
+  ../bin/export-adif -s $STAMP -v QO100 tmp/df7cb-qo100.adif
   grep -q '<eor>' tmp/df7cb-qo100.adif && ./qo100-upload tmp/df7cb-qo100.adif
 
   echo "$TODAY" > .upload.stamp

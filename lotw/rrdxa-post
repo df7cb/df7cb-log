@@ -3,10 +3,7 @@
 set -eu
 
 FILE="$1"
-MYCALL="${2:-DF7CB}"
 
 curl --netrc -fsS --output /dev/null \
-  --form station_callsign=$MYCALL \
-  --form operator=DF7CB \
   --form logfile=@$FILE \
   https://logbook.rrdxa.org/log/upload/

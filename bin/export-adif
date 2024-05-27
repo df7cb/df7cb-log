@@ -1,26 +1,39 @@
 #!/usr/bin/python3
 
+import argparse
 import os
 import adif_export
 import psycopg2
 import psycopg2.extras
-import sys
 
-adiffile = sys.argv[1]
-if len(sys.argv) > 2:
-    since = sys.argv[2]
-else:
-    since = "yesterday"
-if len(sys.argv) > 3:
-    extra = sys.argv[3]
-else:
-    #extra = "mycall COLLATE \"C\" LIKE 'DF7CB%%'"
-    extra = "true"
+argparser = argparse.ArgumentParser(description="Export an ADIF log from PostgreSQL")
+argparser.add_argument("-l", "--myloc")
+argparser.add_argument("-m", "--mycall")
+argparser.add_argument("-s", "--since",
+                       help="QSO since (or changed since) this timestamp")
+argparser.add_argument("-v", "--qso-via")
+argparser.add_argument("logfile", help="logfile")
+args = argparser.parse_args()
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-cur.execute(f"""SELECT
+pred, vals = ['true'], []
+
+if args.myloc:
+    pred.append("myloc = %s")
+    vals.append(args.myloc.upper())
+if args.mycall:
+    pred.append("mycall = %s")
+    vals.append(args.mycall.upper())
+if args.since:
+    pred.append("coalesce(last_update, start) >= %s")
+    vals.append(args.since)
+if args.qso_via:
+    pred.append("qso_via = %s")
+    vals.append(args.qso_via.upper())
+
+query = f"""SELECT
         to_char(start, 'YYYYMMDD') AS "QSO_DATE",
         to_char(start, 'hh24mi') AS "TIME_ON",
         call AS "CALL",
@@ -68,9 +81,9 @@ cur.execute(f"""SELECT
         mypwr AS "TX_PWR",
         myloc AS "MY_GRIDSQUARE"
         FROM log l
-        WHERE coalesce(last_update, start) >= %s
-            AND {extra}
-        ORDER BY start, call""", [since])
+        WHERE {' and '.join(pred)}
+        ORDER BY start, call"""
 
+cur.execute(query, vals)
 records = cur.fetchall()
-adif_export.write(records, adiffile)
+adif_export.write(records, args.logfile)

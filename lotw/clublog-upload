@@ -15,7 +15,7 @@ psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by
     echo "$MYCALL"
 
     ( set -x
-      ../bin/export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%'"
+      ../bin/export-adif -s $STAMP -m $MYCALL $FILE
 
       curl -f -S \
         --form email=cb@df7cb.de \

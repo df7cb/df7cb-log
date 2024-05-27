@@ -18,7 +18,7 @@ psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$S
     FILE="tmp/${MYCALL//\//-}-$MYLOC.adif"
     echo "$MYCALL $MYLOC"
     ( set -x
-      ../bin/export-adif $FILE $STAMP "mycall COLLATE \"C\" LIKE '$MYCALL%%' AND upper(myloc)='$MYLOC'"
+      ../bin/export-adif -m $MYCALL -l $MYLOC -s $STAMP $FILE
 
       # exit 8 is "nothing to upload", exit 9 is "no new QSOs"
       tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x
