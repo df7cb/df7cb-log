@@ -52,9 +52,6 @@ with open(args[1]) as f:
             log[-1]['comment'] = line[2:].rstrip()
         continue
 
-    if line[23] != '0':
-        raise Exception('serial does not start with 0')
-
     qso = {
             #'mytrx': 'IC7610',
             #'mytrx': 'IC706',
@@ -82,7 +79,11 @@ with open(args[1]) as f:
     qso['qrg'] = str(Decimal(line[79:87]) / 1000)
 
     rsttx = line[44:47].rstrip()
-    serial = line[24:27]
+    if line[23] == '0':
+        serial = line[24:27]
+    else:
+        serial = line[23:27]
+
     rstrx = line[49:52].rstrip()
     exchange = line[54:68].strip()
 
