@@ -28,10 +28,9 @@ CQDELAY=4
 #TELNETHOST=arcluster.reversebeacon.net
 #TELNETPORT=7000
 #TELNETHOST=db0sue.de
-#TELNETPORT=8000
-TELNETHOST=localhost
-TELNETPORT=7000
-CLUSTERLOGIN=DF7CB-1
+TELNETHOST=logbook.rrdxa.org
+TELNETPORT=8000
+CLUSTERLOGIN=DF7CB
 #################################
 #  RADIO CONTROL                #
 #################################
