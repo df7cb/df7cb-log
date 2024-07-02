@@ -59,9 +59,9 @@ if len(sys.argv) == 2:
     print("Contest: %s" % contest)
 
 select = """SELECT * FROM (
-  SELECT start::timestamp, call, mode, qrg, qsltx, qslrx, lotw, name, qth, loc, contest, comment, info
+  SELECT mycall, start::timestamp, call, mode, qrg, qsltx, qslrx, lotw, name, qth, loc, contest, comment, info
   FROM log
-  WHERE call collate "C" ~ %s OR name collate "C" ~* %s OR qth collate "C" ~* %s OR loc collate "C" ~* %s
+  WHERE call ~ %s OR name ~* %s OR qth ~* %s OR loc ~* %s
   ORDER BY start DESC, call DESC LIMIT 50
 ) sub
 ORDER BY start, call"""
@@ -93,6 +93,10 @@ while True:
             match = re.search('^(\d{1,2}:\d{2})-(\d{1,2}:\d{2})$', tok)
             log['start'] = "%s %s" % (date, match.group(1))
             log['stop'] = "%s %s" % (date, match.group(2))
+
+        # locator
+        elif re.match(r'^[A-R][A-R][0-9][0-9](?:[A-X][A-X](?:[0-9][0-9](?:[A-X][A-X])?)?)?$', tok, re.I):
+            log['loc'] = tok.upper()
 
         # QRG
         elif tok == "db0mg":
@@ -180,9 +184,12 @@ while True:
             my_rot.set_position(int(match.group(1)), 0)
 
         # generic fields
-        elif re.search('^(.+?):(.*)', tok):
-            match = re.search('^(.+?):(.*)', tok)
-            log[match.group(1)] = match.group(2).replace('_', ' ')
+        elif m := re.search('^(.+?):(.*)', tok):
+            field, value = m.groups()
+            if field == 'op': field = 'name'
+            if field in ('call'): value = value.upper()
+            if field in ('name', 'qth') and value == value.lower(): value = value.title()
+            log[field] = value.replace('_', ' ')
 
         elif len(tok) > 0:
             log['call'] = tok.upper()
@@ -264,11 +271,11 @@ while True:
         if auto_rst == "serial":
             rsttx = str(int(rsttx) + 1)
 
-    elif 'call' in log:
-        cur.execute(select, (log['call'], log['call'], log['call'], log['call']))
+    elif 'call' in log or 'loc' in log:
+        cur.execute(select, (log.get('call'), log.get('call'), log.get('call'), log.get('loc')))
         for rec in cur.fetchall():
-            print("%s \033[1m%s %s %s\033[0m %s/%s/%s %s" %
-                    (rec['start'], rec['call'], rec['qrg'], rec['mode'],
+            print("\033[1m%s\033[0m %s \033[1m%s %s %s\033[0m %s/%s/%s %s" %
+                    (rec['mycall'], rec['start'], rec['call'], rec['qrg'], rec['mode'],
                     rec['qsltx'], rec['qslrx'], rec['lotw'],
                     ' '.join(filter(None, [
                         rec['name'],
