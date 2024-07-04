@@ -7,6 +7,7 @@ import psycopg2
 import psycopg2.extras
 
 argparser = argparse.ArgumentParser(description="Export an ADIF log from PostgreSQL")
+argparser.add_argument("-c", "--contest")
 argparser.add_argument("-l", "--myloc")
 argparser.add_argument("-m", "--mycall")
 argparser.add_argument("-s", "--since",
@@ -20,6 +21,9 @@ cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
 pred, vals = ['true'], []
 
+if args.contest:
+    pred.append("contest = %s")
+    vals.append(args.contest)
 if args.myloc:
     pred.append("myloc = %s")
     vals.append(args.myloc.upper())

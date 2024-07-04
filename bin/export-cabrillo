@@ -2,31 +2,38 @@
 
 # usage: export-cabrillo <contest name> [<filename>]
 
-import getopt
+import argparse
 import psycopg2
 import psycopg2.extras
 import sys
 
-opts, args = getopt.getopt(sys.argv[1:], "au")
-assisted = 'ASSISTED'
+argparser = argparse.ArgumentParser(description="Export a Cabrillo log from PostgreSQL")
+argparser.add_argument("-a", "--assisted")
+argparser.add_argument("-u", "--unassisted")
+argparser.add_argument("-s", "--since",
+                       help="QSO since this timestamp")
+argparser.add_argument("contest", help="Contest name")
+argparser.add_argument("filename", nargs='?')
+args = argparser.parse_args()
+
+assisted = 'NON-ASSISTED' if args.unassisted else 'ASSISTED'
 soapbox = []
 claimed_score = None
-
-for o, a in opts:
-    if o == '-a':
-        assisted = 'ASSISTED'
-    elif o == '-u':
-        assisted = 'NON-ASSISTED'
-    else:
-        assert False, "Unknown option %s" % (o)
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
 
-contest = args[0]
-age = '5 days'
+pred = ['contest = %s']
+vals = [args.contest]
+if args.since:
+    pred.append('start >= %s')
+    vals.append(args.since)
+else:
+    pred.append('start >= now() - %s::interval')
+    vals.append('5 days')
 
-cur.execute("""select
+cur.execute(f"""select
+    min(start) start,
     to_char(min(start::date), 'YYYY-MM-DD') iso_date,
     array_agg(distinct upper(qrg::band::text)) band,
     array_agg(distinct mode) mode,
@@ -35,14 +42,13 @@ cur.execute("""select
     max(myloc) myloc,
     max(mypwr) mypwr
     from log
-    where start > now() - %s::interval
-    and contest = %s
+    where {' and '.join(pred)}
     """,
-    (age, contest))
+    vals)
 
 info = cur.fetchall()[0]
 
-cur.execute(r"""select
+cur.execute(f"""select
     round(qrg * 1000.0)::text qrg,
     to_char(start, 'YYYY-MM-DD') as date,
     to_char(start, 'hh24mi') as time,
@@ -55,30 +61,29 @@ cur.execute(r"""select
       else 'DG'
     end as mode,
     concat_ws(' ',
-      regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\1 \2'),
+      regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\\1 \\2'),
       extx) as rst_sent,
     concat_ws(' ',
-      regexp_replace(rstrx, '^(5[1-9]9?)(..)', '\1 \2'),
+      regexp_replace(rstrx, '^(5[1-9]9?)(..)', '\\1 \\2'),
       exrx) as rst_rcvd
     from log
-    where start > now() - %s::interval
-    and contest = %s
+    where {' and '.join(pred)}
     order by start, extx, call""",
-    (age, contest))
+    vals)
 
 records = cur.fetchall()
 if len(records) == 0:
     print("No QSOs found")
     exit(1)
 
-if contest == 'MWC':
+if args.contest == 'MWC':
     cur.execute("""
         with raw as (select qrg::band::text, count(distinct call) qso, count(distinct mwc_multi(call)) multi
-            from log where start > now() - %s::interval and contest = %s group by qrg::band order by qrg::band desc)
+            from log where start >= %s and contest = %s group by qrg::band order by qrg::band desc)
         select * from raw union all
         select 'Sum', sum(qso), sum(multi) from raw union all
         select 'Score', null, sum(qso) * sum(multi) score from raw;
-        """, [age, contest])
+        """, [info['start'], args.contest])
 
     for row in cur.fetchall():
         row = [field or '' for field in row]
@@ -86,17 +91,17 @@ if contest == 'MWC':
 
     claimed_score = row[-1]
 
-elif contest == 'CWT':
+elif args.contest == 'CWT':
     cur.execute("""
         with qso as (select qrg::band::text, count(distinct call) qso
-            from log where start > now() - %s::interval and contest = %s group by qrg::band order by qrg::band desc),
+            from log where start >= %s and contest = %s group by qrg::band order by qrg::band desc),
         multi as (select count(distinct call) multi
-            from log where start > now() - %s::interval and contest = %s)
+            from log where start >= %s and contest = %s)
         select * from qso union all
         select 'QSO', sum(qso) from qso union all
         select 'Multi', multi from multi union all
         select 'Score', sum(qso) * multi from qso, multi group by multi;
-        """, [age, contest, age, contest])
+        """, [info['start'], args.contest, info['start'], args.contest])
 
     for row in cur.fetchall():
         soapbox.append(f"{row[0]:5} {row[1]:5}")
@@ -105,12 +110,10 @@ elif contest == 'CWT':
 
 # write output
 
-if len(args) > 1:
-    filename = args[1]
-else:
-    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}-{info['mycall'].lower().translate({47: 45})}.cbr"
-print(f"Writing {filename}")
-f = open(filename, 'w')
+if not args.filename:
+    args.filename = f"{info['iso_date']}-{args.contest.lower().translate({32: 95})}-{info['mycall'].lower().translate({47: 45})}.cbr"
+print(f"Writing {args.filename}")
+f = open(args.filename, 'w')
 
 if info['mypwr'] is not None and info['mypwr'] <= 10:
     mypwr = 'QRP'
@@ -120,7 +123,7 @@ else:
     mypwr = 'HIGH'
 
 f.write(f"""START-OF-LOG: 3.0
-CONTEST: {contest}
+CONTEST: {args.contest}
 CALLSIGN: {info['mycall']}
 OPERATORS: DF7CB
 NAME: Christoph Berg
