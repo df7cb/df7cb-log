@@ -23,7 +23,7 @@ for o, a in opts:
     elif o == '-l':
         logtable = "livelog"
     elif o == '-m':
-        mycall = a
+        mycall = a.upper()
     elif o == '-n':
         noop = True
     elif o == '-p':
