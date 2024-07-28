@@ -6,32 +6,34 @@ import re
 import sys
 import psycopg
 
-opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:np:")
-comment = None
-mycall = None
-mypwr = None
+opts, args = getopt.getopt(sys.argv[1:], "c:e:lm:no:p:")
 noop = False
-
 extx = "#"
 logtable = "log"
+contest = args[0]
+
+qso_template = {
+        'contest': contest,
+        }
 
 for o, a in opts:
     if o == '-c':
-        comment = a
+        qso_template['comment'] = a
     elif o == '-e':
         extx = a
     elif o == '-l':
         logtable = "livelog"
     elif o == '-m':
-        mycall = a.upper()
+        qso_template['mycall'] = a.upper()
     elif o == '-n':
         noop = True
+    elif o == '-o':
+        key, _, value = a.partition(':')
+        qso_template[key] = value
     elif o == '-p':
-        mypwr = a
+        qso_template['mypwr'] = a
     else:
         assert False, "Unknown option %s" % (o)
-
-contest = args[0]
 
 if contest == 'CWT':
     extx = 'CHRIS 3484'
@@ -52,19 +54,7 @@ with open(args[1]) as f:
             log[-1]['comment'] = line[2:].rstrip()
         continue
 
-    qso = {
-            #'mytrx': 'IC7610',
-            #'mytrx': 'IC706',
-            #'mypwr': 100,
-            #'myant': 'Windom',
-            #'myloc': 'JO31HI',
-            #'myqth': 'Krefeld',
-            'contest': contest,
-            }
-
-    if mycall: qso['mycall'] = mycall
-    if mypwr: qso['mypwr'] = mypwr
-    if comment: qso['comment'] = comment
+    qso = {x: qso_template[x] for x in qso_template}
 
     qso['mode'] = line[3:6].rstrip()
     qso['start'] = line[7:22] # date+time

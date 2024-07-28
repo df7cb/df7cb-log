@@ -168,4 +168,18 @@
     <GRIDSQUARE>JO20et</GRIDSQUARE>
     <ITUZ>27</ITUZ>
   </StationData>
+  <StationData name="KN45QE">
+    <CALL>YO/DF7CB</CALL>
+    <CQZ>20</CQZ>
+    <DXCC>275</DXCC>
+    <GRIDSQUARE>KN45qe</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="KN44HG">
+    <CALL>YO/DF7CB</CALL>
+    <CQZ>20</CQZ>
+    <DXCC>275</DXCC>
+    <GRIDSQUARE>KN44hg</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
 </StationDataFile>

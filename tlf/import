@@ -6,12 +6,13 @@ PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
 MYCALL="DF7C"
 ARGS=""
 
-while getopts "ac:e:m:p:u" opt ; do
+while getopts "ac:e:m:o:p:u" opt ; do
     case $opt in
         a) ASSISTED="-a" ;;
         c) CONTEST="$OPTARG" ;;
         e) EXTX="$OPTARG" ;;
         m) MYCALL="$OPTARG" ;;
+        o) ARGS="-o $OPTARG" ;;
         p) ARGS="-p $OPTARG" ;;
         u) ASSISTED="-u" ;;
         *) exit 5 ;;
