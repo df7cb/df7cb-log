@@ -4,6 +4,7 @@ import adif_io
 import argparse
 import psycopg #, psycopg.extras
 import re
+import json
 
 argparser = argparse.ArgumentParser(description="Import an ADIF log into PostgreSQL")
 argparser.add_argument("-l", "--livelog",
@@ -129,6 +130,7 @@ else:
 copy_q = f"COPY {logtable} ({', '.join(fields)}) FROM STDIN"
 with cur.copy(copy_q) as copy:
     for rec in log:
+        if 'info' in rec: rec['info'] = json.dumps(rec['info'])
         copy.write_row([rec.get(field) for field in fields])
 
 if not args.livelog:
