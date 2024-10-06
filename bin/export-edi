@@ -74,7 +74,7 @@ records = cur.fetchall()
 if len(sys.argv) > 2:
     filename = sys.argv[2]
 else:
-    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}.edi"
+    filename = f"{info['iso_date']}-{contest.lower().translate({32: 95})}-{info['mycall'].lower()}.edi"
 print(f"Writing {filename}")
 f = open(filename, 'w')
 
@@ -124,8 +124,14 @@ CODXC={odx['call']};{odx['loc']};{odx['distance']}
 for qso in records:
     #nrtx, classtx, loctx = qso['extx'].split(' ')
     #nrrx, classrx, locrx = qso['exrx'].split(' ')
-    nrtx, loctx = qso['extx'].split(' ')
-    nrrx, locrx = qso['exrx'].split(' ')
+    if ' ' in qso['extx']:
+        nrtx, loctx = qso['extx'].split(' ')
+    else:
+        nrtx, locrx = qso['extx'], info['myloc']
+    if ' ' in qso['exrx']:
+        nrrx, locrx = qso['exrx'].split(' ')
+    else:
+        nrrx, locrx = qso['exrx'], qso['loc']
     f.write(';'.join([
         qso['date'],
         qso['time'],
