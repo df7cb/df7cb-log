@@ -2,7 +2,6 @@ RULES=contest
 #RULES=mwc
 #RULES=cwops_mini_cwt
 CALL=DF7C
-SHORT_SERIAL
 #
 EDITOR=vi
 # 0 black, 1 red, 2 green, 3 yellow, 4 blue, 5 magenta, 6 cyan, 7 white
@@ -20,14 +19,16 @@ TLFCOLOR5=43
 TLFCOLOR6=63
 #
 HAMLIB_KEYER
+#FLDIGI
+#QTC=SEND
 #---speed (6 ... 60 wpm)
-CWSPEED=28
+#RTTYMODE
+#CWSPEED=28
+SHORT_SERIAL
 #---cq delay (in 0,5 s)
 CQDELAY=4
 # cluster
-#TELNETHOST=arcluster.reversebeacon.net
-#TELNETPORT=7000
-#TELNETHOST=db0sue.de
+#TELNETHOST=dx.da0bcc.de
 TELNETHOST=logbook.rrdxa.org
 TELNETPORT=8000
 CLUSTERLOGIN=DF7CB
@@ -40,12 +41,13 @@ RIGMODEL=2
 #RIGMODEL=3009
 # IC-7610
 #RIGMODEL=3078
+# IC-705
 #RIGMODEL=3085
 #RIGSPEED=19200
 RIGSPEED=115200
-RIGPORT=localhost
-#RIGPORT=localhost:4533
-#RIGPORT=/dev/ttyUSB7610
+RIGPORT=localhost:4532
+#RIGPORT=hamilton
+#RIGPORT=/home/myon/rig-pty1
 #RIGPORT=/tmp/kappanhang-IC-705.pty
 #RIGPTT
 #
