@@ -1,0 +1,1 @@
+/usr/share/hamradio-files/WAG_call_history.txt
