@@ -182,4 +182,11 @@
     <GRIDSQUARE>KN44hg</GRIDSQUARE>
     <ITUZ>28</ITUZ>
   </StationData>
+  <StationData name="JO31GL">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO31gl</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
 </StationDataFile>
