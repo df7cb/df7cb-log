@@ -1,7 +1,7 @@
 RULES=contest
 #RULES=mwc
 #RULES=cwops_mini_cwt
-CALL=DF7C
+CALL=DF7CB
 #
 EDITOR=vi
 # 0 black, 1 red, 2 green, 3 yellow, 4 blue, 5 magenta, 6 cyan, 7 white
@@ -28,8 +28,8 @@ SHORT_SERIAL
 #---cq delay (in 0,5 s)
 CQDELAY=4
 # cluster
-#TELNETHOST=dx.da0bcc.de
-TELNETHOST=logbook.rrdxa.org
+TELNETHOST=dx.da0bcc.de
+#TELNETHOST=logbook.rrdxa.org
 TELNETPORT=8000
 CLUSTERLOGIN=DF7CB
 #################################
