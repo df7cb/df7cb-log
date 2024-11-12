@@ -122,6 +122,11 @@ elif info['mypwr'] is None or info['mypwr'] <= 100:
 else:
     mypwr = 'HIGH'
 
+if len(info['mode']) == 1 and info['mode'][0] == 'RTTY':
+    club = "Interest Group RTTY"
+else:
+    club = "Rhein Ruhr DX Association"
+
 f.write(f"""START-OF-LOG: 3.0
 CONTEST: {args.contest}
 CALLSIGN: {info['mycall']}
@@ -133,7 +138,7 @@ ADDRESS: 47802 Krefeld
 ADDRESS: Germany
 GRID-LOCATOR: {info['myloc']}
 LOCATION: DX
-CLUB: Rhein Ruhr DX Association
+CLUB: {club}
 CATEGORY-ASSISTED: {assisted}
 CATEGORY-BAND: {info['band'][0] if len(info['band']) == 1 else 'ALL'}
 CATEGORY-MODE: {info['mode'][0] if len(info['mode']) == 1 else 'MIXED'}
