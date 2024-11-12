@@ -14,7 +14,7 @@ argparser.add_argument("-s", "--since",
                        help="QSO since (or changed since) this timestamp")
 argparser.add_argument("-v", "--qso-via")
 argparser.add_argument("logfile", help="logfile")
-args = argparser.parse_args()
+args, more_args = argparser.parse_known_args()
 
 conn = psycopg2.connect("service=cb")
 cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
@@ -36,6 +36,11 @@ if args.since:
 if args.qso_via:
     pred.append("qso_via = %s")
     vals.append(args.qso_via.upper())
+for arg in more_args:
+    assert arg[0:2] == '--'
+    key, _, value = arg[2:].partition('=')
+    pred.append(f"{key} = %s")
+    vals.append(value)
 
 query = f"""SELECT
         to_char(start, 'YYYYMMDD') AS "QSO_DATE",
@@ -91,3 +96,5 @@ query = f"""SELECT
 cur.execute(query, vals)
 records = cur.fetchall()
 adif_export.write(records, args.logfile)
+
+print(f"{cur.rowcount} QSO written to {args.logfile}")
