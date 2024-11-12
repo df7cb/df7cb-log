@@ -38,7 +38,6 @@ cur.execute("""select
     call,
     loc,
     round(st_distance(st_locatorpoint(myloc)::geography, st_locatorpoint(loc)::geography)/1000.0)::text distance
-
     from log
     where start > now() - %s::interval
     and contest = %s
@@ -47,7 +46,7 @@ cur.execute("""select
     """,
     (age, contest))
 
-odx = cur.fetchall()[0]
+odx = cur.fetchone() or {'call':'', 'loc':'', 'distance':''}
 
 cur.execute("""select
     to_char(start, 'YYMMDD') as date,
@@ -142,8 +141,8 @@ for qso in records:
         qso['rstrx'],
         nrrx,
         '', #classrx,
-        qso['loc'],
-        qso['distance'],
+        qso['loc'] or '',
+        qso['distance'] or '',
         '', # new exchange
         'N' if qso['new_wwl'] else '',
         'N' if qso['new_cty'] else '',
