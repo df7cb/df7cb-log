@@ -57,6 +57,7 @@ with open(args[1]) as f:
     qso = {x: qso_template[x] for x in qso_template}
 
     qso['mode'] = line[3:6].rstrip()
+    if qso['mode'] == 'DIG': qso['mode'] = 'RTTY'
     qso['start'] = line[7:22] # date+time
     if laststart == qso['start']: # 2nd QSO in this minute
         qso['start'] += ':15'
