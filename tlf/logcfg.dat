@@ -54,12 +54,16 @@ RIGPORT=localhost:4532
 #SSBMODE
 #
 #RIT_CLEAR
-#
+
+ROTATOR_CONTROL
+ROTMODEL=2
+ROTPORT=192.168.0.3:4533
+
 #################################
 #  INFORMATION WINDOWS          #
 #################################
 #CLUSTER
-BANDMAP=S,3600  # skipdupes, livetime
+BANDMAP=S,1800  # skipdupes, livetime
 #BANDMAP=S,720  # skipdupes, livetime
 BMAUTOGRAB
 #FILTER
