@@ -87,11 +87,14 @@ with open(args[1]) as f:
     qso['exrx'] = exchange
 
     # extract CQ zone
-    #qso['cq'] = exchange
+    if extx == '14':
+        if m := re.match('^([0-9]{1,2})$', exchange):
+            qso['cq'] = exchange
+
     # extract ITU zone
-    #if m := re.search('\\b([0-9]{1,2})\\b', exchange):
-    #    qso['itu'] = int(m.group(1))
-    #qso['itu'] = exchange
+    if extx == '28':
+        if m := re.match('^([0-9]{1,2})$', exchange):
+            qso['itu'] = exchange
 
     # extract dok from exchange
     if qso['call'][0] == 'D' and (m := re.search('\\b([A-Z][0-9]{2})\\b', exchange)):
