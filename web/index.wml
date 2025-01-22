@@ -13,6 +13,11 @@
         width: 100%;
         aspect-ratio: 2 / 1;
       }
+      th {
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 20;
+      }
     </style>
     <!-- https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js -->
     <script src="ol.js"></script>
