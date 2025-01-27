@@ -1,19 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 set -eu
 
 PATH=$PATH:$(dirname $0):$(dirname $0)/../bin
+CONTEST=""
 MYCALL="DF7C"
-ARGS=""
+ARGS=()
 
 while getopts "ac:e:m:o:p:u" opt ; do
     case $opt in
         a) ASSISTED="-a" ;;
-        c) CONTEST="$OPTARG" ;;
+        c) ARGS+=(-c "$OPTARG") CONTEST="$OPTARG" ;;
         e) EXTX="$OPTARG" ;;
-        m) MYCALL="$OPTARG" ;;
-        o) ARGS="-o $OPTARG" ;;
-        p) ARGS="-p $OPTARG" ;;
+        m) ARGS+=(-m "$OPTARG") MYCALL="$OPTARG" ;;
+        o) ARGS+=(-o "$OPTARG") ;;
+        p) ARGS+=(-p "$OPTARG") ;;
         u) ASSISTED="-u" ;;
         *) exit 5 ;;
     esac
@@ -21,20 +22,28 @@ done
 # shift away args
 shift $(($OPTIND - 1))
 
-: ${CONTEST:=MWC}
+case $CONTEST in
+    CWT) EXTX="CHRIS 3484" ;;
+esac
 
-LOG="${1:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__')-$(echo $MYCALL | tr 'A-Z/' 'a-z-').log}"
+if [ "$CONTEST" ]; then
+    LOG="${1:-$(date +%F)-$(echo $CONTEST | tr 'A-Z/ ' 'a-z__')-$(echo $MYCALL | tr 'A-Z/' 'a-z-').log}"
+    ARGS+=(-e "${EXTX:-#}") # default to serial
+else
+    LOG="${1:-$(date +%F)-$(echo $MYCALL | tr 'A-Z/' 'a-z-').log}"
+fi
+[ -f "$LOG" ] || mv ${1:-contest.log} "$LOG"
 CBR="${LOG%.*}.cbr"
-
-[ -f "$LOG" ] || mv contest.log "$LOG"
 
 set -eux
 
-import-tlf ${EXTX:+-e "$EXTX"} -m "$MYCALL" $ARGS -n "$CONTEST" "$LOG"
+import-tlf "${ARGS[@]}" -n "$LOG"
 read ok
-import-tlf ${EXTX:+-e "$EXTX"} -m "$MYCALL" $ARGS "$CONTEST" "$LOG"
-
+import-tlf "${ARGS[@]}" "$LOG"
 git add $LOG
+
+[ "$CONTEST" ] || exit 0
+
 export-cabrillo ${ASSISTED:-} "$CONTEST" "$CBR"
 vi $CBR
 git add $CBR
