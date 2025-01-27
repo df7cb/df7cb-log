@@ -1,31 +1,31 @@
 #!/usr/bin/python3
 
-import cgi
-import cgitb
 from tempfile import TemporaryFile
-from reportlab.pdfgen import canvas
-from reportlab.lib.units import mm
-import qsl
+import os
 import sys
+import urllib
 
-form = cgi.FieldStorage()
+import qsl
+
+form = {k: v for k, v in urllib.parse.parse_qsl(os.environ['QUERY_STRING'])}
 
 if not 'call' in form:
     print("Status: 500 Parameter missing")
     print()
     print(f"CGI parameter 'call' missing")
     exit(0)
-call = form.getvalue('call').upper()
+call = form['call'].upper()
 
-mycall = form.getvalue('mycall') or "DF7CB"
+mycall = form['mycall'] if 'mycall' in form else "DF7CB"
 
 f = TemporaryFile()
-c = canvas.Canvas(f, pagesize=(140*mm, 90*mm))
-c.setTitle(f"{mycall} QSL for {call}")
-qsl.qsl(c, call, mycall)
+qsos = qsl.qsl(f, call, mycall)
 
-c.showPage()
-c.save()
+if not qsos:
+    print("Status: 404 No QSOs found")
+    print()
+    print(f"Sorry, no QSOs between {call} and {mycall} found")
+    exit(0)
 
 filename = f"{mycall}-{call}.pdf".replace('/', '-')
 print("Content-Type: application/pdf")

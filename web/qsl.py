@@ -1,83 +1,73 @@
 #!/usr/bin/python3
 
-import psycopg2
-import psycopg2.extras
+import psycopg
+from psycopg.rows import namedtuple_row
+
+from reportlab.pdfgen import canvas
 from reportlab.lib.units import mm
 from reportlab.platypus import Table, TableStyle
 from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics.shapes import Drawing
 from reportlab.graphics import renderPDF
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 
-conn = psycopg2.connect("service=cb")
-cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+conn = psycopg.connect("service=cb")
+cur = conn.cursor(row_factory=namedtuple_row)
 
 (qslwidth, qslheight) = (140*mm, 90*mm)
 qslmargin = 2*mm
 
-def qsl(c, call, mycall="DF7CB"):
-    # background picture
+def qsl_front(c, mycall):
     height = 90*mm
     width = height * 1778/1000 # keep aspect ratio
-    c.setFillAlpha(0.5)
+    c.drawImage('traarer_muehle_f.jpg', 0*mm, 0*mm, width=width, height=height)
+
+    c.setFillColorRGB(.9, .5, .1)
+    c.setFont("Cantarell Extra Bold", 45)
+    if mycall == "DF7C":
+        c.drawString(92*mm, 21*mm, mycall)
+        c.setFontSize(24)
+        c.drawString(92*mm, 14*mm, "CONTEST")
+        c.setFontSize(25)
+        c.drawString(92*mm, 7*mm,  "STATION")
+    else:
+        c.drawRightString(132*mm, 8*mm, mycall)
+
+    c.showPage()
+
+def qsl_back(c, mycall, qsos):
+    # back image
+    height = 90*mm
+    width = height * 1778/1000 # keep aspect ratio
+    c.setFillAlpha(0.4)
     c.drawImage('traarer_muehle_r.jpg', 0*mm, 0*mm, width=width, height=height)
     c.setFillAlpha(1.0)
 
-    # QSO table
-    cur.execute("""SELECT
-            mycall,
-            call,
-            regexp_replace(call collate "C", '0', 'Ø', 'g') AS call_formatted,
-            regexp_replace(date_trunc('minute', start::timestamp)::text, ':00$', '') AS start,
-            start::date AS qso_date,
-            regexp_replace(date_trunc('minute', start::time)::text, ':00$', '') AS time_on,
-            concat_ws(E'\n',
-              round(qrg, 3),
-              'via ' || qso_via) as freq,
-            concat_ws('/', mode, submode) as mode,
-            concat_ws(' ', rsttx, extx) as rsttx,
-            concat_ws(' ', rstrx, exrx) as rstrx,
-            concat_ws(E'\n',
-              nullif(concat_ws(', ',
-                nullif(mycall, 'DF7CB'),
-                nullif(myqth, 'Krefeld'),
-                nullif(upper(myloc), 'JO31HI')
-              ), ''),
-              nullif(concat_ws(', ',
-                mytrx,
-                mypwr || ' W',
-                myant
-              ), '')
-            ) AS mystn,
-            CASE WHEN qslrx = 'Y' OR lotw IS NOT NULL or qslid IS NOT NULL THEN 'TNX'
-            ELSE 'PSE' END AS qsl_rcvd
-            FROM log
-            WHERE call = %s AND mycall = %s
-            ORDER BY start, call""", (call, mycall))
-
-    qsos = [['Confirming our QSO\nDate',
+    qso_table = [['Confirming our QSO\nDate',
              'Freq\nMHz', 'Mode\n2-way',
              'RST\nsent', 'RST\nrcvd',
+             'Contest',
              'My Station\nTrx, Power, Ant',
              'QSL',
             ]]
     adif = "OPERATOR;QSO_DATE;TIME_ON;FREQ;MODE;RST_SENT;QSL_RCVD;"
 
-    call_formatted = ''
-    for qso in cur.fetchall():
-        call_formatted = qso['call_formatted']
-        qsos.append([qso['start'], qso['freq'], qso['mode'],
-                     qso['rsttx'], qso['rstrx'],
-                     qso['mystn'],
-                     qso['qsl_rcvd'],
+    for qso in qsos:
+        qso_table.append([qso.start, qso.freq, qso.mode,
+                     qso.rsttx, qso.rstrx,
+                     qso.contest,
+                     qso.mystn,
+                     qso.qsl_rcvd,
                     ])
         adif += "\n%s;%s;%s;%s;%s;%s;%s;" % \
-                (qso['mycall'],
-                qso['qso_date'], qso['time_on'],
-                qso['freq'], qso['mode'],
-                qso['rsttx'],
-                qso['qsl_rcvd'])
+                (qso.mycall,
+                qso.qso_date, qso.time_on,
+                qso.freq, qso.mode,
+                qso.rsttx,
+                qso.qsl_rcvd)
 
-    t = Table(qsos)
+    t = Table(qso_table)
     t.setStyle(TableStyle([
         # global
         ('RIGHTPADDING',  (0, 0), (-1, -1), 0),
@@ -120,9 +110,9 @@ def qsl(c, call, mycall="DF7CB"):
     c.setFont("Helvetica", 14)
     c.drawString(71.3*mm, 79*mm, "to")
     c.setFont("Helvetica", 28)
-    c.drawString(77*mm, 79*mm, call_formatted)
+    c.drawString(77*mm, 79*mm, qsos[0].call_formatted)
 
-    qrtext = "TO:%s\nVIA:%s\nFRM:%s" % (call, "", mycall)
+    qrtext = "TO:%s\nVIA:%s\nFRM:%s" % (qsos[0].call, "", mycall)
     qrw = QrCodeWidget(qrtext, barBorder=0, barLevel='L')
     b = qrw.getBounds()
     (w, h) = (b[2] - b[0], b[3] - b[1])
@@ -135,7 +125,10 @@ def qsl(c, call, mycall="DF7CB"):
     c.drawString(69.5*mm, 66*mm, mycall)
 
     c.setFont("Helvetica", 14)
-    c.drawString(70*mm, 60*mm, "Christoph Berg")
+    if mycall == "DF7C":
+        c.drawString(70*mm, 60*mm, "Op: Christoph Berg DF7CB")
+    else:
+        c.drawString(70*mm, 60*mm, "Christoph Berg")
 
     c.setFont("Helvetica", 8)
     text = c.beginText()
@@ -167,14 +160,66 @@ def qsl(c, call, mycall="DF7CB"):
         """)
     c.drawText(text)
 
+    c.showPage()
+
+def qsl(f, call, mycall="DF7CB"):
+    c = canvas.Canvas(f, pagesize=(qslwidth, qslheight))
+    c.setTitle(f"{mycall} QSL for {call}")
+
+    pdfmetrics.registerFont(TTFont('Cantarell Extra Bold', 'Cantarell-ExtraBold.ttf'))
+
+    # front side
+    qsl_front(c, mycall)
+
+    # QSO table
+    cur.execute("""SELECT
+            mycall,
+            call,
+            regexp_replace(call collate "C", '0', 'Ø', 'g') AS call_formatted,
+            regexp_replace(date_trunc('minute', start::timestamp)::text, ':00$', '') AS start,
+            start::date AS qso_date,
+            regexp_replace(date_trunc('minute', start::time)::text, ':00$', '') AS time_on,
+            concat_ws(E'\n',
+              round(qrg, 3),
+              'via ' || qso_via) as freq,
+            concat_ws('/', mode, submode) as mode,
+            rsttx, -- concat_ws(' ', rsttx, extx) as rsttx,
+            rstrx, -- concat_ws(' ', rstrx, exrx) as rstrx,
+            concat_ws(E'\n',
+              nullif(concat_ws(', ',
+                nullif(myqth, 'Krefeld'),
+                nullif(upper(myloc), 'JO31HI')
+              ), ''),
+              nullif(concat_ws(', ',
+                mytrx,
+                mypwr || ' W',
+                myant
+              ), '')
+            ) AS mystn,
+            contest,
+            CASE WHEN qslrx = 'Y' OR lotw IS NOT NULL or qslid IS NOT NULL THEN 'TNX'
+            ELSE 'PSE' END AS qsl_rcvd
+            FROM log
+            WHERE call = %s AND mycall = %s
+            ORDER BY start, call""", (call, mycall))
+    #if not cur.rowcount:
+    #    return None
+
+    qsos = []
+    for qso in cur.fetchall():
+        qsos.append(qso)
+        if len(qsos) == 6:
+            qsl_back(c, mycall, qsos)
+            qsos = []
+    if qsos:
+        qsl_back(c, mycall, qsos)
+
+    c.save()
+
+    return cur.rowcount
+
 if __name__ == "__main__":
     import sys
-    from reportlab.pdfgen import canvas
 
     call = sys.argv[1]
-    c = canvas.Canvas("qsl.pdf", pagesize=(qslwidth, qslheight))
-    c.setTitle("%s QSL for %s" % ('DF7CB', call))
-    qsl(c, call)
-
-    c.showPage()
-    c.save()
+    qsl("qsl.pdf", call)
