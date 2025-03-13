@@ -61,15 +61,18 @@ query = f"""SELECT
           else submode
         end AS "SUBMODE",
 
-        CASE qso_via
-          WHEN 'QO100' THEN 'SAT'
-        END AS "PROP_MODE",
-        CASE qso_via
-          WHEN 'QO100' THEN 'QO-100'
-        END AS "SAT_NAME",
-        CASE qso_via
-          WHEN 'QO100' THEN '3cm'
-        END AS "BAND_RX",
+        case when qso_via ~ '^DB0' then 'RPT'
+             when qso_via is not null then 'SAT'
+        end as "PROP_MODE",
+        case when qso_via ~ '^DB0' then null
+             when qso_via is not null then qso_via
+        end as "SAT_NAME",
+        case when qso_via in ('RS-44', 'SO-50') then '70cm'
+             when qso_via = 'QO100' then '3cm'
+             when qso_via ~ '^DB0' then null
+             when qso_via is null then null
+             else error('Sat unknown: ' || qso_via)
+        end as "BAND_RX",
 
         regexp_replace(rsttx, '^599(.)', '599 \\1') AS "RST_SENT",
         extx as "STX_STRING",
