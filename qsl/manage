@@ -28,9 +28,10 @@ atexit.register(readline.write_history_file, histfile)
 def print_qsls(qsls, num):
     i = 1
     for qsl in qsls[1:]:
-        print("%s%s%d: %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s" %
+        print("%s%s%d: %s %s \033[1m%s\033[0m %s %s %s %s \033[1m%s %s\033[0m %s %s" %
               ('>' if num == i else ' ',
                '\033[1m' if qsl['qslrx'] == 'Y' else '', qsl['n'],
+               qsl['mycall'],
                qsl['start'].strftime('%d.%m.%Y %H:%M'),
                qsl['call'],
                qsl['qrg'], qsl['mode'],
@@ -45,9 +46,14 @@ def via(qsl, manager):
     print(sql % args)
     cur.execute(sql, args)
 
-def update(qsl):
+def update(qsl, qsltx=None, qslrx=None):
     args = (qsl['start'], qsl['call'])
-    if qsl['qsltx'] == 'Y':
+    if qsltx or qsltx:
+        sql = """UPDATE log SET qsltx = %s, qslrx = %s WHERE (start, call) = (%s, %s)"""
+        qsl['qsltx'] = qsltx
+        qsl['qslrx'] = qslrx
+        args = (qsltx, qslrx, qsl['start'], qsl['call'])
+    elif qsl['qsltx'] == 'Y':
         sql = """UPDATE log SET qslrx = 'Y' WHERE (start, call) = (%s, %s)"""
         qsl['qslrx'] = 'Y'
     else: # qsl['qsltx'] in ('R', 'N'):
@@ -67,7 +73,12 @@ while True:
         print()
         exit()
 
-    if m := re.search("^([0-9]+) (.+)$", l):
+    if m := re.search("^([0-9]+) ([RrNnYy])([RrNnYy])$", l):
+        num = int(m.group(1))
+        update(qsls[num], m.group(2).upper(), m.group(3).upper())
+        num += 1
+        print_qsls(qsls, num)
+    elif m := re.search("^([0-9]+) (.+)$", l):
         num = int(m.group(1))
         via(qsls[num], m.group(2))
         update(qsls[num])

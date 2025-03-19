@@ -10,6 +10,7 @@ argparser = argparse.ArgumentParser(description="Export an ADIF log from Postgre
 argparser.add_argument("-c", "--contest")
 argparser.add_argument("-l", "--myloc")
 argparser.add_argument("-m", "--mycall")
+argparser.add_argument("-q", "--qsl", action=argparse.BooleanOptionalAction)
 argparser.add_argument("-s", "--since",
                        help="QSO since (or changed since) this timestamp")
 argparser.add_argument("-v", "--qso-via")
@@ -30,6 +31,14 @@ if args.myloc:
 if args.mycall:
     pred.append("mycall = %s")
     vals.append(args.mycall.upper())
+if args.qsl:
+    # send QSL for this QSO if
+    # 1) we wanted to (qsltx R) or
+    # 2) we are requesting a QSL from them for some other QSO already (qslrx R)
+    pred.append("qsltx = 'R' or call in (select distinct call from log where mycall = %s and qsltx = 'R' and qslrx = 'R')")
+    vals.append(args.mycall.upper())
+    # exclude fully confirmed QSOs
+    pred.append("not (qsltx = 'Y' and qslrx = 'Y')")
 if args.since:
     pred.append("coalesce(last_update, start) >= %s")
     vals.append(args.since)
@@ -67,7 +76,7 @@ query = f"""SELECT
         case when qso_via ~ '^DB0' then null
              when qso_via is not null then qso_via
         end as "SAT_NAME",
-        case when qso_via in ('RS-44', 'SO-50') then '70cm'
+        case when qso_via in ('RS-44', 'SO-50', 'ARISS') then '70cm'
              when qso_via = 'QO100' then '3cm'
              when qso_via ~ '^DB0' then null
              when qso_via is null then null
