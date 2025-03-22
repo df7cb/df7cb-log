@@ -41,7 +41,7 @@ mkdir -p lotw/tmp
   ../bin/export-adif -s $STAMP -m DF7CB tmp/DF7CB.adif
   ./eqsl-upload tmp/DF7CB.adif
 
-  ../bin/export-adif -s $STAMP -v QO100 tmp/df7cb-qo100.adif
+  ../bin/export-adif -s $STAMP --sat_name=QO-100 tmp/df7cb-qo100.adif
   grep -q '<eor>' tmp/df7cb-qo100.adif && ./qo100-upload tmp/df7cb-qo100.adif
 
   echo "$TODAY" > .upload.stamp

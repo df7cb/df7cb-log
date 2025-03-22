@@ -3,8 +3,8 @@
 import argparse
 import os
 import adif_export
-import psycopg2
-import psycopg2.extras
+import psycopg
+from psycopg.rows import dict_row
 
 argparser = argparse.ArgumentParser(description="Export an ADIF log from PostgreSQL")
 argparser.add_argument("-c", "--contest")
@@ -13,100 +13,50 @@ argparser.add_argument("-m", "--mycall")
 argparser.add_argument("-q", "--qsl", action=argparse.BooleanOptionalAction)
 argparser.add_argument("-s", "--since",
                        help="QSO since (or changed since) this timestamp")
-argparser.add_argument("-v", "--qso-via")
+argparser.add_argument("-t", "--table", default='adif')
 argparser.add_argument("logfile", help="logfile")
 args, more_args = argparser.parse_known_args()
 
-conn = psycopg2.connect("service=cb")
-cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+conn = psycopg.connect("service=cb")
+cur = conn.cursor(row_factory=dict_row)
 
 pred, vals = ['true'], []
 
 if args.contest:
-    pred.append("contest = %s")
+    pred.append("contest_id = %s")
     vals.append(args.contest)
 if args.myloc:
-    pred.append("myloc = %s")
+    pred.append("my_gridsquare = %s")
     vals.append(args.myloc.upper())
 if args.mycall:
-    pred.append("mycall = %s")
+    pred.append("station_callsign = %s")
     vals.append(args.mycall.upper())
 if args.qsl:
     # send QSL for this QSO if
     # 1) we wanted to (qsltx R) or
     # 2) we are requesting a QSL from them for some other QSO already (qslrx R)
-    pred.append("qsltx = 'R' or call in (select distinct call from log where mycall = %s and qsltx = 'R' and qslrx = 'R')")
+    pred.append("qsl_sent = 'R' or call in (select distinct call from log where mycall = %s and qsltx = 'R' and qslrx = 'R')")
     vals.append(args.mycall.upper())
     # exclude fully confirmed QSOs
-    pred.append("not (qsltx = 'Y' and qslrx = 'Y')")
+    pred.append("not (qsl_sent = 'Y' and qsl_rcvd = 'Y')")
 if args.since:
-    pred.append("coalesce(last_update, start) >= %s")
+    pred.append("last_update >= %s")
     vals.append(args.since)
-if args.qso_via:
-    pred.append("qso_via = %s")
-    vals.append(args.qso_via.upper())
 for arg in more_args:
     assert arg[0:2] == '--'
     key, _, value = arg[2:].partition('=')
     pred.append(f"{key} = %s")
     vals.append(value)
 
-query = f"""SELECT
-        to_char(start, 'YYYYMMDD') AS "QSO_DATE",
-        to_char(start, 'hh24mi') AS "TIME_ON",
-        call AS "CALL",
-        qrg::text AS "FREQ",
-        qrg::band AS "BAND",
-        case mode
-          when 'FSQ' then 'MFSK'
-          when 'FST4' then 'MFSK'
-          when 'FT4' then 'MFSK'
-          else mode
-        end AS "MODE",
-        case mode
-          when 'FSQ' then 'FSQCALL'
-          when 'FST4' then 'FST4'
-          when 'FT4' then 'FT4'
-          else submode
-        end AS "SUBMODE",
-
-        case when qso_via ~ '^DB0' then 'RPT'
-             when qso_via is not null then 'SAT'
-        end as "PROP_MODE",
-        case when qso_via ~ '^DB0' then null
-             when qso_via is not null then qso_via
-        end as "SAT_NAME",
-        case when qso_via in ('RS-44', 'SO-50', 'ARISS') then '70cm'
-             when qso_via = 'QO100' then '3cm'
-             when qso_via ~ '^DB0' then null
-             when qso_via is null then null
-             else error('Sat unknown: ' || qso_via)
-        end as "BAND_RX",
-
-        regexp_replace(rsttx, '^599(.)', '599 \\1') AS "RST_SENT",
-        extx as "STX_STRING",
-        regexp_replace(rstrx, '^599(.)', '599 \\1') AS "RST_RCVD",
-        exrx as "SRX_STRING",
-
-        coalesce(qsltx, 'N') AS "QSL_SENT",
-        case qslrx
-          when 'Y' then 'Y' -- TNX
-          when 'R' then 'R' -- PSE
-          else 'i' -- N means PSE at qslshop.de
-        end as "QSL_RCVD",
-        loc AS "GRIDSQUARE",
-        contest AS "CONTEST_ID",
-
-        mycall AS "STATION_CALLSIGN",
-        case mycall when 'DF7CB' then '' else 'DF7CB' end as "OPERATOR",
-        mypwr AS "TX_PWR",
-        myloc AS "MY_GRIDSQUARE"
-        FROM log l
-        WHERE {' and '.join(pred)}
-        ORDER BY start, call"""
+query = f"""select * from {args.table}
+        where {' and '.join(pred)}
+        order by call, start"""
 
 cur.execute(query, vals)
 records = cur.fetchall()
+for r in records:
+    del r['start']
+    del r['last_update']
 adif_export.write(records, args.logfile)
 
 print(f"{cur.rowcount} QSO written to {args.logfile}")

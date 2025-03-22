@@ -46,7 +46,8 @@ mycall = 'DF7CB'
 # Hamlib
 Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
 my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-#my_rig.set_conf("rig_pathname", "localhost:4533")
+my_rig.set_conf("rig_pathname", "localhost:4532")
+#my_rig.set_conf("rig_pathname", "192.168.0.3:4532")
 my_rig.open()
 
 my_rot = Hamlib.Rot(Hamlib.ROT_MODEL_NETROTCTL)
@@ -66,6 +67,9 @@ select = """SELECT * FROM (
   ORDER BY start DESC, call DESC LIMIT 50
 ) sub
 ORDER BY start, call"""
+
+# terminal title
+print("\033]0;QSO\007", end='')
 
 while True:
     log = {}

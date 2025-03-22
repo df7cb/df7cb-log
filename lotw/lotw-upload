@@ -12,7 +12,7 @@ psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$S
   while read MYCALL MYLOC; do
     case $MYCALL in
       *DF7CB*|DF7C|*DG8VD*|*DN3AJ*) ;;
-      DA0RR) continue ;;
+      DA0RR|DL60RRDXA) continue ;;
       *) echo "Won't upload for mycall $MYCALL"; exit 1 ;;
     esac
     FILE="tmp/${MYCALL//\//-}-$MYLOC.adif"

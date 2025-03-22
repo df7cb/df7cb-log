@@ -1,3 +1,4 @@
+#RULES=qso
 RULES=contest
 #RULES=mwc
 #RULES=cwops_mini_cwt
@@ -32,7 +33,7 @@ CQDELAY=4
 TELNETHOST=dx.da0bcc.de
 #TELNETHOST=logbook.rrdxa.org
 TELNETPORT=8000
-CLUSTERLOGIN=DF7CB
+CLUSTERLOGIN=DF7CB-1
 #################################
 #  RADIO CONTROL                #
 #################################
@@ -56,9 +57,9 @@ RIGPORT=localhost:4532
 #
 #RIT_CLEAR
 
-ROTATOR_CONTROL
-ROTMODEL=2
-ROTPORT=192.168.0.3:4533
+#ROTATOR_CONTROL
+#ROTMODEL=2
+#ROTPORT=192.168.0.3:4533
 
 #################################
 #  INFORMATION WINDOWS          #

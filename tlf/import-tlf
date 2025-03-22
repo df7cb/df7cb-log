@@ -39,8 +39,19 @@ for o, a in opts:
 log = []
 laststart = ''
 fields = set()
+snip = False
 with open(args[0]) as f:
   for line in f:
+
+    # ignore everything between --8<-- and -->8--
+    if line.strip() == "; -->8--":
+        snip = False
+        continue
+    elif line.strip() == '; --8<--':
+        snip = True
+        continue
+    elif snip:
+        continue
 
     # ; comment, append to last qso
     if line[0] == ';':
