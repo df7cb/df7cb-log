@@ -76,24 +76,24 @@ while True:
         print()
         exit()
 
-    if m := re.search("^([0-9]+) ([RrNnYy])([RrNnYy])$", l):
+    if m := re.match(r"([0-9]+) ([RrNnYy])([RrNnYy])$", l):
         num = int(m.group(1))
         update(qsls[num], m.group(2).upper(), m.group(3).upper())
         num += 1
         print_qsls(qsls, num)
-    elif m := re.search("^([0-9]+) [Ss][Ww][Ll] (\S+)$", l):
+    elif m := re.match(r"([0-9]+) [Ss][Ww][Ll] (\S+)$", l):
         num = int(m.group(1))
         cur.execute("insert into swl (call, start, qrg, mode, rsttx, qsltx, qslrx, mycall, comment) values (%s, %s, %s, %s, 'SWL', 'R', 'Y', %s, %s)",
                     [m.group(2).upper(), qsls[num]['start'], qsls[num]['qrg'], qsls[num]['mode'], qsls[num]['mycall'], f"QSO with {qsls[num]['call']}"])
         conn.commit()
         print_qsls(qsls, num)
-    elif m := re.search("^([0-9]+) (\S+)$", l):
+    elif m := re.match(r"([0-9]+) (\S+)$", l):
         num = int(m.group(1))
         via(qsls[num], m.group(2))
         update(qsls[num])
         num += 1
         print_qsls(qsls, num)
-    elif m := re.search("^[0-9]+$", l):
+    elif m := re.match(r"[0-9]+$", l):
         num = int(l)
         update(qsls[num])
         num += 1

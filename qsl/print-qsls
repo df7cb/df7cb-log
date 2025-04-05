@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+
+MYCALL="$1"
+
+../bin/export-adif --qsl -m $MYCALL "$(echo $MYCALL | tr / _)-qsl.adif"
+
+read -p "Ok?"
+
+psql -v mycall=$MYCALL -f mark-as-sent service=cb
