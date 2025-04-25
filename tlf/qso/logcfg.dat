@@ -1,0 +1,84 @@
+RULES=qso
+CALL=DF7CB
+#
+EDITOR=vi
+# 0 black, 1 red, 2 green, 3 yellow, 4 blue, 5 magenta, 6 cyan, 7 white
+# (Header and footer)
+TLFCOLOR1=20
+# (Pop up windows)
+TLFCOLOR2=67
+# (Log window)
+TLFCOLOR3=70
+# (Markers/dupe colour)
+TLFCOLOR4=57
+# (Input fields)
+TLFCOLOR5=43
+# (Window frames)
+TLFCOLOR6=63
+#
+HAMLIB_KEYER
+#FLDIGI
+#QTC=SEND
+#---speed (6 ... 60 wpm)
+#RTTYMODE
+#CWSPEED=28
+SHORT_SERIAL
+LEADING_ZEROS_SERIAL=OFF
+#---cq delay (in 0,5 s)
+CQDELAY=4
+# cluster
+TELNETHOST=dx.da0bcc.de
+#TELNETHOST=logbook.rrdxa.org
+TELNETPORT=8000
+CLUSTERLOGIN=DF7CB-2
+#################################
+#  RADIO CONTROL                #
+#################################
+RADIO_CONTROL
+# rigctld
+RIGMODEL=2
+#RIGMODEL=3009
+# IC-7610
+#RIGMODEL=3078
+# IC-705
+#RIGMODEL=3085
+#RIGSPEED=19200
+RIGSPEED=115200
+RIGPORT=localhost:4532
+#RIGPORT=hamilton
+#RIGPORT=/home/myon/rig-pty1
+#RIGPORT=/tmp/kappanhang-IC-705.pty
+#RIGPTT
+#
+#SSBMODE
+#
+#RIT_CLEAR
+
+#ROTATOR_CONTROL
+#ROTMODEL=2
+#ROTPORT=192.168.0.3:4533
+
+#################################
+#  INFORMATION WINDOWS          #
+#################################
+#CLUSTER
+BANDMAP=S,1800  # skipdupes, livetime
+#BANDMAP=S,720  # skipdupes, livetime
+BMAUTOGRAB
+#FILTER
+#
+SCOREWINDOW
+#
+CHECKWINDOW
+#################################
+#  CHECK PARTIAL FUNCTION       #
+#################################
+PARTIALS
+#USEPARTIALS
+#
+#################################
+#     Misc commands             #
+#################################
+# No automatic 'qso before msg'
+NOB4
+#############END#################
