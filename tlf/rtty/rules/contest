@@ -15,7 +15,7 @@ COUNTRY_MULT
 #MULT_LIST=rules/ua_mult
 #INITIAL_EXCHANGE=WAG_call_history.txt
 #INITIAL_EXCHANGE=rules/CWT_db.txt
-RECALL_MULTS
+#RECALL_MULTS
 #COUNTRYLIST="Russia:UA,UA9,UA2"
 #SERIAL_OR_SECTION
 MY_COUNTRY_POINTS=2
@@ -38,23 +38,22 @@ DX_POINTS=5
 #                                #
 ##################################
 #
-F1=CQ % % TEST
+F1=| CQ % % TEST |
 F2=@ DE %
-F3=@ 5NN #
-#F3=@ CHRIS 3484
-F4=5NN #
+F3=| @ # # @ |
+F4=| % # # % |
 F5=@
-F6=%
+F6=|% % %|
 F7=@ SRI QSO B4
 F8=AGN
 F9=?
 F10=QRZ?
 F11=PSE K
-F12=TEST %
+F12=| TEST % % CQ |
 #
-CQ_TU_MSG=TU
-S&P_TU_MSG=TU 5NN #
-#S&P_TU_MSG=TU CHRIS 3484
+CQ_TU_MSG=| @ TU % CQ |
+S&P_CALL_MSG=| % % |
+S&P_TU_MSG=| TU # # % |
 #
 #ALT_0=
 #ALT_1=
