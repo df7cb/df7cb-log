@@ -21,7 +21,8 @@ CREATE TABLE prefix (
   prefix prefix_range NOT NULL,
   cty cty NOT NULL REFERENCES country(cty),
   cq int,
-  itu int
+  itu int,
+  exact boolean not null
 );
 CREATE INDEX ON prefix USING gist(prefix);
 
@@ -40,7 +41,9 @@ CREATE OR REPLACE FUNCTION call2cty(call text)
   RETURNS cty
   LANGUAGE SQL
   begin atomic
-    SELECT cty FROM prefix WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1;
+    SELECT cty FROM prefix
+    WHERE call <@ prefix and (call = prefix or not exact)
+    ORDER BY length(prefix) DESC LIMIT 1;
   end;
 
 --CREATE CAST (call AS cty) WITH FUNCTION call2cty AS ASSIGNMENT;
@@ -51,7 +54,7 @@ CREATE OR REPLACE FUNCTION cq(call text)
   begin atomic
     SELECT lpad(coalesce(prefix.cq, country.cq)::text, 2, '0')
     FROM prefix JOIN country ON prefix.cty = country.cty
-    WHERE call::text <@ prefix
+    WHERE call <@ prefix and (call = prefix or not exact)
     ORDER BY length(prefix) DESC LIMIT 1;
   end;
 
@@ -61,7 +64,7 @@ CREATE OR REPLACE FUNCTION itu(call text)
   begin atomic
     SELECT lpad(coalesce(prefix.itu, country.itu)::text, 2, '0')
     FROM prefix JOIN country ON prefix.cty = country.cty
-    WHERE call::text <@ prefix
+    WHERE call <@ prefix and (call = prefix or not exact)
     ORDER BY length(prefix) DESC LIMIT 1;
   end;
 
@@ -70,7 +73,7 @@ CREATE OR REPLACE FUNCTION continent(call text)
   LANGUAGE SQL
   begin atomic
     SELECT continent FROM prefix JOIN country ON prefix.cty = country.cty
-    WHERE call::text <@ prefix
+    WHERE call <@ prefix and (call = prefix or not exact)
     ORDER BY length(prefix) DESC LIMIT 1;
   end;
 

@@ -60,7 +60,8 @@ insert into prefiX
     regexp_replace(m[1], '=|[\[(].*', '', 'g') as prefix, -- remove = and everything after [ or (
     cty,
     (regexp_match(m[1], '\((.*)\)'))[1]::int as cq,
-    (regexp_match(m[1], '\[(.*)\]'))[1]::int as itu
+    (regexp_match(m[1], '\[(.*)\]'))[1]::int as itu,
+    m[1] ~ '^=' as exact
   from country, regexp_matches(prefixes, '[^ ]+', 'g') m(m); -- blank-separated words
 
 commit;
