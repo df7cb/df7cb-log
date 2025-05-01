@@ -6,7 +6,8 @@ CREATE EXTENSION if not exists postgis;
 CREATE TABLE country (
   cty text PRIMARY KEY,
   country text NOT NULL,
-  beam int NOT NULL,
+  official boolean,
+  dxcc int NOT NULL,
   continent text NOT NULL,
   cq int NOT NULL,
   itu int NOT NULL,
@@ -16,54 +17,62 @@ CREATE TABLE country (
   prefixes text NOT NULL
 );
 
-\copy country from 'cty.csv' (format csv, delimiter ',')
+CREATE TABLE prefix (
+  prefix prefix_range NOT NULL,
+  cty cty NOT NULL REFERENCES country(cty),
+  cq int,
+  itu int
+);
+CREATE INDEX ON prefix USING gist(prefix);
 
-UPDATE country SET
-  cty = regexp_replace(cty, '^\*', ''),
-  lon = -lon,
-  tz = -tz,
-  prefixes = regexp_replace(prefixes, ';$', '');
+\ir country_load.sql
 
 SELECT '''' || string_agg(cty, ''',''') || '''' AS cty FROM country \gset
 CREATE TYPE cty AS ENUM(:cty);
 
 ALTER TABLE country ALTER COLUMN cty TYPE cty USING cty::cty,
-  --DROP COLUMN beam,
   ADD COLUMN geom geometry(MULTIPOLYGON, 4326);
-
-CREATE TABLE prefix (
-  prefix prefix_range NOT NULL,
-  cty cty NOT NULL REFERENCES country(cty)
-);
-INSERT INTO prefix
-  SELECT regexp_replace(m[1], '=|[\[(].*', '', 'g'), cty -- remove = and everything after [ or (
-  FROM country, regexp_matches(prefixes, '[^ ]+', 'g') m(m); -- blank-separated words
-CREATE INDEX ON prefix USING gist(prefix);
 
 CREATE DOMAIN call AS text
   CONSTRAINT valid_callsign CHECK ((VALUE ~ '^[A-Z0-9]+(/[A-Z0-9]+)*$'::text));
 
-CREATE OR REPLACE FUNCTION call2cty(call call)
+CREATE OR REPLACE FUNCTION call2cty(call text)
   RETURNS cty
   LANGUAGE SQL
-  AS $$SELECT cty FROM prefix WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  begin atomic
+    SELECT cty FROM prefix WHERE call <@ prefix ORDER BY length(prefix) DESC LIMIT 1;
+  end;
 
-CREATE CAST (call AS cty) WITH FUNCTION call2cty AS ASSIGNMENT;
+--CREATE CAST (call AS cty) WITH FUNCTION call2cty AS ASSIGNMENT;
 
-CREATE OR REPLACE FUNCTION cq(call call)
+CREATE OR REPLACE FUNCTION cq(call text)
   RETURNS text
   LANGUAGE SQL
-  AS $$SELECT lpad(cq::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  begin atomic
+    SELECT lpad(coalesce(prefix.cq, country.cq)::text, 2, '0')
+    FROM prefix JOIN country ON prefix.cty = country.cty
+    WHERE call::text <@ prefix
+    ORDER BY length(prefix) DESC LIMIT 1;
+  end;
 
-CREATE OR REPLACE FUNCTION itu(call call)
+CREATE OR REPLACE FUNCTION itu(call text)
   RETURNS text
   LANGUAGE SQL
-  AS $$SELECT lpad(itu::text, 2, '0') FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  begin atomic
+    SELECT lpad(coalesce(prefix.itu, country.itu)::text, 2, '0')
+    FROM prefix JOIN country ON prefix.cty = country.cty
+    WHERE call::text <@ prefix
+    ORDER BY length(prefix) DESC LIMIT 1;
+  end;
 
-CREATE OR REPLACE FUNCTION continent(call call)
+CREATE OR REPLACE FUNCTION continent(call text)
   RETURNS text
   LANGUAGE SQL
-  AS $$SELECT continent FROM prefix JOIN country ON prefix.cty = country.cty WHERE call::text <@ prefix ORDER BY length(prefix) DESC LIMIT 1$$;
+  begin atomic
+    SELECT continent FROM prefix JOIN country ON prefix.cty = country.cty
+    WHERE call::text <@ prefix
+    ORDER BY length(prefix) DESC LIMIT 1;
+  end;
 
 -- from https://wiki.postgresql.org/wiki/Round_time
 CREATE FUNCTION date_round(base_date timestamptz, round_interval interval)
