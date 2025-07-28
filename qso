@@ -127,20 +127,20 @@ while True:
             # get frequency from rigctld on port 4534
             Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
             qo100_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-            qo100_rig.set_conf("rig_pathname", "localhost:4534")
+            qo100_rig.set_conf("rig_pathname", "localhost:4555")
             qo100_rig.open()
             freq = qo100_rig.get_freq()
             if log['mode'] == 'CW':
                 freq += 850
             log['qrg'] = round(freq / 1000000.0, 4)
 
-            log['qso_via'] = "QO100"
+            log['qso_via'] = "QO-100"
 
         elif re.search(r'^\d+(\.\d+)?$', tok): # frequency in MHz
             log['qrg'] = tok
             freq = float(tok)
             if int(freq) == 2400:
-                log['qso_via'] = "QO100"
+                log['qso_via'] = "QO-100"
             elif freq >= 1000: # guess it's kHz
                 freq /= 1000.0
                 log['qrg'] = freq
