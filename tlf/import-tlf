@@ -6,9 +6,10 @@ import re
 import sys
 import psycopg
 
-opts, args = getopt.getopt(sys.argv[1:], "c:C:e:lm:no:p:")
+opts, args = getopt.getopt(sys.argv[1:], "c:C:e:F:lm:no:p:")
 noop = False
 extx = ""
+freq = None
 logtable = "log"
 
 qso_template = {}
@@ -20,6 +21,8 @@ for o, a in opts:
         qso_template['comment'] = a
     elif o == '-e':
         extx = a
+    elif o == '-F':
+        freq = int(a)
     elif o == '-l':
         logtable = "livelog"
     elif o == '-m':
@@ -75,6 +78,8 @@ with open(args[0]) as f:
     laststart = qso['start']
     qso['call'] = line[29:43].rstrip()
     qso['qrg'] = str(Decimal(line[79:87]) / 1000)
+    if freq:
+        qso['qrg'] = str(freq + float(qso['qrg']) % 1.0)
 
     rsttx = line[44:47].rstrip()
     if line[23] == '0':
