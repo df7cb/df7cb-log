@@ -1,0 +1,522 @@
+Amateur radio log file
+
+<adif_ver:5>3.1.4
+<eoh>
+
+<qso_date:8>20250614
+<time_on:4>1537
+<call:5>CU3AA
+<freq:9>2400.4142
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>HM68 753
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>HM68
+<contest_id:12>QO100-SPRINT
+<comment:3>753
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1519
+<call:5>DF3IS
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JN49 003
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN49
+<contest_id:12>QO100-SPRINT
+<comment:3>003
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1516
+<call:7>DJ4FF/M
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JN47 377
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN47
+<contest_id:12>QO100-SPRINT
+<comment:3>377
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1514
+<call:6>DL1EAL
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JO31 843
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JO31
+<contest_id:12>QO100-SPRINT
+<comment:3>843
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1540
+<call:6>DL3NCR
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JN48 001
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN48
+<contest_id:12>QO100-SPRINT
+<comment:3>001
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1553
+<call:6>DL9DRA
+<freq:9>2400.4217
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:4>JO61
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JO61
+<contest_id:12>QO100-SPRINT
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1534
+<call:5>EI3DP
+<freq:9>2400.4046
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>IO51 348
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>IO51
+<contest_id:12>QO100-SPRINT
+<comment:3>348
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1515
+<call:5>EU2AA
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>KO34 196
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KO34
+<contest_id:12>QO100-SPRINT
+<comment:3>196
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1519
+<call:5>EU6DZ
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>KO35 749
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KO35
+<contest_id:12>QO100-SPRINT
+<comment:3>749
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1504
+<call:5>F5RRS
+<freq:7>2400.38
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JN36 736
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN36
+<contest_id:12>QO100-SPRINT
+<comment:3>736
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1517
+<call:5>F5RRS
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>JN36 736
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN36
+<contest_id:12>QO100-SPRINT
+<comment:3>736
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1513
+<call:5>G4GIR
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>IO92 336
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>IO92
+<contest_id:12>QO100-SPRINT
+<comment:3>336
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1509
+<call:6>HB9EHJ
+<freq:9>2400.4007
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:9>JN47 1234
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>JN47
+<contest_id:12>QO100-SPRINT
+<comment:4>1234
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1551
+<call:5>OH3DP
+<freq:7>2400.41
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:9>KP10 1585
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KP10
+<contest_id:12>QO100-SPRINT
+<comment:4>1585
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1543
+<call:6>PP2RON
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:7>GH53 75
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>GH53
+<contest_id:12>QO100-SPRINT
+<comment:2>75
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1531
+<call:4>R3LO
+<freq:9>2400.3932
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>KO64 972
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KO64
+<contest_id:12>QO100-SPRINT
+<comment:3>972
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1535
+<call:4>RM2P
+<freq:9>2400.4061
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:4>KO93
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KO93
+<contest_id:12>QO100-SPRINT
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1556
+<call:5>US0SY
+<freq:9>2400.4253
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:9>KN28 1587
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KN28
+<contest_id:12>QO100-SPRINT
+<comment:4>1587
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1507
+<call:6>VU2EEI
+<freq:9>2400.3892
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>MO88 287
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>MO88
+<contest_id:12>QO100-SPRINT
+<comment:3>287
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
+
+<qso_date:8>20250614
+<time_on:4>1542
+<call:6>YO2MAX
+<freq:8>2400.421
+<band:4>13cm
+<band_rx:3>3cm
+<mode:2>CW
+<prop_mode:3>SAT
+<sat_name:6>QO-100
+<rst_sent:3>599
+<stx_string:8>JO31 332
+<rst_rcvd:3>599
+<srx_string:8>KN15 821
+<qsl_sent:1>N
+<qsl_rcvd:1>i
+<gridsquare:4>KN15
+<contest_id:12>QO100-SPRINT
+<comment:3>821
+<station_callsign:5>DF7CB
+<my_rig:7>LimeSDR
+<my_antenna:7>1m dish
+<tx_pwr:1>1
+<my_city:7>Krefeld
+<my_gridsquare:6>JO31HI
+<eor>
