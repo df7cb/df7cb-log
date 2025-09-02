@@ -90,7 +90,7 @@ while True:
     elif m := re.match(r"([0-9]+) (\S+)$", l):
         num = int(m.group(1))
         via(qsls[num], m.group(2))
-        update(qsls[num])
+        #update(qsls[num])
         num += 1
         print_qsls(qsls, num)
     elif m := re.match(r"[0-9]+$", l):

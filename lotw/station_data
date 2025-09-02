@@ -189,4 +189,18 @@
     <GRIDSQUARE>JO31gl</GRIDSQUARE>
     <ITUZ>28</ITUZ>
   </StationData>
+  <StationData name="JO43VC">
+    <CALL>DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>230</DXCC>
+    <GRIDSQUARE>JO43VC</GRIDSQUARE>
+    <ITUZ>28</ITUZ>
+  </StationData>
+  <StationData name="IN78RI">
+    <CALL>F/DF7CB</CALL>
+    <CQZ>14</CQZ>
+    <DXCC>227</DXCC>
+    <GRIDSQUARE>IN78RI</GRIDSQUARE>
+    <ITUZ>27</ITUZ>
+  </StationData>
 </StationDataFile>

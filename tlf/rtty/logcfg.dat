@@ -28,7 +28,7 @@ RTTYMODE
 #SHORT_SERIAL
 #---cq delay (in 0,5 s)
 #CQDELAY=22
-CQDELAY=28
+CQDELAY=24
 # cluster
 TELNETHOST=dx.da0bcc.de
 #TELNETHOST=logbook.rrdxa.org

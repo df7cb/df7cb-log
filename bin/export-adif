@@ -14,6 +14,7 @@ argparser.add_argument("-q", "--qsl", action=argparse.BooleanOptionalAction)
 argparser.add_argument("-s", "--since",
                        help="QSO since (or changed since) this timestamp")
 argparser.add_argument("-t", "--table", default='adif')
+argparser.add_argument("-v", "--verbose", action=argparse.BooleanOptionalAction)
 argparser.add_argument("logfile", help="logfile")
 args, more_args = argparser.parse_known_args()
 
@@ -42,15 +43,27 @@ if args.qsl:
 if args.since:
     pred.append("last_update >= %s")
     vals.append(args.since)
+
+seen_sql = False
 for arg in more_args:
-    assert arg[0:2] == '--'
-    key, _, value = arg[2:].partition('=')
-    pred.append(f"{key} = %s")
-    vals.append(value)
+    if arg[0:2] == '--' and '=' in arg:
+        key, _, value = arg[2:].partition('=')
+        pred.append(f"{key} = %s")
+        vals.append(value)
+    else:
+        if seen_sql:
+            vals.append(arg)
+        else:
+            pred.append(arg)
+            seen_sql = True
 
 query = f"""select * from {args.table}
-        where {' and '.join(pred)}
-        order by call, start"""
+where {' and\n  '.join(pred)}
+order by start, call"""
+
+if args.verbose:
+    print(query)
+    print(vals)
 
 cur.execute(query, vals)
 records = cur.fetchall()

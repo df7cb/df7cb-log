@@ -51,4 +51,4 @@ RECALL_MULTS
 #  EXCHANGE                     #
 #                               #
 #################################
-INITIAL_EXCHANGE=rules/CWT_db.txt
+INITIAL_EXCHANGE=rules/cwt.txt

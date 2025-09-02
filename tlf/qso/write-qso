@@ -1,35 +1,39 @@
 #!/usr/bin/python3
 
+import argparse
 import psycopg
 from psycopg.rows import namedtuple_row
 
 # 15DIG 13-FEB-25 21:02 1843  DP1POL         599  599                CE9      1  21141.0
 
+argparser = argparse.ArgumentParser(description="Write a log in tlf format")
+argparser.add_argument("mycall", help="call to export")
+args = argparser.parse_args()
+
 conn = psycopg.connect("service=cb")
 cur = conn.cursor(row_factory=namedtuple_row)
 
 cur.execute("""select
-    *, row_number() over (order by start, call) as extx
-from (select
-    start,
-    row_number() over (partition by cty, qrg::band, major_mode(mode) order by start) as qso_nr,
     replace(qrg::band::text, 'm', '')::int as band,
     case major_mode(mode) when 'CW' then 'CW' when 'PHONE' then 'SSB' when 'DATA' then 'DIG' end as mode,
-    to_char(start, 'DD-MON-YY HH24:MM') as time,
+    to_char(max(start), 'DD-MON-YY HH24:MM') as time,
     call,
     599 as rsttx,
     599 as rstrx,
-    coalesce(unaccent(name::varchar(13)), '') as name,
+    case when bool_or(lotw) then 'Lotw' else '' end as exrx,
     coalesce(cty::text, '') as multi,
     1 as score,
-    round(1000.0 * qrg, 1) as qrg
+    round(1000.0 * min(qrg), 1) as qrg
     from log
     where qrg between 1 and 30
-) where qso_nr = 1 or start >= '2025-01-01'
-order by start, call
-""")
+        and mycall = %s
+    group by call, cty, qrg::band, major_mode(mode)
+    order by max(start), call
+""", [args.mycall])
 
 print("; --8<--                                                                               ")
+nr = 1
 for qso in cur.fetchall():
-    print(f"{qso.band:3}{qso.mode:3} {qso.time:15} {qso.extx:04}  {qso.call:12} {qso.rsttx:5}{qso.rstrx:5}  {qso.name:13} {qso.multi:8} {qso.score}  {qso.qrg:7}")
+    print(f"{qso.band:3}{qso.mode:3} {qso.time:15} {nr:04}  {qso.call:12} {qso.rsttx:5}{qso.rstrx:5}  {qso.exrx:13} {qso.multi:8} {qso.score}  {qso.qrg:7}")
+    nr += 1
 print("; -->8--                                                                               ")

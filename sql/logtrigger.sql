@@ -40,7 +40,7 @@ BEGIN
     -- 2m
     ELSIF NEW.qrg::band IN ('2m', '70cm') THEN
       IF NEW.qso_via IS NOT NULL AND NEW.qso_via NOT LIKE 'DB0%' THEN -- Sat
-        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'TM733'; END IF;
+        IF NEW.mytrx IS NULL THEN NEW.mytrx := 'IC-9700'; END IF;
         IF NEW.mypwr IS NULL THEN NEW.mypwr := '50'; END IF;
         IF NEW.myant IS NULL THEN NEW.myant := 'Space Quad'; END IF;
       END IF;
