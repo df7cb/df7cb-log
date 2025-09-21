@@ -40,10 +40,10 @@ DX_POINTS=5
 #
 F1=| CQ % % TEST |
 F2=@ DE %
-F3=| @ 1994 1994 @ |
-F4=| % 1994 1994 % |
+F3=| @ # # @ |
+F4=| % # # % |
 F5=@
-F6=|% % %|
+F6=| % % % |
 F7=@ SRI QSO B4
 F8=AGN
 F9=?
@@ -53,7 +53,7 @@ F12=| TEST % % CQ |
 #
 CQ_TU_MSG=| @ TU % CQ |
 S&P_CALL_MSG=| % % |
-S&P_TU_MSG=| TU 1994 1994 % |
+S&P_TU_MSG=| TU # # % |
 #
 #ALT_0=
 #ALT_1=

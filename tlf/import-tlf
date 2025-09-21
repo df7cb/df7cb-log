@@ -6,11 +6,12 @@ import re
 import sys
 import psycopg
 
-opts, args = getopt.getopt(sys.argv[1:], "c:C:e:F:lm:no:p:")
+opts, args = getopt.getopt(sys.argv[1:], "c:C:e:F:lm:M:no:p:")
 noop = False
 extx = ""
 freq = None
 logtable = "log"
+dig_mode = "RTTY"
 
 qso_template = {}
 
@@ -27,6 +28,8 @@ for o, a in opts:
         logtable = "livelog"
     elif o == '-m':
         qso_template['mycall'] = a.upper()
+    elif o == '-M':
+        dig_mode = a.upper()
     elif o == '-n':
         noop = True
     elif o == '-o':
@@ -67,7 +70,7 @@ with open(args[0]) as f:
     qso = {x: qso_template[x] for x in qso_template}
 
     qso['mode'] = line[3:6].rstrip()
-    if qso['mode'] == 'DIG': qso['mode'] = 'RTTY'
+    if qso['mode'] == 'DIG': qso['mode'] = dig_mode
     qso['start'] = line[7:22] # date+time
     if laststart == qso['start']: # 2nd QSO in this minute
         qso['start'] += ':15'
