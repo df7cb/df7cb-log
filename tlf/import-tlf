@@ -105,8 +105,10 @@ with open(args[0]) as f:
 
     # extract CQ zone
     if extx == '14':
-        if m := re.match('^([0-9]{1,2})$', exchange):
-            qso['cq'] = exchange
+        if m := re.match('^([0-9]{1,2})(?: (\w+))?$', exchange):
+            qso['cq'] = m.group(1)
+            if m.group(2):
+                qso['state'] = m.group(2)
 
     # extract ITU zone
     if extx == '28':
