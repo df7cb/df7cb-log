@@ -19,6 +19,7 @@ TLFCOLOR5=43
 # (Window frames)
 TLFCOLOR6=63
 #
+#SSBMODE
 HAMLIB_KEYER
 #FLDIGI
 #QTC=RECV
@@ -33,7 +34,7 @@ CQDELAY=4
 TELNETHOST=dx.da0bcc.de
 #TELNETHOST=logbook.rrdxa.org
 TELNETPORT=8000
-CLUSTERLOGIN=DF7CB-1
+CLUSTERLOGIN=DF7CB
 #################################
 #  RADIO CONTROL                #
 #################################
