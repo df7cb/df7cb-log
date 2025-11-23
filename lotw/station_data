@@ -203,4 +203,11 @@
     <GRIDSQUARE>IN78RI</GRIDSQUARE>
     <ITUZ>27</ITUZ>
   </StationData>
+  <StationData name="KG54VP">
+    <CALL>ZS/DF7CB</CALL>
+    <CQZ>38</CQZ>
+    <DXCC>462</DXCC>
+    <GRIDSQUARE>KG54VP</GRIDSQUARE>
+    <ITUZ>57</ITUZ>
+  </StationData>
 </StationDataFile>

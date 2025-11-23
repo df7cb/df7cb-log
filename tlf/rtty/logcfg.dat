@@ -2,6 +2,7 @@ RULES=contest
 #RULES=mwc
 #RULES=cwops_mini_cwt
 CALL=DF7C
+MYQRA=JO31HI
 #
 EDITOR=vi
 # 0 black, 1 red, 2 green, 3 yellow, 4 blue, 5 magenta, 6 cyan, 7 white
@@ -20,14 +21,14 @@ TLFCOLOR6=63
 #
 #HAMLIB_KEYER
 FLDIGI
-#QTC=SEND
+QTC=BOTH
 #---speed (6 ... 60 wpm)
-RIG_MODE_SYNC=OFF
+#RIG_MODE_SYNC=OFF
 RTTYMODE
 #CWSPEED=28
 #SHORT_SERIAL
 #---cq delay (in 0,5 s)
-CQDELAY=22
+CQDELAY=18
 # cluster
 TELNETHOST=dx.da0bcc.de
 #TELNETHOST=logbook.rrdxa.org

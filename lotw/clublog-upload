@@ -9,7 +9,7 @@ APIKEY="$(cat $HOME/.priv/pw/clublog-api-key)"
 
 mkdir -p tmp
 
-psql -AXtF ' ' -c "select mycall from log where last_update >= '$STAMP' group by 1 order by 1" service=cb | \
+psql -AXtF ' ' -c "select mycall from log where mycall not in ('DA0RR', 'DL90MGL') and last_update >= '$STAMP' group by 1 order by 1" service=cb | \
   while read MYCALL; do
     FILE="tmp/${MYCALL//\//-}.adif"
     echo "$MYCALL"

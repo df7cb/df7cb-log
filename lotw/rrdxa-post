@@ -6,4 +6,5 @@ FILE="$1"
 
 curl --netrc -fsS --output /dev/null \
   --form logfile=@$FILE \
+  --form operator=DF7CB \
   https://logbook.rrdxa.org/log/upload/

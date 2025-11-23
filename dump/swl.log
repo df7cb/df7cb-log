@@ -40,3 +40,5 @@
 {"start":"2024-01-13T09:31:00+00:00","call":"DE0KMK","qrg":3.774,"mode":"SSB","rsttx":"SWL","qsltx":"Y","qslrx":"Y","comment":"QSO with DG1E","mycall":"DF7CB","last_update":"2025-03-22T22:10:26+00:00"}
 {"start":"2024-01-16T10:22:18+00:00","call":"DE0ACN","qrg":7.075426,"mode":"FT8","rsttx":"SWL","qsltx":"Y","qslrx":"Y","comment":"QSO with DK2EE","mycall":"DF7CB","last_update":"2025-03-22T22:10:26+00:00"}
 {"start":"2024-03-31T21:49:00+00:00","call":"I2-2085/MI","qrg":7.1111,"mode":"SSB","rsttx":"SWL","qsltx":"N","qslrx":"Y","comment":"QSO with OH5Z","mycall":"DF7C","last_update":"2025-03-22T22:10:26+00:00"}
+{"start":"2024-10-20T10:05:00+00:00","call":"OKL007","qrg":14.025,"mode":"CW","rsttx":"SWL","rstrx":"599","qsltx":"Y","qslrx":"Y","comment":"QSO with UR4QWW","mycall":"DF7CB","last_update":"2025-11-23T17:17:19+00:00"}
+{"start":"2025-01-23T22:33:00+00:00","call":"DE0WAF","qrg":3.5,"mode":"FT8","rsttx":"SWL","rstrx":"-13","qsltx":"Y","qslrx":"Y","comment":"QSO with CT3MD","mycall":"DF7CB","last_update":"2025-11-23T17:17:54+00:00"}

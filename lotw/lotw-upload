@@ -20,6 +20,8 @@ psql -AXtF ' ' -c "select mycall, upper(myloc) from log where last_update >= '$S
     ( set -x
       ../bin/export-adif -m $MYCALL -l $MYLOC -s $STAMP $FILE
 
+      ./wavelog-upload $MYCALL $MYLOC $FILE
+
       # exit 8 is "nothing to upload", exit 9 is "no new QSOs"
       tqsl -c "$MYCALL" -l "$MYLOC" --password="$PASSWORD" -u -a compliant $FILE -x
     ) || case $? in 8|9) ;; *) exit $?;; esac
