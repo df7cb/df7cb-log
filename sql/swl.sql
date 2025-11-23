@@ -51,7 +51,7 @@ select
          when qso_via = 'QO-100' then '3cm'
          when qso_via ~ '^DB0' then null
          when qso_via is null then null
-         else error('Sat unknown: ' || qso_via)
+         --else error('Sat unknown: ' || qso_via)
     end as band_rx,
 
     case mode
@@ -75,9 +75,9 @@ select
     end as sat_name,
 
     regexp_replace(rsttx, '^599(.)', '599 \\1') AS rst_sent,
-    --extx as stx_string,
+    null as stx_string,
     regexp_replace(rstrx, '^599(.)', '599 \\1') AS rst_rcvd,
-    --exrx as srx_string,
+    null as srx_string,
 
     coalesce(qsltx, 'N') AS qsl_sent,
     case qslrx
@@ -85,7 +85,7 @@ select
       when 'R' then 'R' -- PSE
       else 'i' -- N means PSE at qslshop.de
     end as qsl_rcvd,
-    --case when lotw then 'Y' end as lotw_qsl_rcvd,
+    null as lotw_qsl_rcvd,
 
     loc as gridsquare,
     contest as contest_id,

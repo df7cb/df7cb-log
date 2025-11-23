@@ -1,11 +1,21 @@
 #!/bin/bash
 
+TABLE=log
+VIEW=adif
+#TABLE=swl
+#VIEW=swl_adif
+
 set -eu
+
+if [ -z "${1:-}" ]; then
+    psql -c "select mycall, count(*) from $TABLE where qsltx = 'R' group by mycall;" service=cb
+    exit
+fi
 
 MYCALL="$1"
 
-../bin/export-adif --qsl -m $MYCALL "$(echo $MYCALL | tr / _)-qsl.adif"
+../bin/export-adif --table $VIEW --qsl -m $MYCALL "$(echo $MYCALL | tr / _)-qsl.adif"
 
 read -p "Ok?"
 
-psql -v mycall=$MYCALL -f mark-as-sent service=cb
+psql -v table=$TABLE -v mycall=$MYCALL -f mark-as-sent service=cb
