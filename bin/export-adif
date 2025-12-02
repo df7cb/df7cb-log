@@ -58,7 +58,7 @@ for arg in more_args:
             seen_sql = True
 
 query = f"""select * from {args.table}
-where {' and\n  '.join(pred)}
+where ({') and\n  ('.join(pred)})
 order by start, call"""
 
 if args.verbose:

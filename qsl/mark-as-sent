@@ -5,6 +5,6 @@
 update :table set qsltx = 'Y'
     where
     mycall = :'mycall' and
-    qsltx = 'R' or call in (select distinct call from :table where mycall = :'mycall' and qsltx = 'R' and qslrx = 'R') and
+    (qsltx = 'R' or call in (select distinct call from :table where mycall = :'mycall' and qsltx = 'R' and qslrx = 'R')) and
     not (qsltx = 'Y' and qslrx = 'Y')
 returning mycall, start, call, qrg, mode, qso_via, contest;
