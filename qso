@@ -3,8 +3,8 @@
 import atexit
 from datetime import datetime, timezone
 import Hamlib
-import psycopg2
-import psycopg2.extras
+import psycopg
+from psycopg.rows import dict_row
 import re
 import readline
 import requests
@@ -35,8 +35,8 @@ readline.set_completer(completion)
 
 # PG
 
-conn = psycopg2.connect("service=cb")
-cur = conn.cursor(cursor_factory = psycopg2.extras.DictCursor)
+conn = psycopg.connect("service=cb", row_factory=dict_row, autocommit=True)
+cur = conn.cursor()
 
 date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 rsttx = '599'
@@ -241,7 +241,6 @@ while True:
         args = [x for x in log.values()]
         try:
             cur.execute(insert, args)
-            conn.commit()
         except Exception as e:
             print("ERROR: ", e)
             conn.rollback()
