@@ -4,6 +4,8 @@
 # http://www.dl7vee.de/CFD.htm
 # https://github.com/wavelog/wavelog/blob/b1fd5dd2f1b861d293b9af03267f601487bf2b2b/application/controllers/Cfdexport.php
 
+# select qrg::band as band, major_mode(mode), count(distinct log.cty) from log join country on log.cty=country.cty where (qrg between 1 and 54) and not (qrg between 5 and 6) and (lotw or qslrx = 'Y') group by cube(1, 2) order by 1, 2 \crosstabview
+
 import psycopg
 
 conn = psycopg.connect("service=cb")
