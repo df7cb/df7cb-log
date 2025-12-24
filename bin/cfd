@@ -1,0 +1,65 @@
+#!/usr/bin/python3
+
+# https://dcl.darc.de/toplist/public_html/public/index.php
+# http://www.dl7vee.de/CFD.htm
+# https://github.com/wavelog/wavelog/blob/b1fd5dd2f1b861d293b9af03267f601487bf2b2b/application/controllers/Cfdexport.php
+
+import psycopg
+
+conn = psycopg.connect("service=cb")
+cur = conn.cursor()
+
+cur.execute("""
+select distinct log.cty, country.country, qrg::band, major_mode(mode)
+from log join country on log.cty=country.cty
+where (qrg between 1 and 54) and not (qrg between 5 and 6)
+    and (lotw or qslrx = 'Y')
+    and country.official
+group by grouping sets((1, 2, 3, 4), (1, 2, 4))
+order by 1, 2, 3, 4;
+""")
+
+bands = [None, '160m', '80m', '40m', '30m', '20m', '17m', '15m', '12m', '10m', '6m']
+modes = 'CW', 'PHONE', 'DATA'
+ms = 'CFR' # CW FONE REST
+
+ctys = []
+countries = []
+slot = {}
+
+for r in cur.fetchall():
+    cty, country, band, mode = r
+    if cty not in ctys:
+        ctys.append(cty)
+        countries.append(country)
+        slot[cty] = {band: {mode: 1}}
+    else:
+        if band in slot[cty]:
+            slot[cty][band][mode] = 1
+        else:
+            slot[cty][band] = {mode: 1}
+
+print(r"""DF7CB
+--------------------------------------------------------------
+Overview Confirmed Entities
+       (M=Mixed C=CW F=Fone R=Rest)
+==============================================================
+Entity                \          MHz:   ALL   1.8   3.5     7    10    14    18    21    24    28    50
+-------------------------------------------------------------------------------------------------------""")
+
+for i, cty in enumerate(ctys):
+    print(f"{cty.upper():6} {countries[i][:30]:30}  ", end='')
+    for band in bands:
+        if band in slot[cty]:
+            print("M", end='')
+            for m, mode in enumerate(modes):
+                if mode in slot[cty][band]:
+                    print(ms[m], end='')
+                else:
+                    print("-", end='')
+        else:
+            print("----", end='')
+        if band == '6m':
+            print()
+        else:
+            print("  ", end='')
