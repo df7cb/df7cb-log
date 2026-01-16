@@ -60,12 +60,7 @@ cur.execute(f"""select
       when mode ~ 'PSK' then 'PS'
       else 'DG'
     end as mode,
-    concat_ws(' ',
-      regexp_replace(rsttx, '^(5[1-9]9?)(..)', '\\1 \\2'),
-      extx) as rst_sent,
-    concat_ws(' ',
-      regexp_replace(rstrx, '^(5[1-9]9?)(..)', '\\1 \\2'),
-      exrx) as rst_rcvd
+    rsttx, extx, rstrx, exrx
     from log
     where {' and '.join(pred)}
     order by start, extx, call""",
@@ -76,7 +71,7 @@ if len(records) == 0:
     print("No QSOs found")
     exit(1)
 
-if args.contest == 'MWC':
+if args.contest == 'OK1WC':
     cur.execute("""
         with raw as (select qrg::band::text, count(distinct call) qso, count(distinct mwc_multi(call)) multi
             from log where start >= %s and contest = %s group by qrg::band order by qrg::band desc)
@@ -91,7 +86,7 @@ if args.contest == 'MWC':
 
     claimed_score = row[-1]
 
-elif args.contest == 'CWT':
+elif args.contest == 'CW-OPS':
     cur.execute("""
         with qso as (select qrg::band::text, count(distinct call) qso
             from log where start >= %s and contest = %s group by qrg::band order by qrg::band desc),
@@ -156,26 +151,10 @@ if claimed_score:
 
 # QSO: 7036 CW 2022-06-27 1639 DF7CB 599 001 SD6M 599 014 0
 
-call_len = 0
-rst_rcvd_len = 0
+# QSO:  freq mo date       time call          rst exch   call          rst exch   t
+# QSO: ***** ** yyyy-mm-dd nnnn ************* nnn ****** ************* nnn ****** n
 
 for qso in records:
-    if len(qso['call']) > call_len:
-        call_len = len(qso['call'])
-    if len(qso['rst_rcvd']) > rst_rcvd_len:
-        rst_rcvd_len = len(qso['rst_rcvd'])
-
-for qso in records:
-    f.write('QSO: ' + ' '.join([
-        qso['qrg'].ljust(5),
-        qso['mode'],
-        qso['date'],
-        qso['time'],
-        info['mycall'],
-        qso['rst_sent'],
-        qso['call'].ljust(call_len),
-        qso['rst_rcvd'].ljust(rst_rcvd_len),
-        '0', # transmitter number
-        ]) + '\n')
+    f.write(f"QSO: {qso['qrg']:5} {qso['mode']} {qso['date']} {qso['time']} {info['mycall']:13} {qso['rsttx']:3} {qso['extx']:6} {qso['call']:13} {qso['rstrx']:3} {qso['exrx']:6} 0\n")
 
 f.write(f"""END-OF-LOG:\n""")
