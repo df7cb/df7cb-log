@@ -40,7 +40,7 @@ if 'band' in form:
         qual += "and qrg between 5 and 25 and qrg::band in ('60m', '30m', '17m', '12m') "
     elif band == 'vhf':
         qual += "and qrg > 30 "
-    elif re.search('^[\d.cm]+$', band):
+    elif re.search(r'^[\d.cm]+$', band):
         qual += "and qrg::band = %s "
         param.append(band)
 
