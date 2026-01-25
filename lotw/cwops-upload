@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+STAMP="$1"
+PW="$(cat $HOME/.priv/pw/cwops-pass)"
+LOG="df7cb-cwops.adif"
+
+set -x
+
+../bin/export-adif -s "$STAMP" "$LOG" "mode='CW'"
+
+curl -fsS \
+    --cookie-jar .cwops-cookies \
+    -F callsign="DF7CB" \
+    -F password="$PW" \
+    https://cwops.telegraphy.de/login \
+    -F "uploaded_files[]=@$LOG" \
+    "https://cwops.telegraphy.de/api?action=upload&ign=1&opfilter=0"

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 GIT=git
-TODAY="$(date +%Y-%m-%d)"
+TODAY="$(date -u +%Y-%m-%d)"
 
 while getopts "fn" opt ; do
   case $opt in
@@ -37,6 +37,7 @@ mkdir -p lotw/tmp
   ./lotw-upload $STAMP
   ./clublog-upload $STAMP
   ./rrdxa-post tmp/upload.adif
+  ./cwops-upload $STAMP
   ./dcl-upload tmp/upload.adif
   ../bin/export-adif -s $STAMP -m DF7CB tmp/DF7CB.adif
   ./eqsl-upload tmp/DF7CB.adif
