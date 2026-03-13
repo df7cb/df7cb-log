@@ -27,7 +27,7 @@ BEGIN
         ELSIF NEW.qrg between 7 and 7.2 THEN
           NEW.myant := 'Dipole';
         ELSE
-          NEW.myant := 'FD4';
+          NEW.myant := '18m vertical';
         END IF;
       END IF;
       IF NEW.mypwr IS NULL THEN
