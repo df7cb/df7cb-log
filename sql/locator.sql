@@ -2,7 +2,7 @@ create domain locator as text
     check (value ~ '^[A-R][A-R](?:[0-9][0-9](?:[A-X][A-X](?:[0-9][0-9](?:[A-X][A-X])?)?)?)?$');
 
 CREATE OR REPLACE FUNCTION locator_as_linestring (loc locator) RETURNS text
-STRICT LANGUAGE plpgsql
+STRICT IMMUTABLE LANGUAGE plpgsql
 AS $$DECLARE
     a1 int := ascii(substr(loc, 1, 1)) - 65; -- field
     a2 int := ascii(substr(loc, 2, 1)) - 65;
@@ -54,11 +54,11 @@ RETURN format('LINESTRING(%s %s,%s %s,%s %s,%s %s,%s %s)',
 END$$;
 
 CREATE OR REPLACE FUNCTION ST_Locator(loc locator) RETURNS geometry(POLYGON, 4326)
-STRICT LANGUAGE SQL
+STRICT IMMUTABLE LANGUAGE SQL
 RETURN ST_Polygon(ST_GeomFromText(locator_as_linestring(loc)), 4326);
 
 CREATE OR REPLACE FUNCTION locator_as_point (loc locator) RETURNS text
-STRICT LANGUAGE plpgsql
+STRICT IMMUTABLE LANGUAGE plpgsql
 AS $$DECLARE
     a1 int := ascii(substr(loc, 1, 1)) - 65; -- field
     a2 int := ascii(substr(loc, 2, 1)) - 65;
@@ -106,7 +106,7 @@ RETURN format('POINT(%s %s)',
 END$$;
 
 CREATE OR REPLACE FUNCTION ST_LocatorPoint(loc locator) RETURNS geometry(POINT, 4326)
-STRICT LANGUAGE SQL
+STRICT IMMUTABLE LANGUAGE SQL
 RETURN ST_PointFromText(locator_as_point(loc), 4326);
 
 -- locator tables

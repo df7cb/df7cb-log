@@ -1,5 +1,6 @@
 create function mwc_multi(call text)
     returns text
+    immutable
     language sql
     return substring(call from length(call));
 

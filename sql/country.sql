@@ -39,6 +39,7 @@ CREATE DOMAIN call AS text
 
 CREATE OR REPLACE FUNCTION call2cty(call text)
   RETURNS cty
+  STABLE
   LANGUAGE SQL
   begin atomic
     SELECT cty FROM prefix
@@ -50,6 +51,7 @@ CREATE OR REPLACE FUNCTION call2cty(call text)
 
 CREATE OR REPLACE FUNCTION cq(call text)
   RETURNS text
+  STABLE
   LANGUAGE SQL
   begin atomic
     SELECT lpad(coalesce(prefix.cq, country.cq)::text, 2, '0')
@@ -60,6 +62,7 @@ CREATE OR REPLACE FUNCTION cq(call text)
 
 CREATE OR REPLACE FUNCTION itu(call text)
   RETURNS text
+  STABLE
   LANGUAGE SQL
   begin atomic
     SELECT lpad(coalesce(prefix.itu, country.itu)::text, 2, '0')
@@ -70,6 +73,7 @@ CREATE OR REPLACE FUNCTION itu(call text)
 
 CREATE OR REPLACE FUNCTION continent(call text)
   RETURNS text
+  STABLE
   LANGUAGE SQL
   begin atomic
     SELECT continent FROM prefix JOIN country ON prefix.cty = country.cty
@@ -79,6 +83,7 @@ CREATE OR REPLACE FUNCTION continent(call text)
 
 -- from https://wiki.postgresql.org/wiki/Round_time
 CREATE FUNCTION date_round(base_date timestamptz, round_interval interval)
+  IMMUTABLE
   RETURNS timestamptz AS $BODY$
 SELECT to_timestamp((EXTRACT(epoch FROM $1)::integer + EXTRACT(epoch FROM $2)::integer / 2)
                 / EXTRACT(epoch FROM $2)::integer * EXTRACT(epoch FROM $2)::integer)
