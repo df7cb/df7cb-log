@@ -1,0 +1,59 @@
+START-OF-LOG: 3.0
+CONTEST: GC
+CALLSIGN: DF7C
+OPERATORS: DF7CB
+NAME: Christoph Berg
+EMAIL: cb@df7cb.de
+ADDRESS: Rather Str. 76a
+ADDRESS: 47802 Krefeld
+ADDRESS: Germany
+GRID-LOCATOR: JO31HI
+LOCATION: DX
+CLUB: Rhein Ruhr DX Association
+CATEGORY-ASSISTED: ASSISTED
+CATEGORY-BAND: 13CM
+CATEGORY-MODE: MIXED
+CATEGORY-OPERATOR: SINGLE-OP
+CATEGORY-POWER: LOW
+CATEGORY-STATION: FIXED
+CATEGORY-TRANSMITTER: ONE
+QSO: 2.3G PH 2026-04-11 2041 DF7C          59  28     RY3O          59  29     0
+QSO: 2.3G PH 2026-04-11 2042 DF7C          59  28     RT3F          59  CP     0
+QSO: 2.3G PH 2026-04-11 2046 DF7C          59  28     PA3GXT        59  27     0
+QSO: 2.3G PH 2026-04-11 2047 DF7C          59  28     RF9C          59  AM     0
+QSO: 2.3G PH 2026-04-11 2050 DF7C          59  28     OK2DM         59  28     0
+QSO: 2.3G PH 2026-04-11 2051 DF7C          59  28     RA4HGN        59  30     0
+QSO: 2.3G PH 2026-04-11 2052 DF7C          59  28     PP2RON        59  15     0
+QSO: 2.3G PH 2026-04-11 2052 DF7C          59  28     A65BR         59  39     0
+QSO: 2.3G PH 2026-04-11 2053 DF7C          59  28     GW8TIX        59  27     0
+QSO: 2.3G PH 2026-04-11 2053 DF7C          59  28     9A2EY         59  28     0
+QSO: 2.3G PH 2026-04-11 2054 DF7C          59  28     R3LO          59  29     0
+QSO: 2.3G PH 2026-04-11 2107 DF7C          59  28     OM0CS         59  28     0
+QSO: 2.3G PH 2026-04-11 2114 DF7C          59  28     G3DXC         59  27     0
+QSO: 2.3G PH 2026-04-11 2115 DF7C          59  28     RW0A          59  SA     0
+QSO: 2.3G PH 2026-04-11 2116 DF7C          59  28     G3PMY         59  27     0
+QSO: 2.3G PH 2026-04-11 2118 DF7C          59  28     ZS1DDK        59  57     0
+QSO: 2.3G CW 2026-04-11 2128 DF7C          599 28     OM0CS         599 28     0
+QSO: 2.3G CW 2026-04-11 2135 DF7C          599 28     A65BR         599 39     0
+QSO: 2.3G CW 2026-04-11 2135 DF7C          599 28     RY3O          599 29     0
+QSO: 2.3G CW 2026-04-11 2136 DF7C          599 28     PP2RON        599 15     0
+QSO: 2.3G CW 2026-04-11 2137 DF7C          599 28     RW0A          599 SA     0
+QSO: 2.3G CW 2026-04-11 2139 DF7C          599 28     RF9C          599 AM     0
+QSO: 2.3G CW 2026-04-11 2140 DF7C          599 28     DL8GAP        599 28     0
+QSO: 2.3G CW 2026-04-11 2147 DF7C          599 28     OM0CS         599 28     0
+QSO: 2.3G CW 2026-04-12 1018 DF7C          599 28     EU6DZ         599 29     0
+QSO: 2.3G CW 2026-04-12 1019 DF7C          599 28     DL1USB        599 28     0
+QSO: 2.3G CW 2026-04-12 1021 DF7C          599 28     PY2PIM        599 15     0
+QSO: 2.3G CW 2026-04-12 1027 DF7C          599 28     YT7IM         599 28     0
+QSO: 2.3G CW 2026-04-12 1028 DF7C          599 28     HA3HK         599 28     0
+QSO: 2.3G CW 2026-04-12 1035 DF7C          599 28     EU2AA         599 29     0
+QSO: 2.3G CW 2026-04-12 1041 DF7C          599 28     OH3DP         599 18     0
+QSO: 2.3G CW 2026-04-12 1043 DF7C          599 28     EI3DP         599 27     0
+QSO: 2.3G PH 2026-04-12 1057 DF7C          59  28     PY2PIM        59  15     0
+QSO: 2.3G PH 2026-04-12 1058 DF7C          59  28     RN4K          59  PG     0
+QSO: 2.3G PH 2026-04-12 1102 DF7C          59  28     EU6DZ         59  29     0
+QSO: 2.3G PH 2026-04-12 1103 DF7C          59  28     9V1EO         59  54     0
+QSO: 2.3G PH 2026-04-12 1104 DF7C          59  28     TA9EA         59  39     0
+QSO: 2.3G PH 2026-04-12 1105 DF7C          59  28     UN1EAE        59  30     0
+QSO: 2.3G PH 2026-04-12 1106 DF7C          59  28     HA2D          59  28     0
+END-OF-LOG:
