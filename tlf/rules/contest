@@ -41,7 +41,6 @@ DX_POINTS=5
 F1=CQ % % TEST
 F2=@ DE %
 F3=@ 5NN #
-#F3=@ CHRIS 3484
 F4=5NN #
 F5=@
 F6=%
@@ -54,7 +53,6 @@ F12=TEST %
 #
 CQ_TU_MSG=TU
 S&P_TU_MSG=TU 5NN #
-#S&P_TU_MSG=TU CHRIS 3484
 #
 #ALT_0=
 #ALT_1=
