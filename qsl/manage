@@ -45,6 +45,7 @@ def via(qsl, manager):
     sql = """UPDATE log SET qsl_via = %s WHERE (start, call) = (%s, %s)"""
     print(sql % args)
     cur.execute(sql, args)
+    conn.commit()
 
 def update(qsl, qsltx=None, qslrx=None):
     args = (qsl['start'], qsl['call'])
@@ -68,7 +69,9 @@ def update(qsl, qsltx=None, qslrx=None):
 print("\033]0;QSL\007", end='')
 
 num = 1
-prompt = 'QSL'
+call = "QSL"
+rr = 'RY'
+prompt = f"{call} {rr}"
 while True:
     try:
         l = input(f'\033[1m{prompt}>\033[0m ')
@@ -89,21 +92,25 @@ while True:
         print_qsls(qsls, num)
     elif m := re.match(r"([0-9]+) (\S+)$", l):
         num = int(m.group(1))
-        via(qsls[num], m.group(2))
+        via(qsls[num], m.group(2).upper())
         #update(qsls[num])
         num += 1
         print_qsls(qsls, num)
     elif m := re.match(r"[0-9]+$", l):
         num = int(l)
-        update(qsls[num])
+        update(qsls[num], rr[0], rr[1])
         num += 1
         print_qsls(qsls, num)
+    elif m := re.match(r"([RrNnYy][RrNnYy])$", l):
+        rr = m.group(1).upper()
+        prompt = f"{call} {rr}"
     elif l == '':
-        update(qsls[num])
+        update(qsls[num], rr[0], rr[1])
         num += 1
         print_qsls(qsls, num)
     else:
-        cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call COLLATE "C" ~* %s ORDER BY start""", (l,))
+        call = l
+        cur.execute("""SELECT row_number() OVER (ORDER BY start) AS n, * FROM log WHERE call COLLATE "C" ~* %s ORDER BY start""", (call,))
         qsls = [{'qslrx': 'Y'}] # numbers are 1-based
         for rec in cur.fetchall():
             qsls.append(rec)
@@ -112,5 +119,5 @@ while True:
             num = min(qsl_not_y)
         else:
             num = 1
-        prompt = l
+        prompt = f"{call} {rr}"
         print_qsls(qsls, num)
