@@ -1,0 +1,118 @@
+#!/usr/bin/python3
+
+import argparse
+import os
+import psycopg
+import sqlite3
+import re
+
+argparser = argparse.ArgumentParser(description="Import a contest from Not1MM to PostgreSQL")
+argparser.add_argument("-d", "--db", help="database file", default="ham")
+argparser.add_argument("-l", "--list", help="list contests in database", action=argparse.BooleanOptionalAction)
+argparser.add_argument("-n", "--nr", help="use contest number N")
+argparser.add_argument("-e", "--exch", help="override exchange")
+argparser.add_argument("-m", "--mode", help="override mode")
+argparser.add_argument("-c", "--contest", help="override contest name")
+argparser.add_argument("--qo100", help="QO-100 mode", action=argparse.BooleanOptionalAction)
+args = argparser.parse_args()
+
+hamdb = sqlite3.connect(os.path.expanduser(f"~/log/not1mm/{args.db}.db"))
+hamcur = hamdb.cursor()
+
+if args.list:
+    hamcur.execute("select * from contestinstance order by startdate")
+    for contest in hamcur.fetchall():
+        print(contest)
+    exit(0)
+
+if args.nr:
+    hamcur.execute("select * from contestinstance where contestid = ?", (args.nr,))
+else:
+    hamcur.execute("select * from contestinstance order by startdate desc limit 1")
+contest = hamcur.fetchone()
+print(contest)
+
+#         0              1   2     3   4     5     6    7       8    9   10
+fields = "StationPrefix, TS, Call, ZN, Freq, Mode, SNT, SentNr, RCV, NR, ContestName"
+myfields = "mycall, start, call, cq, qrg, mode, rsttx, extx, rstrx, exrx, contest"
+
+if args.qo100:
+    myfields += ", qso_via, loc, comment"
+
+qsos = []
+for qso in hamcur.execute(f"select {fields} from dxlog where contestnr = ?", [contest[0]]):
+    q = list(qso)
+    q[4] = round(q[4] / 1000.0, 4) # Freq
+    if args.mode: q[5] = args.mode
+    if args.exch: q[7] = args.exch
+    if args.contest: q[10] = args.contest
+    if args.qo100:
+        q[4] = 2400.0 + (q[4] % 0.5)
+        q[10] = 'QO-100'
+        q.append('QO-100')
+        m = re.match('([A-ℝ][A-R][0-9][0-9]) ?([0-9]+)?', q[9])
+        q.append(m.group(1)) # gridsquare
+        q.append(m.group(2)) # membership number (if any)
+    qsos.append(q)
+
+    qstr = [str(x) for x in q]
+    print(" ".join(qstr))
+
+print("Insert", len(qsos), "QSOs? ", end="")
+input()
+
+conn = psycopg.connect("service=cb")
+cur = conn.cursor()
+
+with cur.copy(f"copy log ({myfields}) from stdin") as copy:
+    for qso in qsos:
+        copy.write_row(qso)
+
+conn.commit()
+
+"""
+TS 2026-04-26 12:58:19
+Call TA3DJ
+Freq 14012.5
+QSXFreq 14012.5
+Mode CW
+ContestName UKEI-DX
+SNT 599
+RCV 599
+CountryPrefix TA
+StationPrefix DF7C
+QTH 
+Name 
+Comment 
+NR 9
+Sect 
+Prec 
+CK 0
+ZN 20
+SentNr 70
+Points 2
+IsMultiplier1 0
+IsMultiplier2 0
+Power 0
+Band 14.0
+WPXPrefix TA3
+Exchange1 
+RadioNR 
+ContestNR 3
+isMultiplier3 0
+MiscText 
+IsRunQSO 0
+ContactType 
+Run1Run2 
+GridSquare 
+Operator DF7C
+Continent AS
+RoverLocation 
+RadioInterfaced 
+NetworkedCompNr 1
+NetBiosName turing
+IsOriginal 1
+ID c6e7ba9e769746afaf8c6f204670cb33
+CLAIMEDQSO 1
+Dirty 1
+"""
