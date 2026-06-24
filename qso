@@ -46,8 +46,8 @@ mycall = 'DF7CB'
 # Hamlib
 Hamlib.rig_set_debug(Hamlib.RIG_DEBUG_NONE)
 my_rig = Hamlib.Rig(Hamlib.RIG_MODEL_NETRIGCTL)
-my_rig.set_conf("rig_pathname", "localhost:4532")
-#my_rig.set_conf("rig_pathname", "192.168.0.3:4532")
+#my_rig.set_conf("rig_pathname", "localhost:4532")
+my_rig.set_conf("rig_pathname", "192.168.0.3:4532")
 my_rig.open()
 
 my_rot = Hamlib.Rot(Hamlib.ROT_MODEL_NETROTCTL)
@@ -130,8 +130,8 @@ while True:
             qo100_rig.set_conf("rig_pathname", "localhost:4555")
             qo100_rig.open()
             freq = qo100_rig.get_freq()
-            if log['mode'] == 'CW':
-                freq += 850
+            #if log['mode'] == 'CW':
+            #    freq += 850
             log['qrg'] = round(freq / 1000000.0, 4)
 
             log['qso_via'] = "QO-100"

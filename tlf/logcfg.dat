@@ -1,9 +1,12 @@
 #RULES=qso
 RULES=contest
-#CABRILLO-CONTEST=OK1WC
+#RULES=arrl10m_dx
+#CABRILLO-CONTEST=CQ-160-CW
 #RULES=mwc
 #RULES=cwops_mini_cwt
-CALL=DF7CB
+LOGFILE=contest.log
+
+CALL=DF7C
 MYQRA=JO31HI
 #
 EDITOR=vi
@@ -64,6 +67,11 @@ RIGPORT=localhost:4532
 ROTATOR_CONTROL
 ROTMODEL=2
 ROTPORT=192.168.0.3:4533
+
+ONLINESCORE
+#ONLINESCORE_ENDPOINT=https://www.df7cb.de/bin/contest
+ONLINESCORE_USER=df7cb
+ONLINESCORE_PASS=foo
 
 #################################
 #  INFORMATION WINDOWS          #

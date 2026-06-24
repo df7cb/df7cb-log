@@ -52,3 +52,8 @@ RECALL_MULTS
 #                               #
 #################################
 INITIAL_EXCHANGE=rules/cwt.txt
+
+CABRILLO-CONTEST=CW-OPS
+CABRILLO-CATEGORY-MODE=CW
+CABRILLO-CATEGORY-BAND=ALL
+CABRILLO-CATEGORY-POWER=LOW

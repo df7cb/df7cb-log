@@ -13,7 +13,10 @@ args = argparser.parse_args()
 conn = psycopg.connect("service=cb")
 cur = conn.cursor(row_factory=namedtuple_row)
 
-cur.execute("""select
+cur.execute("""--select * from (
+    select
+    row_number() over (partition by cty, qrg::band, major_mode(mode) order by max(start) desc) as rank,
+    max(start) as start,
     replace(qrg::band::text, 'm', '')::int as band,
     case major_mode(mode) when 'CW' then 'CW' when 'PHONE' then 'SSB' when 'DATA' then 'DIG' end as mode,
     to_char(max(start), 'DD-MON-YY HH24:MM') as time,
@@ -26,10 +29,13 @@ cur.execute("""select
     round(1000.0 * min(qrg), 1) as qrg
     from log
     where qrg between 1 and 30
-        and mycall = %s
+        and mycall in ('DF7CB', 'DF7C')
+        --and mode = 'RTTY'
+        and start >= '2025-01-01'
     group by call, cty, qrg::band, major_mode(mode)
     order by max(start), call
-""", [args.mycall])
+--) where rank = 1 or start > now() - '1 year'::interval
+""")
 
 print("; --8<--                                                                               ")
 nr = 1
