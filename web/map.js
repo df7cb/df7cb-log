@@ -649,7 +649,7 @@ var log_update = function (evt) {
       let inner;
       if (qso[field]) {
         if (field == 'qso_via') {
-          inner = document.createTextNode("via " + qso[field]);
+          inner = document.createTextNode('(' + qso[field] + ')');
         } else if (field == "loc") {
           inner = document.createElement('a');
           inner.innerHTML = qso[field];
